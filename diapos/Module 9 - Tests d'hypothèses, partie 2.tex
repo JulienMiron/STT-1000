@@ -441,8 +441,8 @@ Dans le cas de proportion, on a $X_{11}, \ldots, X_{1n_1} \overset{i.i.d.}{\sim}
 Alors, si $n_1 >30$ et $n_2 > 30$, par le TCL
 
 \begin{align*}
-\hat{p}_1 = \frac{1}{n_1} \sum_{i=1}^{n_1} X_{11} &\approx N\left(p_1, \frac{p_1(1-p_1)}{n_1} \right) \\
-\hat{p}_2 = \frac{1}{n_2} \sum_{i=1}^{n_2} X_{21} &\approx N\left(p_2, \frac{p_2(1-p_2)}{n_2}\right)
+\hat{p}_1 = \frac{1}{n_1} \sum_{i=1}^{n_1} X_{1i} &\approx N\left(p_1, \frac{p_1(1-p_1)}{n_1} \right) \\
+\hat{p}_2 = \frac{1}{n_2} \sum_{i=1}^{n_2} X_{2i} &\approx N\left(p_2, \frac{p_2(1-p_2)}{n_2}\right)
 \end{align*}
 
 
@@ -466,7 +466,7 @@ Un test de niveau approximativement $\alpha$ rejette $H_0$ si
 \begin{align*} 
 \left| z_0  \right|  > z_{\alpha/2} & & (H_1 : p_1 \ne p_2) \\
 z_0   > z_{\alpha} & & (H_1 : p_1 > p_2) \\
-z_0   < z_{\alpha} & & (H_1 : p_1 < p_2) \\
+z_0   < -z_{\alpha} & & (H_1 : p_1 < p_2) \\
 \end{align*}
 
 
@@ -474,7 +474,7 @@ z_0   < z_{\alpha} & & (H_1 : p_1 < p_2) \\
 
 
 \begin{frame}{Bibliographie}
- 	Ce document est rédigé avec Beamer ainsi qu'une classe .cls fourni par Jérôme Soucy. Les diapositives sont adaptées des diapositives créées par Thierry Duchesne et Emmanuelle Reny-Nolin pour le cours STT-1900. Les graphiques proviennent de ces mêmes diapositives.
+ 	Ce document est rédigé avec Beamer ainsi qu'une classe .cls fournie par Jérôme Soucy. Les diapositives sont adaptées des diapositives créées par Thierry Duchesne et Emmanuelle Reny-Nolin pour le cours STT-1900. Les graphiques proviennent de ces mêmes diapositives.
  	\printbibliography
  	\vfill
  	\footnotesize Pour signaler une erreur dans ce document, veuillez écrire à l'adresse :~\href{mailto:julien.miron@mat.ulaval.ca}{julien.miron@mat.ulaval.ca}.

@@ -168,7 +168,7 @@ Conditions d'application à vérifier avant d'interpréter les intervalles de co
 \item[P2] {\bf homoscédasticité:}  la variance de $Y_i$ autour de la droite est homogène (elle ne dépend pas de $X_i$);\\
     {\color{gray}{$V(Y_i)=\sigma^2 \hspace{2cm}\Rightarrow V(E_i)=\sigma^2$}}
 \item[P3]  {\bf indépendance:}  les observations sont indépendantes;\\
-    {\color{gray}{ $Y_i$indépendants \hspace{1.1cm} $\Rightarrow$  $E_i$ indépendants}}
+    {\color{gray}{ $Y_i$ indépendants \hspace{1.1cm} $\Rightarrow$  $E_i$ indépendants}}
 \item[P4]  {\bf  normalité:} les $Y_i$ sont de loi normale autour de la droite.\\
     {\color{gray}{ \hspace{3.5cm} $\Rightarrow$ les $E_i$ sont de loi normale autour de 0}}
 \end{itemize}
@@ -336,7 +336,7 @@ Si le postulat de linéarité est respecté, alors \alerter{une pente nulle pour
 \medskip
 
 Dans ce cas,  la loi de $Y$ ne change pas avec la valeur de $X$ (la valeur moyenne de $Y$ est égale à
-$\beta_0$ peu importe la valeur de $X$.)
+$\beta_0$ peu importe la valeur de $X$).
 
 %En effet, dans ce cas on a que $E(Y|X)=\beta_0+\beta_1X=\beta_0+0X=\beta_0$, et donc
 \centerline{\includegraphics[height=4.5cm]{beta1nul.jpg}}
@@ -382,7 +382,7 @@ Par contre, nous ne connaissons pas $\sigma^2$. Il faut donc l'estimer.
 \end{frame}
 
 \begin{frame}{}
-Comme $\sigma^2$ est la variance des erreurs du modèle $E_i=Y_i=\beta_0-\beta_1 X_i$ que nous estimons par $e_i=y_i=\hat{\beta_0}-\hat{\beta_1} x_i$, nous utiliserons
+Comme $\sigma^2$ est la variance des erreurs du modèle $E_i=Y_i-\beta_0-\beta_1 X_i$ que nous estimons par $e_i=y_i-\hat{\beta_0}-\hat{\beta_1} x_i$, nous utiliserons
 
 $$\hat{\sigma}^2=MS_E= \frac{SS_E}{n-2}.$$
 Nous en déduisons donc
@@ -727,7 +727,7 @@ Pas d'effet chronologique & Effet de grappe\\
 \subsection{Solution aux problèmes: transformer $X$ et/ou $Y$}\label{sec:transfo}
 
 \begin{frame}{Bibliographie}
- 	Ce document est rédigé avec Beamer ainsi qu'une classe .cls fourni par Jérôme Soucy. Les diapositives sont adaptées des diapositives créées par Thierry Duchesne et Emmanuelle Reny-Nolin pour le cours STT-1900. Les graphiques proviennent de ces mêmes diapositives.
+ 	Ce document est rédigé avec Beamer ainsi qu'une classe .cls fournie par Jérôme Soucy. Les diapositives sont adaptées des diapositives créées par Thierry Duchesne et Emmanuelle Reny-Nolin pour le cours STT-1900. Les graphiques proviennent de ces mêmes diapositives.
  	\printbibliography
  	\vfill
  	\footnotesize Pour signaler une erreur dans ce document, veuillez écrire à l'adresse :~\href{mailto:julien.miron@mat.ulaval.ca}{julien.miron@mat.ulaval.ca}.
