@@ -1,0 +1,65 @@
+# Compile les diapos LaTeX, génère le site Quarto et le publie sur GitHub Pages.
+# Se déclenche à chaque push sur la branche main (ou manuellement depuis
+# l'onglet Actions).
+name: Diapos et site STT-1000
+
+on:
+  push:
+    branches: main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Une seule publication à la fois ; la plus récente l'emporte.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  construire:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v5
+
+      - name: Compiler les diapos (présentation + imprimable)
+        uses: xu-cheng/texlive-action@v3
+        with:
+          scheme: full
+          run: |
+            sh diapos/compiler.sh
+
+      - name: Installer Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      # R et les paquets knitr/rmarkdown viennent des paquets Ubuntu : on évite
+      # ainsi de dépendre de services externes (r-hub, CRAN) pendant la
+      # publication.
+      - name: Installer R et les paquets R
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            r-base-core r-cran-knitr r-cran-rmarkdown r-cran-png
+          Rscript -e 'library(knitr); library(rmarkdown); library(png); cat(R.version.string, "\n")'
+
+      - name: Générer le site
+        uses: quarto-dev/quarto-actions/render@v2
+
+      - name: Préparer le site pour GitHub Pages
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _book
+
+  publier:
+    needs: construire
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - name: Publier sur GitHub Pages
+        id: deploiement
+        uses: actions/deploy-pages@v4

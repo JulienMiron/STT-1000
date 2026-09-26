@@ -1,0 +1,11 @@
+# Avant-propos {.unnumbered}
+
+Ce site rassemble le matériel du cours STT-1000 *Probabilités et
+statistique*.
+
+Pour l'instant, seules les **diapositives** du cours y sont disponibles, en
+version présentation et en version imprimable : voir la page
+[Diapositives](diapos.qmd).
+
+Si vous constatez des coquilles ou des erreurs, merci de m'envoyer
+[un courriel](mailto:julien.miron@mat.ulaval.ca).

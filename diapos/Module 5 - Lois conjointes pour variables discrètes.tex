@@ -1,0 +1,480 @@
+
+\documentclass{BeamerTemplate}
+\title{Module 5 - Lois conjointes pour variables discrètes}
+\subtitle{STT-1000 Probabilités et statistique}
+\date{\today}
+
+\usepackage{adjustbox}
+
+
+\begin{document}
+\AtBeginSection{\frame{\sectionpage}}
+
+\begin{frame}
+
+\titlepage
+
+\end{frame}
+
+%-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+\section{Vecteurs aléatoires}
+
+
+\begin{frame}[t]{Vecteurs aléatoires}
+
+Dans bien des situations, on peut s'intéresser au comportement aléatoire de plusieurs variables \alerter{simultanément}.
+\vspace{0.1 in}
+
+\begin{itemize}
+ \item Le réservoir d'un barrage reçoit l'eau de 4 rivières.
+ On sera intéressé par le comportement \alerter{conjoint} de $\mathbf{X}=(X,
+ Y,X_3,X_4)$, où $X_i$ est le débit de la $i$-ème rivière. 
+ \item Un système en parallèle fonctionne tant qu'au moins
+ un de ses trois composants fonctionne. Soit $Y_i$, la variable qui
+ indique si le $i$-ème composant fonctionne. On sera intéressé
+ par le comportement \alerter{conjoint} de $\mathbf{Y}=(Y_1,Y_2,Y_3)$.
+\end{itemize}
+
+\vspace{0.1 in}
+
+\textbf{Pour notre cours: uniquement le cas de 2 variables aléatoires discrètes.
+}
+
+\end{frame}
+
+
+\section{Loi conjointe de 2 variables aléatoires}
+
+\begin{frame}{Fonction de probabilité conjointe}
+
+ \begin{defn}{}
+  La \alerter{fonction de probabilité conjointe} de deux v.a.
+  discrètes $X$ et $Y$ est la fonction $p(x,y)$ qui associe à toute
+  valeur possible $(x,y)$ de $(X,Y)$ la probabilité
+  $P(X=x\mbox{\ et\ }Y=y)$:
+  $$p(x,y)=P(X=x\mbox{\ et\ }Y=Y).$$
+ \end{defn}
+ 
+ \vspace{0.1in}
+ Puisque c'est une fonction de probabilité, on a :
+ \begin{itemize}
+ \item $0\leq p(x,y) \leq 1$ pour tout $(x,y)$
+ \item $\sum\limits_{x}\sum\limits_{y}p(x,y)=1$
+ \end{itemize}
+ 
+
+\end{frame}
+
+\begin{frame}{Exemple}
+
+On considère un réseau d'alimentation électrique divisé en deux parties: le réseau $\mathcal{X}$ alimente $2$ maisons et le réseau $\mathcal{Y}$ alimente $3$ maisons. Parfois, il y a des problèmes avec le réseau et le courant ne se rend pas à toutes les maisons. \\
+%C'est un peu petit, mais bon ça pourrait être le village en dessous du sapin de Noel...
+
+\vspace{0.1 in}
+On définit les variables suivantes: \\
+$X$ = nombre de maisons du réseau $\mathcal{X}$ sans électricité \\
+$Y$ = nombre de maisons du réseau $\mathcal{Y}$ sans électricité \\
+
+\vspace{0.1in}
+Une fonction de probabilité conjointe possible pour ces variables aléatoires est:
+\begin{center}
+\begin{tabular}{cc|cccc}
+$p(x,y)$ & & \multicolumn{3}{c}{$y$} \\
+ & & 0 & 1 & 2 & 3 \\ \cline{1-6}
+ & 0 & 0.2 & 0.15  & 0.05 & 0 \\
+$x$ & 1 & 0.1 & 0.1 & 0.05 & 0.1\\
+ & 2 & 0.1 & 0.05 & 0.05 & 0.05 \\
+\end{tabular}
+\end{center}
+
+\end{frame}
+
+\section{Lois marginales}
+
+
+
+
+\begin{frame}[t]{Lois marginales}
+
+ \begin{defn}{}
+  Soit $p(x,y)$, la fonction de probabilité conjointe de
+  $X$ et $Y$. Alors les \alerter{fonctions de probabilité marginales}
+  de $X$ et $Y$ sont respectivement données par
+  \begin{align*}
+   p_{X}(x)&=P(X=x)=\sum_{\alerter{y}}p(x,y)\\
+   p_Y(y)&=P(Y=y)=\sum_{\alerter{x}}p(x,y).
+  \end{align*}
+ \end{defn}
+
+
+
+\end{frame}
+
+\begin{frame}[t]{Retour à l'exemple}
+
+On peut calculer les deux fonctions de probabilité marginales:
+
+
+\end{frame}
+
+\begin{frame}[t]{Retour à l'exemple}
+
+Quelle est la probabilité qu'il n'y ait aucune maison sans électricité dans le réseau $\mathcal{X}$?
+
+
+
+
+
+\end{frame}
+
+\section{Lois conditionnelles}
+
+
+
+\begin{frame}[t]{Lois conditionnelles}
+
+
+ \begin{defn}{}
+  Soit $p(x,y)$, la fonction de probabilité conjointe de
+  $X$ et $Y$. Alors les \alerter{fonctions de probabilité conditionnelles}
+  de $X$ sachant $Y$ et de $Y$ sachant $X$ sont respectivement données par
+  \begin{align*}
+   p_{X|y}(x)&=P(X=x|Y=y)=\frac{P(X=x\text{\ et\ }Y=y)}{P(Y=y)}
+   =\frac{p(x,y)}{p_Y(y)}\\
+   & \mbox{(fonction de $x$ pour une valeur de $y$ fixe)} \\[15pt]
+   p_{Y|x}(y)&=P(Y=y|X=x)=\frac{P(X=x\text{\ et\ }Y=y)}{P(X=x)}
+   =\frac{p(x,y)}{p_X(x)}\\
+     & \mbox{(fonction de $y$ pour une valeur de $x$ fixe)}
+  \end{align*}
+ \end{defn}
+ 
+
+
+\end{frame}
+
+\begin{frame}[t]{Retour à l'exemple }
+
+On peut calculer les fonctions de probabilité conditionnelles:
+
+\end{frame}
+
+\begin{frame}[t]{Retour à l'exemple}
+
+Quelle est la probabilité qu'il y ait une maison du réseau $\mathcal{Y}$ sans électricité s'il y a 2 maisons du réseau $\mathcal{X}$ sans électricité?
+
+
+\end{frame}
+
+\begin{frame}[t]{Espérance conditionnelle}
+
+{\small
+ Puisque la fonction de probabilité conditionnelle d'une v.a. est une fonction
+ de probabilité en bonne et due forme, on peut s'en servir pour calculer des espérances,
+ variances, etc.
+
+ \begin{defn}{}
+   Les \alerter{espérances conditionnelles} de $X$ sachant $Y$ et de $Y$ sachant
+   $X$ sont respectivement données par
+   \begin{align*}
+     E[X|y]&=\sum\limits_{x}xp_{X|y}(x)\\
+     E[Y|x]&=\sum\limits_{y}yp_{Y|x}(y).
+   \end{align*}
+ \end{defn}
+ 
+Nous avons donc également
+\begin{itemize}
+\item $E[g(X)|y]=\sum\limits_{x}g(x)p_{X|y}(x)$
+\item $E[g(Y)|x]=\sum\limits_{y}g(y)p_{Y|x}(y)$
+\end{itemize}
+
+}
+
+\end{frame}
+
+\begin{frame}[t]{Retour à l'exemple }
+Quel est l'espérance du nombre de maisons sans électricité dans le réseau $\mathcal{Y}$ s'il y a 2 maisons sans électricité dans le réseau $\mathcal{X}$? Quelle est sa variance?
+
+\end{frame}
+
+
+\section{Indépendance de variables aléatoires}
+
+\begin{frame}{Événements indépendants}
+Rappel:
+ \begin{defn}{}
+  Soient $A$ et $B$ deux événements de $S$. On dit que $A$ et $B$
+  sont \alerter{indépendants}, dénoté $A\perp B$, si, et seulement si,
+  $$P(A\cap B) = P(A)P(B).$$
+ \end{defn}
+ 
+ 
+
+   Supposons que $P(B)>0$, de sorte que $P(A|B)$ est bien définie.
+
+   \begin{itemize} \itemsep0.1in
+    \item Si $A\perp B$, alors $P(A|B)=P(A)$.
+    \item Si $P(A)>0$ aussi, alors $P(A|B)=P(A)\Leftrightarrow A\perp B$.
+   \end{itemize}
+   
+
+
+\end{frame}
+
+
+\begin{frame}[t]{Retour à l'exemple}
+
+{\small
+Est-ce que les événements suivants sont indépendants: \\
+$E_1$ = Il y a deux maisons sans électricité dans le réseau $\mathcal{X}$. \\
+$E_2$ = Il y a au moins une maison sans électricité dans le réseau $\mathcal{Y}$?
+}
+
+
+\end{frame}
+
+
+\begin{frame}[t]{Indépendance de variables aléatoires}
+
+{\small
+
+ \begin{defn}{}
+   Deux v.a. $X$ et $Y$ sont \alerter{indépendantes} si, et seulement si,
+   $$p(x,y)=p_X(x)p_Y(y), \forall x, y$$
+ \end{defn}
+ \vspace{0.2in}
+ \begin{itemize}
+  \item Si on a $p(x,y)$ et que l'on veut savoir si $X\perp Y$, on doit obtenir $p_X(x)$ et $p_Y(y)$ et ensuite on
+  vérifie si $p(x,y)=p_X(x)p_Y(y)$ pour toutes les paires de valeurs possibles.
+  \item Si on a $p_X(x)$ et $p_Y(y)$ et que l'on nous demande de calculer
+  $p(x,y)$, il n'est pas possible de le faire ... sauf si on nous
+  dit que $X\perp Y$, auquel cas $p(x,y)=p_X(x)p_Y(y)$.
+ \end{itemize}
+}
+\end{frame}
+
+\begin{frame}{Conséquence de l'indépendance}
+
+
+\begin{thm}{}
+Deux v.a. $X$ et $Y$ sont indépendantes si, et seulement si
+$$p_{Y|x}(y)=p_{Y}(y)\mbox{\ \ et\ \ }
+p_{X|y}(x)=p_{X}(x)$$
+pour toutes les valeurs possibles de $x$ et $y$.
+\end{thm}
+
+\end{frame}
+
+\begin{frame}[t]{Retour à l'exemple}
+
+Le nombre de maisons sans électricité dans le réseau $\mathcal{X}$ est-il indépendant du nombre de maisons sans électricité dans le réseau $\mathcal{Y}$?
+
+\end{frame}
+
+\begin{frame}[t]{Un autre exemple}
+Soient $X$ et $Y$ deux v.a. ayant comme fonctions de
+probabilité respectives $p_X(x)=1/3$ pour $x=1,~2$
+et $p_X(x)=1/6$ pour $x=3,~4$, et $p_Y(y)=1/2$ pour
+$y=4,~5$. Quelle est la fonction de probabilité conjointe
+de $X$ et $Y$?
+
+%Impossible de répondre avec l'information donnée!!!
+
+%On peut le calculer si on suppose que $X$ et $Y$ sont indépendantes?}
+\end{frame}
+
+\section{La covariance et la corrélation}
+
+\begin{frame}[t]{Covariance}
+Si $X$ et $Y$ ne sont pas indépendantes, on peut mesurer leur association linéaire.
+
+\begin{defn}{}
+ La \alerter{covariance} entre deux v.a. $X$ et $Y$,
+ dénotée $\sigma_{X,Y}$ ou $Cov(X,Y)$, est
+ donnée par
+ \begin{align*}
+  \sigma_{XY}=Cov(X,Y)&=E[(X-E(X))(Y-E(Y))]
+ \end{align*}
+% où $E[g(X)h(Y)]=\sum\limits_{x}\sum\limits_{y}g(x)h(y)p(x,y)$.
+\end{defn}
+
+\vspace{0.2in}
+On peut également écrire la covariance sous la forme suivante:
+
+$$ Cov(X,Y) = E[XY]-E[X]E[Y]$$
+
+La preuve est similaire à celle de $V(X) = E(X^2) - E(X)^2$.
+
+\end{frame}
+
+\begin{frame}[t]{Interprétation de la valeur de la covariance}
+\begin{itemize}
+ \item{\bf Association positive:} Une valeur $\sigma_{XY}>0$ signifie que les
+ deux v.a. ont tendance à prendre des valeurs supérieures (ou inférieures) à leur moyenne
+ respective \alerter{en même temps}.
+ \item {\bf Association négative:} Une valeur $\sigma_{XY}<0$ signifie que
+ $X$ a tendance à prendre des valeurs \alerter{supérieures} à sa moyenne quand
+ $Y$ prend des valeurs \alerter{inférieures à sa moyenne} et vice-versa.
+\end{itemize}
+
+\vspace{0.1in}
+
+\textbf{Unités:\\}
+L'unité de mesure de $Cov(X,Y)$ est l'unité de mesure de $X$ multipliée par l'unité de mesure de $Y$. C'est donc assez difficile à interpréter...
+\end{frame}
+
+\begin{frame}[t]{Propriétés de la covariance}
+ \begin{itemize}\itemsep4mm
+
+ \item $Cov(X, X)=Var(X)$
+ \item $Cov(aX, bY)=abCov(X, Y)$
+ \item $Cov(X+c, Y+d)=Cov(X, Y)$
+ \item $V(X+Y)=V(X)+V(Y)+2 Cov(X,Y)$
+ \item $V(X-Y)=V(X)+V(Y)-2 Cov(X,Y)$
+
+\item {\small $V(a_0+a_1X+\cdots+a_kX_k)=
+{\color{blue}{ a_1^2\sigma^2_1+\cdots+a_k^2\sigma^2_k}}
++2\sum\limits_{i<i'}\sum
+a_ia_{i'}Cov(X_i,X_{i'})$}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[t]%{Événements mutuellement exclusifs}
+
+\centerline{\LARGE \bf \alert{QUIZ !}}
+\begin{itemize}\itemsep1.5cm
+\item  Que peut-on dire de $Cov(5,\, X)$? % 0
+\item Vrai ou Faux: $Cov(X,\,3Y)=Cov(Y,\,3X)$? % Vrai
+\item Si $X$ est mesurée en $^\circ C$ et $Y$ en secondes, quelles sont les unités de la covariance?
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[t]{Coefficient de corrélation}
+
+Mesure standardisée de la covariance:
+
+\begin{defn}{}
+ Le \alerter{coefficient de corrélation} entre deux variables aléatoires $X$ et $Y$ est donné par
+ $$\rho=\frac{Cov(X,Y)}{\sqrt{V[X]V[Y]}}=\frac{\sigma_{XY}}{\sigma_X\sigma_Y}.$$
+\end{defn}
+
+\vspace{0.1 in}
+\textbf{Propriétés:}
+\begin{itemize}
+ \item $-1\le \rho\le 1$  \\[12pt]
+ \item  Si $X\perp Y$, alors $Cov(X,Y)=0$ et donc $\rho=0$.\\ (théorème 3.2, p-97)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[t]{Retour à l'exemple}
+Calculer la \underline{covariance} et la {corrélation} entre le nombre de maisons sans électricité dans le réseau $\mathcal{X}$ et le nombre de maisons sans électricité dans le réseau $\mathcal{Y}$.
+
+
+\end{frame}
+
+\begin{frame}[t]{Retour à l'exemple (suite)}
+
+
+
+\end{frame}
+
+\begin{frame}[t]{Attention!}
+
+Deux pièges à éviter au sujet de la corrélation:\\
+\vspace{0.1 in}
+\begin{itemize}
+\item $\rho(X,Y) = 0 \centernot\implies X \perp Y$ \\[12pt]
+\vspace{1.4in}
+\item $\rho(X,Y)$ mesure la corrélation \textbf{linéaire}. Deux variables peuvent être reliées sans que  $\rho(X,Y)$ ne puisse le détecter.
+\end{itemize}
+
+
+\end{frame}
+
+\section{Combinaisons linéaires}
+
+\begin{frame}[t]{Deux variables - Espérance}
+
+Supposons deux v.a. $X$ et $Y$. Soit $Y = a_1X + a_2Y$.
+
+$\alerter{E(Y)}  =  E[ a_1X + a_2Y]$\\
+... 
+
+
+
+
+
+
+\end{frame}
+
+\begin{frame}[t]{Deux variables - Variance}
+
+\vspace{0.2 in}
+{\footnotesize
+\begin{align*}
+V(Y) &=  E(Y^2) - (E(Y))^2\\
+ & = E[ (a_1X + a_2Y )^2] - [E(a_1X + a_2Y)]^2\\ 
+ & = E( a_1^2X^2 + 2a_1 a_2 X Y + a_2^2Y^2 ) + [a_1E(X) + a_2 E(Y)]^2  \\
+ & = ...\\
+ &= a_1^2 V(X) + 2 a_1 a_2 Cov(X, Y) + a_2^2 V(Y)
+\end{align*}
+}
+
+$$ \alerter{V(a_1X + a_2 Y) = a_1^2 V(X)  + a_2^2 V(Y) + 2 a_1 a_2 Cov(X, Y) }$$
+
+
+
+\end{frame}
+
+
+
+
+\begin{frame}[t]{Généralisation pour plusieurs variables}
+Soient $X,\hdots,X_n$, des variables aléatoires et $a_0,a_1,\hdots,a_n$, des constantes.\\
+ Soit $Y=a_0+a_1X+\cdots+a_nX_n$. Alors
+\begin{itemize}
+ \item[] $$E[Y]=a_0+\sum_{i=1}^na_iE[X_i]$$ 
+ \item[] $$V[Y] =\sum_{i=1}^na_i^2Var[X_i]+2\sum\limits_{j}\sum\limits_{i<j}a_ia_jCov(X_i,X_j)$$
+\end{itemize}
+
+
+Si $X,\hdots,X_n$ sont des v.a. \alerter{indépendantes}, alors $Cov(X_i,X_j)=0$ et  $$V[Y]=\sum_{i=1}^na_i^2V[X_i].$$
+
+%\uncover<4-> {\alert{$\Rightarrow$ Le second point implique que $Var(X-Y)\neq Var(X)-Var(Y)$ mais bien $Var(X-Y)=Var(X)+Var(Y)-2Cov(X,Y)$.}}
+
+\end{frame}
+
+\begin{frame}[t]{Exemple}
+Soient $X,Y,X_3$ les débits de 3 rivières.\\
+Soit $Y$ la hausse d'un lac où ces rivières se jettent ou prennent leur source. On peut écrire $Y=0.6X+0.5Y-1.6X_3$. \\
+
+\vspace{0.1in}
+On sait que $E(X)=10$, $E(Y)=20$, $E(X_3)=10$,
+$Var(X)=4$, $Var(Y)=16$, $Var(X_3)=1$,
+$Cov(X,Y)=1.6$ et que $X_3$ est indépendante de $X$ et de $Y$. \\
+
+\vspace{0.1in}
+Calculez l'espérance et la variance de $Y$, la hausse du lac.
+\end{frame}
+
+\begin{frame}[t]{Exemple}
+
+\end{frame}
+
+
+\begin{frame}{Bibliographie}
+ 	Ce document est rédigé avec Beamer ainsi qu'une classe .cls fourni par Jérôme Soucy. Les diapositives sont adaptées des diapositives créées par Anne-Sophie Charest 
+ pour le cours STT-1000 ainsi que celles créées par Thierry Duchesne et Emmanuelle Reny-Nolin pour le cours STT-1900.
+ 	\printbibliography
+ 	\vfill
+ 	\footnotesize Pour signaler une erreur dans ce document, veuillez écrire à l'adresse :~\href{mailto:julien.miron@mat.ulaval.ca}{julien.miron@mat.ulaval.ca}.
+ \end{frame}
+
+\end{document}
+

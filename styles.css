@@ -1,0 +1,205 @@
+/* ============================================================
+   VARIABLES DE COULEUR
+   ============================================================ */
+:root {
+  --accent: #e8590c;        /* couleur d'accent (liens, bordures, éléments actifs) */
+  --accent-clair: #fbeee4;  /* même teinte que --accent, très pâle, pour les fonds au survol */
+  --fond-clair: #FFFDFF;    /* fond du corps de page */
+  --fond-fonce: #FFFDFF;    /* fond de la sidebar et du footer — actuellement identique à --fond-clair */
+}
+
+/* ============================================================
+   ÉLÉMENTS DE BASE
+   ============================================================ */
+h2 {
+  border-bottom: 3.5px solid var(--accent);
+  padding-bottom: 0.3em;
+}
+
+a {
+  color: var(--accent);
+}
+
+body {
+  background-color: var(--fond-clair);
+}
+
+/* ============================================================
+   MISE EN PAGE — SIDEBAR ET FOOTER
+   ============================================================ */
+footer.footer,
+.nav-footer,
+.nav-footer-left,
+.nav-footer-center,
+.nav-footer-right,
+#quarto-sidebar {
+  background-color: var(--fond-fonce);
+}
+
+/* Lien actuellement sélectionné dans la sidebar de navigation (page active) */
+.sidebar-item-container .sidebar-link.active,
+.sidebar-item-container .active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Lien survolé dans la sidebar de navigation */
+.sidebar-item-container:hover .sidebar-link,
+.sidebar-link:hover {
+  color: var(--accent);
+  background-color: var(--accent-clair);
+}
+
+/* Table des matières (à droite) : entrée active et survol */
+.sidebar nav[role=doc-toc] ul > li > a.active,
+.sidebar nav[role=doc-toc] ul > li > ul > li > a.active {
+  font-weight: bold;
+  color: var(--accent) !important;
+  border-left-color: var(--accent) !important;
+}
+
+.sidebar nav[role=doc-toc] ul > li > a:hover,
+.sidebar nav[role=doc-toc] ul > li > ul > li > a:hover {
+  color: var(--accent) !important;
+  border-left-color: var(--accent) !important;
+  background-color: var(--accent-clair);
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   BLOC DE TITRE (page de garde / en-tête de chapitre)
+   ============================================================ */
+.quarto-title-block .quarto-title-meta {
+  font-size: 1.2em;
+}
+
+/* ============================================================
+   ENVIRONNEMENTS DE TYPE THÉORÈME
+   (définition, propriété, remarque, exemple, théorème, logit)
+   ============================================================ */
+.env-definition,
+.env-propriete,
+.env-remarque,
+.env-exemple,
+.env-theo,
+.env-logit,
+.env-log {
+  margin: 1.5em 0;
+  padding: 0.9em 1.2em;
+  border-left: 4px solid;   /* couleur définie individuellement ci-dessous */
+  border-radius: 4px;
+}
+
+.env-definition { border-left-color: #3454d1; background-color: #eef1fc; } /* bleu */
+.env-propriete  { border-left-color: #c9694f; background-color: #fbf1ee; } /* terracotta */
+.env-remarque   { border-left-color: #6b7280; background-color: #f2f3f5; } /* gris neutre */
+.env-exemple    { border-left-color: #9467bd; background-color: #f5f0fa; } /* violet */
+.env-theo       { border-left-color: #4ebf90; background-color: #f0fdf9; } /* vert menthe */
+.env-logit      { border-left-color: #e6a817; background-color: #fdf6e3; } /* jaune ambré */
+.env-log      { border-left-color: #e6a817; background-color: #fdf6e3; } /* jaune ambré */
+
+
+/* Retire la marge du haut sur le premier paragraphe à l'intérieur d'un bloc,
+   pour que le texte colle au titre du bloc plutôt qu'au cadre */
+.env-definition p:first-child,
+.env-propriete p:first-child,
+.env-remarque p:first-child,
+.env-exemple p:first-child {
+  margin-top: 0;
+}
+
+/* Titre en gras affiché en haut de chaque bloc d'environnement (ex. "Définition 1.2") */
+.env-titre {
+  font-weight: bold;
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 0.3em;
+}
+
+/* ============================================================
+   BOÎTE DE NOTATION REPLIABLE (élément <details class="notation">)
+   ============================================================ */
+details.notation {
+  background-color: #f0f4f8;
+  border-left: 4px solid #4a90d9;
+  border-radius: 4px;
+  padding: 0.6em 1em;
+  margin: 1em 0;
+  font-size: 0.95em;
+}
+
+details.notation summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #2c5f8a;
+  list-style: none;   /* retire le marqueur natif (triangle) du navigateur */
+  outline: none;
+}
+
+/* Retire spécifiquement la flèche par défaut de Chrome/Safari,
+   pour la remplacer par notre propre flèche (::after ci-dessous) */
+details.notation summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Étiquette affichée avant le texte du résumé */
+details.notation summary::before {
+  content: "💡 Élément de notation:";
+}
+
+/* Flèche personnalisée, alignée à droite, qui pivote à l'ouverture */
+details.notation summary::after {
+  content: " ▸";
+  float: right;
+  transition: transform 0.2s ease;
+}
+
+details.notation[open] summary::after {
+  transform: rotate(90deg);
+}
+
+/* Espacement du contenu une fois la boîte dépliée */
+details.notation p {
+  margin: 0.5em 0 0 0;
+}
+
+/* ============================================================
+   RÉFÉRENCES BIBLIOGRAPHIQUES (section générée par Quarto/Pandoc)
+   ============================================================ */
+#refs {
+  margin-top: 3em;
+  padding-top: 1.5em;
+  border-top: 1px solid var(--accent);
+}
+
+/* Titre "Références" ajouté manuellement au-dessus de la liste,
+   car Quarto ne génère pas de titre de section pour #refs */
+#refs::before {
+  content: "Références";
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+/* ============================================================
+   FORMULES MATHÉMATIQUES (MathJax)
+   ============================================================ */
+/* Empêche les formules rendues en CHTML de se couper sur plusieurs lignes */
+mjx-container[jax="CHTML"] {
+  white-space: nowrap;
+}
+
+#TOC > ul > li > a {
+  font-weight: bold;
+}
+
+#TOC ul ul a {
+  font-weight: normal;
+}
+
+#TOC ul ul {
+  padding-left: 2.2em;
+}

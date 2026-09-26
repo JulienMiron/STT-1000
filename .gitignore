@@ -1,0 +1,27 @@
+/.quarto/
+/_book/
+/_freeze/
+*_files/
+.Rhistory
+.RData
+
+**/*.quarto_ipynb
+
+# Diapos : les PDF compilés (présentation + imprimable) et les fichiers
+# auxiliaires sont produits par la compilation. Les autres PDF de diapos/
+# (venn.pdf, TableNormale.pdf, etc.) sont des images utilisées par les
+# diapos et restent versionnés.
+/diapos/Module *.pdf
+/diapos/*.aux
+/diapos/*.bbl
+/diapos/*.bcf
+/diapos/*.blg
+/diapos/*.fdb_latexmk
+/diapos/*.fls
+/diapos/*.log
+/diapos/*.nav
+/diapos/*.out
+/diapos/*.run.xml
+/diapos/*.snm
+/diapos/*.toc
+/diapos/*.vrb

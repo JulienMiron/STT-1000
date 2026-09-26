@@ -1,0 +1,5 @@
+# Configuration latexmk pour les diapos STT-1000
+$pdf_mode = 1;                       # pdflatex
+$pdflatex = 'pdflatex -interaction=nonstopmode -halt-on-error -file-line-error %O %S';
+$bibtex_use = 0;                     # aucun module n'utilise de bibliographie pour l'instant
+$clean_ext = 'nav snm vrb bbl run.xml';   # fichiers propres à Beamer et biblatex

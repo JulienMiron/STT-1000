@@ -1,0 +1,484 @@
+\documentclass{BeamerTemplate}
+\title{Module 9 - Tests d'hypothèses, partie 2}
+\subtitle{STT-1000 Probabilités et statistique}
+
+\usepackage{adjustbox}
+
+
+\begin{document}
+\AtBeginSection{\frame{\sectionpage}}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section[Intro]{Introduction}
+
+\subsection*{ }
+
+\begin{frame}[t]{Objectif}
+
+\underline{Avec UN échantillon:}\\
+Tester si un paramètre prend une valeur précise  ($H_0:\mu=200$)\\
+
+\medskip
+
+\underline{Avec DEUX échantillons:}\\
+ \alerter{Tester si  le paramètre prend la même valeur dans deux populations} ($H_0:\mu_1=\mu_2$).
+
+\bigskip
+Exemples:
+    \begin{itemize}
+    \item La concentration moyenne de phosphate dans le sol est-elle la même dans la région A que dans la région B?
+    \item La variabilité du débit de la rivière C est-elle inférieure à celle du débit de la rivière D?
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Méthode d'analyse}
+
+Les mêmes étapes de construction du test d'hypothèses qu'avec une population:
+
+\vspace{0.3cm}
+\begin{enumerate}[1)]\itemsep0.35cm
+  \item Formuler  $H_0$ et $H_1$.
+  \item \'Etablir une règle pour le rejet de $H_0$ basée sur un seuil $\alpha$ et une loi échantillonnale appropriée.
+  \item Utiliser les données  pour calculer la statistique observée.
+  \item Décider de rejeter ou non  $H_0$.
+  \item \'Enoncer la conclusion dans les termes de l'étude.
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{5 cas étudiés}
+\small
+\begin{tabular}{|c|l|}
+  \hline
+&\\[-0.3cm]
+$H_0:{\color{blue}{\mu_1=\mu_2}}$       &1) $ \left.\begin{array}{l}
+                            X_{11}, ..., X_{1n_1}\;\sim\;N(\mu_1, \, \sigma^2_1) \\[0.1cm]
+                            X_{21}, ..., X_{2n_2}\;\sim\;N(\mu_2, \, \sigma^2_2)
+                            \end{array}\right\} $
+                            \begin{tabular}{c} $\sigma^2_1$ et $\sigma^2_2$ \\[0.1cm]
+                            \alerter{connues}\end{tabular}\\[-0.3cm]
+&\\\cline{2-2}
+\begin{tabular}{c}
+\'Echantillons\\
+ \alerter{indépendants}
+ \end{tabular}          &2) $ \left.\begin{array}{l}
+                            X_{11}, ..., X_{1n_1}\;\sim\;N(\mu_1, \, \sigma^2) \\ [0.1cm]
+                            X_{21}, ..., X_{2n_2}\;\sim\;N(\mu_2, \, \sigma^2)
+                            \end{array}\right\} $
+                            \begin{tabular}{c} $\sigma^2_1$ et $\sigma^2_2$ \alerter{inconnues}\\
+                            mais \alerter{égales}\end{tabular}\\[-0.3cm]
+&\\\cline{2-2}
+&\\[-0.3cm]              &3) $ \left.\begin{array}{l}
+                            X_{11}, ..., X_{1n_1}\;\sim\;N(\mu_1, \, \sigma^2_1) \\ [0.1cm]
+                            X_{21}, ..., X_{2n_2}\;\sim\;N(\mu_2, \, \sigma^2_2)
+                            \end{array}\right\} $
+                            \begin{tabular}{c} $\sigma^2_1$ et $\sigma^2_2$ \alerter{inconnues}\\
+                            mais \alerter{inégales}\end{tabular}\\[-0.3cm]
+&\\\hline
+&\\[-0.3cm]
+\begin{tabular}{c}
+$H_0: {\color{blue}{\mu_1=\mu_2}}$\\
+\'Ech. \alerter{appariés}
+ \end{tabular}              &4) $ \left.\begin{array}{l}
+                            X_{11}, ..., X_{1n}\;\sim\;N(\mu_1, \, \sigma^2_1) \\ [0.1cm]
+                            X_{21}, ..., X_{2n}\;\sim\;N(\mu_2, \, \sigma^2_2)
+                            \end{array}\right\} $
+                            \begin{tabular}{c} $\sigma^2_1$ et $\sigma^2_2$ inconnues,\\
+                            dépend. par paires\end{tabular}\\[-0.3cm]
+&\\\hline\hline
+&\\[-0.3cm]
+\begin{tabular}{c}
+$H_0:{\color{blue}{p_1=p_2}}$\\
+\'Ech. indép.
+ \end{tabular}              &5) $ \left.\begin{array}{l}
+                            X_{11}, ..., X_{1n_1}\sim \text{Bernoulli}(p_1) \\ [0.1cm]
+                            X_{21}, ..., X_{2n_2}\sim \text{Bernoulli}(p_2)
+                            \end{array}\right. $
+                            \\[-0.3cm]
+&\\\hline
+\end{tabular}
+\normalsize
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{comment}
+&\\[-0.3cm]
+\begin{tabular}{c}
+$H_0:p_1=p_2$ \\
+\'Ech. indép.
+ \end{tabular}              &6) $ \left.\begin{array}{l}
+                            X_{11}, ..., X_{1n_1}\;\sim\;\textnormal{Bernoulli}(p_1) \\[0.1cm]
+                            X_{21}, ..., X_{2n_2}\;\sim\;\textnormal{Bernoulli}(p_2)
+                            \end{array}\right\} $
+                            \begin{tabular}{c} $n_1$ et $n_2$\\[0.1cm]
+                            grands\end{tabular}\\[-0.3cm]
+&\\\hline
+
+\end{comment}
+
+\section{Comparaison de deux moyennes}
+
+
+\begin{frame}[t]%{Événements mutuellement exclusifs}
+
+\centerline{\LARGE \bf \alert{QUIZ !}}
+\begin{enumerate}[$\bullet$]\itemsep 2mm
+\item On pige un échantillon de taille $n_1=10$ dans une population où $X\sim N(30, 16)$.
+\item On pige un échantillon de taille $n_2=25$ dans une population où $Y\sim N(10, 25)$.
+\end{enumerate}
+
+\vspace{6mm}
+
+\begin{enumerate}\itemsep 5mm
+\item Quelle est la distribution de $\overline X$ ?
+\item Quelle est la distribution de $\overline X - \overline Y $ ?
+\end{enumerate}
+\vspace{1cm}
+
+\end{frame}
+
+\begin{frame}[t]{Cas 1: Populations normales, variances connues, échantillons indépendants}
+
+On recueille \alerter{deux échantillons indépendants} dans des populations où la variable $X$ est  distribuée selon des lois normales de moyennes $\mu_1$ et $\mu_2$ et de variances $\sigma^2_1$ et $\sigma^2_2$ {connues}.
+\begin{align*}
+X_{11}, \ldots, X_{1n_1}\; \overset{i.i.d.}{\sim} \;N(\mu_1, \sigma^2_1) & \quad &  X_{21}, \ldots, X_{2n_2} \;\overset{i.i.d.}{\sim}\; N(\mu_2, \sigma^2_2).
+\end{align*}
+On connaît la loi des moyennes:
+\begin{align*}
+\overline{X}_1 %= \frac{1}{n_1} \sum_{i=1}^{n_1} X_{1i}
+\;\sim \;N\left(\mu_1, \frac{\sigma_1^2}{n_1} \right) &\quad &
+\overline{X}_2 %= \frac{1}{n_2} \sum_{i=1}^{n_2} X_{2i}
+\;\sim\; N\left(\mu_2, \frac{\sigma_2^2}{n_2}\right)
+\end{align*}
+On déduit la loi de la différence des moyennes:
+$$\overline{X}_1 - \overline{X}_2 \;\sim\; N\left( \mu_1 - \mu_2, \frac{\sigma^2_1}{n_1} + \frac{\sigma^2_2}{n_2} \right). $$
+\end{frame}
+
+\begin{frame}[t]{Cas 1 : Statistique de test}
+
+{\small
+Sous l'hypothèse nulle $H_0 : \mu_1 = \mu_2$, on a que
+$$
+Z_0 = \frac{\overline{X}_1 - \overline{X}_2 }{\sqrt{\frac{\sigma^2_1}{n_1} + \frac{\sigma^2_2}{n_2} }} \quad \sim \quad N(0,1).
+$$
+
+Au seuil $\alpha$,
+
+\begin{itemize}\itemsep4mm
+\item $H_1 : \mu_1 \ne \mu_2$: on rejette $H_0$ si $|z_0| > z_{\alpha/2}$
+\item $H_1 : \mu_1 > \mu_2$: on rejette $H_0$ si $\;z_0 > \;z_{\alpha}$
+\item $H_1 : \mu_1 < \mu_2$: on rejette $H_0$ si $\;z_0 < -z_{\alpha}$
+\end{itemize}
+}
+\end{frame}
+
+
+\subsection{Cas 2 et 3: Populations normales, variances inconnues, échantillons indépendants}\label{sec:ttestindep}
+
+\begin{frame}[t]{Cas 2 et 3 : Et si les variances sont inconnues?}
+
+Si $\sigma^2_1$ et $\sigma^2_2$ sont inconnues, on doit utiliser un estimateur des variances des deux distributions:
+
+\begin{itemize}
+\item<1-> \underline{si les variances sont égales} ($\sigma^2_1 = \sigma^2_2 = \sigma^2$), on peut  \alerter{combiner les estimations de variance des deux échantillons pour estimer cette variance};
+\item<2-> \underline{si les variances ne sont pas égales} ($\sigma_1^2 \ne \sigma_2^2$), on doit \alerter{estimer $\sigma^2_1$ et $\sigma^2_2$  séparément à partir de chaque échantillon}.
+\end{itemize}
+
+\uncover<3->{Il faut faire un test de comparaison des variances (test $F$) pour distinguer ces deux  situations (pas dans ce cours).}
+\end{frame}
+
+
+\begin{frame}[t]{Cas 2: Lois normales, $\sigma^2_1 = \sigma^2_2$ inconnues}
+
+{\small
+
+On \alerter{combine} ces deux estimateurs
+$$\alerter{S_1^2} = \frac{1}{n_1-1} \sum_{i=1}^{n_1}(X_{1i} - \overline{X}_1)^2 \qquad\quad \alerter{S_2^2} = \frac{1}{n_2-1} \sum_{i=1}^{n_2}(X_{2i} - \overline{X}_2)^2$$
+
+pour obtenir une estimation globale de $\sigma^2$:
+$$
+\alerter{S_p^2} = \frac{(n_1-1)S_1^2 + (n_2-1)S_2^2}{n_1 + n_2 - 2}.
+$$
+
+\medskip
+\uncover<2->{
+Sous $H_0 : \mu_1 = \mu_2$,
+$$ \overline{X}_1 - \overline{X}_2 \sim N\left(0,\; \sigma^2 \left[ \frac{1}{n_1} + \frac{1}{n_2} \right] \right) $$
+%et $$ T_0 = \frac{\overline{X}_1 - \overline{X}_2}{\sqrt{S_p^2 \left( \frac{1}{n_1} + \frac{1}{n_2} \right)} } \sim t_{n_1 + n_2 -2}. $$
+}
+}
+\end{frame}
+
+\begin{frame}[t]{Statistique de test}
+Si $H_0$ est vraie,
+$$
+T_0 = \frac{\overline{X}_1 - \overline{X}_2}{\sqrt{S_p^2 \left( \frac{1}{n_1} + \frac{1}{n_2} \right)} } \sim t_{n_1 + n_2 -2}.
+$$
+
+Au seuil $\alpha$,
+
+\begin{itemize}\itemsep2mm
+\item $H_1 : \mu_1 \ne \mu_2$: on rejette $H_0$ si $\left| t_0  \right|  > t_{\alpha/2, n_1+n_2-2}$
+\item $H_1 : \mu_1 > \mu_2$: on rejette $H_0$ si $\;t_0   > \;t_{\alpha, n_1+n_2-2}$
+\item $H_1 : \mu_1 < \mu_2$: on rejette $H_0$ si $\;t_0   < - t_{\alpha,n_1+n_2-2}$
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[t]{Cas 3: Lois normales, $\sigma^2_1 \ne \sigma^2_2$ inconnues}
+
+{\small On doit estimer \alerter{séparément} les variances $\sigma^2_1$ et $\sigma_2^2$.
+Il n'y a pas de statistique $T$ exacte pour tester $H_0 : \mu_1 = \mu_2$.
+Par contre
+\begin{align*}
+T_0^* = \frac{\overline{X}_1 - \overline{X}_2}{ \sqrt{ \frac{S^2_1}{n_1} + \frac{S^2_2}{n_2}  }} \approx t_v  & &
+\mbox{o\`u }\quad v = \frac{\left( \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2} \right) ^2 }{ \frac{ (s_1^2 / n_1)^2}{n_1 + 1} + \frac{ (s_2^2 / n_2)^2}{n_2 + 1}} - 2.
+\end{align*}
+
+\medskip
+Au seuil $\alpha$,
+
+\begin{itemize}\itemsep2mm
+\item $H_1 : \mu_1 \ne \mu_2$: on rejette $H_0$ si $\left| t_0^*  \right|  > t_{\alpha/2, v}$
+\item $H_1 : \mu_1 > \mu_2$: on rejette $H_0$ si $\;t_0^*   > \;t_{\alpha,v}$
+\item $H_1 : \mu_1 < \mu_2$: on rejette $H_0$ si $\;t_0^*   < - t_{\alpha,v}$
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}[t]{Nomenclature}
+
+\begin{itemize}\itemsep1cm
+\item Cas 2: ce test pour variances égales est souvent appelé \alerter{test-t à deux échantillons} ({\it two-sample t-test}).
+\item Cas 3: ce test approximatif pour variances inégales est souvent appelé \alerter{test de Welch} ({\it Welch's test}).
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[t]{Exemple 1}
+
+{\small
+Des échantillons d'eau sont prélevés de 2 rivières en plusieurs lieux, toujours à la même profondeur. \\
+On  mesure la concentration de zinc, en $\mu g/l$, considérée comme une variable aléatoire normale.
+
+%\vspace{2mm}
+
+%\begin{center}
+\begin{tabular}{|l|cccccc|c|c|}
+\hline
+Lieu & 1 & 2 & 3 & 4 & 5 & 6 & $\overline x$& $s^2$\\
+\hline
+Rivière 1 & 6,51 & 5,43 & 4,32 & 5,73 & 3,90 & 4,11 & 5,00&1,092\\
+Rivière 2 & 6,03 & 4,92 & 3,60 & 5,13 & 2,58 &  & 4,45&1,850\\
+\hline
+\end{tabular}
+%\end{center}
+
+}
+
+\end{frame}
+
+
+\begin{frame}[t]{Exemple 1 (suite)}
+
+Au seuil de $5 \%$, peut-on dire que la concentration moyenne est plus élevée dans la rivière 1 que dans la rivière 2?
+
+\end{frame}
+\begin{frame}[t]{Exemple 1 (suite)}
+
+\end{frame}
+
+\subsection{Cas 4: Populations normales, échantillons appariés}\label{sec:ttestapp}
+
+\begin{frame}[t]{Deux scénarios d'échantillonnage}
+
+On veut comparer deux types de  bâtons de golf. On collecte 40 observations.
+\vspace{2mm}
+
+\medskip
+\small
+
+\underline{Scénario 1}:\\
+20 golfeurs frappent une balle avec le bâton $A$ (on note la distance).\\% parcourue par la balle.
+20 autres golfeurs frappent avec le bâton $B$ (on note la distance).\\
+On note 40 observations indépendantes.
+
+\medskip
+\underline{Scénario 2}:\\
+20 golfeurs  frappent une balle avec chacun des bâtons A et B. \\
+On note 20 paires d'observations.%: $$(X_{11}, X_{21}), \ldots, (X_{1n}, X_{2n})$$
+
+\medskip
+\underline{Lequel des scénarios est préférable}?
+
+\end{frame}
+
+\begin{frame}[t]{Notion d'appariement}
+
+\begin{itemize}
+\item \underline{Scénario 1}:  %les 20 golfeurs ayant testé le bâton A sont différents de ceux ayant testé le bâton B.
+    \alerter{Comment distinguer si la différence observée est due aux golfeurs ou aux bâtons?}
+
+\medskip
+$Var(\overline{X}_A-\overline{X}_B)$ risque d'être trop élevée pour  conclure qu'un bâton est meilleur que l'autre.
+
+\medskip
+\item \underline{Scénario 2}: \alerter{On contrôle la variabilité entre les golfeurs} en les faisant frapper avec les deux bâtons.
+
+\medskip
+S'il y a une différence significative, elle sera due aux bâtons et non à la variabilité entre golfeurs.
+
+\medskip
+\uncover<2->{
+\underline{Problème}: les $X_{Aj}$ ne sont pas indépendants des $X_{Bj}$.\\
+On ne peut pas utiliser les tests vus aux cas 1, 2 et 3.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[t]{Cas 4: Populations normales, échantillons appariés}
+
+Considérons plutôt les différences $D_j$ qui, elles, \alerter{sont indépendantes}:
+ $$\begin{array}{lll}
+ D_1 &=& X_{A1}-X_{B1}\\
+ D_2 &=& X_{A2}-X_{B2}\\
+ &...&\\
+ D_n &=& X_{An} - X_{Bn}
+ \end{array}$$
+
+
+\medskip
+
+\end{frame}
+
+\begin{frame}[t]{Un échantillon de $n$ différences}
+
+{\small
+
+Dans le cas de deux échantillons appariés, un test de $H_0: \mu_1 = \mu_2$ est équivalent à tester $H_0: \mu_D = 0$ dans le cas d'\alerter{un seul échantillon $D_1,\ldots,D_n$
+d'une loi normale avec variance inconnue}.
+
+\bigskip
+La statistique du test est donc
+$$
+T_0 = \frac{\overline{D}}{S_D / \sqrt{n}}\sim t_{n-1}\qquad\text{sous }\;H_0,
+$$
+o\`u
+\begin{align*}
+\overline{D} = \frac{1}{n} \sum_{j=1}^n D_j = \frac{1}{n} \sum_{j=1}^n (X_{1j} - X_{2j}) & \mbox{ et } & S_D^2 = \frac{1}{n-1} \sum_{j=1}^n (D_j - \overline{D})^2.
+\end{align*}
+
+\medskip
+\uncover<2->{
+Le test bilatéral apparié rejette $H_0 : \mu_D = 0$  au seuil $\alpha$  si $|t_0| > t_{\alpha/2, n-1}$. On adapte la règle pour les tests unilatéraux.}
+}
+\end{frame}
+
+\begin{frame}[t]{Quelques remarques importantes}
+\begin{itemize}
+\item<1-> C'est \alerter{le contexte} qui détermine si les données sont appariées ou non.
+\item<2-> Si on analyse des données appariées sans tenir compte de l'appariement, on risque de diminuer grandement la significativité des données (c.-à-d. de surestimer le seuil observé).
+\item<3-> Il est avantageux d'utiliser l'appariement dans une expérience \alerter{quand les unités expérimentales sont hétérogènes}.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[t]{Exemple 2}
+
+On veut savoir si les étudiants de 16 ans sont aussi forts en mathématiques en juin qu'en septembre. On choisit 8 étudiants au hasard qui passent un examen similaire avant et après les vacances. Voici leurs résultats.
+\vspace{2mm}
+
+
+\begin{center}
+\begin{tabular}{|c|cccccccc|c|}\hline
+\'Etudiant & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Moyenne\\ \hline
+Examen 1 & 77 & 74 & 82 & 73 & 87 & 69 & 66 & 81& 76,125\\
+Examen 2 & 72 & 68 & 76 & 68 & 84 & 68 & 61 & 76 &71,625\\ \hline
+\end{tabular}
+\end{center}
+
+\bigskip
+\end{frame}
+
+\begin{frame}[t]{Exemple 2 (suite)}
+
+En supposant que les notes à chaque examen suivent une loi normale, que peut-on conclure sur la différence de moyennes entre le premier et le deuxième examen, au seuil $\alpha=0,05$ ?
+
+{\ }
+\end{frame}
+
+
+\begin{frame}[t]{Exemple 2 (suite)}
+
+{\ }
+\end{frame}
+
+
+\begin{frame}[t]%{Événements mutuellement exclusifs}
+
+\centerline{\LARGE \bf \alert{QUIZ !}}
+Par erreur, vous faites l'analyse de l'exemple 2 comme s'il s'agissait d'échantillons indépendants avec variances égales.
+\vspace{7mm}
+
+\begin{enumerate}\itemsep 9mm
+\item Quelle est votre règle de rejet de $H_0$ ?
+\item La valeur observée de la statistique du test est 1,28. Quelle est votre conclusion?
+\end{enumerate}
+\vspace{1.4cm}
+
+\end{frame}
+
+
+\begin{frame}[t]{Cas 5: Comparaison de deux proportions}
+
+Dans le cas de proportion, on a $X_{11}, \ldots, X_{1n_1} \overset{i.i.d.}{\sim} \mbox{Bernoulli}(p_1)$, et $X_{21}, \ldots, X_{2n_2} \overset{i.i.d.}{\sim} \mbox{Bernoulli}(p_2).$
+
+\vspace{0.1 in}
+Alors, si $n_1 >30$ et $n_2 > 30$, par le TCL
+
+\begin{align*}
+\hat{p}_1 = \frac{1}{n_1} \sum_{i=1}^{n_1} X_{11} &\approx N\left(p_1, \frac{p_1(1-p_1)}{n_1} \right) \\
+\hat{p}_2 = \frac{1}{n_2} \sum_{i=1}^{n_2} X_{21} &\approx N\left(p_2, \frac{p_2(1-p_2)}{n_2}\right)
+\end{align*}
+
+
+
+Sous l'hypothèse nulle, $p_1 = p_2 = p$ et on a donc
+
+
+$$ \hat{p}_1  - \hat{p}_2 \approx N\left( 0, p(1-p) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) \right) $$
+\end{frame}
+
+\section{Comparaisons de deux proportions}
+\begin{frame}[t]{Cas 5: Comparaison de deux proportions}
+
+La statistique du test est alors
+
+$$ Z_0 = \frac{\hat{p}_1 - \hat{p}_2}{ \sqrt{ \hat{p}(1-\hat{p}) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) } } \mbox{ où } \hat{p} = \frac{n_1 \hat{p}_1 + n_2 \hat{p}_2}{n_1 + n_2} $$
+
+
+\vspace{0.2in}
+Un test de niveau approximativement $\alpha$ rejette $H_0$ si 
+\begin{align*} 
+\left| z_0  \right|  > z_{\alpha/2} & & (H_1 : p_1 \ne p_2) \\
+z_0   > z_{\alpha} & & (H_1 : p_1 > p_2) \\
+z_0   < z_{\alpha} & & (H_1 : p_1 < p_2) \\
+\end{align*}
+
+
+\end{frame}
+
+
+\begin{frame}{Bibliographie}
+ 	Ce document est rédigé avec Beamer ainsi qu'une classe .cls fourni par Jérôme Soucy. Les diapositives sont adaptées des diapositives créées par Thierry Duchesne et Emmanuelle Reny-Nolin pour le cours STT-1900. Les graphiques proviennent de ces mêmes diapositives.
+ 	\printbibliography
+ 	\vfill
+ 	\footnotesize Pour signaler une erreur dans ce document, veuillez écrire à l'adresse :~\href{mailto:julien.miron@mat.ulaval.ca}{julien.miron@mat.ulaval.ca}.
+ \end{frame}
+
+\end{document}
+
