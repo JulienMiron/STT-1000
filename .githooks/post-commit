@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Hook Git : reporte automatiquement vers Global les diapos modifiées par ce commit.
+# Voir scripts/sync-to-global.sh pour la logique complète.
+# Activé localement via : git config core.hooksPath .githooks
+set -e
+REPO_DIR="$(git rev-parse --show-toplevel)"
+bash "$REPO_DIR/scripts/sync-to-global.sh" || {
+  echo "[post-commit] La synchronisation vers Global a échoué (voir ci-dessus)." >&2
+  echo "[post-commit] Le commit local n'est PAS annulé ; relance la synchronisation manuellement une fois corrigé :" >&2
+  echo "[post-commit]   bash '$REPO_DIR/scripts/sync-to-global.sh' --all" >&2
+}
