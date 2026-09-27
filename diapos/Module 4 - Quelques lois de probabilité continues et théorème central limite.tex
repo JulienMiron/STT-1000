@@ -79,10 +79,10 @@ F(x)&=
 
 {\small
 La puissance de calcul demandée à un processeur lors de l'exécution d'une
-tâche peut être n'importe quelle valeur entre 1.5 et 2 GHz, et chaque valeur
+tâche peut être n'importe quelle valeur entre 1,5 et 2 GHz, et chaque valeur
 dans cet intervalle est équiprobable. 
 
-Quelle est la probabilité que la puissance demandée excède 1.8 GHz?\\
+Quelle est la probabilité que la puissance demandée excède 1,8 GHz?\\
 
 \vspace{1 in}
 Quelle est l'espérance de la puissance demandée?
@@ -180,14 +180,14 @@ que 4 bateaux passent en 15 heures?
 La loi exponentielle est \alerter{la seule loi continue
 sans mémoire}:
 \begin{align*}
-P[X>x+s|X>s]&=\frac{P[X>x+s\text{\ et\ }X>s]}{P[X>s]}\\[8pt]
-&=\frac{P[X>x+s]}{P[X>s]}
+P(X>x+s|X>s)&=\frac{P(X>x+s\text{\ et\ }X>s)}{P(X>s)}\\[8pt]
+&=\frac{P(X>x+s)}{P(X>s)}
 =\frac{1-F_X(x+s)}{1-F_X(s)}\\[8pt]
 &=\frac{1-\{1-\exp(-\lambda\{x+s\})\}}
 {1-\{1-\exp(-\lambda s)\}}=\frac{\exp(-\lambda\{x+s\})}{\exp(-\lambda s)}\\[8pt]
 &=e^{-\lambda x-\lambda s -(-\lambda s)} =e^{-\lambda x} \\[8pt]
 &=1-(1-e^{-\lambda x})\\[8pt]
-&=P[X>x]
+&=P(X>x)
 \end{align*}
 \end{frame}
 
@@ -207,7 +207,7 @@ est la probabilité qu'elle survivra au moins 1000 autres heures?
  
 
 \begin{frame}[t]{Loi Gamma}
-Considérons $Y_1,\hdots,Y_n$ des variables aléatoires indépendantes et identiquement distribuées (i.i.d.), telles que $Y_i\sim \text{exp}(\lambda)$, $\forall i =1,\hdots,n$. Alors,
+Considérons $Y_1,\ldots,Y_n$ des variables aléatoires indépendantes et identiquement distribuées (i.i.d.), telles que $Y_i\sim \text{exp}(\lambda)$, $\forall i =1,\ldots,n$. Alors,
 $$ X=\sum_{i=1}^nY_i  \sim \alerter{\mbox{Gamma}(n,\lambda)}.$$ 
 
 \textbf{Fonction de densité:} Si $X \sim \mbox{Gamma}(n,\lambda)$, où $n>0$ et $\lambda > 0$, \\
@@ -274,7 +274,7 @@ Poisson de taux $\lambda$, alors on a que
  est une v.a. de loi exponentielle de paramètre $\lambda$ et donc de moyenne $1/\lambda$;
  \item  le temps qui s'écoule entre $n+1$ événements (ou
  avant un $n$-ème événement) est une v.a. qui suit une
- loi gamma$(n,\lambda)$.
+ loi Gamma$(n,\lambda)$.
 \end{itemize}
 
 \end{frame}
@@ -472,10 +472,10 @@ Il n'y a pas de solution analytique à cette intégrale. On doit obtenir ces val
 
 \begin{frame}{Loi normale standard}
 
-La loi $N(0,1)$ est appelée \alerter{loi normale standard} ou encore \alerter{loi normale centrée réduite}. Cette loi est très importante, et mérite donc une notation spéciale: 
+La loi $\mathcal{N}(0,1)$ est appelée \alerter{loi normale standard} ou encore \alerter{loi normale centrée réduite}. Cette loi est très importante, et mérite donc une notation spéciale: 
 
 \vspace{0.1 in}
-Si $Z \sim N(0,1)$ alors on dénote
+Si $Z \sim \mathcal{N}(0,1)$ alors on dénote
 
 \begin{itemize}
 \item  $\phi(z)$ la densité de $Z$\\[6pt]
@@ -501,7 +501,7 @@ $\Phi(z)$ n'a toujours pas de forme analytique, mais les livres de statistiques 
 
 \begin{frame}[t]{Loi normale standard}
 
-On suppose que $X \sim N(0,1)$.
+On suppose que $X \sim \mathcal{N}(0,1)$.
 
 \vspace{0.1 in}
 Quelle est la probabilité que $X$ soit plus petit que 1,15?
@@ -537,7 +537,7 @@ Quelle est la probabilité que $|X|$ soit plus petit que 2?
 
 \begin{frame}[t]{Loi normale standard}
 
-On peut aussi lire la table dans l'autre sens, i.e. trouver les valeurs de $x$ à partir des probabilités:
+On peut aussi lire la table dans l'autre sens, c-à-d trouver les valeurs de $x$ à partir des probabilités:
 \vspace{0.1 in}
 
 Quelle est la valeur $c$ telle que $P(X < c) = 78\%$?
@@ -551,7 +551,7 @@ Quelle est la valeur $c$ telle que $P(X > c) = 94,3\%$?
 
 \begin{frame}{Standardisation}
 
-Si $X \sim N(\mu, \sigma^2)$, et qu'on veut calculer des probabilités pour $X$, on peut utiliser la table pour la loi normale standard grâce au processus de \alerter{standardisation}:
+Si $X \sim \mathcal{N}(\mu, \sigma^2)$, et qu'on veut calculer des probabilités pour $X$, on peut utiliser la table pour la loi normale standard grâce au processus de \alerter{standardisation}:
 
 \begin{align*}
 F_X(x)= P(X\le x)&=\int_{-\infty}^x \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2}(\frac{t-\mu}{\sigma})^2}dt\\[6pt]
@@ -560,14 +560,14 @@ F_X(x)= P(X\le x)&=\int_{-\infty}^x \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{1}{2}
 \end{align*}
 
 \vspace{0.1in}
-{\small Pour calculer la valeur de la fonction de répartition en $x$ pour une $N(\mu, \sigma^2)$, on peut simplement calculer la fonction de répartition de la loi normale standard en $\frac{x-\mu}{\sigma}$, par exemple à l'aide de la table.}
+{\small Pour calculer la valeur de la fonction de répartition en $x$ pour une $\mathcal{N}(\mu, \sigma^2)$, on peut simplement calculer la fonction de répartition de la loi normale standard en $\frac{x-\mu}{\sigma}$, par exemple à l'aide de la table.}
 
 \end{frame}
 
 \begin{frame}{Standardisation}
   
-Un raisonnement similaire permet de montrer que si $$X\sim N(\mu,\sigma^2)$$
-alors $$Z=\frac{(X-\mu)}{\sigma} \sim N(0,1).$$
+Un raisonnement similaire permet de montrer que si $$X\sim \mathcal{N}(\mu,\sigma^2)$$
+alors $$Z=\frac{(X-\mu)}{\sigma} \sim \mathcal{N}(0,1).$$
 
 
 \vspace{0.4 in}
@@ -578,11 +578,11 @@ table de la loi normale standard est requise!}
 
 
 \begin{frame}[t]{Standardisation}
-Supposons que $X\sim N(\mu,\sigma^2)$ et que l'on cherche
+Supposons que $X\sim \mathcal{N}(\mu,\sigma^2)$ et que l'on cherche
 $P(a<X\le b)$.\\
 
 \vspace{0.1 in}
- Alors si $Z=\frac{(X-\mu)}{\sigma}$, on a que $Z\sim N(0,1)$.
+ Alors si $Z=\frac{(X-\mu)}{\sigma}$, on a que $Z\sim \mathcal{N}(0,1)$.
  
  Donc
 \begin{align*}
@@ -600,13 +600,13 @@ P(a<X\le b)&=P\left(\frac{a-\mu}{\sigma}<\frac{X-\mu}{\sigma}\le
 Les problèmes impliquant des calculs de probabilités pour la
 loi normale se résolvent donc en deux étapes:\\
 \begin{itemize}
-\item[1-] standardiser la v.a. d'intérêt pour obtenir des probabilités impliquant la $N(0,1)$;\\
+\item[1-] standardiser la v.a. d'intérêt pour obtenir des probabilités impliquant la $\mathcal{N}(0,1)$;\\
 \item[2-] aller chercher les valeurs de $\Phi(\cdot)$ dans une table
 \end{itemize}
 
 \vspace{0.2in}
 
-Comme la densité $N(0,1)$ est symétrique autour de 0, $$\Phi(-x)=1-\Phi(x) \mbox{ pour tout } x\in\mathbb{R}.$$ Les livres donnent donc généralement les valeurs de $\Phi(x)$ pour $x>0$.
+Comme la densité $\mathcal{N}(0,1)$ est symétrique autour de 0, $$\Phi(-x)=1-\Phi(x) \mbox{ pour tout } x\in\mathbb{R}.$$ Les livres donnent donc généralement les valeurs de $\Phi(x)$ pour $x>0$.
 
 %centerline{\includegraphics[height=4.5cm]{axesnorm01.jpg}}
 
@@ -629,27 +629,27 @@ La masse (en tonnes) des camions passant sur un viaduc peut être vue comme une 
 \begin{frame}[t]{Exemple 1 (suite)}
 
 {\small
-(iii) Quelle est la masse, disons $m_1$, telle que 97.5\% des camions ont une masse inférieure à $m_1$? 
+(iii) Quelle est la masse, disons $m_1$, telle que 97,5\% des camions ont une masse inférieure à $m_1$? 
 \vspace{1 in}
 
-(iv) Quelle est la masse, disons $m_2$, telle que 97.5\% des camions ont une masse supérieure à $m_2$?
+(iv) Quelle est la masse, disons $m_2$, telle que 97,5\% des camions ont une masse supérieure à $m_2$?
 }
 \end{frame}
 
 
 \begin{frame}[t]{Loi normale}
 
-\alerter{Une combinaison linéaire de variables aléatoires normales est aussi une variable aléatoire normale}, peu importe si les v.a. sont indépendantes ou pas.
+\alerter{Une combinaison linéaire de variables aléatoires normales est aussi une variable aléatoire normale}, peu importe si les v.a. sont indépendantes ou pas --- à condition qu'elles soient \alerter{conjointement normales} (et pas seulement normales chacune de leur côté).
 
 \vspace{0.1 in}
 On peut calculer sa moyenne et sa variance avec les formules vues précédemment pour les combinaisons linéaires de variables aléatoires. 
 
 
 \vspace{0.1 in}
-Par exemple, si $X_1,X_2,\ldots,X_n$ sont des v.a. \alerter{indépendantes} et que $X_i\sim N(\mu_i,\sigma^2_i)$ pour $i=1,\hdots,n$, alors 
-$$ Y=X_1+X_2+\cdots+X_n \sim N\left( \sum_{i=1}^n \mu_i,\sum_{i=1}^n \sigma^2_i \right)$$
+Par exemple, si $X_1,X_2,\ldots,X_n$ sont des v.a. \alerter{indépendantes} et que $X_i\sim \mathcal{N}(\mu_i,\sigma^2_i)$ pour $i=1,\ldots,n$, alors 
+$$ Y=X_1+X_2+\cdots+X_n \sim \mathcal{N}\left( \sum_{i=1}^n \mu_i,\sum_{i=1}^n \sigma^2_i \right)$$
 et
-$$ W=a_1X_1+\cdots+a_nX_n \sim N\left( \sum_{i=1}^n a_i \mu_i,\sum_{i=1}^n a_i^2 \sigma^2_i \right) $$
+$$ W=a_1X_1+\cdots+a_nX_n \sim \mathcal{N}\left( \sum_{i=1}^n a_i \mu_i,\sum_{i=1}^n a_i^2 \sigma^2_i \right) $$
 
 
 \end{frame}
@@ -660,9 +660,9 @@ $$ W=a_1X_1+\cdots+a_nX_n \sim N\left( \sum_{i=1}^n a_i \mu_i,\sum_{i=1}^n a_i^2
 Le portefeuille d'actions de votre firme est constitué à
 20\% d'actions de ABC, 30\% d'actions de EFG et 50\% d'actions de
 WXY. On vous dit que les rendements des trois titres sont des v.a.
-normales indépendantes de variance 0.09 et de moyenne
-0.12 pour ABC, 0.15 pour EFG et 0.15 pour WXY. Quelle est la probabilité
-que le rendement global de ce portefeuille excède 0.17? \\
+normales indépendantes de variance 0,09 et de moyenne
+0,12 pour ABC, 0,15 pour EFG et 0,18 pour WXY. Quelle est la probabilité
+que le rendement global de ce portefeuille excède 0,17? \\
 (Note: Le rendement global
 du portefeuille est la combinaison linéaire des rendements
 des actions individuelles dont les poids sont les proportions de chaque
@@ -679,39 +679,44 @@ action dans le portefeuille.)
 \begin{frame}[t]{Un résultat très (très) utile}
 \begin{thm}{}
 
-Soit $X_1, X_2, ... X_n$ des variables aléatoires \alerter{indépendantes} de moyenne $\mu<\infty$, de variance $\sigma^2<\infty$, de loi de probabilité \alerter{quelconque}.
+Soit $X_1, X_2, \ldots, X_n$ des variables aléatoires \alerter{indépendantes} de moyenne $\mu<\infty$, de variance $\sigma^2<\infty$, de loi de probabilité \alerter{quelconque}.
 \vspace{0.5cm}
 
 Alors si $n$ est assez grand (généralement $n \geq 30$),
 \vspace{0.5cm}
 
-$Y\;\;=\;\;X_1+\hdots+X_n\;\;\approx\;\; N(n\mu, n\sigma^2)$
+$Y\;\;=\;\;X_1+\ldots+X_n\;\;\approx\;\; \mathcal{N}(n\mu, n\sigma^2)$
 
 \vspace{0.5cm}
 
-$\overline X\;\;=\;\;\displaystyle\frac{X_1+\hdots+X_n}{n}\;\;\approx\;\; N\left(\mu, \frac{\sigma^2}{n}\right)$ 
+$\overline X\;\;=\;\;\displaystyle\frac{X_1+\ldots+X_n}{n}\;\;\approx\;\; \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)$ 
 
 \end{thm}
 Nous appelons ce théorème, le \textit{théorème central limite} (TCL).
+
+\vspace{0.2cm}
+{\small Le seuil $n\ge 30$ est indicatif: la vitesse de convergence dépend en
+réalité de l'asymétrie de la distribution sous-jacente (une loi très
+asymétrique peut nécessiter un $n$ plus grand).}
 \end{frame}
 
 \begin{frame}[t]
 \begin{tabular}{p{5cm}|p{5cm}}
 
-\alerter{1)} Vous pigez une boule dans une urne contenant 3 boules numérotées: 1, 2, 3.
-& \alerter{2)} Vous remettez la boule dans l'urne et pigez une boule à nouveau.\\
+\alerter{1)} Vous tirez une boule dans une urne contenant 3 boules numérotées: 1, 2, 3.
+& \alerter{2)} Vous remettez la boule dans l'urne et tirez une boule à nouveau.\\
 
 \alerter{Vrai ou Faux?} & \alerter{Vrai ou Faux?}\\
 
 {\it La valeur de la boule tirée a la distribution de probabilité suivante:}
-& {\it La somme des deux numéros pigés a la distribution de probabilité suivante:}\\
+& {\it La somme des deux numéros tirés a la distribution de probabilité suivante:}\\
 \includegraphics[width=4.5cm]{unif.png}
 &\includegraphics[width=4.5cm]{unif2.png}
 \end{tabular}
 
 \end{frame}
 
-\begin{frame}[t]{Exemple 4}
+\begin{frame}[t]{Exemple 3}
 
 {\small
 Supposons que les demandes quotidiennes en électricité de 100 usines peuvent être
@@ -724,7 +729,7 @@ Quelle est la probabilité approximative que la demande quotidienne totale en é
 
 \end{frame}
 
-\begin{frame}[t]{Exemple 4 (solution)}
+\begin{frame}[t]{Exemple 3 (solution)}
 
 {\ \ \ }
 \end{frame}
@@ -737,7 +742,8 @@ Quelle est la probabilité approximative que la demande quotidienne totale en é
 Une v.a. binomiale peut être écrite comme une somme de v.a. indépendantes:
 \vspace{1 in}
 
-On peut donc approximer sa distribution par une loi normale:
+On peut donc approximer sa distribution par une loi normale, pourvu que $n$
+soit assez grand (par exemple, $np\ge 5$ et $n(1-p)\ge 5$):
 
 
 \end{frame}
@@ -765,7 +771,7 @@ Quelle est la probabilité que l'étudiant fasse exactement $5$ erreurs?\\
 Puisque la loi binomiale est discrète mais que la loi normale est continue, on doit faire une correction pour la continuité. 
 
 \vspace{0.2 in}
-Pour calculer $P(X=a)$ on calcule $P(a-0.5 \leq X \leq a+0.5)$:
+Pour calculer $P(X=a)$ on calcule $P(a-0{,}5 \leq X \leq a+0{,}5)$:
 
 \vspace{0.2 in}
 
