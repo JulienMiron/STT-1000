@@ -33,7 +33,7 @@ cd "$REPO_DIR"
 if [ "$ALL" -eq 1 ]; then
   changed="$(ls diapos/Module*.tex 2>/dev/null || true)"
 else
-  changed="$(git diff-tree --no-commit-id --name-only -r HEAD -- diapos | grep '\.tex$' || true)"
+  changed="$(git -c core.quotepath=false diff-tree --no-commit-id --name-only -r HEAD -- diapos | grep '\.tex$' || true)"
 fi
 
 if [ -z "$changed" ]; then
