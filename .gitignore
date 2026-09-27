@@ -29,3 +29,6 @@
 # Document de travail interne (relecture/suggestions) : jamais versionné,
 # n'apparaît pas sur le site (voir _quarto.yml resources et diapos.qmd).
 /diapos/suggestions-ameliorations.*
+
+# Diapos annotées en classe : usage personnel, jamais versionné.
+/diapos/Annotées/
