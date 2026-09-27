@@ -32,10 +32,10 @@ Dans bien des situations, on peut s'intéresser au comportement aléatoire de pl
 
 \begin{itemize}
  \item Le réservoir d'un barrage reçoit l'eau de 4 rivières.
- On sera intéressé par le comportement \alerter{conjoint} de $\mathbf{X}=(X,
- Y,X_3,X_4)$, où $X_i$ est le débit de la $i$-ème rivière. 
+ On sera intéressé par le comportement \alerter{conjoint} de $\mathbf{X}=(X_1,
+ X_2,X_3,X_4)$, où $X_i$ est le débit de la $i$-ème rivière.
  \item Un système en parallèle fonctionne tant qu'au moins
- un de ses trois composants fonctionne. Soit $Y_i$, la variable qui
+ un de ses 3 composants fonctionne. Soit $Y_i$, la variable qui
  indique si le $i$-ème composant fonctionne. On sera intéressé
  par le comportement \alerter{conjoint} de $\mathbf{Y}=(Y_1,Y_2,Y_3)$.
 \end{itemize}
@@ -83,12 +83,13 @@ $Y$ = nombre de maisons du réseau $\mathcal{Y}$ sans électricité \\
 \vspace{0.1in}
 Une fonction de probabilité conjointe possible pour ces variables aléatoires est:
 \begin{center}
-\begin{tabular}{cc|cccc}
-$p(x,y)$ & & \multicolumn{3}{c}{$y$} \\
- & & 0 & 1 & 2 & 3 \\ \cline{1-6}
- & 0 & 0.2 & 0.15  & 0.05 & 0 \\
-$x$ & 1 & 0.1 & 0.1 & 0.05 & 0.1\\
- & 2 & 0.1 & 0.05 & 0.05 & 0.05 \\
+\begin{tabular}{cc|ccccc}
+$p(x,y)$ & & \multicolumn{4}{c}{$y$} & \\
+ & & 0 & 1 & 2 & 3 & Total \\ \cline{1-7}
+ & 0 & 0{,}2 & 0{,}15  & 0{,}05 & 0 & 0{,}4 \\
+$x$ & 1 & 0{,}1 & 0{,}1 & 0{,}05 & 0{,}1 & 0{,}35\\
+ & 2 & 0{,}1 & 0{,}05 & 0{,}05 & 0{,}05 & 0{,}25 \\ \cline{1-7}
+ & Total & 0{,}4 & 0{,}3 & 0{,}15 & 0{,}15 & 1\\
 \end{tabular}
 \end{center}
 
@@ -157,7 +158,7 @@ Quelle est la probabilité qu'il n'y ait aucune maison sans électricité dans l
 
 \end{frame}
 
-\begin{frame}[t]{Retour à l'exemple }
+\begin{frame}[t]{Retour à l'exemple}
 
 On peut calculer les fonctions de probabilité conditionnelles:
 
@@ -196,7 +197,7 @@ Nous avons donc également
 
 \end{frame}
 
-\begin{frame}[t]{Retour à l'exemple }
+\begin{frame}[t]{Retour à l'exemple}
 Quelle est l'espérance du nombre de maisons sans électricité dans le réseau $\mathcal{Y}$ s'il y a 2 maisons sans électricité dans le réseau $\mathcal{X}$? Quelle est sa variance?
 
 \end{frame}
@@ -317,7 +318,7 @@ La preuve est similaire à celle de $V(X) = E(X^2) - E(X)^2$.
  deux v.a. ont tendance à prendre des valeurs supérieures (ou inférieures) à leur moyenne
  respective \alerter{en même temps}.
  \item {\bf Association négative:} Une valeur $\sigma_{XY}<0$ signifie que
- $X$ a tendance à prendre des valeurs \alerter{supérieures} à sa moyenne quand
+ $X$ a tendance à prendre des valeurs \alerter{supérieures à sa moyenne} quand
  $Y$ prend des valeurs \alerter{inférieures à sa moyenne} et vice-versa.
 \end{itemize}
 
@@ -401,10 +402,10 @@ Deux pièges à éviter au sujet de la corrélation:\\
 
 \begin{frame}[t]{Deux variables - Espérance}
 
-Supposons deux v.a. $X$ et $Y$. Soit $Y = a_1X + a_2Y$.
+Supposons deux v.a. $X$ et $Y$. Soit $W = a_1X + a_2Y$.
 
-$\alerter{E(Y)}  =  E[ a_1X + a_2Y]$\\
-... 
+$\alerter{E(W)}  =  E[ a_1X + a_2Y]$\\
+...
 
 
 
@@ -418,8 +419,8 @@ $\alerter{E(Y)}  =  E[ a_1X + a_2Y]$\\
 \vspace{0.2 in}
 {\footnotesize
 \begin{align*}
-V(Y) &=  E(Y^2) - (E(Y))^2\\
- & = E[ (a_1X + a_2Y )^2] - [E(a_1X + a_2Y)]^2\\ 
+V(W) &=  E(W^2) - (E(W))^2\\
+ & = E[ (a_1X + a_2Y )^2] - [E(a_1X + a_2Y)]^2\\
  & = E( a_1^2X^2 + 2a_1 a_2 X Y + a_2^2Y^2 ) - [a_1E(X) + a_2 E(Y)]^2  \\
  & = ...\\
  &= a_1^2 V(X) + 2 a_1 a_2 Cov(X, Y) + a_2^2 V(Y)
@@ -439,9 +440,12 @@ $$ \alerter{V(a_1X + a_2 Y) = a_1^2 V(X)  + a_2^2 V(Y) + 2 a_1 a_2 Cov(X, Y) }$$
 Soient $X,\hdots,X_n$, des variables aléatoires et $a_0,a_1,\hdots,a_n$, des constantes.\\
  Soit $Y=a_0+a_1X+\cdots+a_nX_n$. Alors
 \begin{itemize}
- \item[] $$E[Y]=a_0+\sum_{i=1}^na_iE[X_i]$$ 
+ \item[] $$E[Y]=a_0+\sum_{i=1}^na_iE[X_i]$$
  \item[] $$V[Y] =\sum_{i=1}^na_i^2Var[X_i]+2\sum\limits_{j}\sum\limits_{i<j}a_ia_jCov(X_i,X_j)$$
 \end{itemize}
+
+\vspace{0.05in}
+{\small (où $\sigma_i^2=Var(X_i)$, comme vu précédemment.)}
 
 
 Si $X,\hdots,X_n$ sont des v.a. \alerter{indépendantes}, alors $Cov(X_i,X_j)=0$ et  $$V[Y]=\sum_{i=1}^na_i^2V[X_i].$$
@@ -451,13 +455,13 @@ Si $X,\hdots,X_n$ sont des v.a. \alerter{indépendantes}, alors $Cov(X_i,X_j)=0$
 \end{frame}
 
 \begin{frame}[t]{Exemple}
-Soient $X,Y,X_3$ les débits de 3 rivières.\\
-Soit $Y$ la hausse d'un lac où ces rivières se jettent ou prennent leur source. On peut écrire $Y=0.6X+0.5Y-1.6X_3$. \\
+Soient $X_1,X_2,X_3$ les débits de 3 rivières.\\
+Soit $Y$ la hausse d'un lac où ces rivières se jettent ou prennent leur source. On peut écrire $Y=0{,}6X_1+0{,}5X_2-1{,}6X_3$. \\
 
 \vspace{0.1in}
-On sait que $E(X)=10$, $E(Y)=20$, $E(X_3)=10$,
-$Var(X)=4$, $Var(Y)=16$, $Var(X_3)=1$,
-$Cov(X,Y)=1.6$ et que $X_3$ est indépendante de $X$ et de $Y$. \\
+On sait que $E(X_1)=10$, $E(X_2)=20$, $E(X_3)=10$,
+$Var(X_1)=4$, $Var(X_2)=16$, $Var(X_3)=1$,
+$Cov(X_1,X_2)=1{,}6$ et que $X_3$ est indépendante de $X_1$ et de $X_2$. \\
 
 \vspace{0.1in}
 Calculez l'espérance et la variance de $Y$, la hausse du lac.
@@ -467,6 +471,21 @@ Calculez l'espérance et la variance de $Y$, la hausse du lac.
 
 \end{frame}
 
+
+\begin{frame}[t]{Réponses aux exercices}
+{\footnotesize
+\begin{itemize}
+\item \textbf{Lois marginales} : $p_X(0)=0{,}4$, $p_X(1)=0{,}35$, $p_X(2)=0{,}25$ ; $p_Y(0)=0{,}4$, $p_Y(1)=0{,}3$, $p_Y(2)=0{,}15$, $p_Y(3)=0{,}15$.
+\item \textbf{Aucune maison sans électricité dans $\mathcal{X}$} : $P(X=0)=p_X(0)=0{,}4$.
+\item \textbf{Lois conditionnelles} (sachant $X=2$) : $p_{Y|2}(0)=0{,}4$, $p_{Y|2}(1)=0{,}2$, $p_{Y|2}(2)=0{,}2$, $p_{Y|2}(3)=0{,}2$.
+\item \textbf{Une maison de $\mathcal{Y}$ sans électricité si 2 maisons de $\mathcal{X}$} : $P(Y=1|X=2)=0{,}2$.
+\item \textbf{Espérance et variance conditionnelles} (sachant $X=2$) : $E[Y|2]=1{,}2$ ; $V[Y|2]=1{,}36$.
+\item \textbf{Indépendance de $E_1$ et $E_2$} : oui, $P(E_1\cap E_2)=0{,}15=P(E_1)P(E_2)$.
+\item \textbf{Indépendance de $X$ et $Y$} : non, par exemple $p(0,0)=0{,}2\neq p_X(0)p_Y(0)=0{,}16$.
+\item \textbf{Covariance et corrélation} : $Cov(X,Y)=0{,}2075$ ; $\rho(X,Y)\approx 0{,}245$.
+\end{itemize}
+}
+\end{frame}
 
 \begin{frame}{Bibliographie}
  	Ce document est rédigé avec Beamer ainsi qu'une classe .cls fournie par Jérôme Soucy. Les diapositives sont adaptées des diapositives créées par Anne-Sophie Charest 

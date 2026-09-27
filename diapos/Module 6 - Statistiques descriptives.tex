@@ -73,39 +73,36 @@ Une bonne analyse est précédée d'un \alerter{résumé} des principales caract
 }
 \end{frame}
 
-\begin{comment}
-
 \begin{frame}[t]{Types de variables}
-
-{\small
+\vspace{-0.6cm}
+{\footnotesize
 Les variables observées sont généralement de l'un de trois types:
-\begin{itemize}
+\begin{itemize}\itemsep0pt
 \item<1-> {\bf Variable quantitative:} variable dont la valeur est
 un nombre entier ou un nombre réel (p.ex., masse, température, nombre
 de craques)
 \item<2-> {\bf Variable qualitative:}
- \begin{itemize}
+ \begin{itemize}\itemsep0pt
   \item<2-> {\bf Variable qualitative ordinale:} Variable dont la valeur n'est \alert{pas
   une mesure continue ou un dénombrement}, mais pour laquelle les modalités
-  peuvent \^etre \alert{ordonnées} (p.ex. une variable ``revenu'' avec modalités
-  ``faible'', ``moyen'', ``élevé'')
+  peuvent \^etre \alert{ordonnées} (p.ex. une variable «revenu» avec modalités
+  «faible», «moyen», «élevé»)
   \item<3-> {\bf Variable qualitative catégorielle:} Variable dont la valeur n'est \alert{pas
   une mesure continue ou un dénombrement} et pour laquelle les modalités
-  \alert{ne peuvent pas \^etre ordonnées} (p.ex. une variable ``Couleur'' avec
-  valeurs ``Bleu'', ``Rouge'', ``Noir'', ou une variable ``Région
-  administrative'' qui prend les valeurs 1, 2, 3, 4 ou 5)
+  \alert{ne peuvent pas \^etre ordonnées} (p.ex. une variable «Couleur» avec
+  valeurs «Bleu», «Rouge», «Noir», ou une variable «Région
+  administrative» qui prend les valeurs 1, 2, 3, 4 ou 5)
  \end{itemize}
+\end{itemize}
+\vspace{-4mm}
+\begin{itemize}\itemsep0pt
+\item «Luminosité» et «Température» sont des variables quantitatives
+\item «Lot» et «Catalyseur» sont des variables qualitatives catégorielles
+\item «Vitesse du mélangeur» est une variable qualitative ordinale
 \end{itemize}
 }
 
-\begin{itemize}
-\item ``Luminosité'' et ``Température'' sont des variables quantitatives
-\item ``Lot'' et ``Catalyseur'' sont des variables qualitatives catégorielles
-\item ``Vitesse du mélangeur'' est une variable qualitative ordinale
-\end{itemize}
-
 \end{frame}
-\end{comment}
 
 
 
@@ -143,7 +140,7 @@ $$\alert{\overline{x}}=\frac{x_1+x_2+...+x_n}{n}=\frac{1}{n}\sum_{i=1}^nx_i.$$
 \end{frame}
 
 
-\begin{frame}[t]%{Événements mutuellement exclusifs}
+\begin{frame}[t]{Quiz~: moyenne}
 
 \centerline{\LARGE \bf \alert{QUIZ !}}
 La moyenne d'un échantillon de taille $n=30$ vaut $\overline x =112$. \\
@@ -162,7 +159,7 @@ La moyenne échantillonnale vaut nécessairement toujours 112.
 
 \begin{frame}[t]{Médianes {\it théorique} et {\it échantillonnale}}
 
-Autre mesure de tendance centrale : la médiane.
+Autre mesure de tendance centrale: la médiane.
 \begin{itemize}
 \item Médiane théorique: associée à la distribution de $X$, au modèle probabiliste de la population.
 \item Médiane échantillonnale: calculée à partir d'une série d'observations $x_1,\hdots, x_n$.
@@ -196,7 +193,7 @@ lwd=3,yaxs="i",ylim=c(0,0.6),las=1)
 })
 \end{comment}
 
-\begin{frame}[t]%{Événements mutuellement exclusifs}
+\begin{frame}[t]{Quiz~: comparaison de $\mu$ et $\widetilde\mu$}
 
 \centerline{\LARGE \bf \alert{QUIZ !}}
 Comment se comparent $\mu$ et $\widetilde\mu$ dans chacune des deux distributions suivantes?
@@ -259,7 +256,7 @@ Valeur centrale de l'échantillon {\it ordonné}, ou la moyenne des deux valeurs
 \end{frame}
 
 
-\begin{frame}[t]%{Événements mutuellement exclusifs}
+\begin{frame}[t]{Quiz~: médiane}
 
 \centerline{\LARGE \bf \alert{QUIZ !}}
 La médiane d'un échantillon de taille $n=30$ vaut $\widetilde x =114$. \\
@@ -269,7 +266,7 @@ On retire la plus grande et la plus petite observations.
 {\bf Vrai ou Faux?}
 \bigskip
 
-La médiane échantillonnale vaut toujours 114.
+La médiane échantillonnale vaut nécessairement toujours 114.
 \vspace{2cm}
 
 \end{frame}
@@ -295,8 +292,8 @@ $$\alert{P(X\le c_a)=a}$$
 Il existe plusieurs définitions des quantiles échantillonnaux. Voici celle que nous utiliserons pour le  quantile échantillonnal d'ordre $a$:
 $$\alert{q_a=x_{(an+0,5)}}$$
 \end{Boite}
-\small{
-Si $an+0,5$ n'est pas entier, on peut faire une interpolation linéaire entre les deux valeurs entières qui l'entourent. On obtient ainsi une moyenne pondérée de $x_{([an+0,5])}$ et $x_{([an+0,5]+1)}$, o\`u $[u]$ est la partie entière de $u$.
+\footnotesize{
+Si $an+0,5$ n'est pas entier, on interpole linéairement entre les deux valeurs entières qui l'entourent : $q_a=(1-w)x_{([an+0,5])}+wx_{([an+0,5]+1)}$, o\`u $[u]$ est la partie entière de $u$ et $w=an+0,5-[an+0,5]$ le poids de la valeur supérieure.
 }
 \end{frame}
 \begin{frame}[t]{Exemple 2}
@@ -304,7 +301,7 @@ Considérons un tout petit échantillon:
 $$4\quad 3\quad 8\quad 9\quad 6$$
 
 \begin{enumerate}[a)]
-\item Quel est le quantile échantillonnal d'ordre $0,3$ de cet échantillon ?
+\item Quel est le quantile échantillonnal d'ordre $0,3$ de cet échantillon?
 \vspace{1.2cm}
 
 \item  Quel est le quantile échantillonnal d'ordre $0,65$ de cet échantillon?
@@ -333,7 +330,7 @@ Soit l'échantillon $x_1,\ldots,x_{11}$ suivant:
 {\small $5,~ 15,~ 17,~ 15,~  9,~  2,~  2,~ 11,~  4,~  1,~ 4.$}\hspace{4mm}\includegraphics[width=5.4cm]{dot2.png}
 
 \vspace{3mm}
-Calculez  ses trois quartiles.\\
+Calculer ses trois quartiles.\\
 
 \end{frame}
 
@@ -350,6 +347,13 @@ Deux types d'asphalte peuvent avoir des durées de vie moyennes ou médianes tr�
 \medskip
 En plus des mesures de position, une autre caractéristique importante d'une
 distribution est  \alerter{la dispersion des valeurs autour du centre de la distribution}.
+
+\vspace{4mm}
+
+\begin{tabular}{cc}
+\includegraphics[width=5.1cm]{disp1.png}\hspace{5 mm}& \includegraphics[width=5.1cm]{disp2.png}\\ &\\
+\alerter{$\overline x=20$, peu dispersé} &\alerter{$\overline x=20$, très dispersé}
+\end{tabular}
 \end{frame}
 
 
@@ -388,15 +392,15 @@ Une mesure alternative de dispersion est \alert{l'écart interquartile}.
 
 \begin{Boite}{Écart interquartile}
 
-L'écart interquartile d'un échantillon est la distance entre le $1^{er}$ et le $3^e$ quartiles :
+L'écart interquartile d'un échantillon est la distance entre le $1^{er}$ et le $3^e$ quartiles:
 
 \vspace{-3mm}
 \begin{center}\alert{$EIQ=Q_3-Q_1=q_{0,75}-q_{0,25}$}\end{center}
 \end{Boite}
 \begin{itemize}
-\item L'$EIQ$ est l'étendue de la moitié centrale des données.
-\item Loi normale: l'$EIQ$ vaut environ $1,34\sigma$ \\(à vérifier en exercice!).
-\item Exemple 3: l'étendue vaut $R=16$, \\l'écart-type échantillonnal est de $s=5,9$, \\l'écart interquartile est $EIQ=14-2,5=11,5$.
+\item L'$EIQ$ est l'étendue de la moitié centrale des données
+\item Loi normale: l'$EIQ$ vaut environ $1,34\sigma$ \\(à vérifier en exercice!)
+\item Exemple 3: l'étendue vaut $R=16$, \\l'écart-type échantillonnal est de $s=5,9$, \\l'écart interquartile est $EIQ=14-2,5=11,5$
 \end{itemize}
 \end{frame}
 
@@ -504,7 +508,7 @@ Avec des classes de même largeur de la forme $(x_{min},x_{max}]$, l'histogramme
 
 \begin{frame}[t]{Exemple 4 (suite)}
 
-Complétons le tableau de fréquences qui définit 8 classes de valeurs.\\
+Compléter le tableau de fréquences qui définit 8 classes de valeurs.\\
 
 \begin{tabular}{ccccc}\hline
 Classe ($j$) & Largeur ($\ell_j$) & Fréq. ($n_j$) & Fréq. rel. ($f_j$) & Hauteur ($h_j$) \\ \hline
@@ -578,7 +582,7 @@ l'extérieur de l'intervalle $[b_{inf},b_{sup}]$
 Les observations représentées par des points sur un boxplot sont parfois appelées {\em données aberrantes} ou {\em données extrêmes}, puisqu'elles sont très peu plausibles sous une loi normale.\\
 \bigskip
 
-\underline{Exercice}: Remplacez les quartiles échantillonnaux par les quartiles théoriques sous une loi $N(\mu,\sigma^2)$ dans les équations (\ref{eq:binf})-(\ref{eq:bsup}) et calculez $P(X<b_{inf}\text{\ ou\ }X>b_{sup})$ si $X\sim N(\mu,\sigma^2)$. Quelle est la probabilité d'observer une valeur extrême, i.e. hors de $[b_{inf}, \, b_{sup}]$?
+\underline{Exercice}: Remplacer les quartiles échantillonnaux par les quartiles théoriques sous une loi $N(\mu,\sigma^2)$ dans les équations (\ref{eq:binf})-(\ref{eq:bsup}) et calculer $P(X<b_{inf}\text{\ ou\ }X>b_{sup})$ si $X\sim N(\mu,\sigma^2)$. Quelle est la probabilité d'observer une valeur extrême, i.e. hors de $[b_{inf}, \, b_{sup}]$?
 }
 \end{frame}
 \begin{frame}[t]{Utilité du diagramme en boîte}
@@ -587,10 +591,10 @@ Les observations représentées par des points sur un boxplot sont parfois appel
 Le diagramme en boîte permet d'évaluer en un coup d'oeil certaines propriétés de la distribution des observations:
 \begin{itemize}
 \item le centre de la distribution (mesuré par la médiane);
-\item la dispersion (mesurée par l'écart inter-quartile);
-\item la symétrie (l'écart entre le 1er quartile et la médiane est-il le m\^eme que
-l'écart entre la médiane et le 3e quartile? les moustaches sont-elles de même longueur?);
-\item si certaines observations sont peu plausibles sous la loi normale (trop extrêmes);
+\item la dispersion (mesurée par l'écart interquartile);
+\item la symétrie (l'écart entre le $1^{er}$ quartile et la médiane est-il le m\^eme que
+l'écart entre la médiane et le $3^e$ quartile? les moustaches sont-elles de même longueur?);
+\item la présence d'observations peu plausibles sous la loi normale (trop extrêmes);
 \end{itemize}
 }
 
@@ -611,6 +615,20 @@ Construire à la main le diagramme en boîte des concentrations de phosphates, e
 \begin{center}
 \includegraphics[width=8cm]{box-conc.png}
 \end{center}
+\end{frame}
+
+\begin{frame}[t]{Réponses aux exercices}
+{\footnotesize
+\begin{itemize}
+\item \textbf{Exemple 1} (échantillon $8,17,2,11$) : échantillon ordonné $x_{(1)}=2$, $x_{(2)}=8$, $x_{(3)}=11$, $x_{(4)}=17$.
+\item \textbf{Quiz~: moyenne} : Faux --- retirer le maximum et le minimum change généralement la moyenne.
+\item \textbf{Quiz~: médiane} : Vrai --- pour $n=30$ (pair), retirer le maximum et le minimum ne change pas les deux valeurs centrales de l'échantillon ordonné, donc la médiane est inchangée.
+\item \textbf{Exemple 2} (échantillon $4,3,8,9,6$) : $q_{0,3}=4$ ; $q_{0,65}=7{,}5$.
+\item \textbf{Exemple 3} (11 observations) : $Q_1=2{,}5$, $Q_2=5$, $Q_3=14$ (voir aussi la diapositive « Écart interquartile »).
+\item \textbf{Exemple 4} : tableau de fréquences complété à la diapositive « Exemple 4 (suite) ».
+\item \textbf{Exercice} (bornes théoriques sous la loi normale) : avec $Q_1=\mu-0{,}6745\sigma$, $Q_3=\mu+0{,}6745\sigma$ et $EIQ\approx1{,}349\sigma$, on obtient $b_{inf}=\mu-2{,}70\sigma$ et $b_{sup}=\mu+2{,}70\sigma$, d'où $P(X<b_{inf}\text{ ou }X>b_{sup})\approx 0{,}007$ (0,7\,\%).
+\end{itemize}
+}
 \end{frame}
 
 \begin{frame}{Bibliographie}
