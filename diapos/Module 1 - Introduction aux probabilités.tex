@@ -24,25 +24,24 @@
 \end{frame}
 
 \begin{frame}{Probabilités vs. statistique?}
+  \small
     \begin{Boite}{Probabilités}
         Outil mathématique formel servant à décrire et modéliser les comportements aléatoires.
     \end{Boite}
     On connaît les "paramètres" du phénomène et on tente de décrire ce qu'on attend du phénomène en question.
-
-
     Exemple: on lance un dé équilibré à 6 faces et on veut savoir la probabilité d'obtenir un «3».
-    \end{frame}
-    \begin{frame}{Probabilités vs. statistique?}
-\begin{Boite}{Statistique}
-Étude quantitative des attributs d’une “population” à partir d’observations.
+
+    \pause
+
+    \begin{Boite}{Statistique}
+        Étude quantitative des attributs d'une "population" à partir d'observations.
     \end{Boite}
-On ne connaît pas les "paramètres" du phénomène, c'est ce qu'on tente d'estimer.
+    On ne connaît pas les "paramètres" du phénomène, c'est ce qu'on tente d'estimer.
+    Exemple: on veut savoir si un dé est équilibré...
 
-Exemple: on veut savoir si un dé est équilibré...
-\end{frame}
+    \pause
 
-    \begin{frame}{Probabilités vs. statistique?}
-Une bonne compréhension des probabilités et de la statistique est indispensable à la prise de décision en présence d’incertitude.
+    Une bonne compréhension des probabilités et de la statistique est indispensable à la prise de décision en présence d'incertitude.
 \end{frame}
 
 \section{Expérience aléatoire}
@@ -73,7 +72,7 @@ Quel est l'espace échantillonnal?
 \begin{itemize}
     \item $\mathcal{E}_1$: on lance un dé et on note le chiffre sur le dessus;
     \vspace{1cm}
-    \item $\mathcal{E}_2$: on pige une carte parmi les quatre rois d’un jeu standard;
+    \item $\mathcal{E}_2$: on pige une carte parmi les quatre rois d'un jeu standard;
     \vspace{1cm}
     \item $\mathcal{E}_3$: on compte le nombre de véhicules traversant un pont durant une heure;
     \vspace{1cm}
@@ -87,10 +86,10 @@ Quel est l'espace échantillonnal?
 \end{Boite}
 Retour aux expériences précédentes:
 \begin{itemize}
-    \item $\mathcal{E}_1$: $A=$“Le dé affiche un nombre pair”$=\{2,4,6\}$
-     \item ${\cal{E}}_2$: \alert{$N$}=``On pige un roi noir''=$\{R\spadesuit,R\clubsuit\}$
-    \item $\mathcal{E}_3$: $C=$“Moins de 100 véhicules traversent le pont”$ =\{0,1,2,...,99\}$
-    \item $\mathcal{E}_4$: $D=$“La station reçoit plus de 150 mm de pluie”$=(150,\infty)$
+    \item $\mathcal{E}_1$: $A=$«Le dé indique un nombre pair»$=\{2,4,6\}$
+     \item $\mathcal{E}_2$: \alert{$B$}=«On pige un roi noir»=$\{R\spadesuit,R\clubsuit\}$
+    \item $\mathcal{E}_3$: $C=$«Moins de 100 véhicules traversent le pont»$ =\{0,1,2,...,99\}$
+    \item $\mathcal{E}_4$: $D=$«La station reçoit plus de 150 mm de pluie»$=(150,\infty)$
 \end{itemize}
 
 \end{frame}
@@ -173,7 +172,7 @@ Retour aux expériences précédentes:
 
 \begin{frame}{Expérience aléatoire}
  \begin{Boite}{Événements mutuellement exclusifs}
-  Des événements sont \alert{mutuellement exclusifs} si toutes
+  Des événements sont \alerter{mutuellement exclusifs} si toutes
   leurs combinaisons possibles d'intersections sont vides, c'est-à-dire
   lorsqu'\textbf{au plus un} de ces événements peut se produire à
   la fois. 
@@ -204,12 +203,12 @@ Retour aux expériences précédentes:
  {\small  %Retour aux exemples:
   \begin{itemize}\itemsep1.3cm
    \item $\mathcal{E}_1$: Lancer d'un dé.\\
-   Soient $A=$``obtenir un nombre pair'', $B=\{5\}$ et $C=\{1\}$. \\
+   Soient $A=$«obtenir un nombre pair», $B=\{5\}$ et $C=\{1\}$. \\
    %Comme    $A\cap B=A\cap C=B\cap C=A\cap B\cap C=\emptyset$, ces trois    événements sont mutuellement exclusifs.
-   \item $\mathcal{E}_4$: Mesurer les précipitations.\\
-   $A=$``La station re\c{c}oit plus de 150 mm'',\\
-   $B=$``La station re\c{c}oit moins de 175 mm'' et \\$C=$``La station re\c{c}oit
-   entre 200 et 300 mm''. \\%Comme $A\cap B=(150,175)\neq\emptyset$,     $A,B,C$ ne sont \alert{pas} mutuellement exclusifs. (Même si $B$ et $C$ le sont.)
+   \item $\mathcal{E}_4$: Mesurer la quantité de pluie.\\
+   $A=$«La station reçoit plus de 150 mm»,\\
+   $B=$«La station reçoit moins de 175 mm» et \\$C=$«La station reçoit
+   entre 200 et 300 mm». \\%Comme $A\cap B=(150,175)\neq\emptyset$,     $A,B,C$ ne sont \alert{pas} mutuellement exclusifs. (Même si $B$ et $C$ le sont.)
    %(On aurait aussi pu    utiliser $A\cap C=(300,\infty)\neq\emptyset\ldots$)
    \vspace{1.3cm}
  \end{itemize}
@@ -294,8 +293,8 @@ $P\left(\bigcup\limits_{i=1}^kA_i\right)=\sum\limits_{i=1}^kP(A_i)
 \begin{minipage}{8cm}{
 \small
 Vous achetez un nouveau téléphone. \\
-D\'efinissons les \'ev\'enements suivants:\\
-$A$: La carte SIM est d\'efectueuse.\\
+Définissons les événements suivants:\\
+$A$: La carte SIM est défectueuse.\\
 $B$: La batterie a une autonomie insuffisante.\\
 }
 \end{minipage}
@@ -329,7 +328,7 @@ Rappel:   $P(A)=0,05$, $P(B)=0,20$ et $P(A \cup B)=0,23$.
 
 \begin{minipage}{8cm}{
 \small
- \`A l'Université ABC,
+ À l'Université ABC,
  \begin{enumerate}[$\bullet$]
  \item 55\% des étudiants portent des lunettes,
  \item 70\% des étudiants possèdent un portable,
@@ -344,7 +343,7 @@ Rappel:   $P(A)=0,05$, $P(B)=0,20$ et $P(A \cup B)=0,23$.
  Si on choisit un étudiant au hasard dans cette université, pouvez-vous déterminer la probabilité qu'il s'agisse...
   \begin{enumerate}[(i)]\itemsep.8cm
  \item d'un étudiant qui ne porte pas de lunettes? % 0.45
-  \item d'un étudiant avec lunettes satisfait de ses études? % infos insuffisantes
+  \item d'un étudiant avec lunettes, satisfait de ses études? % infos insuffisantes
  \end{enumerate}
 }
 \end{frame}
@@ -357,7 +356,7 @@ Rappel:   $P(A)=0,05$, $P(B)=0,20$ et $P(A \cup B)=0,23$.
  \item 35\%  des étudiants portent des lunettes et possèdent un portable,
  \item 30\% portent des lunettes, sont satisfaits de leurs études et possèdent un portable,
  \item 5\% portent des lunettes, sont insatisfaits de leurs études et n'ont pas de portable,
-%  \item 13\% sont des gar\c{c}ons  satisfaits de leurs études.
+%  \item 13\% sont des garçons  satisfaits de leurs études.
  \end{enumerate}
  Pouvez-vous maintenant déterminer la probabilité qu'un étudiant choisi au hasard soit...
      \begin{enumerate}\itemsep 4mm
@@ -373,8 +372,11 @@ Rappel:   $P(A)=0,05$, $P(B)=0,20$ et $P(A \cup B)=0,23$.
 
 {\small
  Remplir toutes les zones mutuellement exclusives d'un diagramme de Venn.\\
- $L=$``l'étudiant porte des lunettes'', $P=$``l'étudiant possède un
- portable'' et $S=$``l'étudiant est satisfait de ses études''. %On cherche (i) $P(\bar{F}\cap P\cap \bar{S})$ et (ii) $P(F\cap \bar{P}\cap S)$.
+ $L=$«l'étudiant porte des lunettes», $O=$«l'étudiant possède un
+ portable» et $S=$«l'étudiant est satisfait de ses études». %On cherche (i) $P(\bar{F}\cap P\cap \bar{S})$ et (ii) $P(F\cap \bar{P}\cap S)$.
+
+ \medskip
+ Rappel des données : $P(L)=0,55$ ; $P(O)=0,70$ ; $P(S)=0,75$ ; $P(L\cap O)=0,35$ ; $P(L\cap O\cap S)=0,30$ ; $P(L\cap \overline{O}\cap \overline{S})=0,05$.
 }
 
 \centerline{\includegraphics[height=5cm]{venn-eg.jpg}}
@@ -558,7 +560,7 @@ soient pas indépendants. Par exemple
 
 {\small Plusieurs problèmes de calcul de probabilités
  deviennent plus simples si on les divise en
- plusieurs morceaux. %\`A cette fin, nous voudrons  \alert{partitionner} l'espace échantillonnal.
+ plusieurs morceaux. %À cette fin, nous voudrons  \alert{partitionner} l'espace échantillonnal.
 
  \begin{Boite}{Partition de l'espace échantillonnal}
   On dit que $B_1,B_2,\ldots,B_k$ forment une \alert{partition
@@ -658,7 +660,7 @@ On sait aussi que
 \item 90\% des viaducs faits de béton de type A vont résister sans travaux majeurs  pendant plus de 10 ans,
 \item cette proportion est de 80\% chez les viaducs
  faits de béton de type B
- \item et de 70\% chez les viaducs faits en des matériaux
+ \item et de 70\% chez les viaducs faits avec des matériaux
  autres que le béton.
 \end{enumerate}
 
@@ -697,12 +699,12 @@ Exemple 8: Quelle est la probabilité qu'un viaduc pris au  hasard dans ce pays 
 \end{frame}
 
 \begin{frame}
- \begin{thm}{}
+ \begin{thm}{Théorème de Bayes}
   Soient $A$ un événement dans $\mathcal{U}$ et $B_1,\ldots,B_k$, une partition
   de $\mathcal{U}$. Alors
   $$P(B_j|A)=\frac{P(A|B_j)P(B_j)}{\sum_{i=1}^kP(A|B_i)P(B_i)},\ \ \forall j=1,\ldots,k.$$
  \end{thm}
-On nomme ce théorème le \textit{Théorème de Bayes}. Il s'agit d'un des résultats les plus importants de la théorie des probabilités.
+Il s'agit d'un des résultats les plus importants de la théorie des probabilités.
 
 \end{frame}
 
@@ -742,10 +744,10 @@ Quelle est la probabilité que je sois de bonne humeur, sachant cette informatio
   différentes peut-on assigner les gâteaux aux 2 personnes?
  }
 
-%On a 6 \alert{permutations} possibles  de 3 objets pris deux \`a la fois.
+%On a 6 \alert{permutations} possibles  de 3 objets pris deux à la fois.
 \end{frame}
 
-\begin{frame}{Permutations - Formule g\'en\'erale}
+\begin{frame}{Permutations - Formule générale}
 
  \begin{Boite}{Permutation}
   Le nombre de permutations possibles de $n$ objets pris $r$
@@ -768,8 +770,8 @@ Quelle est la probabilité que je sois de bonne humeur, sachant cette informatio
 
 \begin{frame}[t]{Exemples}
 \begin{itemize}
-\item Dix pilotes sont disponibles pour assurer quatre liaisons a\'eriennes. Combien
- d'options d'assignation de ces pilotes \`a ces liaisons a-t-on?
+\item Dix pilotes sont disponibles pour assurer quatre liaisons aériennes. Combien
+ d'options d'assignation de ces pilotes à ces liaisons a-t-on?
 
 \vspace{0.3in}
 
@@ -778,9 +780,9 @@ Quelle est la probabilité que je sois de bonne humeur, sachant cette informatio
  \bigskip
 
  \uncover<2->{
-  \item Pour les m\^emes 4 liaisons a\'eriennes, on doit choisir 4 \'equipages de bord parmi
-  12 \'equipages disponibles. \\ De combien de fa\c{c}ons diff\'erentes peut-on
-  assigner les pilotes ET les \'equipages de bord aux 4 liaisons?}
+  \item Pour les mêmes 4 liaisons aériennes, on doit choisir 4 équipages de bord parmi
+  12 équipages disponibles. \\ De combien de façons différentes peut-on
+  assigner les pilotes ET les équipages de bord aux 4 liaisons?}
 
 \vspace{0.15in}
  \end{itemize}
@@ -806,7 +808,7 @@ Quelle est la probabilité que je sois de bonne humeur, sachant cette informatio
  \uncover<3->{
   Soient $a,b,c$, mes trois meilleurs amis. \\
   J'aurais $P^3_2=6$ permutations de
-  ces 3 amis pris 2 \`a la fois ... mais je compterais $(a,b)$ et $(b,a)$ deux fois
+  ces 3 amis pris 2 à la fois ... mais je compterais $(a,b)$ et $(b,a)$ deux fois
   alors qu'il s'agit d'une seule et même option!\\
   En fait je dois diviser
   $P^3_2$ par 2 pour obtenir 3 choix possibles, soient
@@ -814,7 +816,7 @@ Quelle est la probabilité que je sois de bonne humeur, sachant cette informatio
  }
 \end{frame}
 
-\begin{frame}[t]{Combinaisons: Formule g\'en\'erale}
+\begin{frame}[t]{Combinaisons: Formule générale}
  \begin{defn}{}
   Le nombre de combinaisons possibles de $r$ objets pris parmi $n$ est
   $${n\choose r}=C^n_r=\frac{n!}{r!(n-r)!}.$$
@@ -828,7 +830,7 @@ D'où vient cette formule?\\
   Soit $x$ le nombre de façons de choisir $r$ objets parmi $n$. \\
   Alors on
   a que $P^n_r=x\times P^r_r=x\times r!$, car une permutation consiste tout
-  d'abord \`a choisir $r$ objets parmi les $n$, ensuite \`a permuter ces
+  d'abord à choisir $r$ objets parmi les $n$, ensuite à permuter ces
   $r$ objets.
 
   Donc $P^n_r=xr!$ $$\Rightarrow x=P^n_r/r!=\frac{n!}{(n-r)!}\frac{1}{r!}=
@@ -838,8 +840,8 @@ D'où vient cette formule?\\
 
 \begin{frame}[t]{Exemples}
  \begin{itemize}
-  \item<1->{\bf Lotto 6/49}: On tire au hasard 6 des 49 nombres de 1 \`a 49, et l'ordre dans
-  lequel les 6 nombres sont tir\'es ne compte pas. On a donc
+  \item<1->{\bf Lotto 6/49}: On tire au hasard 6 des 49 nombres de 1 à 49, et l'ordre dans
+  lequel les 6 nombres sont tirés ne compte pas. On a donc
   \uncover<1->{
   $${49\choose6}=\frac{49!}{6!43!}=\frac{49\times48\times47\times46\times45\times44}{6!}=
   13~983~816$$
@@ -848,7 +850,7 @@ D'où vient cette formule?\\
   Loto-Québec indique d'ailleurs sur son site web que la probabilité de gagner le gros lot est de $1/13~983~816$.
   \vspace{0.1in}
   
- {\small Note : On aurait pu trouver aussi \`a l'aide de la règle de multiplication:
+ {\small Note: On aurait pu trouver aussi à l'aide de la règle de multiplication:
   49 choix pour le 1er nombre, 48 pour le second, ... 44 pour le 6e, et ensuite on doit diviser
   par $6!$ car chaque combinaison est comptée $6!$ fois.}}\\
  \end{itemize}
@@ -856,7 +858,7 @@ D'où vient cette formule?\\
 
 \begin{frame}{Exemples (suite)}
  \begin{itemize}
-  \item<1->{\bf Poker}: Au poker, une main consiste en 5 cartes tir\'ees d'un jeu de 52 cartes
+  \item<1->{\bf Poker}: Au poker, une main consiste en 5 cartes tirées d'un jeu de 52 cartes
   distinctes. Il y a donc \
   $${52\choose5}=\frac{52!}{5!47!}=\frac{52\times51\times50\times49\times48}{5!}=
   2~598~960$$
@@ -888,13 +890,13 @@ D'où vient cette formule?\\
 
 \begin{frame}[t]{Exemples (suite)}
  \begin{itemize}
-  \item<1->{\bf Comit\'es:} Un groupe de 30 personnes doit choisir 4 repr\'esentants.
+  \item<1->{\bf Comités:} Un groupe de 30 personnes doit choisir 4 représentants.
   \begin{itemize} \itemsep1.3cm
   \item  Combien y a-t-il
-  de comit\'es possibles? 
-  \item Et si le comit\'e est form\'e d'un pr\'esident, d'un V-P, d'un tr\'esorier,
-  et d'un secr\'etaire? 
-  \item Et si le comit\'e est form\'e d'un pr\'esident et de 3 autres membres?
+  de comités possibles? 
+  \item Et si le comité est formé d'un président, d'un V-P, d'un trésorier,
+  et d'un secrétaire? 
+  \item Et si le comité est formé d'un président et de 3 autres membres?
   \end{itemize}
  \end{itemize}
 \end{frame}
@@ -904,7 +906,7 @@ D'où vient cette formule?\\
 \begin{frame}{Propriété importante}
 
  \begin{thm}{}
-  Soient deux nombres r\'eels $x$ et $y$ et un entier $n$. Alors
+  Soient deux nombres réels $x$ et $y$ et un entier $n$. Alors
   $$(x+y)^n=\sum_{r=0}^n{n\choose r}x^ry^{n-r}.$$
  \end{thm}
 

@@ -40,17 +40,17 @@ Soit $\mathcal{E}$ une expérience aléatoire ayant
 
  \begin{Boite}{Variable aléatoire}
 Soit $X$, une fonction  qui associe un nombre réel $X(e)$ à chaque élément
-  $e\in \mathcal{U}$. Alors on appelle $X$ une \alert{variable aléatoire}.
+  $e\in \mathcal{U}$. Alors on appelle $X$ une \alerter{variable aléatoire}.
 
 \medskip
 
-L'ensemble des valeurs que peut prendre $X$ est noté   $\mathbb{R}_X$ et est appelé \alert{image de $X$}.
+L'ensemble des valeurs que peut prendre $X$ est noté   $\mathbb{R}_X$ et est appelé \alerter{image de $X$}.
  \end{Boite}
-On note habituellement une v.a. par une lettre majuscule et les valeurs prises par cette v.a. par une lettre minuscule. On écrira par exemple P(X=x) pour dénoter la probabilité que la variable aléatoire X prenne la valeur x.
+On note habituellement une v.a. par une lettre majuscule et les valeurs prises par cette v.a. par une lettre minuscule. On écrira par exemple $P(X=x)$ pour dénoter la probabilité que la variable aléatoire $X$ prenne la valeur $x$.
 
 \end{frame}
 
-\begin{frame}[t]%{Événements mutuellement exclusifs}
+\begin{frame}[t]{Exemple 2}
 
 \centerline{\LARGE \bf \alert{QUIZ !}}\label{lancerde}
 $\mathcal{E}$: on lance un dé régulier et on observe la face du dessus. \\
@@ -61,9 +61,9 @@ Voici 2 exemples.
  \begin{itemize}
   \item<2-> $X$ est la variable aléatoire qui donne le  résultat observé.\\
     $X(e)=e,~\forall e\in \mathcal{U}$\\
-    $R_X=\{1,2,3,4,5,6\}$
-  \item<3-> Je gagne 1\$ si je roule  4, 5 ou 6.\\
-    Je perds 1\$ si je roule 1, 2 ou 3.\\
+    $\mathbb{R}_X=\{1,2,3,4,5,6\}$
+  \item<3-> Je gagne 1~\$ si je roule  4, 5 ou 6.\\
+    Je perds 1~\$ si je roule 1, 2 ou 3.\\
     $Y$ est la variable aléatoire qui représente mon gain.\\
       $Y(e)=\left\{
   \begin{array}{rl}
@@ -71,7 +71,7 @@ Voici 2 exemples.
   1&\text{si}\;e\in\{4,5,6\}
   \end{array}
   \right.$\\
-  $R_Y=\{-1,1\}$.
+  $\mathbb{R}_Y=\{-1,1\}$.
  \end{itemize}
 \end{frame}
 
@@ -102,7 +102,7 @@ Voici 2 exemples.
 
 \begin{frame}[t]{Exemple 2: probabilités}
 
-Quelle est la probabilité que je perde 1 \$ en jouant?\\
+Quelle est la probabilité que je perde 1~\$ en jouant?\\
 
 %Puisque les événements $A$ et $B$  sont équivalents, leur probabilité est égale. Si le dé est équilibré, quelle est la probabilité que $Y$ prenne la valeur $-1$?
 
@@ -127,7 +127,7 @@ Quelle est la probabilité que je perde 1 \$ en jouant?\\
 On peut spécifier complètement le comportement aléatoire de \alerter{toute} variable aléatoire $X$ à l'aide d'une seule fonction.
 
 \begin{defn}{}
-Soit $X$ une variable aléatoire. On appelle \alerter{fonction de répartition} (l'acronyme CDF, pour \textit{cumulative distribution function}, est le plus utilisé en pratique), la fonction
+Soit $X$ une variable aléatoire. On appelle \alerter{fonction de répartition} (CDF, de \textit{cumulative distribution function}) la fonction
 
 $$F_X:\mathbb{R}\to [0,1]$$
 qui associe la valeur 
@@ -151,7 +151,7 @@ P(Y=1)&=1/2\end{array}$
 
 \end{frame}
 
-\begin{frame}[t]%{Événements mutuellement exclusifs}
+\begin{frame}[t]{Exemple 3}
 
 \centerline{\LARGE \bf \alert{QUIZ !}}
 
@@ -180,10 +180,10 @@ Supposons que $\lambda=1/10$. Calculez ces probabilités.
 \end{frame}
 
 
-\begin{frame}[t]%{Événements mutuellement exclusifs}
+\begin{frame}[t]
 
 \centerline{\LARGE \bf \alert{QUIZ !}}
-Quelle est la probabilité d'obtenir un gain supérieur à 0,75\$ ?
+Quelle est la probabilité d'obtenir un gain supérieur à 0,75~\$ ?
 
 \medskip
 Répondez à l'aide de la fonction de répartition.
@@ -217,7 +217,7 @@ Répondez à l'aide de la fonction de répartition.
 \begin{block}{Variables aléatoires discrètes et continues}
 \begin{itemize}\itemsep3mm
 \item  Si $F_X(x)$ est une fonction en escalier continue à droite,  alors on dit que $X$ est une variable aléatoire \alerter{discrète}. L'ensemble des valeurs possibles est \alerter{dénombrable}.
-\item Si $F_X(x)$ est une fonction continue, alors on dit que  $X$ est une variable aléatoire \alerter{continue}. L'ensemble des valeurs possibles est \alerter{indénombrable}
+\item Si $F_X(x)$ est une fonction continue, alors on dit que  $X$ est une variable aléatoire \alerter{continue}. L'ensemble des valeurs possibles est \alerter{indénombrable}.
  \end{itemize}
 \end{block}
 
@@ -230,7 +230,7 @@ Répondez à l'aide de la fonction de répartition.
 
  \begin{defn}
   Soit $X$ une v.a. \alerter{discrète}. On  appelle \alerter{fonction de probabilité} (ou \alerter{fonction de masse},
-  ou \alerter{fonction de masse de probabilité}. On utilise PMF, de \textit{probability mass function}) de $X$ la fonction
+  ou \alerter{fonction de masse de probabilité}; PMF, de \textit{probability mass function}) de $X$ la fonction
   $$p_X:\mathbb{R}\to[0,1]$$ qui associe la valeur 
   $$p_X(x)=P(X=x)$$
   à tout $x\in \mathbb{R}$.
@@ -279,7 +279,7 @@ Une fonction $p_X$ peut être une fonction de probabilité pour une v.a. discrè
 \begin{frame}[t]{Fonction de densité}
 
 \begin{defn}
-Soit $X$ une v.a. continue. On appelle fonction de densité (PDF, de \textit{probability density function}) de $X$, la fonction qui associe la valeur 
+Soit $X$ une v.a. continue. On appelle \alerter{fonction de densité} (PDF, de \textit{probability density function}) de $X$ la fonction qui associe la valeur
 $$f_X(x)=\frac{d}{dx}F_X(x)$$
 à tout $x\in \mathbb{R}$.
 \end{defn}
@@ -328,7 +328,7 @@ P(a<X<b)\\P(a<X\le b)\\P(a\le X<b)\\P(a\le X\le b)
 
 \end{frame}
 
-\begin{frame}[t]%{Événements mutuellement exclusifs}
+\begin{frame}[t]{Exemple 4}
 
 \centerline{\LARGE \bf \alert{QUIZ !}}
 
@@ -345,7 +345,7 @@ Déterminez la densité de $X$, sa fonction de répartition, et évaluez $P(5<X<
 
 
 \begin{frame}[t]{Exemple 5: Retour à l'exemple de la pluie}
-La distribution de la quantité de pluie mensuelle re\c{c}ue à la station
+La fonction de répartition de la quantité de pluie mensuelle reçue à la station
 est définie par $F(x)=1-e^{-\lambda x}$ si
 $x\ge0$, et $0$ ailleurs.
 \begin{itemize}\itemsep 2cm
@@ -355,7 +355,7 @@ $x\ge0$, et $0$ ailleurs.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[t]%{Événements mutuellement exclusifs}
+\begin{frame}[t]
 
 \centerline{\LARGE \bf \alert{QUIZ !}}
 \begin{itemize}
@@ -365,7 +365,7 @@ $x\ge0$, et $0$ ailleurs.
 \end{frame}
 
 
-\begin{frame}[t]%{Événements mutuellement exclusifs}
+\begin{frame}[t]
 
 \centerline{\LARGE \bf \alert{QUIZ !}}
 Associez chaque densité  avec la bonne répartition.
@@ -526,14 +526,14 @@ Une quantité très utile qui découle de la variance est l'écart-type, $\sigma
 La quantité de pluie reçue en un mois à cette station est-elle très variable?
 \end{frame}
 
-\section{Espérance mathématique d'une fonction de variable aléatoire}
+\section{Espérance d'une fonction d'une variable aléatoire}
 
-\begin{frame}[t]{Valeur espérée d'une fonction de $X$}
+\begin{frame}[t]{Espérance d'une fonction d'une variable aléatoire}
 
 {\small
-\begin{Boite}{Espérance mathématique d'une fonction de $X$}
+\begin{Boite}{Espérance d'une fonction d'une variable aléatoire}
  Soit $X$ une v.a. et posons $Y=H(X)$ une fonction
- de $X$. Alors l'\alert{espérance mathématique
+ de $X$. Alors l'\alerter{espérance
  de $H(X)$} (ou de $Y$) est définie par
  $$E[Y]=E[H(X)]=\sum_{x\in\mathbb{R}_X}H(x)p(x)$$
  ou
