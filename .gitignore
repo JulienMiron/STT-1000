@@ -4,6 +4,7 @@
 *_files/
 .Rhistory
 .RData
+**/.DS_Store
 
 **/*.quarto_ipynb
 

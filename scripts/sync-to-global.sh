@@ -108,8 +108,8 @@ fi
 SHORT_SHA="$(git -C "$REPO_DIR" rev-parse --short HEAD)"
 LAST_MSG="$(git -C "$REPO_DIR" log -1 --pretty=%s)"
 
-git commit -m "Reporte des corrections de diapos depuis $COURSE ($SHORT_SHA)
+git commit --only -m "Reporte des corrections de diapos depuis $COURSE ($SHORT_SHA)
 
-$LAST_MSG"
+$LAST_MSG" -- "${staged[@]}"
 git push origin master
 echo "[sync-to-global] Synchronisation terminée et poussée sur Global."
