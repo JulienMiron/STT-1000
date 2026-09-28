@@ -732,6 +732,38 @@ Pas d'effet chronologique & Effet de grappe\\
 
 \subsection{Solution aux problèmes: transformer $X$ et/ou $Y$}\label{sec:transfo}
 
+\section{Réponses des exemples}
+
+\begin{frame}[t]{Réponses des exemples}
+{\footnotesize
+\begin{itemize}
+\item \textbf{Exemple 1} (estimation des paramètres) : $\hat\beta_1=S_{XY}/S_{XX}\approx-0{,}0510$~;
+$\hat\beta_0=\overline Y-\hat\beta_1\overline X\approx90{,}72$~; droite estimée~: $\hat Y=90{,}72-0{,}0510\,X$.
+\item \textbf{Exemple 2} (i)~: à $x_0=925$~s ($15$~min~$25$~s), prévision ponctuelle
+$\hat Y_0\approx43{,}52$~; IC à $95\,\%$ pour $E(Y|X=x_0)$~: $(41{,}33\,;\,45{,}71)$.
+(ii)~: même prévision ponctuelle $\hat Y_0\approx43{,}52$~; intervalle de prévision à $95\,\%$
+pour une observation individuelle~: $(35{,}94\,;\,51{,}10)$.
+\item \textbf{Exemple 3}~: $R^2\approx0{,}656$ ($65{,}6\,\%$ de la variabilité de $Y$ expliquée par le
+modèle)~; $r\approx-0{,}810$.
+\item \textbf{Exemple 4}~: les graphiques suggèrent que l'homoscédasticité (P2) semble raisonnable,
+mais la normalité (P4) est douteuse (résidus asymétriques, quelques valeurs extrêmes positives).
+\end{itemize}
+}
+\end{frame}
+
+\section{Réponses des quiz}
+
+\begin{frame}[t]{Réponses des quiz}
+{\footnotesize
+\begin{itemize}
+\item \textbf{Quiz} (interprétation du modèle)~: différence prédite entre Jacques (10~s plus lent) et
+Marc : $10\hat\beta_1\approx-0{,}51$ (le $VO_2max$ prédit de Jacques est environ $0{,}51$ unité plus bas)~;
+Faux --- $X=0$ est loin à l'extérieur du domaine observé ($683$ à $1045$~s), il s'agit d'une extrapolation
+dangereuse (même si numériquement $\hat\beta_0\approx90{,}7$).
+\end{itemize}
+}
+\end{frame}
+
 \begin{frame}{Bibliographie}
  	Ce document est rédigé avec Beamer ainsi qu'une classe .cls fournie par Jérôme Soucy. Les diapositives sont adaptées des diapositives créées par Thierry Duchesne et Emmanuelle Reny-Nolin pour le cours STT-1900. Les graphiques proviennent de ces mêmes diapositives.
  	\printbibliography
