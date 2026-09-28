@@ -474,6 +474,41 @@ Un test de niveau approximativement $\alpha$ rejette $H_0$ si
 \end{frame}
 
 
+\section{Réponses des exemples}
+
+\begin{frame}[t]{Réponses des exemples}
+{\footnotesize
+\begin{itemize}
+\item \textbf{Exemple 1} (zinc, rivières 1 et 2) : test-t à deux échantillons indépendants à variances
+égales, $S_p^2\approx1{,}429$ et $t_0=(5{,}00-4{,}45)/\sqrt{S_p^2(1/6+1/5)}\approx0{,}76$~; comme
+$t_0=0{,}76 < t_{0{,}05,9}=1{,}833$, on ne rejette pas $H_0$ : on ne peut pas conclure, au seuil de
+5\,\%, que la concentration moyenne est plus élevée dans la rivière 1.
+\item \textbf{Exemple 2} (examens de juin et septembre, échantillons appariés) : différences
+$D_j=X_{1j}-X_{2j}$ de moyenne $\overline D=4{,}5$ et d'écart-type $S_D\approx1{,}690$~; $t_0=
+\overline D/(S_D/\sqrt{8})\approx7{,}53$, largement supérieur à $t_{0{,}025,7}=2{,}365$ : on rejette
+$H_0$ et on conclut, au seuil de 5\,\%, que les étudiants sont significativement moins forts en
+septembre (baisse moyenne de 4,5 points).
+\end{itemize}
+}
+\end{frame}
+
+\section{Réponses des quiz}
+
+\begin{frame}[t]{Réponses des quiz}
+{\footnotesize
+\begin{itemize}
+\item \textbf{Quiz} (distributions de $\overline X$ et $\overline X - \overline Y$, avec $n_1=10$,
+$X\sim N(30,16)$ et $n_2=25$, $Y\sim N(10,25)$) : $\overline X \sim N(30\,;\,1{,}6)$~;
+$\overline X - \overline Y \sim N(20\,;\,2{,}6)$.
+\item \textbf{Quiz} (exemple 2 analysé à tort comme deux échantillons indépendants à variances
+égales) : règle de rejet bilatérale avec $df=n_1+n_2-2=14$ : on rejette $H_0$ si $|t_0| >
+t_{0{,}025,14}=2{,}145$~; comme $t_0=1{,}28 < 2{,}145$, on ne rejette pas $H_0$ — conclusion
+contraire à celle du test apparié (correct) de l'exemple 2, ce qui illustre la perte de puissance
+lorsqu'on ignore l'appariement.
+\end{itemize}
+}
+\end{frame}
+
 \begin{frame}{Bibliographie}
  	Ce document est rédigé avec Beamer ainsi qu'une classe .cls fournie par Jérôme Soucy. Les diapositives sont adaptées des diapositives créées par Thierry Duchesne et Emmanuelle Reny-Nolin pour le cours STT-1900. Les graphiques proviennent de ces mêmes diapositives.
  	\printbibliography
