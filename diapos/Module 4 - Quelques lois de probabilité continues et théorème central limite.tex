@@ -793,6 +793,59 @@ Un étudiant fait une erreur de calcul dans 10\% de ses calculs. S'il doit répo
 \end{frame}
 
 
+\section{Réponses des exemples}
+
+\begin{frame}[t]{Réponses des exemples (1/3)}
+{\footnotesize
+\begin{itemize}
+\item \textbf{Exemple} (loi uniforme, puissance du processeur) : $P(X>1{,}8)=\frac{2-1{,}8}{2-1{,}5}=0{,}4$~;
+$E(X)=1{,}75$.
+\item \textbf{Exemple} (loi exponentielle, bateaux) : $P(X>6)=e^{-2}\approx0{,}1353$~;
+$P(4\text{ bateaux en 15 h})=P(\text{Poisson}(5)=4)=e^{-5}5^4/4!\approx0{,}1755$.
+\item \textbf{Exemple} (loi exponentielle, ampoule) : par l'absence de mémoire,
+$P(\text{survie}\ge1000\text{ h de plus})=P(X>1000)=e^{-1}\approx0{,}3679$.
+\item \textbf{Exemple} (loi Gamma, hacker) : $X\sim\text{Gamma}(3,1/15)$~; $E(X)=45$ minutes~;
+$V(X)=675$ minutes$^2$.
+\item \textbf{Exemple (suite)} (loi Gamma, hacker en 20 minutes) : nombre de mots de passe
+craqués $\sim\text{Poisson}(4/3)$~; $P(=2)=e^{-4/3}(4/3)^2/2!\approx0{,}2343$.
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}[t]{Réponses des exemples (2/3)}
+{\footnotesize
+\begin{itemize}
+\item \textbf{Exemple 1} (Weibull, panneaux de verre) : $P(\text{dure}<5\text{ ans})=F(5)=1-e^{-0{,}0625}\approx0{,}0606$.
+\item \textbf{Exemple 1 (suite)} (coût de la garantie) : coût total espéré
+$=500\times1000\$\times0{,}0606\approx30\,294\$$.
+\item \textbf{Exemple 2} (Weibull, iPod) : (i) $P(X\ge3|\text{neuf})=e^{-(3/4)^3}\approx0{,}6558$~;
+(ii) $P(X\ge5|X\ge2)=e^{-(5/4)^3}/e^{-(2/4)^3}=e^{-1{,}828125}\approx0{,}1607$.
+\item \textbf{Exemple 2 (suite)} (médiane du iPod) : $m$ tel que $(m/4)^3=\ln2$
+$\Rightarrow$ $m\approx3{,}54$ ans.
+\item \textbf{Exemple 1} (loi normale, camions) : (i) $P(X>70)=1-\Phi(2)=0{,}0228$~;
+(ii) $P(40<X<60)=\Phi(1)-\Phi(-1)=0{,}6826$.
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}[t]{Réponses des exemples (3/3)}
+{\footnotesize
+\begin{itemize}
+\item \textbf{Exemple 1 (suite)} (percentiles des camions) : (iii) $m_1=50+1{,}96\times10=69{,}6$~;
+(iv) $m_2=50-1{,}96\times10=30{,}4$.
+\item \textbf{Exemple 2} (portefeuille) : $E(W)=0{,}159$, $V(W)=0{,}0342$~;
+$P(W>0{,}17)=P(Z>0{,}0595)\approx0{,}476$.
+\item \textbf{Exemple 3} (TCL, demande des usines) : $Y\approx\mathcal{N}(1000,2500)$~;
+$P(Y>1100)=P(Z>2)=0{,}0228$.
+\item \textbf{Exemple} (approximation binomiale, étudiant, sans correction) :
+$P(X>5)\approx P(Z>1{,}667)=\Phi(1{,}667)\approx0{,}9522$.
+\item \textbf{Exemple (suite)} (exactement 5 erreurs, sans correction) :
+$P(X=5)\approx0$ (ceci illustre le besoin d'une correction de continuité).
+\item \textbf{Exemple (suite) avec correction} : $P(X>5)\approx P(Z\ge1{,}5)=\Phi(1{,}5)\approx0{,}9332$.
+\end{itemize}
+}
+\end{frame}
+
 \begin{frame}{Bibliographie}
  	Ce document est rédigé avec Beamer ainsi qu'une classe .cls fournie par Jérôme Soucy. Les diapositives sont adaptées des diapositives créées par Anne-Sophie Charest 
  pour le cours STT-1000 ainsi que celles créées par Thierry Duchesne et Emmanuelle Reny-Nolin pour le cours STT-1900. Les graphiques proviennent de ces mêmes diapositives.
