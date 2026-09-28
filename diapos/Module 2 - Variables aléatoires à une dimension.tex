@@ -592,15 +592,52 @@ Rappel: $E(X)=1/\lambda\qquad V(X)=1/\lambda^2$
 
 
 
-\begin{frame}[t]{Réponses aux exercices}
+\section{Réponses des exemples}
+
+\begin{frame}[t]{Réponses des exemples (1/2)}
 {\footnotesize
 \begin{itemize}
-\item \textbf{Exemples} ($p_X$, $p_Y$ pour le dé) : $p_X(1)=\cdots=p_X(6)=1/6$ ; $p_Y(-1)=p_Y(1)=1/2$.
-\item \textbf{Propriétés de la fonction de probabilité} : (1) $p_X(x)\ge 0$ pour tout $x$ ; (2) $\sum_x p_X(x)=1$.
+\item \textbf{Exemple 2 (suite)} (table $X(e)$, $Y(e)$ pour le dé) : $X(e)=e$ pour $e=1,\ldots,6$~;
+$Y(e)=-1$ si $e\in\{1,2,3\}$, $Y(e)=1$ si $e\in\{4,5,6\}$.
+\item \textbf{Exemple 2: probabilités} (perdre 1~\$) : $P(Y=-1)=P(e\in\{1,2,3\})=3/6=1/2$.
+\item \textbf{Retour à l'exemple 2} (fonction de répartition de $Y$) : $F_Y(y)=0$ si $y<-1$~;
+$F_Y(y)=1/2$ si $-1\le y<1$~; $F_Y(y)=1$ si $y\ge1$.
+\item \textbf{Exemple 3 (suite)} ($\lambda=1/10$) : $P(X\le15)=1-e^{-1{,}5}\approx0{,}777$~;
+$P(X>10)=e^{-1}\approx0{,}368$~; $P(5<X\le10)=e^{-0{,}5}-e^{-1}\approx0{,}239$.
+\item \textbf{Exemples} ($p_X$, $p_Y$ pour le dé) : $p_X(1)=\cdots=p_X(6)=1/6$~; $p_Y(-1)=p_Y(1)=1/2$.
+\item \textbf{Propriétés de la fonction de probabilité} : (1) $p_X(x)\ge 0$ pour tout $x$~; (2) $\sum_x p_X(x)=1$.
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}[t]{Réponses des exemples (2/2)}
+{\footnotesize
+\begin{itemize}
+\item \textbf{Exemple 5} (retour à la pluie) : $f(x)=\lambda e^{-\lambda x}$ si $x>0$ (0 sinon)~;
+$P(X>5)=e^{-5\lambda}$.
 \item \textbf{Exemple 6} : $E(X)=1/\lambda$.
-\item \textbf{Exemple 7} : $V(X)=1/\lambda^2$ ; plus $\lambda$ est petit, plus $X$ est variable.
-\item \textbf{Exemple 8} : $E(R)=10+3/\lambda$, $V(R)=9/\lambda^2$, donc l'écart-type est $3/\lambda$.
+\item \textbf{Exemple 7} : $V(X)=1/\lambda^2$~; plus $\lambda$ est petit, plus $X$ est variable.
 \item \textbf{Preuves} (« Résultats utiles ») : découlent directement des définitions de $E(\cdot)$ et $V(\cdot)$ en substituant $aX+b$, puis, pour la deuxième, en développant $(X-\mu)^2=X^2-2\mu X+\mu^2$.
+\item \textbf{Exemple 8} : $E(R)=10+3/\lambda$, $V(R)=9/\lambda^2$, donc l'écart-type est $3/\lambda$.
+\end{itemize}
+}
+\end{frame}
+
+\section{Réponses des quiz}
+
+\begin{frame}[t]{Réponses des quiz}
+{\footnotesize
+\begin{itemize}
+\item \textbf{Quiz} (retour au dé, gain $>0{,}75$\$) : $P(Y>0{,}75)=P(Y=1)=1/2$ (car $F_Y(0{,}75)=1/2$).
+\item \textbf{Quiz} (Exemple 4, densité sur $[0,20]$) : $f(x)=1/30$ si $x\in[0,10)$, $f(x)=1/15$ si
+$x\in[10,20]$, 0 sinon~; $F(x)=x/30$ si $0\le x<10$, $F(x)=1/3+(x-10)/15$ si $10\le x\le20$~;
+$P(5<X<12)=3/10=0{,}3$.
+\item \textbf{Quiz} (pluie, $P(10<X<15\mid X\ge5)$) : par la propriété d'absence de mémoire,
+$=e^{-5\lambda}-e^{-10\lambda}$.
+\item \textbf{Quiz} (association densité-répartition) : densité 1 (uniforme sur $[1,3]$)
+$\leftrightarrow$ répartition 2 (rampe linéaire)~; densité 2 (deux blocs sur $[0,1]$ et $[2,3]$)
+$\leftrightarrow$ répartition 4~; densité 3 (rampe croissante sur $[1,3]$) $\leftrightarrow$ répartition 1
+(courbe convexe)~; densité 4 (triangulaire sur $[0,4]$) $\leftrightarrow$ répartition 3 (courbe en S).
 \end{itemize}
 }
 \end{frame}
