@@ -387,6 +387,19 @@ Quelle est la probabilité que la moyenne échantillonnale soit supérieure à l
 
 
 
+\section{Réponses des exemples}
+
+\begin{frame}[t]{Réponses des exemples}
+{\footnotesize
+\begin{itemize}
+\item \textbf{Exemple 3} (four à peinture, $X\sim\mathcal{N}(197,38)$, $n=20$) : $\dfrac{19S^2}{38}\sim\chi^2_{19}$~; $S>7{,}38\Leftrightarrow\chi^2_{19}>19\times7{,}38^2/38\approx27{,}23$, donc $P(S>7{,}38)\approx0{,}10$ (table du khi-carré, 19 d.l., puisque $\chi^2_{0{,}10;19}=27{,}204$).
+\item \textbf{Exemple 4} (9 forages, $X_i$ i.i.d. $\mathcal{N}(\mu,\sigma^2)$) : $T=\dfrac{\overline X-\mu}{S/\sqrt n}\sim t_{8}$~; l'événement $\overline X-\mu>S$ équivaut à $T>\sqrt 9=3$, donc $P(T_8>3)$ est entre $0{,}005$ et $0{,}01$ (table de Student, 8 d.l.), soit environ $0{,}01$.
+\end{itemize}
+}
+\end{frame}
+
+
+
 \begin{frame}{Bibliographie}
  	Ce document est rédigé avec Beamer ainsi qu'une classe .cls fournie par Jérôme Soucy. Les diapositives sont adaptées des diapositives créées par Thierry Duchesne et Emmanuelle Reny-Nolin pour le cours STT-1900. Les graphiques proviennent de ces mêmes diapositives.
  	\printbibliography
