@@ -472,17 +472,40 @@ Calculez l'espérance et la variance de $Y$, la hausse du lac.
 \end{frame}
 
 
-\begin{frame}[t]{Réponses aux exercices}
+\section{Réponses des exemples}
+
+\begin{frame}[t]{Réponses des exemples (1/2)}
 {\footnotesize
 \begin{itemize}
-\item \textbf{Lois marginales} : $p_X(0)=0{,}4$, $p_X(1)=0{,}35$, $p_X(2)=0{,}25$ ; $p_Y(0)=0{,}4$, $p_Y(1)=0{,}3$, $p_Y(2)=0{,}15$, $p_Y(3)=0{,}15$.
-\item \textbf{Aucune maison sans électricité dans $\mathcal{X}$} : $P(X=0)=p_X(0)=0{,}4$.
-\item \textbf{Lois conditionnelles} (sachant $X=2$) : $p_{Y|2}(0)=0{,}4$, $p_{Y|2}(1)=0{,}2$, $p_{Y|2}(2)=0{,}2$, $p_{Y|2}(3)=0{,}2$.
-\item \textbf{Une maison de $\mathcal{Y}$ sans électricité si 2 maisons de $\mathcal{X}$} : $P(Y=1|X=2)=0{,}2$.
-\item \textbf{Espérance et variance conditionnelles} (sachant $X=2$) : $E[Y|2]=1{,}2$ ; $V[Y|2]=1{,}36$.
-\item \textbf{Indépendance de $E_1$ et $E_2$} : oui, $P(E_1\cap E_2)=0{,}15=P(E_1)P(E_2)$.
-\item \textbf{Indépendance de $X$ et $Y$} : non, par exemple $p(0,0)=0{,}2\neq p_X(0)p_Y(0)=0{,}16$.
-\item \textbf{Covariance et corrélation} : $Cov(X,Y)=0{,}2075$ ; $\rho(X,Y)\approx 0{,}245$.
+\item \textbf{Exemple} (lois marginales) : $p_X(0)=0{,}4$, $p_X(1)=0{,}35$, $p_X(2)=0{,}25$~; $p_Y(0)=0{,}4$, $p_Y(1)=0{,}3$, $p_Y(2)=0{,}15$, $p_Y(3)=0{,}15$.
+\item \textbf{Exemple} (aucune maison sans électricité dans $\mathcal{X}$) : $P(X=0)=p_X(0)=0{,}4$.
+\item \textbf{Exemple} (lois conditionnelles sachant $X=2$) : $p_{Y|2}(0)=0{,}4$, $p_{Y|2}(1)=0{,}2$, $p_{Y|2}(2)=0{,}2$, $p_{Y|2}(3)=0{,}2$.
+\item \textbf{Exemple} (une maison de $\mathcal{Y}$ sans électricité si 2 maisons de $\mathcal{X}$) : $P(Y=1|X=2)=0{,}2$.
+\item \textbf{Exemple} (espérance et variance conditionnelles sachant $X=2$) : $E[Y|2]=1{,}2$~; $V[Y|2]=1{,}36$.
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}[t]{Réponses des exemples (2/2)}
+{\footnotesize
+\begin{itemize}
+\item \textbf{Exemple} (indépendance de $E_1$ et $E_2$) : oui, $P(E_1\cap E_2)=0{,}15=P(E_1)P(E_2)$.
+\item \textbf{Exemple} (indépendance de $X$ et $Y$) : non, par exemple $p(0,0)=0{,}2\neq p_X(0)p_Y(0)=0{,}16$.
+\item \textbf{Un autre exemple} (fonction de probabilité conjointe à partir des marginales) : impossible à déterminer sans hypothèse supplémentaire (par exemple l'indépendance).
+\item \textbf{Exemple} (covariance et corrélation) : $Cov(X,Y)=0{,}2075$~; $\rho(X,Y)\approx 0{,}245$.
+\item \textbf{Exemple} (rivières et hausse du lac) : $E(Y)=0$~; $V(Y)=8{,}96$.
+\end{itemize}
+}
+\end{frame}
+
+\section{Réponses des quiz}
+
+\begin{frame}[t]{Réponses des quiz}
+{\footnotesize
+\begin{itemize}
+\item \textbf{Quiz} ($Cov(5,X)$) : $Cov(5,X)=0$ (la covariance avec une constante est toujours nulle).
+\item \textbf{Quiz} ($Cov(X,3Y)=Cov(Y,3X)$?) : Vrai, car $Cov(X,3Y)=3\,Cov(X,Y)=Cov(Y,3X)$.
+\item \textbf{Quiz} (unités de la covariance) : $^\circ$C $\times$ secondes.
 \end{itemize}
 }
 \end{frame}
