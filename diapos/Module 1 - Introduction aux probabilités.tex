@@ -577,7 +577,29 @@ soient pas indépendants. Par exemple
 
 \begin{frame}[t]{Exemple d'une partition de $\mathcal{U}$}
 
- \centerline{\includegraphics[height=6.8cm]{partition-p24.jpg}}
+\begin{center}
+    \begin{tikzpicture}[scale = 0.85]
+  % Le rectangle
+  \draw[thick] (-5,-4) rectangle (5,4);
+
+  % Les cercles
+  \draw (-3,4) -- (-3,-4);
+  \draw (-2,4) -- (0,-4);
+  \draw (-1,0) -- (5,4);
+  \draw (-1,0) -- (5,4);
+  \draw (2,2) -- (5,-4);
+
+
+  % Les lettres
+  \node at (-4.7,3.7) {$B_1$};
+  \node at (-2.7,3.7) {$B_2$};
+  \node at (-1.6,3.7) {$B_3$};
+  \node at (-0.5,-0.3) {$B_4$};
+  \node at (2.5,1.8) {$B_5$};
+  \node at (5.2, 4) {$\mathcal{U}$};
+
+\end{tikzpicture}
+\end{center}
 
 \end{frame}
 
@@ -595,10 +617,34 @@ soient pas indépendants. Par exemple
  \end{Boite}
 \end{frame}
 
-\begin{frame}[t]{Exemple d'une partition de $\mathcal{U}$}
+\begin{frame}[t]{Exemple d'une partition de $\mathcal{U}$ (suite)}
 
- \centerline{\includegraphics[height=6.8cm]{partition-p24.jpg}}
+\begin{center}
+    \begin{tikzpicture}[scale = 0.85]
+  % Le rectangle
+  \draw[thick] (-5,-4) rectangle (5,4);
 
+  % Les cercles
+  \draw (-3,4) -- (-3,-4);
+  \draw (-2,4) -- (0,-4);
+  \draw (-1,0) -- (5,4);
+  \draw (-1,0) -- (5,4);
+  \draw (2,2) -- (5,-4);
+
+  % L'événement A, à cheval sur $B_2$, $B_3$ et $B_4$
+  \draw[very thick, burntorange] (-0.5,0.3) ellipse (2.3 and 2.0);
+  \node[burntorange] at (-0.5,1.6) {\bf A};
+
+  % Les lettres
+  \node at (-4.7,3.7) {$B_1$};
+  \node at (-2.7,3.7) {$B_2$};
+  \node at (-1.6,3.7) {$B_3$};
+  \node at (-0.5,-0.3) {$B_4$};
+  \node at (2.5,1.8) {$B_5$};
+  \node at (5.2, 4) {$\mathcal{U}$};
+
+\end{tikzpicture}
+\end{center}
 \end{frame}
 
 \begin{frame}[t]{Conditionner sur une partition pour trouver $P(A)$}
