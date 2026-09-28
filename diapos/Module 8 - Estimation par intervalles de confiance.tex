@@ -19,7 +19,7 @@
 \begin{frame}{Introduction: estimation ponctuelle imparfaite}
 
 Un échantillon donne lieu à UNE estimation du paramètre. Quelle confiance peut-on avoir en cette estimation?\\
-{\small \it Ci-dessous, chaque échantillon $X_1,...X_{25}$ provient d'une $\mathcal{N}(15,\,16)$.}
+{\small \it Ci-dessous, chaque échantillon $X_1,\ldots,X_{25}$ provient d'une $\mathcal{N}(15,\,16)$.}
 \vspace{0.5cm}
 
 \includegraphics[width=5.0cm]{moy1000.png}
@@ -30,7 +30,7 @@ Un échantillon donne lieu à UNE estimation du paramètre. Quelle confiance peu
 
 \begin{frame}[t]
 Dans l'histogramme de gauche (page précédente),\\
-les 1000 valeurs de $\overline x$ pourraient servir d'estimation pour $\mu$.
+les 1~000 valeurs de $\overline x$ pourraient servir d'estimation pour $\mu$.
 \bigskip
 
 
@@ -43,7 +43,7 @@ Dans cette situation, environ combien d'estimations sont distantes de $\mu$ d'au
 \begin{frame}[t]
  \frametitle{Concept d'estimation par intervalle de confiance}
 
-Un intervalle de confiance :
+Un intervalle de confiance (IC) :
 \medskip
 
     \begin{itemize}\itemsep8mm
@@ -79,17 +79,21 @@ Un intervalle de confiance :
 \begin{frame}[t]
  \frametitle{Plusieurs intervalles de confiance }
 
-\begin{minipage}[b]{3cm}
-\includegraphics[width=2.8cm]{quote.png}
+\begin{minipage}[b]{2.6cm}
+\includegraphics[width=2.4cm]{quote.png}
 \end{minipage}
-\begin{minipage}[b]{7.5cm}
-\includegraphics[width=7.5cm]{interpret-ic2.jpg}
+\begin{minipage}[b]{6.5cm}
+\includegraphics[width=6.5cm]{interpret-ic2.jpg}
 \end{minipage}
+
+{\footnotesize Chaque échantillon donne un intervalle différent~: sur un grand nombre de
+répétitions, environ $(1-\alpha)\times 100\,\%$ contiennent la vraie valeur $\theta$ (ex.\
+Échantillon $k+3$~: celui-ci ne la contient pas).}
 
 \end{frame}
 \begin{frame}{Rappel sur les lois échantillonnales}
 
- Lorsque $X_1, ..., X_n$ i.i.d. $N(\mu, \sigma^2)$, on connaît les lois échantillonnales des statistiques suivantes:
+ Lorsque $X_1,\ldots,X_n$ i.i.d. $\mathcal{N}(\mu, \sigma^2)$, on connaît les lois échantillonnales des statistiques suivantes {\small\it (tableau à compléter en classe, à partir des résultats vus au Module 7)}~:
 
 \begin{center}
 {\renewcommand{\arraystretch}{2.5}
@@ -103,8 +107,6 @@ $\displaystyle U=\frac{(n-1)S^2 }{\sigma^2}$ &&&\\\hline
 }
 \end{center}
 
- \vspace{1cm}
-
 \end{frame}
 
 \begin{frame}[t]{5 cas étudiés}
@@ -116,15 +118,15 @@ Nous construirons 5 intervalles de confiance:
   \hline
   Cas&Paramètre & Situation \\\hline
 &&\\[-0.3cm]
-1&  $\mu$ & $X_1, ..., X_n\;\sim\;N(\mu, \, \sigma^2)$ avec $\sigma^2$ connue \\
+1&  $\mu$ & $X_1,\ldots,X_n\;\sim\;\mathcal{N}(\mu, \, \sigma^2)$ avec $\sigma^2$ connue \\
 &&\\
-2&  $\mu$ & $X_1, ..., X_n\;\sim\;N(\mu, \, \sigma^2)$ avec $\sigma^2$ inconnue  \\
+2&  $\mu$ & $X_1,\ldots,X_n\;\sim\;\mathcal{N}(\mu, \, \sigma^2)$ avec $\sigma^2$ inconnue  \\
 &&\\
-3&  $\mu$ & $X_1, ..., X_n\;\sim\;$ loi inconnue, mais $n$ est grand  \\[0.2cm]\hline
+3&  $\mu$ & $X_1,\ldots,X_n\;\sim\;$ loi inconnue, mais $n$ grand  \\[0.2cm]\hline
 &&\\[-0.3cm]
-4&  $p$ & $X_1, ..., X_n \sim \text{Bernoulli}(p)$ avec $n$ assez grand  \\[0.2cm]\hline
+4&  $p$ & $X_1,\ldots,X_n \sim \text{Bernoulli}(p)$ avec $n$ grand  \\[0.2cm]\hline
 &&\\[-0.3cm]
-5&  $\sigma^2$ & $X_1, ..., X_n\;\sim\;N(\mu, \, \sigma^2)$ \\[0.2cm]\hline
+5&  $\sigma^2$ & $X_1,\ldots,X_n\;\sim\;\mathcal{N}(\mu, \, \sigma^2)$ \\[0.2cm]\hline
 
 \end{tabular}
 \end{frame}
@@ -137,9 +139,9 @@ Nous construirons 5 intervalles de confiance:
 
 \small
 \begin{itemize} \itemsep1mm
-\item {\color{blue}{On suppose que $X_1,\ldots,X_n$ i.i.d. loi $N(\mu,\sigma^2)$, \\
+\item {\color{blue}{On suppose que $X_1,\ldots,X_n$ i.i.d. loi $\mathcal{N}(\mu,\sigma^2)$, \\
 o\`u $\sigma^2$ est  une valeur connue}.}% et $\mu$ est le paramètre d'intér\^et.
-\item On déduit que $\overline X\;\sim\;N\left(\mu,\displaystyle\frac{\sigma^2}{n}\right)$, donc que    $\displaystyle Z=\frac{\overline X-\mu}{\sigma/\sqrt{n}}\;\sim\;N(0,1)$
+\item On déduit que $\overline X\;\sim\;\mathcal{N}\left(\mu,\displaystyle\frac{\sigma^2}{n}\right)$, donc que    $\displaystyle Z=\frac{\overline X-\mu}{\sigma/\sqrt{n}}\;\sim\;\mathcal{N}(0,1)$
 \item Soit $z_{\alpha/2}$, la valeur telle que $P(Z>z_{\alpha/2})=\alpha/2$. On a donc que\\
 \end{itemize}
 
@@ -158,8 +160,10 @@ $P(\,-z_{\alpha/2}\;\le \;Z\;\le \;z_{\alpha/2}\,)=1-\alpha$.
  \frametitle{Cas 1 pour $\mu$: loi normale, variance connue}
 
 \begin{itemize} \itemsep3mm
-\item On cherche $[C_1, C_2]$ tels que $P(C_1\le \alert{\mu} \le C_2)=1-\alpha$
+\item On cherche $[C_1, C_2]$ telles que $P(C_1\le \alerter{\mu} \le C_2)=1-\alpha$
 \item On sait que $P\left(\,-z_{\alpha/2}\;\le \;\dfrac{\overline X - \mu}{\sigma/\sqrt{n}}\;\le \;z_{\alpha/2}\,\right)=1-\alpha$
+\item<2-> En isolant $\mu$~:
+$$\overline X - z_{\alpha/2}\dfrac{\sigma}{\sqrt{n}}\;\le\;\mu\;\le\;\overline X + z_{\alpha/2}\dfrac{\sigma}{\sqrt{n}}$$
 \end{itemize}
 
 \end{frame}
@@ -167,7 +171,7 @@ $P(\,-z_{\alpha/2}\;\le \;Z\;\le \;z_{\alpha/2}\,)=1-\alpha$.
 \begin{frame}[t] \frametitle{Exemple 1 }
 
  {\small
- Soit $X$, le diamètre (en cm)  des disques de frein  produits par une machine, o\`u $X\sim N(\mu,\, 0,0009)$.  On choisit un échantillon de 9 disques  au hasard et on calcule un diamètre moyen de $12,05$ cm.
+ Soit $X$, le diamètre (en cm)  des disques de frein  produits par une machine, o\`u $X\sim \mathcal{N}(\mu,\, 0,0009)$.  On choisit un échantillon de 9 disques  au hasard et on calcule un diamètre moyen de $12,05$ cm.
 
  \vspace{3mm}
 
@@ -202,7 +206,7 @@ Déterminez si les énoncés suivants (liés à l'exemple 1) sont vrais ou faux.
  \frametitle{Cas 2 pour $\mu$: loi normale, variance INCONNUE}
 
  \begin{itemize} \itemsep1mm
-\item {\color{blue}{On suppose que $X_1,\ldots,X_n$ i.i.d. loi $N(\mu,\sigma^2)$, \\
+\item {\color{blue}{On suppose que $X_1,\ldots,X_n$ i.i.d. loi $\mathcal{N}(\mu,\sigma^2)$, \\
 o\`u $\sigma^2$ est  une valeur inconnue, donc à estimer par $S^2$}.}% et $\mu$ est le paramètre d'intér\^et.
 \item On déduit que $\overline X\;\sim\;N\left(\mu,\displaystyle\frac{\sigma^2}{n}\right)$, donc $T=\dfrac{\overline X-\mu}{S/\sqrt{n}}\;\sim\;t_{n-1}$
 \item Soit $t_{\alpha/2; n-1}$, la valeur telle que $P(T>t_{\alpha/2;\, n-1})=\alpha/2$. Ainsi,\\
@@ -225,8 +229,10 @@ $P(-t_{\alpha/2;\, n-1}\le T\le t_{\alpha/2;\,n-1})=1-\alpha$.
  \frametitle{Cas 2 pour $\mu$: loi normale, variance inconnue}
 
  \begin{itemize} \itemsep3mm
-\item On cherche $[C_1, C_2]$ tels que $P(C_1\le \alert{\mu} \le C_2)=1-\alpha$
+\item On cherche $[C_1, C_2]$ telles que $P(C_1\le \alerter{\mu} \le C_2)=1-\alpha$
 \item On sait que $P\left(\,-t_{\alpha/2;\, n-1}\;\le \;\dfrac{\overline X - \mu}{S/\sqrt{n}}\;\le \;t_{\alpha/2;\, n-1}\,\right)=1-\alpha$
+\item<2-> En isolant $\mu$~:
+$$\overline X - t_{\alpha/2;\,n-1}\dfrac{S}{\sqrt{n}}\;\le\;\mu\;\le\;\overline X + t_{\alpha/2;\,n-1}\dfrac{S}{\sqrt{n}}$$
 \end{itemize}
 
 %$\frac{\bar{X}-\mu}{S/\sqrt{n}}\sim t_{n-1}\Rightarrow$
@@ -245,16 +251,16 @@ $P(-t_{\alpha/2;\, n-1}\le T\le t_{\alpha/2;\,n-1})=1-\alpha$.
 \subsection{Loi de $X_1,\ldots,X_n$ inconnue, mais $n$ grand}
 
 \begin{frame}[t]
- \frametitle{Cas 3 pour $\mu$: loi inconnue, n grand}
+ \frametitle{Cas 3 pour $\mu$: loi inconnue, $n$ grand}
 
  \begin{itemize} \itemsep3mm
 \item {\color{blue}{On suppose que $X_1,\ldots,X_n$ sont i.i.d. d'une loi inconnue. }}% et $\mu$ est le paramètre d'intér\^et.
 \item  Peut-on construire des intervalles de confiance?
 
- \item <2->L'idée: utiliser le \alerter{théorème  central limite } et le fait  que pour $n$ grand :%(dans la pratique on recommande $n\ge 30$):
+ \item <2->L'idée: utiliser le \alerter{théorème central limite (TCL)} et le fait  que pour $n$ grand :%(dans la pratique on recommande $n\ge 30$):
 
  \vspace{4mm}
-  $s^2\simeq \sigma^2$ et $\overline{X}\approx N(\mu,s^2/n)\Rightarrow$
+  $S^2\simeq \sigma^2$ et $\overline{X}\approx \mathcal{N}(\mu,S^2/n)\Rightarrow$
 \vspace{1cm}
 \item <2->
  Si $n$ est grand, on peut construire des intervalles de confiance dont le niveau sera \alerter{approximativement}  du niveau désiré.
@@ -262,10 +268,10 @@ $P(-t_{\alpha/2;\, n-1}\le T\le t_{\alpha/2;\,n-1})=1-\alpha$.
 \end{frame}
 
 \begin{frame}[t]
- \frametitle{Cas 3 pour $\mu$: loi inconnue, n grand}
+ \frametitle{Cas 3 pour $\mu$: loi inconnue, $n$ grand}
 
  \begin{itemize} \itemsep3mm
-\item On cherche $[C_1, C_2]$ tels que $P(C_1\le \alerter{\mu} \le C_2)=1-\alpha$
+\item On cherche $[C_1, C_2]$ telles que $P(C_1\le \alerter{\mu} \le C_2)=1-\alpha$
 \item On sait que $P\left(\,-z_{\alpha/2 }\;\le \;\dfrac{\overline X - \mu}{S/\sqrt{n}}\;\le \;z_{\alpha/2 }\,\right)\alerter{\approx} 1-\alpha$
     \vspace{7mm}
 \item On déduit que $P\left(\overline X \,-\,z_{\alpha/2 } \dfrac{S}{\sqrt{n}}\;\le \;  \mu\;\le \overline X \,+\,z_{\alpha/2 }\dfrac{S}{\sqrt{n}}\,\right)\alerter{\approx} 1-\alpha$
@@ -319,11 +325,11 @@ La marge d'erreur d'un IC sur la moyenne $\mu$ augmente \\(donc la précision di
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Intervalle de confiance pour une proportion}
 
-\begin{frame}[t]{Cas 4 pour une proportion}
+\begin{frame}[t]{Cas 4 pour $p$}
 
 
  \begin{itemize} \itemsep1mm
-\item {\color{blue}{On suppose que $X_1,\hdots,X_n$ i.i.d. loi Bernoulli$(p)$,
+\item {\color{blue}{On suppose que $X_1,\ldots,X_n$ i.i.d. loi Bernoulli$(p)$,
 où $p$ est inconnue et où $n\geq 30$}.}
 \item L'estimateur ponctuel pour $p$ est $\hat{p} =\displaystyle \frac{1}{n}\sum_{i=1}^n X_i$
 \item Par le TCL, nous savons que $\hat{p}\approx \mathcal{N}(p, \frac{p(1-p)}{n})$ et donc $$\frac{\hat{p}-p}{\sqrt{\frac{p(1-p)}{n}}}\approx \mathcal{N}(0,1)$$
@@ -331,11 +337,18 @@ où $p$ est inconnue et où $n\geq 30$}.}
 Ainsi,
 $$P\left(-z_{\alpha/2}\leq \frac{\hat{p}-p}{\sqrt{\frac{p(1-p)}{n}}} \leq z_{\alpha/2} \right)\approx 1-\alpha$$
 \end{frame}
-\begin{frame}[t]{Cas 4 pour une proportion}
+\begin{frame}[t]{Cas 4 pour $p$}
 On en déduit donc l'intervalle de confiance de niveau approximatif $(1-\alpha)$:
 $$P\left(\hat{p}-z_{\alpha/2}\sqrt{\frac{p(1-p)}{n}} \leq p \leq \hat{p}+z_{\alpha/2} \sqrt{\frac{p(1-p)}{n}} \right)\approx 1-\alpha$$
 \pause
 Mais il y a un problème.
+
+\pause
+\smallskip
+{\small Le paramètre $p$ inconnu apparaît aussi dans la marge d'erreur! On le remplace par
+$\hat p$ (par le TCL, l'approximation reste valide)~:
+$$\hat{p}-z_{\alpha/2}\sqrt{\frac{\hat p(1-\hat p)}{n}} \;\le\; p \;\le\; \hat{p}+z_{\alpha/2} \sqrt{\frac{\hat p(1-\hat p)}{n}}$$
+}
 \end{frame}
 
 \section{Intervalles de confiance pour la variance}
@@ -347,7 +360,7 @@ Mais il y a un problème.
 
 
  \begin{itemize} \itemsep1mm
-\item {\color{blue}{On suppose que $X_1,\ldots,X_n$ i.i.d. loi $N(\mu,\sigma^2)$, \\
+\item {\color{blue}{On suppose que $X_1,\ldots,X_n$ i.i.d. loi $\mathcal{N}(\mu,\sigma^2)$, \\
 o\`u $\mu$ et $\sigma^2$ sont inconnues}.}% et $\mu$ est le paramètre d'intér\^et.
 \item On sait que  $\displaystyle U=\frac{(n-1)\,S^2}{\sigma^2}\;\sim\;\chi^2_{n-1}$
 \item Soit $\chi^2_{\alpha/2;\,n-1}$, la valeur telle que $P(U>\chi^2_{\alpha/2;\,n-1})=\alpha/2$. Ainsi,\\
@@ -367,8 +380,10 @@ $P(\chi^2_{1-\alpha/2;\,n-1}\le U\le \chi^2_{\alpha/2;\,n-1})=1-\alpha$.
  \frametitle{Cas 5 pour $\sigma^2$: loi normale, $\mu$ et $\sigma^2$ inconnues}
 
  \begin{itemize} \itemsep3mm
-\item On cherche $[C_1, C_2]$ tels que $P(C_1\le \alert{\sigma^2} \le C_2)=1-\alpha$
+\item On cherche $[C_1, C_2]$ telles que $P(C_1\le \alerter{\sigma^2} \le C_2)=1-\alpha$
 \item On sait que $P\left(\chi^2_{1-\alpha/2;\,n-1}\le \dfrac{(n-1)\,S^2}{\sigma^2}\le \chi^2_{\alpha/2;\,n-1}\right)=1-\alpha$
+\item<2-> En isolant $\sigma^2$ (l'inégalité s'inverse)~:
+$$\dfrac{(n-1)\,S^2}{\chi^2_{\alpha/2;\,n-1}}\;\le\;\sigma^2\;\le\;\dfrac{(n-1)\,S^2}{\chi^2_{1-\alpha/2;\,n-1}}$$
 \end{itemize}
 
 % {\small  On cherche deux v.a. $C_1$ et $C_2$ telles que $P[C_1\le\sigma^2\le C_2]=1-\alpha$. On sait  que $\frac{(n-1)S^2}{\sigma^2}\sim\chi^2_{n-1}\Rightarrow$}
@@ -397,7 +412,11 @@ $P(\chi^2_{1-\alpha/2;\,n-1}\le U\le \chi^2_{\alpha/2;\,n-1})=1-\alpha$.
  {\small
  On veut calibrer la machine qui fabrique les disques de frein pour qu'elle soit la plus stable possible. On veut d'abord estimer la variation du diamètre des disques produits, avec un intervalle de confiance  à 95\%.\\
 
- Un échantillon de taille 25  a donné une variance échantillonnale de $0,015$ cm$^2$.  On suppose que les diamètres sont i.i.d. de loi normale.}
+ Un échantillon de taille 25  a donné une variance échantillonnale de $0,015$ cm$^2$.  On suppose que les diamètres sont i.i.d. de loi normale.
+
+ \vspace{2mm}
+ \alerter{a)} Donnez un intervalle de confiance pour $\sigma^2$.\\
+ \alerter{b)} Déduisez-en un intervalle de confiance pour $\sigma$.}
 
 \end{frame}
 

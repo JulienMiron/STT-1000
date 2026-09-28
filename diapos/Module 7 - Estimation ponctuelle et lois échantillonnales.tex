@@ -41,8 +41,8 @@ nouveau produit sur l'attrait d'une option.
 {\bf Estimation de paramètres}&{\bf Vérification d'hypothèses}\\\hline
 
 \uncover<2->{\alerter{Estimation ponctuelle:} }& \uncover<4->{\alerter{Tests d'hypothèses:} }\\[3mm]
-\uncover<2->{$\bullet\;\mu$ estimé par...}&\uncover<4->{$\bullet\;$ A-t-on $\;\mu\leq60$?} \\[3mm]
-\uncover<2->{$\bullet\;\sigma^2$ estimé par...}&\uncover<4->{$\bullet\;$ A-t-on $\;\sigma^2<10$?}\\[3mm]\cline{1-1}
+\uncover<2->{$\bullet\;\mu$ estimé par\ldots}&\uncover<4->{$\bullet\;$ A-t-on $\;\mu\leq60$?} \\[3mm]
+\uncover<2->{$\bullet\;\sigma^2$ estimé par\ldots}&\uncover<4->{$\bullet\;$ A-t-on $\;\sigma^2<10$?}\\[3mm]\cline{1-1}
 \uncover<3->{\alerter{Intervalles de confiance: }}&\uncover<4->{$\bullet\;$ A-t-on $\;\mu_1=\mu_2=\mu_3 $?}\\[3mm]
 \uncover<3->{associer une marge d'erreur}&\\[-1mm]
 \uncover<3->{aux estimations ponctuelles}
@@ -51,23 +51,30 @@ nouveau produit sur l'attrait d'une option.
 \end{frame}
 
 \begin{frame}[t]{Modèle, loi, paramètres}
-\centerline{\includegraphics[width=11cm]{estimation.png}}
+\centerline{\includegraphics[width=11cm]{estimation2.png}}
 
+\vspace{0.5cm}
+{\small
+On suppose un \alerter{modèle probabiliste} pour la population (une loi, avec des
+\alerter{paramètres inconnus}, ex. $\mu$ et $\sigma^2$). À partir d'un
+\alerter{échantillon aléatoire}, on calcule des \alerter{paramètres estimés}
+(ex. $\overline x$ et $s^2$).
+}
 \end{frame}
 
 \begin{frame}[t]{Exemple 1: masse des camions}
 
 {\small
 \begin{tabular}{l p{5cm}}
- {\bf Population :}& l'ensemble des camions qui passent sur un viaduc\\[3mm]
+ {\bf Population:}& l'ensemble des camions qui passent sur un viaduc\\[3mm]
 {\bf Caractéristique d'intérêt:}   &  $X$: masse d'un camion\\[3mm]
-{\bf Modèle probabiliste :}& $X\sim \mathcal{N}(\mu,\sigma^2)$\\[3mm]
-{\bf Paramètre d'intérêt :}&  $\mu$: masse
-moyenne des camions  sur ce viaduc\\[3mm]
+{\bf Modèle probabiliste:}& $X\sim \mathcal{N}(\mu,\sigma^2)$\\[3mm]
+{\bf Paramètre d'intérêt:}&  $\mu$: espérance de la
+masse des camions  sur ce viaduc\\[3mm]
 {\bf Taille d'échantillon: }&  $n=25$\\[3mm]
-{\bf Échantillon aléatoire:}&  $X_1,\,X_2,...,\,X_{25}$\\[3mm]
-{\bf Échantillon observé:}&  $x_1,\,x_2,...,\,x_{25}$\\[3mm]
-{\bf Estimation ponctuelle :} &$\overline x = 16,5$ tonnes
+{\bf Échantillon aléatoire:}&  $X_1,\,X_2,\ldots,\,X_{25}$\\[3mm]
+{\bf Échantillon observé:}&  $x_1,\,x_2,\ldots,\,x_{25}$\\[3mm]
+{\bf Estimation ponctuelle:} &$\overline x = 16,5$ tonnes
 \end{tabular}
 }
 \end{frame}
@@ -80,17 +87,17 @@ moyenne des camions  sur ce viaduc\\[3mm]
 \begin{frame}[t]{Paramètres classiques: $\mu$ et $\sigma^2$}
 
 \begin{itemize}\itemsep4mm
-\item<1-> Par quelles quantités pourrait-on estimer la moyenne et la variance de la population?\\
+\item<1-> Par quelles quantités pourrait-on estimer l'espérance et la variance de la population?\\
 
 
 \uncover<2->{\it Par \alerter{$\overline X$} et \alerter{$S^2$}\hfill }
 \item<3-> Ces mesures échantillonnales sont-elles des variables aléatoires?\\
 
-\item<4-> Elles ont donc une loi de probabilité...
+\item<4-> Elles ont donc une loi de probabilité\ldots
 \end{itemize}
 \end{frame}
 
-\begin{frame}[t]{Exemple 2: simulation de données}
+\begin{frame}[t]{Exemple 2: Simulation de données}
 
 Prenons un échantillon de 25 camions et mesurons leur masse (distribuée selon le modèle normal). On s'attend à ce que $\overline x$ diffère un peu de $\mu$.
 
@@ -131,7 +138,7 @@ Prenons un échantillon de 25 camions et mesurons leur masse (distribuée selon 
  Quelles qualités devrait avoir un bon estimateur?\\
 
 \begin{enumerate}\itemsep1cm
-\item<1-> Être \alerter{sans biais}, i.e. avoir une valeur espérée égale au paramètre estimé.
+\item<1-> Être \alerter{sans biais}, i.e. avoir une espérance égale au paramètre estimé.
 \item<2-> Avoir une \alerter{variance faible}, idéalement qui diminue lorsque $n$ grandit.
 \end{enumerate}
 \end{frame}
@@ -173,7 +180,7 @@ ${S}^2 = \dfrac{1}{n-1}\sum\limits_{i=1}^{n}(X_i-\overline{X})^2$ est-il un bon 
 
 \begin{frame}[t]
 \begin{itemize}
-\item Les hommes canadiens mesurent en moyenne 1,78 m. Supposons $X\sim\mathcal{N}(1,78; \sigma^2)$.
+\item L'espérance de la taille des hommes canadiens est de 1,78 m. Supposons $X\sim\mathcal{N}(1,78; \sigma^2)$.
 \item Jacques mesure 250 Canadiens choisis au hasard.
 \item Marie mesure 1000 Canadiens choisis au hasard.
 \end{itemize}
@@ -182,14 +189,22 @@ ${S}^2 = \dfrac{1}{n-1}\sum\limits_{i=1}^{n}(X_i-\overline{X})^2$ est-il un bon 
 {\bf Vrai ou Faux?}
 \medskip
 
-Jacques a plus de chances que Marie d'obtenir...
+Jacques a plus de chances que Marie d'obtenir\ldots
 \begin{itemize}
 \item  une taille moyenne supérieure à 1,78 m.
 \item  une taille moyenne supérieure à 1,82 m.
 \end{itemize}
 
+\uncover<2->{
+\vspace{0.3cm}
+{\small
+\alerter{Faux} pour le premier énoncé~: $P(\overline X>1{,}78)=0{,}5$ pour les deux, peu importe $n$
+(1,78 est le centre de la distribution de $\overline X$ dans les deux cas). \alerter{Vrai} pour
+le second~: la distribution de $\overline X$ de Jacques ($n=250$) est plus dispersée que celle de
+Marie ($n=1000$), donc $P(\overline X>1{,}82)$ est plus grande pour Jacques.
+}}
 
-\vspace{1cm}
+\vspace{0.3cm}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -201,12 +216,12 @@ Jacques a plus de chances que Marie d'obtenir...
 \item Les estimateurs sont des variables aléatoires.
 \item Leur distribution dépend souvent de la loi de $X$ dans la population.
 \item Pour associer une marge d'erreur à un estimateur, on doit trouver sa loi.
-\item Les lois qui impliquent des estimateurs sont appelées des {\it distributions échantillonnales}. Nous en verrons trois:
+\item Les lois qui impliquent des estimateurs sont appelées des {\it lois échantillonnales}. Nous en verrons trois:
 
     \begin{itemize}\itemsep1mm
 \item Normale $\mathcal{N}(\mu, \sigma^2/n)$
-\item Student $\;\;t_v$
-\item Khi-carré $\chi^2_v$
+\item Khi-carré $\chi^2_\nu$
+\item Student $\;\;t_\nu$
 \end{itemize}
 \end{enumerate}
 
@@ -232,12 +247,34 @@ on connaît la loi de plusieurs statistiques.
 
 \end{frame}
 
+\section{Loi Normale}
+
+\begin{frame}[t]{Propriétés de la loi normale}
+
+{\small
+\begin{itemize}\itemsep4mm
+\item<1-> Si $X_1,\ldots,X_n$ sont i.i.d. $\mathcal{N}(\mu,\sigma^2)$, alors
+$$\overline{X}\sim \mathcal{N}\left(\mu,\frac{\sigma^2}{n}\right)$$
+\item<2-> En standardisant,
+$$\dfrac{\overline{X}-\mu}{\sigma/\sqrt{n}}\sim \mathcal{N}(0,1)$$
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}[t]{Table de la loi normale}
+
+\begin{center}
+\includegraphics[height=6.5cm]{TableNormale.pdf}
+\end{center}
+
+\end{frame}
+
 \section{Loi du khi-carré}
 
 \begin{frame}[t]{Loi du khi-deux (ou loi du khi-carré)}
 \begin{itemize}
-\item valeurs possibles d'une variable suivant une $\chi^2_v$ : $[0,\infty)$ 
-\item un seul paramètre qu'on appelle "degrés de liberté".
+\item valeurs possibles d'une variable suivant une $\chi^2_\nu$ : $[0,\infty)$ 
+\item un seul paramètre qu'on appelle "degrés de liberté"
 \end{itemize}
 
 \includegraphics[width=7.5cm]{khi.png}
@@ -247,10 +284,10 @@ on connaît la loi de plusieurs statistiques.
 
 {\small
 \begin{itemize}\itemsep2mm
-\item<1-> Si $K\sim\chi^2_v$, alors $\left\{\begin{array}{ll}E(K)& = v\\V(K) &= 2v
+\item<1-> Si $K\sim\chi^2_\nu$, alors $\left\{\begin{array}{ll}E(K)& = \nu\\V(K) &= 2\nu
     \end{array}\right.$
 \item<2-> Si $Z\sim \mathcal{N}(0,1)$, alors $Z^2\sim\chi^2_1$ %[et donc si $Z\sim \mathcal{N}(\mu,\sigma^2)$ et $X = \{(Z-\mu)/\sigma\}^2$, alors $X\sim\chi^2_1$].
-\item<2-> Si $K_1,\ldots,K_n$ sont des v.a. indépendantes et que $K_i\sim\chi^2_{v_i}$, alors $$K_1+\cdots+K_n\sim\chi^2_{v_1+\cdots+v_n}$$
+\item<2-> Si $K_1,\ldots,K_n$ sont des v.a. indépendantes et que $K_i\sim\chi^2_{\nu_i}$, alors $$K_1+\cdots+K_n\sim\chi^2_{\nu_1+\cdots+\nu_n}$$
 \item<3-> Si $X_1,\ldots,X_n$ sont i.i.d. $\mathcal{N}(\mu,\sigma^2)$, alors $$\dfrac{\sum_{i=1}^n(X_i-\mu)^2}{\sigma^2}\sim\chi^2_n\qquad \text{et}\qquad\frac{(n-1)S^2}{\sigma^2}\sim\chi^2_{n-1}$$
 \end{itemize}
 }
@@ -283,14 +320,14 @@ on connaît la loi de plusieurs statistiques.
 
 \section{Loi de Student}
 
-\begin{frame}[t]{Loi de Student (loi $t_v$)}
+\begin{frame}[t]{Loi de Student (loi $t_\nu$)}
 
 {\small
 \begin{itemize}
 \item ressemble  à la $\mathcal{N}(0,1)$, sauf qu'elle a des queues plus lourdes (des
 valeurs éloignées de 0 sont plus probables que sous la loi $\mathcal{N}(0,1)$).
 \item un seul paramètre appelé "degrés de liberté" (plus le nombre de degrés de liberté est faible, plus les queues sont lourdes).
-    % Si le nombre de degrés de liberté est supérieur à 30, la loi $t$ et la loi $\mathcal{N}(0,1)$ sont presque indistinguables. Ainsi si une v.a. $X$ suit une loi $t$ à $v$ degrés de liberté, on écrit $X\sim t_v$. Sa densité ressemble à ceci :
+    % Si le nombre de degrés de liberté est supérieur à 30, la loi $t$ et la loi $\mathcal{N}(0,1)$ sont presque indistinguables. Ainsi si une v.a. $X$ suit une loi $t$ à $\nu$ degrés de liberté, on écrit $X\sim t_\nu$. Sa densité ressemble à ceci :
 
 \end{itemize}
 }
@@ -313,10 +350,10 @@ valeurs éloignées de 0 sont plus probables que sous la loi $\mathcal{N}(0,1)$)
 
 {\small
 \begin{itemize}
-\item<1-> Si $T\sim t_v$ {\scriptsize (et $v>1$)}, alors $E(T) = 0$.
-\item<1-> Si $T\sim t_v$ {\scriptsize (et $v>2$)}, alors $V(T) = \dfrac{v}{v-2}$.
-\item<2-> Si $Z\sim \mathcal{N}(0,1)$, $\quad K\sim\chi^2_v$, $\quad Z$ et $K$ sont indépendantes,
-$$\text{alors}\quad \dfrac{Z}{\sqrt{K/v}}\sim t_v$$
+\item<1-> Si $T\sim t_\nu$ {\scriptsize (et $\nu>1$)}, alors $E(T) = 0$.
+\item<1-> Si $T\sim t_\nu$ {\scriptsize (et $\nu>2$)}, alors $V(T) = \dfrac{\nu}{\nu-2}$.
+\item<2-> Si $Z\sim \mathcal{N}(0,1)$, $\quad K\sim\chi^2_\nu$, $\quad Z$ et $K$ sont indépendantes,
+$$\text{alors}\quad \dfrac{Z}{\sqrt{K/\nu}}\sim t_\nu$$
 \item<3-> Si $X_1,\ldots,X_n$ sont i.i.d. $\mathcal{N}(\mu,\sigma^2)$, alors
 $$\frac{\overline{X}-\mu}{S/\sqrt{n}}\sim t_{n-1}.$$
 \end{itemize}

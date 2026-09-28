@@ -54,9 +54,9 @@ Comment la durée de vie de transformateurs électriques varie-t-elle
 en fonction de leur grosseur?}}
 
 \item \alerter{Estimation de paramètres}: {\scriptsize {\it
-La luminosité en fonction de la distance des étoiles d'une certaine
-galaxie est de la forme $L=K_1+K_2d+\sigma\varepsilon$, où $K_1$, $K_2$ et $\sigma$
-sont des paramètres inconnus à être estimés à partir d'observations.}}
+Sachant que la luminosité $L$ d'une étoile d'une certaine galaxie varie en fonction de sa
+distance $d$ selon $L=K_1+K_2d+\sigma\varepsilon$, quelles sont les valeurs des paramètres
+$K_1$, $K_2$ et $\sigma$?}}
 \end{itemize}
 
 \end{frame}
@@ -78,12 +78,15 @@ $$
 \end{tikzpicture}
 
 \begin{tabular}{ll}
-{\color{green}{variable réponse}} & {\color{blue}{variables explicatives}}\\
+{\color{green}{\alerter{variable réponse}}} & {\color{blue}{\alerter{variable explicative}}}\\
 {\color{green}{variable dépendante}} & {\color{blue}{variables indépendantes}}\\
 {\color{green}{variable endogène}} & {\color{blue}{variables exogènes}}\\
 {\color{green}{issue}} & {\color{blue}{facteurs}}\\
 {\color{green}{ }} & {\color{blue}{covariables }}\\
 \end{tabular}
+
+{\footnotesize (Ce sont les termes \alerter{variable réponse} et \alerter{variable explicative} qui seront
+réutilisés dans la suite du cours.)}
 
 \end{frame}
 
@@ -91,7 +94,7 @@ $$
 %Soit $Y$, la masse d'un homme de 30 ans en kg et\\ soit $X$, sa grandeur en cm. On a que
 %$$Y=f(X)+\mbox{fluctuation aléatoire}$$
 
-$${\color{green}{Y}}\quad =\quad \alert{f(}{\color{blue}{X}}\alert{)}\quad +\quad \text{fluctuation aléatoire}
+$${\color{green}{Y}}\quad =\quad \alerter{f(}{\color{blue}{X}}\alerter{)}\quad +\quad \text{fluctuation aléatoire}
 $$
 
 \hspace{1cm}
@@ -119,7 +122,7 @@ $$
 \item \alerter{$Y$}: variable réponse
 \item \alerter{$X_1,\ldots,X_{k}$}: variables explicatives
 \item \alerter{$f_1,\ldots,f_{k}$}: transformations connues des variables explicatives
-\item \alerter{$\beta_0,\ldots,\beta_{k}$}: paramètres de valeur inconnue à estimer à l'aide d'observations.
+\item \alerter{$\beta_0,\ldots,\beta_{k}$}: paramètres de valeurs inconnues à estimer à l'aide d'observations.
 \item \alerter{$E$}: erreur aléatoire
 \end{itemize}
 \end{frame}
@@ -196,12 +199,15 @@ $\bullet$ Si $X=0$ est peu plausible en pratique, $\beta_0$ peut prendre une val
 
 \begin{frame}[t]{Extrapolation dangereuse!}
 
-{\small
-%Soit $Y_i$ le rendement d'un procédé chimique et $X_i$ la concentration d'un certain catalyseur lors de la $i$-ème répétition d'une expérience, $i=1,\ldots,10$.
-On ignore la forme de la relation entre $X$ et $Y$ à l'extérieur de l'intervalle observé.
+{\footnotesize
+Soit $Y$, l'exactitude (\emph{accuracy}, en \%) d'un modèle d'apprentissage automatique, et
+$X$, la taille (en milliers d'exemples) de l'ensemble d'entraînement, mesurées pour $X$ entre 1
+et 50. Dans cet intervalle, la relation semble linéaire. On ignore sa forme à l'extérieur de cet
+intervalle~: extrapoler linéairement serait dangereux, car l'exactitude ne peut pas dépasser
+$100\,\%$, alors que le modèle linéaire prédirait une hausse indéfinie.
 }
 
-\centerline{\includegraphics[height=5.25cm]{extrapol.jpg}}
+\centerline{\includegraphics[height=4.75cm]{extrapol.jpg}}
 \end{frame}
 
 
@@ -209,8 +215,8 @@ On ignore la forme de la relation entre $X$ et $Y$ à l'extérieur de l'interval
 
 {\small
 %En pratique, on observe $(X_1,Y_n),\ldots,(X_n,Y_n)$ mais on n'observe pas la vraie droite, c.-à-d.,
-$\beta_0$ et $\beta_1$ : paramètres de valeurs inconnues.\\[1mm]
-$\hat{\beta}_0$ et $\hat{\beta}_1$ : estimateurs des paramètres, obtenus en \alerter{minimisant la partie inexpliquée de $Y$} (la fluctuation aléatoire):
+$\beta_0$ et $\beta_1$: paramètres de valeurs inconnues.\\[1mm]
+$\hat{\beta}_0$ et $\hat{\beta}_1$: estimateurs des paramètres, obtenus en \alerter{minimisant la partie inexpliquée de $Y$} (la fluctuation aléatoire):
 
 \medskip
 
@@ -319,7 +325,7 @@ $\hat Y=\hat\beta_0+\hat\beta_1\,X$
 \end{frame}
 
 
-\begin{frame}[t]%{Événements mutuellement exclusifs}
+\begin{frame}[t]{Quiz~: interprétation du modèle}
 
 \centerline{\LARGE \bf \alert{QUIZ !}}
 \begin{itemize}\itemsep1cm
@@ -381,8 +387,8 @@ Par contre, nous ne connaissons pas $\sigma^2$. Il faut donc l'estimer.
 }
 \end{frame}
 
-\begin{frame}{}
-Comme $\sigma^2$ est la variance des erreurs du modèle $E_i=Y_i-\beta_0-\beta_1 X_i$ que nous estimons par $e_i=y_i-\hat{\beta_0}-\hat{\beta_1} x_i$, nous utiliserons
+\begin{frame}{Estimation de $\sigma^2$}
+Comme $\sigma^2$ est la variance des erreurs du modèle $E_i=Y_i-\beta_0-\beta_1 X_i$ que nous estimons par $e_i=y_i-\hat{\beta}_0-\hat{\beta}_1 x_i$, nous utiliserons
 
 $$\hat{\sigma}^2=MS_E= \frac{SS_E}{n-2}.$$
 Nous en déduisons donc
@@ -390,7 +396,7 @@ Nous en déduisons donc
 T_0=\frac{\hat{\beta}_1-\beta_1}{\sqrt{\frac{MS_E}{S_{XX}}}}\sim t_{n-2}.
 $$}
 \end{frame}
-\section{Intervalles de confiance et de prédiction}
+\section{Intervalles de confiance et de prévision}
 
 \begin{frame}[t]{Estimateurs de $\beta_0$ et $\beta_1$}
 
@@ -500,17 +506,17 @@ ce qui mène à l'intervalle de prévision pour $\beta_0+\beta_1x_0+E_0$
 $$}}
 \end{frame}
 
-\begin{frame}[t]{Exemple 3}
+\begin{frame}[t]{Exemple 2 (i)}
 
 {\small
 
 \begin{enumerate}[(i)]
-\item Calculons une prévision ponctuelle et un intervalle de confiance à 95\% pour la valeur moyenne de l'absorption maximale d'oxygène ($VO_2max$) chez les hommes qui courent les 3,2 km en 15 minutes et 25 secondes;
+\item Calculons une prévision ponctuelle et un intervalle de confiance à 95\% pour la valeur moyenne de l'absorption maximale d'oxygène ($VO_2max$) chez les hommes qui courent les 3,2 km en 15 min 25 s;
 
 \end{enumerate}}
 
 \end{frame}
-\begin{frame}[t]{Exemple 3}
+\begin{frame}[t]{Exemple 2 (ii)}
 
 {\small
 
@@ -521,12 +527,12 @@ $$}}
 
 \end{frame}
 
-\begin{frame}[t]{Exemple 3 (suite)}
+\begin{frame}[t]{Exemple 2 (i) (suite)}
 
 \includegraphics[width=9cm]{ICmoy.png}
 \end{frame}
 
-\begin{frame}[t]{Exemple  3 (suite)}
+\begin{frame}[t]{Exemple 2 (ii) (suite)}
 
 \includegraphics[width=9cm]{IPfutur.png}
 \end{frame}
@@ -584,14 +590,14 @@ R^2&=\frac{SS_R}{SS_T}\\
 \end{frame}
 
 
-\begin{frame}[t]{Exemple 4 sur le $VO_2max$}
+\begin{frame}[t]{Exemple 3 sur le $VO_2max$}
 %$\Rightarrow$ \alert{Plus la corrélation entre $X$ et $Y$ est forte, plus grande sera la proportion de la variabilité dans la valeur des $Y_i$ expliquée par le modèle de régression}.
 
-Coefficient de détermination :
+Coefficient de détermination:
 
 \vspace{3cm}
 
-Coefficient de corrélation échantillonnal :
+Coefficient de corrélation échantillonnal:
 \end{frame}
 
 
@@ -681,7 +687,7 @@ C'est la collecte des données qui en est garante. Il faut s'assurer qu'\alerter
 \medskip
 Exemple d'une mauvaise collecte:
 \begin{itemize} \item les observations 1, 2, 3, 4 sont prises par l'employé A qui a tendance à surestimer $Y$;
-\item les mesures 5, 6, 7 et 8 sont prises par l'employé B qui a tendance à sous-estimer $Y$;
+\item les observations 5, 6, 7 et 8 sont prises par l'employé B qui a tendance à sous-estimer $Y$;
 \item Problème: les observations prises par un même employé seront corrélées.
 \end{itemize}
 }
@@ -691,7 +697,7 @@ Exemple d'une mauvaise collecte:
 
 {\small
 Il peut aussi y avoir de la corrélation lorsque les observations sont prises de façon trop rapprochées dans le temps (ou l'espace).\\
-Si les valeurs de $i=1,\ldots,n$ correspondent à un \underline{ordre chronologique}, le \alerter{graphique des $e_i$ en fonction de $i$ } pourrait révéler un problème de corrélation positive entre les résidus rapprochés (``effet de grappe'').
+Si les valeurs de $i=1,\ldots,n$ correspondent à un \underline{ordre chronologique}, le \alerter{graphique des $e_i$ en fonction de $i$ } pourrait révéler un problème de corrélation positive entre les résidus rapprochés («effet de grappe»).
 }
 
 \begin{center}
@@ -714,7 +720,7 @@ Pas d'effet chronologique & Effet de grappe\\
 \end{itemize}
 \end{frame}
 
-\begin{frame}[t]{Exemple 5 sur l'absorption d'oxygène}
+\begin{frame}[t]{Exemple 4 sur l'absorption d'oxygène}
 % Des graphiques permettant de valider les postulats d'homoscédasticité et de normalité pour l'exemple sur l'absorption de l'oxygène suggèrent que l'hypothèse d'homoscédasticité semble raisonnable, mais on peut mettre en doute la normalité ...
 \vspace*{-3mm}
 

@@ -64,8 +64,8 @@ $H_0:{\color{blue}{\mu_1=\mu_2}}$       &1) $ \left.\begin{array}{l}
                             \alerter{connues}\end{tabular}\\[-0.3cm]
 &\\\cline{2-2}
 \begin{tabular}{c}
-\'Echantillons\\
- \alerter{indépendants}
+\'Ech.\\
+ \alerter{indép.}
  \end{tabular}          &2) $ \left.\begin{array}{l}
                             X_{11}, ..., X_{1n_1}\;\sim\;N(\mu_1, \, \sigma^2) \\ [0.1cm]
                             X_{21}, ..., X_{2n_2}\;\sim\;N(\mu_2, \, \sigma^2)
@@ -88,7 +88,7 @@ $H_0: {\color{blue}{\mu_1=\mu_2}}$\\
                             X_{11}, ..., X_{1n}\;\sim\;N(\mu_1, \, \sigma^2_1) \\ [0.1cm]
                             X_{21}, ..., X_{2n}\;\sim\;N(\mu_2, \, \sigma^2_2)
                             \end{array}\right\} $
-                            \begin{tabular}{c} $\sigma^2_1$ et $\sigma^2_2$ inconnues,\\
+                            \begin{tabular}{c} $\sigma^2_1$ et $\sigma^2_2$ \alerter{inconnues},\\
                             dépend. par paires\end{tabular}\\[-0.3cm]
 &\\\hline\hline
 &\\[-0.3cm]
@@ -159,7 +159,7 @@ On déduit la loi de la différence des moyennes:
 $$\overline{X}_1 - \overline{X}_2 \;\sim\; N\left( \mu_1 - \mu_2, \frac{\sigma^2_1}{n_1} + \frac{\sigma^2_2}{n_2} \right). $$
 \end{frame}
 
-\begin{frame}[t]{Cas 1 : Statistique de test}
+\begin{frame}[t]{Cas 1: Statistique de test}
 
 {\small
 Sous l'hypothèse nulle $H_0 : \mu_1 = \mu_2$, on a que
@@ -180,7 +180,7 @@ Au seuil $\alpha$,
 
 \subsection{Cas 2 et 3: Populations normales, variances inconnues, échantillons indépendants}\label{sec:ttestindep}
 
-\begin{frame}[t]{Cas 2 et 3 : Et si les variances sont inconnues?}
+\begin{frame}[t]{Cas 2 et 3: Et si les variances sont inconnues?}
 
 Si $\sigma^2_1$ et $\sigma^2_2$ sont inconnues, on doit utiliser un estimateur des variances des deux distributions:
 
@@ -239,6 +239,7 @@ Par contre
 T_0^* = \frac{\overline{X}_1 - \overline{X}_2}{ \sqrt{ \frac{S^2_1}{n_1} + \frac{S^2_2}{n_2}  }} \approx t_v  & &
 \mbox{o\`u }\quad v = \frac{\left( \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2} \right) ^2 }{ \frac{ (s_1^2 / n_1)^2}{n_1 + 1} + \frac{ (s_2^2 / n_2)^2}{n_2 + 1}} - 2.
 \end{align*}
+{\footnotesize $v$ est ensuite arrondi à l'entier le plus proche (pas nécessairement vers le bas) pour trouver la valeur critique dans la table de Student.}
 
 \medskip
 Au seuil $\alpha$,
@@ -433,11 +434,12 @@ Par erreur, vous faites l'analyse de l'exemple 2 comme s'il s'agissait d'échant
 \end{frame}
 
 
+\section{Comparaisons de deux proportions}
 \begin{frame}[t]{Cas 5: Comparaison de deux proportions}
 
 Dans le cas de proportion, on a $X_{11}, \ldots, X_{1n_1} \overset{i.i.d.}{\sim} \mbox{Bernoulli}(p_1)$, et $X_{21}, \ldots, X_{2n_2} \overset{i.i.d.}{\sim} \mbox{Bernoulli}(p_2).$
 
-\vspace{0.1 in}
+\vspace{0.25cm}
 Alors, si $n_1 >30$ et $n_2 > 30$, par le TCL
 
 \begin{align*}
@@ -453,7 +455,6 @@ Sous l'hypothèse nulle, $p_1 = p_2 = p$ et on a donc
 $$ \hat{p}_1  - \hat{p}_2 \approx N\left( 0, p(1-p) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) \right) $$
 \end{frame}
 
-\section{Comparaisons de deux proportions}
 \begin{frame}[t]{Cas 5: Comparaison de deux proportions}
 
 La statistique du test est alors
@@ -461,14 +462,14 @@ La statistique du test est alors
 $$ Z_0 = \frac{\hat{p}_1 - \hat{p}_2}{ \sqrt{ \hat{p}(1-\hat{p}) \left( \frac{1}{n_1} + \frac{1}{n_2} \right) } } \mbox{ où } \hat{p} = \frac{n_1 \hat{p}_1 + n_2 \hat{p}_2}{n_1 + n_2} $$
 
 
-\vspace{0.2in}
-Un test de niveau approximativement $\alpha$ rejette $H_0$ si 
-\begin{align*} 
-\left| z_0  \right|  > z_{\alpha/2} & & (H_1 : p_1 \ne p_2) \\
-z_0   > z_{\alpha} & & (H_1 : p_1 > p_2) \\
-z_0   < -z_{\alpha} & & (H_1 : p_1 < p_2) \\
-\end{align*}
+\vspace{0.5cm}
+Un test de niveau approximativement $\alpha$ rejette $H_0$ si
 
+\begin{itemize}\itemsep4mm
+\item $H_1 : p_1 \ne p_2$: on rejette $H_0$ si $|z_0| > z_{\alpha/2}$
+\item $H_1 : p_1 > p_2$: on rejette $H_0$ si $\;z_0 > \;z_{\alpha}$
+\item $H_1 : p_1 < p_2$: on rejette $H_0$ si $\;z_0 < -z_{\alpha}$
+\end{itemize}
 
 \end{frame}
 

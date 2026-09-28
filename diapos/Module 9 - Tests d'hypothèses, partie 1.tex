@@ -18,7 +18,7 @@
 \section{Introduction}
 
 \begin{frame}[t]{Des hypothèses de recherche}
-Une question de recherche est souvent liée à un paramètre d'une population d'intérêt :
+Une question de recherche est souvent liée à un paramètre d'une population d'intérêt~:
 \bigskip
 
 \begin{itemize}\itemsep 5mm
@@ -81,8 +81,8 @@ On suppose que $H_0$ est vraie jusqu'à ce qu'une \underline{preuve suffisante} 
 \begin{frame}[t]{Remarques}
 \begin{itemize}\itemsep4mm
 \item $H_0$ et $H_1$ sont toujours incompatibles (les événements des deux hypothèses sont mutuellement exclusifs).
-\item Dans notre cours, $H_0$ sera toujours une hypothèse simple ($\mu\alerter{=}10$)
-\item $H_1$ peut avoir une forme bilatérale ($\mu\ne 10$)\\ ou unilatérale ($\mu<10$ ou $\mu>10$)
+\item Dans notre cours, $H_0$ sera toujours une hypothèse simple ($\mu\alerter{=}10$).
+\item $H_1$ peut avoir une forme bilatérale ($\mu\ne 10$)\\ ou unilatérale ($\mu<10$ ou $\mu>10$).
 \item C'est l'hypothèse de recherche qui dicte le sens de $H_1$.
 
 \end{itemize}
@@ -132,8 +132,12 @@ on pourrait choisir de
   On ne rejette pas  $ H_0 $ & & \alerter{Erreur de type II} \\ \hline
 \end{tabular}
 \end{center}
+}
+\end{frame}
 
-\uncover<2->{
+\begin{frame}[t]{Quantités liées aux deux erreurs possibles}
+
+{\small
 %Les règles de décision doivent limiter les chances de commettre des erreurs.
 On aimerait contrôler les quantités suivantes:
 
@@ -157,7 +161,6 @@ $\begin{array}{l|l}
 &= P(\text{ne pas rejeter }H_0 | H_0\text{\ fausse})\\
 \end{array}
 \end{array}$
-}
 }
 \end{frame}
 
@@ -195,7 +198,7 @@ Le biologiste hésite entre deux règles de décision.
 
 \vspace{7mm}
 \begin{itemize}
-\item<2->   Comment se comparent les seuils associés à ces deux règles ?
+\item<2->   Comment se comparent les seuils associés à ces deux règles?
 \item<2-> Si la vraie concen\-tration moyenne est $\mu = 0,12$, laquelle des deux règles mène à la plus grande proba\-bilité d'erreur de type II? À la plus grande puissance?
 \end{itemize}
 \end{frame}
@@ -208,12 +211,12 @@ Le biologiste hésite entre deux règles de décision.
 \end{frame}
 
 
-\begin{frame}[t]{Exemple  1 : Règle 2, rejet de $H_0$ si $\overline x > 0,12$}
+\begin{frame}[t]{Exemple 1: Règle 2, rejet de $H_0$ si $\overline x > 0,12$}
 \begin{center}
     \includegraphics[width=12.5cm]{H0-xbarre.png}
 \end{center}
 \end{frame}
-\begin{frame}[t]{Exemple  1 : Calculs complets}
+\begin{frame}[t]{Exemple 1: Calculs complets}
 
 Vous pourrez vérifier en exercice les valeurs des probabilités d'erreur suivantes:
 
@@ -233,23 +236,23 @@ $\alpha$   & 0,057 & 0,0008\\ \hline
 
 \begin{frame}{5 cas étudiés}
 
-La règle de rejet de $H_0$  doit être basée sur la distribution échantillonnale de notre estimateur ($\overline X$ ou $S^2$). Nous considérerons 5 situations pour les tests d'hypothèses à un échantillon (les mêmes que pour les IC):
+La règle de rejet de $H_0$  doit être basée sur la distribution échantillonnale de notre estimateur ($\overline X$ ou $S^2$). Nous considérerons 5 situations pour les tests d'hypothèses à un échantillon (les mêmes que pour les intervalles de confiance (IC)):
 \vspace{0.3cm}
 \small
 
-\begin{tabular}{|c|c|l|}
+\begin{tabular}{|c|c|c|l|}
   \hline
-  Cas&Hyp. nulle  & Situation \\\hline
-&&\\[-0.3cm]
-1&   & $X_1, ..., X_n\;\sim\;N(\mu, \, \sigma^2)$ avec $\sigma^2$ connue \\
-&&\\
-2& $H_0:\mu=\mu_0$ & $X_1, ..., X_n\;\sim\;N(\mu, \, \sigma^2)$ avec $\sigma^2$ inconnue  \\
-&&\\
-3&   & $X_1, ..., X_n\;\sim\;$ loi inconnue, mais $n$ est grand  \\[0.2cm]\hline
-&&\\[-0.3cm]
-4& $H_0:p=p_0$   & $X_1, ..., X_n\sim \text{Bernoulli}(p)$, $n$ assez grand  \\[0.2cm]\hline
-&&\\[-0.3cm]
-5& $H_0:\sigma^2=\sigma^2_0$& $X_1, ..., X_n\;\sim\;N(\mu, \, \sigma^2)$ \\[0.2cm]\hline
+  Cas&Hyp. nulle & Stat. de test & Situation \\\hline
+&&&\\[-0.3cm]
+1&   & $Z_0$ & $X_1, ..., X_n\;\sim\;N(\mu, \, \sigma^2)$ avec $\sigma^2$ connue \\
+&&&\\
+2& $H_0:\mu=\mu_0$ & $T_0$ & $X_1, ..., X_n\;\sim\;N(\mu, \, \sigma^2)$ avec $\sigma^2$ inconnue  \\
+&&&\\
+3&   & $Z_0$ & $X_1, ..., X_n\;\sim\;$ loi inconnue, mais $n$ est grand  \\[0.2cm]\hline
+&&&\\[-0.3cm]
+4& $H_0:p=p_0$   & $Z_0$ & $X_1, ..., X_n\sim \text{Bernoulli}(p)$, $n$ assez grand  \\[0.2cm]\hline
+&&&\\[-0.3cm]
+5& $H_0:\sigma^2=\sigma^2_0$& $U_0$ & $X_1, ..., X_n\;\sim\;N(\mu, \, \sigma^2)$ \\[0.2cm]\hline
 \end{tabular}
 \normalsize
 \vspace{0.7cm}
@@ -259,7 +262,7 @@ La règle de rejet de $H_0$  doit être basée sur la distribution échantillonn
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Tests d'hypothèses sur la moyenne d'une distribution normale de variance connue}
 
-\begin{frame}[t]{Cas 1: Test sur $\mu$, loi normale, $\sigma^2$  connue}
+\begin{frame}[t]{Cas 1: Tests sur $\mu$, loi normale, $\sigma^2$  connue}
 
 Supposons un échantillon aléatoire  $X_1,\ldots,X_n$ issu d'une population $N(\mu, \sigma^2)$ où $\mu$ est inconnue mais $\sigma^2$ est connue.
 
@@ -277,7 +280,7 @@ $H_1 : \mu > \mu_0$ (unilatérale à droite) \\
 
 
 
-\begin{frame}[t]{Contre-hypothèse bilatérale}
+\begin{frame}[t]{Hypothèse alternative bilatérale}
 
 \small
 Tester $H_0 : \mu = \mu_0 \quad\mbox{ contre }\quad \alerter{H_1 : \mu \ne \mu_0}.$
@@ -318,14 +321,14 @@ $$
 et de dire que l'on rejette $H_0$ (au profit de $H_1:\mu\ne\mu_0$) quand $|z_0|>z_{\alpha/2}$.
 \end{frame}
 
-\subsection{Contre-hypothèses unilatérales}
+\subsection{Hypothèses alternatives unilatérales}
 
-\begin{frame}[t]{Contre-hypothèses unilatérales}
+\begin{frame}[t]{Hypothèses alternatives unilatérales}
 
 {\small
 \underline{$H_1$ unilatérale à droite:}
 
-Si on veut tester $H_0 : \mu = \mu_0 \mbox{ vs } \alerter{H_1 : \mu > \mu_0}$ alors on rejette $H_0$ si $\overline{x}$ est suffisamment plus élevée que $\mu_0$.
+Si on veut tester $H_0 : \mu = \mu_0 \mbox{ contre } \alerter{H_1 : \mu > \mu_0}$ alors on rejette $H_0$ si $\overline{x}$ est suffisamment plus élevée que $\mu_0$.
 
 \medskip
 Pour obtenir un  test de seuil $\alpha$, on rejette $H_0$ si \alerter{$z_0>z_\alpha$}.
@@ -334,7 +337,7 @@ Pour obtenir un  test de seuil $\alpha$, on rejette $H_0$ si \alerter{$z_0>z_\al
 \uncover<2->{
 \underline{$H_1$ unilatérale à gauche:}
 
-De même, si on veut tester $H_0 : \mu = \mu_0 \mbox{ vs }\alerter{H_1 : \mu < \mu_0}$ alors on rejette $H_0$ pour de faibles valeurs de $\overline{x}$, soit lorsque \alerter{$z_0<-z_\alpha$}.
+De même, si on veut tester $H_0 : \mu = \mu_0 \mbox{ contre }\alerter{H_1 : \mu < \mu_0}$ alors on rejette $H_0$ pour de faibles valeurs de $\overline{x}$, soit lorsque \alerter{$z_0<-z_\alpha$}.
 }
 }
 \end{frame}
@@ -346,7 +349,7 @@ De même, si on veut tester $H_0 : \mu = \mu_0 \mbox{ vs }\alerter{H_1 : \mu < \
 Une compagnie affirme que le remboursement d'impôt moyen aux étudiants qui ont utilisé
 son service est d'au moins $1100 \,\$$. \\
 Un échantillon aléatoire de 20 étudiants ayant utilisé le service ont obtenu un  remboursement moyen de $1060 \,\$$. \\
-En supposant une distribution normale d'écart-type $100 \,\$$ pour le remboursement d'un étudiant, peut-on conclure que la compagnie fait de la fausse publicité, au seuil $\alpha = 0,05$ ?}\\
+En supposant une distribution normale d'écart-type $100 \,\$$ pour le remboursement d'un étudiant, peut-on conclure que la compagnie fait de la fausse publicité, au seuil $\alpha = 0,05$?}\\
 
 \bigskip
 
@@ -373,7 +376,7 @@ Au seuil de 5\%, le remboursement moyen ...
 \bigskip
 \end{frame}
 
-\subsection{Seuil observé (valeur P)}
+\subsection{Seuil observé (valeur-p)}
 
 \begin{frame}[t]{Le seuil observé ou valeur-p d'un test ({\it p-value})}
 
@@ -382,7 +385,7 @@ Au seuil de 5\%, le remboursement moyen ...
 
  \vspace{3mm}
 
- $\alpha^*$ peut être vu comme la \alert{probabilité d'observer un autre échantillon  ``au moins aussi extrême'' sous $H_0$.}}
+ $\alpha^*$ peut être vu comme la \alert{probabilité d'observer un autre échantillon  «au moins aussi extrême» sous $H_0$.}}
 \end{Boite}
 
 
@@ -424,7 +427,7 @@ Retournons à l'exemple sur la concentration de mercure. Si la concentration moy
 \begin{frame}[t]%{Événements mutuellement exclusifs}
 
 \centerline{\LARGE \bf \alert{QUIZ !}}
-Vous faites un test sur 20 observations  pour confronter les hypothèses $H_0: \mu=5$ et $H_1: \mu<5$. Vous obtenez un seuil observé (valeur P) de 0,09.
+Vous faites un test sur 20 observations  pour confronter les hypothèses $H_0: \mu=5$ et $H_1: \mu<5$. Vous obtenez un seuil observé (valeur-p) de 0,09.
 
 Vrai, faux ou manque d'information?
 \begin{enumerate} \itemsep 3mm
@@ -445,11 +448,11 @@ Vrai, faux ou manque d'information?
 les formules générales suivantes (pour le cas 1: loi normale, $\sigma^2$ connue):
 
  \begin{itemize}\itemsep4mm
- \item Pour $H_0 : \mu = \mu_0 \mbox{ vs } H_1 : \mu \neq \mu_0$:\\
- $\alpha^*=P(|Z|>|z_{0}|)=2\,P(Z>|z_{obs}|)$.
- \item Pour $H_0 : \mu = \mu_0 \mbox{ vs } H_1 : \mu > \mu_0$:\\
+ \item Pour $H_0 : \mu = \mu_0 \mbox{ contre } H_1 : \mu \neq \mu_0$:\\
+ $\alpha^*=P(|Z|>|z_{0}|)=2\,P(Z>|z_{0}|)$. {\scriptsize (on note parfois $z_{obs}$ au lieu de $z_0$ pour la valeur observée de la statistique.)}
+ \item Pour $H_0 : \mu = \mu_0 \mbox{ contre } H_1 : \mu > \mu_0$:\\
  $\alpha^*=P(Z>z_{0})$.
- \item Pour $H_0 : \mu = \mu_0 \mbox{ vs } H_1 : \mu < \mu_0$:\\
+ \item Pour $H_0 : \mu = \mu_0 \mbox{ contre } H_1 : \mu < \mu_0$:\\
  $\alpha^*=P(Z<z_{0})$.
  \end{itemize}
  }
@@ -489,7 +492,7 @@ On pige un échantillon $X_1, \ldots, X_{16}$  d'une loi $N(\mu, 64)$ pour teste
 
 \end{frame}
 
-\begin{frame}[t]{Déterminants de la puissance}
+\begin{frame}[t]{Déterminants de la puissance (1/4)}
 
 {\small
 Trois facteurs importants influencent la puissance d'un test:}
@@ -506,11 +509,11 @@ plus $\mu_1$ s'éloigne de $\mu_0$, plus la puissance augmente.
 \end{enumerate}
 \end{frame}
 
-\begin{frame}[t]{Déterminants de la puissance}
+\begin{frame}[t]{Déterminants de la puissance (2/4)}
 
 \begin{enumerate}
 \item[2.] \alerter{le seuil du test}:
-plus $\alpha$ augmente, plus la puissance augmente;
+plus $\alpha$ augmente, plus la puissance augmente.
 
 \begin{center}
     \includegraphics[width=10cm]{puiss3.pdf}
@@ -520,7 +523,7 @@ plus $\alpha$ augmente, plus la puissance augmente;
 \end{frame}
 
 
-\begin{frame}[t]{Déterminants de la puissance}
+\begin{frame}[t]{Déterminants de la puissance (3/4)}
 
 
 \begin{enumerate}
@@ -533,7 +536,7 @@ plus $\alpha$ augmente, plus la puissance augmente;
 
 \end{enumerate}
 \end{frame}
-\begin{frame}[t]{Déterminants de la puissance}
+\begin{frame}[t]{Déterminants de la puissance (4/4)}
 
 \begin{enumerate}\itemsep5mm
 \item Le statisticien n'a aucun contrôle sur $\mu$, la vraie valeur de la moyenne. Il peut demander au chercheur la plus petite différence qu'il considère importante.
@@ -589,21 +592,21 @@ Au seuil $\alpha$, on rejette $H_0:\mu=\mu_0$ ...
 \item \underline{Test bilatéral ($H_1 : \mu \ne \mu_0$)}:
 
     \begin{enumerate}[$\circ$]\itemsep2mm
-    \item on rejette $H_0$ si $|t_0| > t_{\alpha/2, n-1}$
+    \item on rejette $H_0$ si $|t_0| > t_{\alpha/2;\,n-1}$
     \item $\alpha^*=P(|t_{n-1}|>|t_0|)=2\,P(t_{n-1}>|t_0|)$
     \end{enumerate}
 
 \item \underline{Test unilatéral à droite ($H_1 : \mu > \mu_0$)}:
 
     \begin{enumerate}[$\circ$]\itemsep2mm
-    \item on rejette $H_0 : \mu = \mu_0$  si $t_0 > t_{\alpha, n-1}$
+    \item on rejette $H_0 : \mu = \mu_0$  si $t_0 > t_{\alpha;\,n-1}$
     \item $\alpha^*=P(t_{n-1}>t_0)$
     \end{enumerate}
 
 \item \underline{Test unilatéral à gauche ($H_1 : \mu < \mu_0$)}:
 
     \begin{enumerate}[$\circ$]\itemsep2mm
-    \item on rejette $H_0 : \mu = \mu_0$ si $t_0 < -t_{\alpha, n-1}$.
+    \item on rejette $H_0 : \mu = \mu_0$ si $t_0 < -t_{\alpha;\,n-1}$.
     \item $\alpha^*=P(t_{n-1}<t_0)$
     \end{enumerate}
 \end{itemize}
@@ -620,7 +623,7 @@ Dans tous les cas, on peut énoncer la règle suivante:
 
 \centerline{\alerter{On rejette $H_0$ si $\alpha^*<\alpha$.}}
 
-C'est le calcul de la valeur-P ($\alpha^*$) qui change selon le test.
+C'est le calcul de la valeur-p ($\alpha^*$) qui change selon le test.
 
 \bigskip
 \uncover<2->{
@@ -692,7 +695,7 @@ Les hypothèses du test bilatéral seront:
  $$\begin{array}{ll}
  H_0 : &p = p_0\\ H_1 : &p \neq p_0
  \end{array}$$
-Par le TCL, nous savons que sous $H_0$, $\hat{p}\approx \mathcal{N}(p_0, \frac{p_0(1-p_0)}{n})$ et donc $$Z_0=\frac{\hat{p}-p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}\approx \mathcal{N}(0,1)$$
+Par le théorème central limite (TCL), nous savons que sous $H_0$, $\hat{p}\approx \mathcal{N}(p_0, \frac{p_0(1-p_0)}{n})$ et donc $$Z_0=\frac{\hat{p}-p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}\approx \mathcal{N}(0,1)$$
 
 
  et nous rejetons $H_0$ si $|z_0|>z_{\alpha/2}$.
@@ -824,6 +827,45 @@ Vrai, faux ou manque d'information?
 
 \vspace{.5cm}
 
+\end{frame}
+
+\begin{frame}[t]{Réponses aux exercices (1/2)}
+{\footnotesize
+\begin{itemize}
+\item \textbf{QUIZ (béton, $\overline x=81{,}6$)}~: non, on ne peut pas conclure seulement parce
+que $\overline x>80$~; un écart positif peut survenir par pur hasard d'échantillonnage même si
+$\mu=80$. Il faut un test formel.
+\item \textbf{Exemple 1 (retour)}, seuil observé pour $\overline x=0{,}111$~:
+$z_0\approx 1{,}74$, donc $\alpha^*=P(Z>1{,}74)\approx 0{,}041$.
+\item \textbf{QUIZ (valeur-p $=0,09$ pour $H_0:\mu=5$ contre $H_1:\mu<5$)}~: (1) Vrai ;
+(2) Faux ; (3) Vrai ; (4) manque d'information ; (5) manque d'information ; (6) Faux (un $n$
+plus grand rendrait le seuil observé plus \emph{petit}, pas plus élevé).
+\item \textbf{Exemple 2} (remboursement, $n=20$, $\overline x=1060$, $\sigma=100$)~:
+$z_0\approx -1{,}79$. Au seuil $5\,\%$ ($H_1:\mu<1100$), on rejette $H_0$ ; valeur-p
+$\approx 0{,}037$. Conclusion~: preuve suffisante que le remboursement moyen est inférieur à
+$1100\,\$$.
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}[t]{Réponses aux exercices (2/2)}
+{\footnotesize
+\begin{itemize}
+\item \textbf{Exemple 3} (puissance, $n=16$, $\sigma^2=64$, $\alpha=0{,}10$)~: si $\mu=11$,
+puissance $\approx 0{,}218$.
+\item \textbf{Exemple 3 (retour)}~: taille d'échantillon nécessaire pour une puissance de
+$80\,\%$ si $\mu=11$~: $n\approx 289$.
+\item \textbf{Exemple 4} (transistors, $n=20$, $\overline x=152$, $s=10$, $\mu_0=155$,
+$\alpha=0{,}01$)~: $t_0\approx -1{,}34$ ; $|t_0|<t_{0{,}005;19}\approx 2{,}86$, on ne rejette pas
+$H_0$. Conclusion~: pas assez de preuve que le coefficient moyen a changé.
+\item \textbf{Exemple 5} (sacs de sucre, $n=31$, $s^2=8{,}2$, $\sigma_0^2=7$, $\alpha=0{,}05$)~:
+$u_0\approx 35{,}14 < \chi^2_{0{,}05;30}\approx 43{,}77$, on ne rejette pas $H_0$. Conclusion~:
+pas de preuve suffisante que la variance est trop grande.
+\item \textbf{QUIZ (IC 99\% $[2{,}26;\,3{,}41]$ pour $\mu$)}~: (1) Faux ; (2) Vrai ; (3) manque
+d'information (l'IC à 95\% n'est pas donné) ; (4) Vrai (4 est hors de l'IC à 99\%, donc aussi
+hors de l'IC, plus étroit, à 95\%).
+\end{itemize}
+}
 \end{frame}
 
 \begin{frame}{Bibliographie}
