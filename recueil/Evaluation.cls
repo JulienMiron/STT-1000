@@ -376,6 +376,20 @@
 }
 
 % ============================================================================
+% NIVEAU DE DIFFICULTÉ (recueils) : \difficulte{n}, n de 1 (plus facile) à 5
+% (plus difficile), à placer juste après \question. Affiche n étoiles.
+% Pas de légende précise : seul le nombre d'étoiles compte, de façon relative.
+% ============================================================================
+\newcommand{\difficulte}[1]{~{\footnotesize\color{orange!85!black}%
+  \ifcase#1\relax
+  \or\ensuremath{\bigstar}%
+  \or\ensuremath{\bigstar\bigstar}%
+  \or\ensuremath{\bigstar\bigstar\bigstar}%
+  \or\ensuremath{\bigstar\bigstar\bigstar\bigstar}%
+  \or\ensuremath{\bigstar\bigstar\bigstar\bigstar\bigstar}%
+  \fi}}
+
+% ============================================================================
 % EN-TÊTES ET PIEDS DE PAGE
 % ============================================================================
 
