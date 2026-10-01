@@ -1,12 +1,13 @@
 # STT-1000 Probabilités et statistique
 
-Ce dépôt contient le site Quarto du cours. Pour l'instant, seules les
-**diapositives** (LaTeX/Beamer, classe `BeamerTemplate.cls`) dans `diapos/`
-y sont intégrées ; elles ont été reprises telles quelles depuis `Global/`.
+Ce dépôt contient le site Quarto du cours : les **diapositives**
+(LaTeX/Beamer, classe `BeamerTemplate.cls`) dans `diapos/` et le **recueil
+d'exercices** (LaTeX, classe `Evaluation.cls`) dans `recueil/`. Les deux ont
+été repris tels quels depuis `Global/`.
 
-À chaque `push` sur `main`, GitHub Actions compile les diapos, régénère le
-site et le publie sur GitHub Pages. Les PDF ne sont **pas** versionnés : ils
-sont produits par la compilation.
+À chaque `push` sur `main`, GitHub Actions compile les diapos et le recueil,
+régénère le site et le publie sur GitHub Pages. Les PDF ne sont **pas**
+versionnés : ils sont produits par la compilation.
 
 ## Structure
 
@@ -16,7 +17,12 @@ sont produits par la compilation.
 | `diapos.qmd` | Page du site qui liste automatiquement les PDF des diapos |
 | `diapos/Module *.tex` | Sources des diapos (un fichier par module) |
 | `diapos/compiler.sh` | Compile les diapos (version présentation + version imprimable) |
-| `diapos/latexmkrc` | Configuration de `latexmk` |
+| `diapos/latexmkrc` | Configuration de `latexmk` pour les diapos |
+| `exercices.qmd` | Page du site qui lie le PDF du recueil d'exercices |
+| `recueil/recueil-STT-1000.tex` | Source du recueil d'exercices |
+| `recueil/Evaluation.cls`, `recueil/logo_ul.pdf` | Dépendances de compilation du recueil (classe d'examen, logo) |
+| `recueil/compiler.sh` | Compile le recueil d'exercices |
+| `recueil/latexmkrc` | Configuration de `latexmk` pour le recueil |
 | `R/` | Fonctions R utilisées par la page Diapositives |
 | `.github/workflows/publish.yml` | Compilation et publication automatiques |
 
@@ -60,13 +66,14 @@ fichier).
 ```bash
 sh diapos/compiler.sh                                     # tous les modules
 sh diapos/compiler.sh "Module 6 - Statistiques descriptives.tex"  # un seul module
+sh recueil/compiler.sh                                     # recueil d'exercices
 quarto preview                                            # aperçu du site avec les PDF
 ```
 
 Prérequis : une distribution TeX complète (TeX Live ou MiKTeX) avec
 `latexmk`, Quarto et R (paquets `knitr`, `rmarkdown`, `png`).
 
-## Synchronisation automatique vers Global
+## Synchronisation automatique vers Global (diapos)
 
 Ce dépôt est une copie de travail des diapos ; `Global/STT-1000/Diapos`
 (archive maîtresse, aussi synchronisée avec Overleaf) reste la référence à
@@ -85,6 +92,20 @@ git config core.hooksPath .githooks
 Détails et mode d'emploi manuel : voir l'en-tête de
 `scripts/sync-to-global.sh` (`--dry-run` pour simuler, `--all` pour tout
 resynchroniser).
+
+## Synchronisation automatique depuis Global (recueil)
+
+Pour le recueil, la direction est inversée : `Global/STT-1000/Examens/recueil-STT-1000.tex`
+est la référence (modifiée directement ou via `maj_recueil.py`), et
+`recueil/recueil-STT-1000.tex` dans ce dépôt n'en est qu'une copie publiée.
+Un hook Git **dans le dépôt Global** reporte automatiquement toute
+modification du recueil vers ce dépôt (copie + commit + push), ce qui
+déclenche la recompilation et la republication du site. Voir
+`Global/scripts/sync-recueil-to-sites.sh`.
+
+Ne pas modifier `recueil/recueil-STT-1000.tex` directement dans ce dépôt :
+les changements seraient écrasés par la prochaine synchronisation depuis
+Global.
 
 ## Logo généré automatiquement
 

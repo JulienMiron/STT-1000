@@ -3,9 +3,9 @@
 Ce site rassemble le matériel du cours STT-1000 *Probabilités et
 statistique*.
 
-Pour l'instant, seules les **diapositives** du cours y sont disponibles, en
-version présentation et en version imprimable : voir la page
-[Diapositives](diapos.qmd).
+Les **diapositives** du cours (en version présentation et en version
+imprimable) ainsi qu'un **recueil d'exercices** y sont disponibles : voir
+les pages [Diapositives](diapos.qmd) et [Exercices](exercices.qmd).
 
 Si vous constatez des coquilles ou des erreurs, merci de m'envoyer
 [un courriel](mailto:julien.miron@mat.ulaval.ca).

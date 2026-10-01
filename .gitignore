@@ -34,3 +34,15 @@
 # Diapos annotées en classe : usage personnel, jamais versionné.
 /diapos/Annotées/
 
+# Recueil d'exercices : le PDF compilé et les fichiers auxiliaires sont
+# produits par la compilation (voir recueil/compiler.sh). Le .tex,
+# Evaluation.cls, les images et logo_ul.pdf restent versionnés.
+/recueil/*.pdf
+!/recueil/logo_ul.pdf
+/recueil/*.aux
+/recueil/*.fdb_latexmk
+/recueil/*.fls
+/recueil/*.log
+/recueil/*.out
+/recueil/*.synctex.gz
+

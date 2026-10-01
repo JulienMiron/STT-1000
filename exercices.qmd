@@ -1,0 +1,7 @@
+# Exercices {.unnumbered}
+
+Le recueil d'exercices rassemble des questions tirées des examens des
+sessions précédentes, classées par module. Il est compilé automatiquement à
+partir du fichier LaTeX du dossier `recueil/` à chaque mise à jour du dépôt.
+
+[Télécharger le recueil d'exercices (PDF)](recueil/recueil-STT-1000.pdf)

@@ -4,6 +4,7 @@ project:
   pre-render: R/logo.R    # régénère images/logo.png dans la couleur --accent de styles.css
   resources:
     - "diapos/Module *.pdf"        # PDF compilés par diapos/compiler.sh (voir le workflow)
+    - "recueil/recueil-STT-1000.pdf"   # PDF compilé par recueil/compiler.sh (voir le workflow)
 
 book:
   title: "Probabilités et statistique -- STT-1000"
@@ -26,6 +27,7 @@ book:
   chapters:
     - index.qmd
     - diapos.qmd
+    - exercices.qmd
 
 crossref:
   chapters: true                   # numérotation des figures/tableaux tient compte du chapitre
