@@ -26,8 +26,6 @@ book:
 
   chapters:
     - index.qmd
-    - diapos.qmd
-    - exercices.qmd
 
 crossref:
   chapters: true                   # numérotation des figures/tableaux tient compte du chapitre
