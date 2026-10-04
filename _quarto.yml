@@ -28,7 +28,6 @@ website:
     tools:
       - toggle-appearance: true
 
-  back-to-top-navigation: true
   reader-mode: true
 
 # Réglages de langue et de dates (affichage en français)
