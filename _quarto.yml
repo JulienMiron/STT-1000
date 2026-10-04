@@ -1,39 +1,29 @@
 project:
-  type: book
-  output-dir: _book
-  pre-render: R/logo.R    # régénère images/logo.png dans la couleur --accent de styles.css
+  type: website
+  output-dir: _site
+  pre-render: R/logo.R    # régénère images/logo.png dans la couleur --purple de styles.css
   resources:
-    - "diapos/Module *.pdf"        # PDF compilés par diapos/compiler.sh (voir le workflow)
+    - "diapos/Module *.pdf"            # PDF compilés par diapos/compiler.sh (voir le workflow)
     - "recueil/recueil-STT-1000.pdf"   # PDF compilé par recueil/compiler.sh (voir le workflow)
 
-book:
-  title: "Probabilités et statistique -- STT-1000"
-  author: "Julien Miron"
-
-  site-url: https://JulienMiron.github.io/STT-1000/
+website:
+  title: "STT-1000 Probabilités et statistique"
+  site-url: https://julienmiron.github.io/STT-1000/
   repo-url: https://github.com/JulienMiron/STT-1000
   repo-actions: [edit, issue]
-  search: true
 
   page-footer:
-    left: "Notes de cours STT-1000"
+    left: "Site de cours STT-1000"
     right: "Généré avec Quarto"
 
-  sidebar:
-    style: floating
-    collapse-level: 1              # replie tout sauf les titres de chapitre
-    logo: images/logo.png          # affichée au-dessus du titre dans la sidebar
-
-  chapters:
-    - index.qmd
-
-crossref:
-  chapters: true                   # numérotation des figures/tableaux tient compte du chapitre
-  eq-prefix: "équation"
-  fig-prefix: "figure"
-  tbl-prefix: "tableau"
-  fig-title: "Figure"
-  tbl-title: "Tableau"
+  navbar:
+    background: "#0E9E6C"
+    foreground: "#ffffff"
+    left:
+      - href: index.qmd
+        text: Accueil
+      - href: diapos.qmd
+        text: Diapositives
 
 # Réglages de langue et de dates (affichage en français)
 lang: fr
@@ -43,33 +33,11 @@ language:
 date-modified: last-modified       # date mise à jour automatiquement au rendu
 date-format: "D MMMM YYYY"
 
-knitr:
-  opts_chunk:
-    comment: "#>"
-    fig-align: center
-    fig-width: 6
-    fig-asp: 0.62
-    out-width: "80%"
-
-
 format:
   html:
     favicon: images/favicon.png
-    grid:
-      sidebar-width: 300px   # sidebar de gauche (chapitres) — défaut 250px
-      margin-width: 250px    # TdM de droite — défaut ~200-250px selon thème
-      gutter-width: 1rem     # espace entre les colonnes
-
     theme: lumen
     css: styles.css
-    toc: true
-    toc-expand: true
-    toc-depth: 3
-    number-sections: true
-    number-depth: 3
-    code-fold: true                # le code R des figures reste replié
-    code-summary: "Code R"
-    smooth-scroll: true
-    html-math-method: mathjax
+    toc: false
 
 editor: source

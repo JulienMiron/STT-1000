@@ -13,12 +13,11 @@ versionnés : ils sont produits par la compilation.
 
 | Chemin | Contenu |
 |---|---|
-| `index.qmd` | Page d'accueil du site |
-| `diapos.qmd` | Page du site qui liste automatiquement les PDF des diapos |
+| `index.qmd` | Page d'accueil du site (bandeau + liens vers les autres pages) |
+| `diapos.qmd` | Page *Diapositives* : lien vers le recueil d'exercices et liste automatique des PDF des diapos |
 | `diapos/Module *.tex` | Sources des diapos (un fichier par module) |
 | `diapos/compiler.sh` | Compile les diapos (version présentation + version imprimable) |
 | `diapos/latexmkrc` | Configuration de `latexmk` pour les diapos |
-| `exercices.qmd` | Page du site qui lie le PDF du recueil d'exercices |
 | `recueil/recueil-STT-1000.tex` | Source du recueil d'exercices |
 | `recueil/Evaluation.cls`, `recueil/logo_ul.pdf` | Dépendances de compilation du recueil (classe d'examen, logo) |
 | `recueil/compiler.sh` | Compile le recueil d'exercices |
@@ -109,12 +108,13 @@ Global.
 
 ## Logo généré automatiquement
 
-`images/logo.png` (utilisé par `sidebar: logo:`) est régénéré à chaque rendu
+`images/logo.png` (repris sur la page d'accueil) est régénéré à chaque rendu
 à partir de `images/logo-source.png` (la silhouette) et de la couleur
-`--accent` définie dans `styles.css` — voir `R/logo.R`, lancé automatiquement
-par `project: pre-render:` dans `_quarto.yml`. Pour changer la couleur du
-logo, il suffit donc de changer `--accent` dans `styles.css` ; ne pas modifier
-`images/logo.png` directement (il sera écrasé au prochain rendu).
+`--purple` définie dans `styles.css` — voir `R/logo.R`, lancé automatiquement
+par `project: pre-render:` dans `_quarto.yml`. Cette couleur est la même que
+celle de STT-4300, SitePerso, STT-1920 et STT-1900 ; pour changer la couleur
+du logo, il suffit donc de changer `--purple` dans `styles.css` ; ne pas
+modifier `images/logo.png` directement (il sera écrasé au prochain rendu).
 
 ## À faire
 

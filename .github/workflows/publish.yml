@@ -58,7 +58,7 @@ jobs:
       - name: Préparer le site pour GitHub Pages
         uses: actions/upload-pages-artifact@v4
         with:
-          path: _book
+          path: _site
 
   publier:
     needs: construire
