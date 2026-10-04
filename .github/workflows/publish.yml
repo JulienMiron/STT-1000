@@ -32,6 +32,13 @@ jobs:
           run: |
             sh diapos/compiler.sh
 
+      - name: Compiler le recueil d'exercices
+        uses: xu-cheng/texlive-action@v3
+        with:
+          scheme: full
+          run: |
+            sh recueil/compiler.sh
+
       - name: Installer Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 

@@ -1,11 +1,15 @@
-# Avant-propos {.unnumbered}
+# Documents du cours {.unnumbered}
 
-Ce site rassemble le matériel du cours STT-1000 *Probabilités et
-statistique*.
+## Recueil d'exercices
 
-Pour l'instant, seules les **diapositives** du cours y sont disponibles, en
-version présentation et en version imprimable : voir la page
-[Diapositives](diapos.qmd).
+[Télécharger le recueil d'exercices (PDF)](recueil/recueil-STT-1000.pdf)
 
-Si vous constatez des coquilles ou des erreurs, merci de m'envoyer
-[un courriel](mailto:julien.miron@mat.ulaval.ca).
+## Diapositives du cours
+
+```{r}
+#| label: liste-diapos
+#| echo: false
+#| results: asis
+source("R/diapos.R")
+diapos_page()
+```

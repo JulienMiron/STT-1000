@@ -46,7 +46,7 @@ diapos_lien <- function(base, suffixe = "", texte = "PDF", dossier = "diapos") {
   if (file.exists(pdf)) sprintf("[%s](%s)", texte, pdf) else "—"
 }
 
-# Page « Diapositives » : un module par section, avec ses liens PDF
+# Page « Diapositives » : un tableau Module / Présentation / Imprimable
 diapos_page <- function() {
   infos <- diapos_infos()
   if (is.null(infos)) {
@@ -54,10 +54,13 @@ diapos_page <- function() {
     return(invisible())
   }
   infos <- infos[order(infos$module), ]
+  cat("| Module | Présentation | Imprimable |\n|:--|:--:|:--:|\n")
   for (i in seq_len(nrow(infos))) {
-    cat(sprintf("\n## Module %s – %s {.unnumbered}\n\n", infos$numero[i], infos$titre[i]))
-    cat("| Présentation | Imprimable |\n|:--:|:--:|\n")
-    cat(sprintf("| %s | %s |\n", diapos_lien(infos$base[i]), diapos_lien(infos$base[i], "-imprimable")))
+    cat(sprintf(
+      "| Module %s – %s | %s | %s |\n",
+      infos$numero[i], infos$titre[i],
+      diapos_lien(infos$base[i]), diapos_lien(infos$base[i], "-imprimable")
+    ))
   }
   invisible()
 }

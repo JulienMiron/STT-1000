@@ -1,0 +1,11 @@
+# Configuration latexmk pour le recueil d'exercices STT-1000
+$pdf_mode = 1;                       # pdflatex
+$pdflatex = 'pdflatex -interaction=nonstopmode -halt-on-error -file-line-error %O %S';
+$bibtex_use = 0;
+
+# La classe « exam » réutilise les mêmes étiquettes de \part dans chaque
+# module ; le recueil combine des centaines de questions et déclenche donc
+# des avertissements d'étiquettes dupliquées. force_mode permet de terminer
+# la compilation malgré ces avertissements (voir Global/.latexmkrc).
+$force_mode = 1;
+$max_repeat = 3;
