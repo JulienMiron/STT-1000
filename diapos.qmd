@@ -1,12 +1,6 @@
 <div class="portal-hero">
 
-<p class="eyebrow">STT-1000 — Probabilités et statistique</p>
 
-# Diapositives
-
-<p class="hero-lead">Les diapositives du cours sont compilées automatiquement à partir des fichiers LaTeX du dossier `diapos/` à chaque mise à jour du dépôt. La version *présentation* contient les dévoilements progressifs utilisés en classe ; la version *imprimable* présente une page par diapositive.</p>
-
-</div>
 
 ## Recueil d'exercices
 
@@ -21,3 +15,5 @@
 source("R/diapos.R")
 diapos_page()
 ```
+
+</div>
