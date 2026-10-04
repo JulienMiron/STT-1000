@@ -1,5 +1,23 @@
 # Documents du cours {.unnumbered}
 
+<div class="book-hero">
+<div class="book-hero-copy">
+
+<h1 class="book-hero-title">STT-1000</h1>
+<p class="book-hero-course-code">Probabilités et statistique</p>
+<p class="book-hero-lead">Diapositives du cours et recueil d'exercices.</p>
+
+<div class="book-hero-actions">
+<a class="book-hero-action book-hero-action--primary" href="#diapositives-du-cours">Diapositives</a>
+<a class="book-hero-action" href="recueil/recueil-STT-1000.pdf">Recueil d'exercices</a>
+</div>
+
+</div>
+<div class="book-hero-visual">
+<img src="images/logo.png" alt="">
+</div>
+</div>
+
 ## Recueil d'exercices
 
 [Télécharger le recueil d'exercices (PDF)](recueil/recueil-STT-1000.pdf)
