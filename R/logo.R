@@ -1,4 +1,5 @@
-# Régénère images/logo.png dans la couleur --accent définie dans styles.css.
+# Régénère images/logo.png dans la couleur --purple définie dans styles.css
+# (couleur d'accent partagée avec STT-4300/SitePerso/STT-1900).
 #
 # images/logo-source.png est le gabarit (silhouette) : sa forme et son canal
 # alpha ne doivent jamais être modifiés. Ce script se contente d'y appliquer
@@ -6,7 +7,7 @@
 # le fichier réellement utilisé par le site (sidebar: logo: dans _quarto.yml).
 #
 # Exécuté automatiquement avant chaque rendu (project: pre-render: dans
-# _quarto.yml), donc le logo reste toujours synchronisé avec --accent.
+# _quarto.yml), donc le logo reste toujours synchronisé avec --purple.
 
 if (!requireNamespace("png", quietly = TRUE)) {
   stop("Le paquet R 'png' est requis pour générer le logo (install.packages(\"png\")).")
@@ -14,10 +15,10 @@ if (!requireNamespace("png", quietly = TRUE)) {
 
 extraire_accent <- function(fichier_css = "styles.css") {
   lignes <- readLines(fichier_css, warn = FALSE)
-  ligne <- grep("--accent\\s*:", lignes, value = TRUE)[1]
-  if (is.na(ligne)) stop("Aucune variable --accent trouvée dans ", fichier_css)
+  ligne <- grep("--purple\\s*:", lignes, value = TRUE)[1]
+  if (is.na(ligne)) stop("Aucune variable --purple trouvée dans ", fichier_css)
   hex <- regmatches(ligne, regexpr("#[0-9a-fA-F]{6}", ligne))
-  if (length(hex) == 0) stop("Valeur de --accent introuvable dans : ", ligne)
+  if (length(hex) == 0) stop("Valeur de --purple introuvable dans : ", ligne)
   hex
 }
 

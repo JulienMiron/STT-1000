@@ -60,7 +60,7 @@ format:
       margin-width: 250px    # TdM de droite — défaut ~200-250px selon thème
       gutter-width: 1rem     # espace entre les colonnes
 
-    theme: cosmo
+    theme: lumen
     css: styles.css
     toc: true
     toc-expand: true
