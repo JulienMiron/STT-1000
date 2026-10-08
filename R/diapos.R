@@ -4,6 +4,26 @@
 #   diapos/Module N - Titre.pdf             (présentation)
 #   diapos/Module N - Titre-imprimable.pdf  (version imprimable)
 # Tout nouveau fichier diapos/Module *.tex est détecté automatiquement.
+#
+# Les archives ZIP « Tout télécharger » (une par version) sont produites par
+# R/archives.R avant chaque rendu, à partir des mêmes PDF.
+
+diapos_cours <- "STT-1000"   # préfixe des archives ZIP
+
+# PDF compilés d'une version : "presentation" ou "imprimable"
+diapos_pdfs <- function(version = c("presentation", "imprimable"), dossier = "diapos") {
+  version <- match.arg(version)
+  motif <- if (version == "imprimable") "^Module .*-imprimable\\.pdf$" else "^Module .*\\.pdf$"
+  pdfs <- list.files(dossier, pattern = motif, full.names = TRUE)
+  if (version == "presentation") pdfs <- pdfs[!grepl("-imprimable\\.pdf$", pdfs)]
+  sort(pdfs)
+}
+
+# Chemin de l'archive ZIP d'une version
+diapos_archive <- function(version = c("presentation", "imprimable"), dossier = "diapos") {
+  version <- match.arg(version)
+  file.path(dossier, sprintf("%s-diapos-%s.zip", diapos_cours, version))
+}
 
 # Nettoie un titre LaTeX pour l'afficher en Markdown
 diapos_nettoyer <- function(t) {
@@ -46,12 +66,30 @@ diapos_lien <- function(base, suffixe = "", texte = "PDF", dossier = "diapos") {
   if (file.exists(pdf)) sprintf("[%s](%s)", texte, pdf) else "—"
 }
 
-# Page « Diapositives » : un tableau Module / Présentation / Imprimable
+# Bouton « Tout télécharger » d'une version, si son archive ZIP existe
+diapos_bouton <- function(version, texte, classe = "") {
+  zip_path <- diapos_archive(version)
+  if (!file.exists(zip_path)) return(NULL)
+  mo <- file.size(zip_path) / 1024^2
+  taille <- if (mo < 1) "moins de 1 Mo" else sprintf("%.0f Mo", mo)
+  sprintf('<a class="portal-button%s" href="%s" download>%s <small>(ZIP, %s)</small></a>',
+          classe, zip_path, texte, taille)
+}
+
+# Page « Diapositives » : boutons « Tout télécharger » puis un tableau
+# Module / Présentation / Imprimable
 diapos_page <- function() {
   infos <- diapos_infos()
   if (is.null(infos)) {
     cat("*Aucune diapositive disponible pour le moment.*\n")
     return(invisible())
+  }
+  boutons <- c(
+    diapos_bouton("presentation", "Tout télécharger – version présentation"),
+    diapos_bouton("imprimable", "Tout télécharger – version imprimable", " secondary")
+  )
+  if (length(boutons) > 0) {
+    cat('<p class="diapos-archives">', paste(boutons, collapse = "\n"), '</p>\n\n', sep = "\n")
   }
   infos <- infos[order(infos$module), ]
   cat("| Module | Présentation | Imprimable |\n|:--|:--:|:--:|\n")

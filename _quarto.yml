@@ -1,9 +1,12 @@
 project:
   type: website
   output-dir: _site
-  pre-render: R/logo.R    # régénère images/logo.png dans la couleur --purple de styles.css
+  pre-render:
+    - R/logo.R        # régénère images/logo.png dans la couleur --purple de styles.css
+    - R/archives.R    # regroupe les PDF des diapos en deux archives ZIP (présentation, imprimable)
   resources:
     - "diapos/Module *.pdf"            # PDF compilés par diapos/compiler.sh (voir le workflow)
+    - "diapos/*.zip"                   # archives ZIP produites par R/archives.R
     - "recueil/recueil-STT-1000.pdf"   # PDF compilé par recueil/compiler.sh (voir le workflow)
 
 website:

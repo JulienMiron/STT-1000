@@ -14,7 +14,7 @@ versionnés : ils sont produits par la compilation.
 | Chemin | Contenu |
 |---|---|
 | `index.qmd` | Page d'accueil du site (bandeau + liens vers les autres pages) |
-| `diapos.qmd` | Page *Diapositives* : lien vers le recueil d'exercices et liste automatique des PDF des diapos |
+| `diapos.qmd` | Page *Diapositives* : lien vers le recueil d'exercices, boutons « Tout télécharger » (ZIP) et liste automatique des PDF des diapos |
 | `diapos/Module *.tex` | Sources des diapos (un fichier par module) |
 | `diapos/compiler.sh` | Compile les diapos (version présentation + version imprimable) |
 | `diapos/latexmkrc` | Configuration de `latexmk` pour les diapos |
@@ -22,7 +22,7 @@ versionnés : ils sont produits par la compilation.
 | `recueil/Evaluation.cls`, `recueil/logo_ul.pdf` | Dépendances de compilation du recueil (classe d'examen, logo) |
 | `recueil/compiler.sh` | Compile le recueil d'exercices |
 | `recueil/latexmkrc` | Configuration de `latexmk` pour le recueil |
-| `R/` | Fonctions R utilisées par la page Diapositives |
+| `R/` | Fonctions R utilisées par la page Diapositives, et scripts lancés avant chaque rendu (`logo.R`, `archives.R`) |
 | `.github/workflows/publish.yml` | Compilation et publication automatiques |
 
 ## Mise en place (une seule fois)
@@ -105,6 +105,17 @@ déclenche la recompilation et la republication du site. Voir
 Ne pas modifier `recueil/recueil-STT-1000.tex` directement dans ce dépôt :
 les changements seraient écrasés par la prochaine synchronisation depuis
 Global.
+
+## Archives ZIP des diapos
+
+La page *Diapositives* propose deux boutons « Tout télécharger » : l'un
+regroupe toutes les versions présentation, l'autre toutes les versions
+imprimables. Les archives `diapos/STT-1000-diapos-presentation.zip` et
+`diapos/STT-1000-diapos-imprimable.zip` sont produites par `R/archives.R`,
+lancé automatiquement avant chaque rendu (`project: pre-render:` dans
+`_quarto.yml`), à partir des PDF compilés. Elles ne sont pas versionnées ;
+un bouton n'apparaît que si son archive existe (donc si au moins un PDF de
+cette version a été compilé). Le script nécessite l'exécutable `zip`.
 
 ## Logo généré automatiquement
 

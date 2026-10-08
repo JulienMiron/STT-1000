@@ -13,6 +13,8 @@
 # (venn.pdf, TableNormale.pdf, etc.) sont des images utilisées par les
 # diapos et restent versionnés.
 /diapos/Module *.pdf
+# Archives ZIP « Tout télécharger », produites par R/archives.R au rendu
+/diapos/*.zip
 /diapos/*.aux
 /diapos/*.bbl
 /diapos/*.bcf
