@@ -1,0 +1,21 @@
+---
+title: "Exercices du manuel"
+---
+
+<div class="portal-hero">
+
+<p class="hero-lead">Les exercices de fin de chapitre du manuel, classés selon l'avancement du cours. Pour chaque exercice (ou chaque sous-question), on indique la diapo à partir de laquelle toute la matière nécessaire a été vue en classe. Les numéros de diapos sont ceux affichés au bas des diapositives.</p>
+
+<p>Pour des exercices de type examen, voir aussi le <a href="recueil/recueil-STT-1000.pdf">recueil d'exercices</a> (classé par module).</p>
+
+</div>
+
+```{r}
+#| label: exercices
+#| echo: false
+#| results: asis
+#| warning: false
+#| message: false
+source("R/exercices.R")
+exercices_page()
+```

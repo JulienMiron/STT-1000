@@ -11,11 +11,12 @@ title: "STT-1000"
 
 <h1 class="home-title">STT-1000</h1>
 <p class="home-course-code">Probabilités et statistique</p>
-<p class="home-lead">Diapositives du cours et recueil d'exercices.</p>
+<p class="home-lead">Diapositives du cours, recueil d'exercices et exercices du manuel selon l'avancement en classe.</p>
 
 <div class="home-actions">
 <a class="home-action home-action--primary" href="diapos.html"><span>Diapositives</span></a>
 <a class="home-action home-action--secondary" href="recueil/recueil-STT-1000.pdf"><span>Recueil d'exercices</span></a>
+<a class="home-action home-action--secondary" href="exercices.html"><span>Exercices du manuel</span></a>
 </div>
 
 </div>

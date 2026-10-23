@@ -6,6 +6,8 @@
 
 [Télécharger le recueil d'exercices (PDF)](recueil/recueil-STT-1000.pdf)
 
+Pour savoir quels exercices du manuel faire selon l'avancement du cours, voir la page [Exercices](exercices.qmd).
+
 ## Diapositives du cours
 
 ```{r}

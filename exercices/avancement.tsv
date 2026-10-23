@@ -1,0 +1,9 @@
+# Avancement du cours en classe : une ligne par mise à jour (par exemple à la fin de chaque semaine).
+# Colonnes séparées par des TABULATIONS :
+#   date      AAAA-MM-JJ
+#   module    code du module : numéro dans le nom du fichier de diapos (1, 2, ..., 10) ; les deux parties du module 9 sont 9.1 et 9.2
+#   diapo     numéro affiché au bas de la dernière diapo vue (version présentation), ou « fin »
+#   remarque  facultative, affichée telle quelle
+# Exemple (sans le # du début) :
+# 2026-09-12	1	24	
+date	module	diapo	remarque

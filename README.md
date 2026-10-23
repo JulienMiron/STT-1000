@@ -22,7 +22,10 @@ versionnés : ils sont produits par la compilation.
 | `recueil/Evaluation.cls`, `recueil/logo_ul.pdf` | Dépendances de compilation du recueil (classe d'examen, logo) |
 | `recueil/compiler.sh` | Compile le recueil d'exercices |
 | `recueil/latexmkrc` | Configuration de `latexmk` pour le recueil |
-| `R/` | Fonctions R utilisées par la page Diapositives, et scripts lancés avant chaque rendu (`logo.R`, `archives.R`) |
+| `exercices.qmd` | Page *Exercices* : exercices du manuel selon l'avancement du cours (voir plus bas) |
+| `exercices/correspondance.tsv` | Diapo à partir de laquelle chaque exercice du manuel est faisable |
+| `exercices/avancement.tsv` | Avancement du cours en classe (à mettre à jour chaque semaine) |
+| `R/` | Fonctions R utilisées par les pages Diapositives (`diapos.R`) et Exercices (`exercices.R`), et scripts lancés avant chaque rendu (`logo.R`, `archives.R`) |
 | `.github/workflows/publish.yml` | Compilation et publication automatiques |
 
 ## Mise en place (une seule fois)
@@ -105,6 +108,62 @@ déclenche la recompilation et la republication du site. Voir
 Ne pas modifier `recueil/recueil-STT-1000.tex` directement dans ce dépôt :
 les changements seraient écrasés par la prochaine synchronisation depuis
 Global.
+
+## Page *Exercices* : exercices du manuel selon l'avancement
+
+La page *Exercices* (`exercices.qmd`, code dans `R/exercices.R`) indique, pour
+chaque exercice de fin de chapitre du manuel (ou chaque sous-question), la diapo
+à partir de laquelle toute la matière nécessaire a été vue en classe. On y trouve :
+
+- **Où en est le cours ?** — la dernière ligne de `exercices/avancement.tsv` et
+  la liste des exercices faisables à ce jour (ceux qui se sont ajoutés depuis la
+  mise à jour précédente sont en gras) ; n'apparaît que si le fichier contient au
+  moins une ligne ;
+- **Quels exercices puis-je faire ?** — un sélecteur *module + diapo* qui affiche
+  tous les exercices faisables jusqu'à ce point. L'adresse se met à jour et peut
+  être partagée : `exercices.html#module=3&d=24` ;
+- **Exercices par module** — pour chaque module, les exercices qui deviennent
+  faisables à chaque diapo ;
+- les exercices du manuel **hors programme** (notions non vues dans le cours).
+
+### Mettre à jour l'avancement (chaque semaine)
+
+Ajouter une ligne à `exercices/avancement.tsv` (colonnes séparées par des
+**tabulations**) : la date, le code du module, le numéro affiché au bas de la
+dernière diapo vue (ou `fin`) et une remarque facultative, par exemple
+
+```
+2026-10-20	3	24	
+```
+
+puis `git commit` et `git push`. Le code du module est le numéro qui figure dans
+le nom du fichier de diapos (`1`, `2`, …, `10`) ; si deux fichiers portent le même
+numéro, ils deviennent `N.1`, `N.2` dans l'ordre alphabétique (ici `9.1` et `9.2`
+pour les deux parties du module 9).
+
+### Les données : `exercices/correspondance.tsv`
+
+Une ligne par exercice, ou par groupe de sous-questions quand elles deviennent
+faisables à des moments différents. Colonnes : `exercice`, `parties` (vide = tout
+l'exercice), `sujet` (notion travaillée, affichée au survol), `module` (code, ou
+`hors` si la matière n'est pas vue dans le cours), `diapo`, `titre` et `note`
+(justification du classement). Règle suivie : la diapo retenue est celle où la
+**dernière** notion nécessaire est présentée (définition, formule ou méthode),
+dans le module le plus avancé dont l'exercice a besoin.
+
+Le classement initial couvre les exercices des chapitres 1, 2, 4 à 10 et 12 du
+manuel. Pour ajouter un chapitre, ajouter des lignes au fichier.
+
+**Numéros de diapos.** Ce sont ceux de la version présentation (le numéro affiché
+au bas de la diapo). Ils sont recalculés à chaque rendu à partir des sources
+`diapos/Module *.tex`, avec la même règle que Beamer (chaque `\section` produit
+une diapo de titre ; les diapos commentées ou dans un environnement `comment` ne
+comptent pas ; une diapo dans `\only<beamer>{...}` n'existe que dans la version
+présentation, et la page le signale). Si on ajoute ou retire une diapo, la
+colonne `titre` sert d'ancrage : l'exercice suit la diapo qui porte ce titre, et
+le journal du rendu (onglet *Actions*) l'indique par une ligne `[exercices]`.
+**Pour corriger une ligne à la main**, changer `diapo` et `titre` ensemble (ou
+vider `titre` : le numéro est alors pris tel quel).
 
 ## Archives ZIP des diapos
 

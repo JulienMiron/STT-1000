@@ -2801,3 +2801,65 @@ mjx-container[jax="CHTML"] {
   gap: .25rem .5rem;
   margin: .5rem 0 1.2rem;
 }
+
+/* Page Exercices : exercices du manuel selon l'avancement du cours (R/exercices.R).
+   Aucune couleur nouvelle : bordures --line, accent --purple ; le texte secondaire
+   utilise l'opacité pour rester lisible en mode clair comme en mode sombre. */
+.exo-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem 1rem;
+  align-items: flex-end;
+  margin: .8rem 0 .4rem;
+}
+.exo-form label {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  font-weight: 700;
+  font-size: .9rem;
+}
+.exo-form select { min-width: min(30rem, 85vw); }
+.exo-form input { width: 7rem; }
+.exo-resume { margin: .6rem 0; }
+.exo-chapitre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .3rem .6rem;
+  margin: .35rem 0;
+}
+.exo-chapitre-titre {
+  flex: 0 0 6.5rem;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  opacity: .7;
+}
+.exo-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+  flex: 1 1 20rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.exo-liste li {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .05rem .55rem;
+  font-size: .92rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.exo-liste li.exo-nouveau {
+  border-color: var(--purple);
+  font-weight: 700;
+}
+.exo-vide, .exo-note { opacity: .75; font-style: italic; }
+.exo-table td.exo-num { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; width: 1%; text-align: right; }
+.exo-table td.exo-titre { opacity: .75; font-size: .9rem; width: 30%; }
+.exo-historique, .exo-hors { margin: 1rem 0; }
+.exo-historique summary, .exo-hors summary { cursor: pointer; font-weight: 700; }
