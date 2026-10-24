@@ -344,7 +344,8 @@ exo_liste_html <- function(d, faisable, nouveau = rep(FALSE, nrow(d))) {
       k <- sel$exercice == ex
       if (!any(f[k])) next
       tout <- all(f[k]) && !any(sel$hors[k])
-      lib <- if (tout) ex else exo_etiquette(ex, paste(sel$parties[k & f], collapse = ", "))
+      parts <- sort(trimws(unlist(strsplit(sel$parties[k & f], ","))))
+      lib <- if (tout) ex else exo_etiquette(ex, paste(parts, collapse = ", "))
       sujet <- sel$sujet[k][1]
       classe <- if (any(nv[k] & f[k])) " class=\"exo-nouveau\"" else ""
       items <- c(items, sprintf("<li%s title=\"%s\">%s</li>", classe, exo_html(sujet), exo_html(lib)))
@@ -416,19 +417,19 @@ exercices_page <- function() {
     exercices = lapply(which(!d$hors), function(i) list(
       e = d$exercice[i], p = d$parties[i], s = d$sujet[i], c = d$chapitre[i], t = d$tri[i],
       m = d$ordre[i], d = d$diapo_actuelle[i])),
-    complets = as.list(tapply(!d$hors, d$exercice, all)),
-    depart = if (!is.null(a)) list(m = a$ordre[nrow(a)], d = a$diapo[nrow(a)]) else NULL
+    complets = as.list(tapply(!d$hors, d$exercice, all))
   )
   json <- jsonlite::toJSON(donnees, auto_unbox = TRUE, null = "null")
   cat("## Quels exercices puis-je faire ?\n\n")
   cat("<div class=\"exo-selecteur\">\n")
-  cat("<p>Indiquez la dernière diapo vue en classe (le numéro affiché au bas de la diapo). La liste montre tous les exercices du manuel dont la matière a été vue jusque-là ; ceux qui portent sur le module choisi sont en gras.</p>\n")
+  cat("<p>Par défaut, la liste montre tous les exercices du manuel au programme du cours. Pour ne voir que ceux dont la matière a été vue, choisissez un module et indiquez la dernière diapo vue en classe (le numéro affiché au bas de la diapo) ; ceux qui portent sur le module choisi sont alors en gras.</p>\n")
   cat("<form class=\"exo-form\" onsubmit=\"return false;\">\n")
   cat("<label>Module <select id=\"exo-module\" class=\"form-select\">\n")
+  cat("<option value=\"0\">Tout</option>\n")
   for (m in seq_len(nrow(modules)))
     cat(sprintf("<option value=\"%d\">%s</option>\n", m, exo_html(nom_module(m))))
   cat("</select></label>\n")
-  cat("<label>Diapo <input id=\"exo-diapo\" class=\"form-control\" type=\"number\" min=\"1\" step=\"1\" inputmode=\"numeric\"></label>\n")
+  cat("<label id=\"exo-diapo-label\">Diapo <input id=\"exo-diapo\" class=\"form-control\" type=\"number\" min=\"1\" step=\"1\" inputmode=\"numeric\"></label>\n")
   cat("</form>\n<p id=\"exo-resume\" class=\"exo-resume\" aria-live=\"polite\"></p>\n<div id=\"exo-resultat\"></div>\n</div>\n\n")
   cat("<script id=\"exo-donnees\" type=\"application/json\">", gsub("</", "<\\/", json, fixed = TRUE), "</script>\n", sep = "")
   cat(exo_script(), "\n\n")
@@ -486,6 +487,7 @@ exo_script <- function() {
   var D = JSON.parse(document.getElementById("exo-donnees").textContent);
   var selM = document.getElementById("exo-module");
   var inD = document.getElementById("exo-diapo");
+  var labD = document.getElementById("exo-diapo-label");
   var resume = document.getElementById("exo-resume");
   var sortie = document.getElementById("exo-resultat");
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) {
@@ -495,17 +497,23 @@ exo_script <- function() {
     var h = window.location.hash.replace(/^#/, ""), r = {};
     h.split("&").forEach(function (kv) { var p = kv.split("="); if (p.length === 2) r[p[0]] = p[1]; });
     var m = NaN, code = decodeURIComponent(r.module || "");
+    if (code === "tout") return {m: 0, d: 0};
     D.modules.forEach(function (x, i) { if (x.code === code) m = i + 1; });
     var d = parseInt(r.d, 10);
     return (m >= 1 && m <= D.modules.length) ? {m: m, d: d >= 1 ? d : nbDiapos(m)} : null;
   }
   function afficher(majAdresse) {
-    var m = parseInt(selM.value, 10), n = nbDiapos(m);
-    inD.max = n;
-    var d = parseInt(inD.value, 10);
-    if (!(d >= 1)) d = n;
-    if (d > n) { d = n; inD.value = n; }
-    var ok = D.exercices.filter(function (x) { return x.m < m || (x.m === m && x.d <= d); });
+    var m = parseInt(selM.value, 10), tout = !(m >= 1), d = 0;
+    labD.style.display = tout ? "none" : "";          // « Tout » : pas de diapo à choisir
+    if (!tout) {
+      var n = nbDiapos(m);
+      inD.max = n;
+      d = parseInt(inD.value, 10);
+      if (!(d >= 1)) d = n;
+      if (d > n) { d = n; inD.value = n; }
+    }
+    function dans(y) { return tout || y.m < m || (y.m === m && y.d <= d); }
+    var ok = D.exercices.filter(dans);
     var parEx = {};
     D.exercices.forEach(function (x) { (parEx[x.e] = parEx[x.e] || []).push(x); });
     var vus = {}, groupes = {}, ordreCh = [];
@@ -513,34 +521,45 @@ exo_script <- function() {
     ok.forEach(function (x) {
       if (vus[x.e]) return;
       vus[x.e] = true;
-      var faits = parEx[x.e].filter(function (y) { return y.m < m || (y.m === m && y.d <= d); });
+      var faits = parEx[x.e].filter(dans);
       var lib = (faits.length === parEx[x.e].length && D.complets[x.e]) ? x.e :
-        x.e + " (" + faits.map(function (y) { return y.p.replace(/\\(([^)]*)\\)/g, "-$1"); }).join(", ") + ")";
-      var nouveau = faits.some(function (y) { return y.m === m; });
+        x.e + " (" + [].concat.apply([], faits.map(function (y) { return y.p.split(/,\\s*/); }))
+          .filter(function (q) { return q; }).sort(function (a, b) { return a.localeCompare(b); })
+          .map(function (q) { return q.replace(/\\(([^)]*)\\)/g, "-$1"); }).join(", ") + ")";
+      var nouveau = !tout && faits.some(function (y) { return y.m === m; });
       if (!groupes[x.c]) { groupes[x.c] = []; ordreCh.push(x.c); }
       groupes[x.c].push("<li" + (nouveau ? " class=\\"exo-nouveau\\"" : "") + " title=\\"" + esc(x.s) + "\\">" + esc(lib) + "</li>");
     });
-    var titre = D.modules[m - 1].titres[d - 1], sect = D.modules[m - 1].sections[d - 1];
-    resume.innerHTML = "Jusqu\\u2019à la diapo <strong>" + d + "</strong>" +
-      (titre ? " (« " + esc(titre) + " »)" : (sect ? " (section « " + esc(sect) + " »)" : "")) +
-      " du " + esc(D.modules[m - 1].nom) + " : <strong>" + Object.keys(vus).length + "</strong> exercice" +
-      (Object.keys(vus).length > 1 ? "s" : "") + " du manuel.";
+    var nb = Object.keys(vus).length, nbTxt = "<strong>" + nb + "</strong> exercice" + (nb > 1 ? "s" : "") + " du manuel";
+    if (tout) {
+      resume.innerHTML = "Tous les exercices au programme du cours : " + nbTxt + ".";
+    } else {
+      var titre = D.modules[m - 1].titres[d - 1], sect = D.modules[m - 1].sections[d - 1];
+      resume.innerHTML = "Jusqu\\u2019à la diapo <strong>" + d + "</strong>" +
+        (titre ? " (« " + esc(titre) + " »)" : (sect ? " (section « " + esc(sect) + " »)" : "")) +
+        " du " + esc(D.modules[m - 1].nom) + " : " + nbTxt + ".";
+    }
     sortie.innerHTML = ordreCh.length === 0 ? "<p class=\\"exo-vide\\">Aucun exercice pour l\\u2019instant.</p>" :
       ordreCh.map(function (c) {
         return "<div class=\\"exo-chapitre\\"><span class=\\"exo-chapitre-titre\\">Chapitre " + esc(c) +
           "</span><ul class=\\"exo-liste\\">" + groupes[c].join("") + "</ul></div>";
       }).join("");
     if (majAdresse && window.history && history.replaceState)
-      history.replaceState(null, "", "#module=" + encodeURIComponent(D.modules[m - 1].code) + "&d=" + d);
+      history.replaceState(null, "", tout ? window.location.pathname + window.location.search :
+        "#module=" + encodeURIComponent(D.modules[m - 1].code) + "&d=" + d);
   }
-  // Point de départ : le lien partagé, sinon où en est le cours, sinon la fin du cours
-  var depart = lireAdresse() || D.depart || {m: D.modules.length, d: nbDiapos(D.modules.length)};
-  selM.value = depart.m;
-  inD.value = depart.d;
-  selM.addEventListener("change", function () { inD.value = nbDiapos(parseInt(selM.value, 10)); afficher(true); });
+  // Point de départ : le lien partagé (#module=3&d=24), sinon tout
+  var depart = lireAdresse() || {m: 0, d: 0};
+  function placer(p) { selM.value = p.m; inD.value = p.d >= 1 ? p.d : ""; }
+  placer(depart);
+  selM.addEventListener("change", function () {
+    var m = parseInt(selM.value, 10);
+    inD.value = m >= 1 ? nbDiapos(m) : "";
+    afficher(true);
+  });
   inD.addEventListener("input", function () { afficher(true); });
   window.addEventListener("hashchange", function () {
-    var p = lireAdresse(); if (p) { selM.value = p.m; inD.value = p.d; afficher(false); }
+    var p = lireAdresse(); if (p) { placer(p); afficher(false); }
   });
   afficher(false);
 })();

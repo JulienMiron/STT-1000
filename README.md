@@ -119,9 +119,11 @@ chaque exercice de fin de chapitre du manuel (ou chaque sous-question), la diapo
   la liste des exercices faisables à ce jour (ceux qui se sont ajoutés depuis la
   mise à jour précédente sont en gras) ; n'apparaît que si le fichier contient au
   moins une ligne ;
-- **Quels exercices puis-je faire ?** — un sélecteur *module + diapo* qui affiche
-  tous les exercices faisables jusqu'à ce point. L'adresse se met à jour et peut
-  être partagée : `exercices.html#module=3&d=24` ;
+- **Quels exercices puis-je faire ?** — un sélecteur *module + diapo*. Par
+  défaut, le choix « Tout » affiche tous les exercices au programme ; en
+  choisissant un module et une diapo, on ne voit que les exercices faisables
+  jusqu'à ce point. L'adresse se met à jour et peut être partagée :
+  `exercices.html#module=3&d=24` ;
 - **Exercices par module** — pour chaque module, les exercices qui deviennent
   faisables à chaque diapo ;
 - les exercices du manuel **hors programme** (notions non vues dans le cours).
