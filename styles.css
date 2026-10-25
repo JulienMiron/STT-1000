@@ -2863,3 +2863,10 @@ mjx-container[jax="CHTML"] {
 .exo-table td.exo-titre { opacity: .75; font-size: .9rem; width: 30%; }
 .exo-historique, .exo-hors { margin: 1rem 0; }
 .exo-historique summary, .exo-hors summary { cursor: pointer; font-weight: 700; }
+
+/* Page Diapositives : colonne « Manuel » (sections à lire, R/diapos.R) */
+.diapos-manuel { cursor: help; border-bottom: 1px dotted currentColor; }
+.diapos-item { white-space: nowrap; }
+.diapos-lectures { margin: 1rem 0; }
+.diapos-lectures summary { cursor: pointer; font-weight: 700; }
+.diapos-lectures ul ul { margin-bottom: .3rem; }

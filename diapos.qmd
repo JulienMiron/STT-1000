@@ -10,6 +10,8 @@ Pour savoir quels exercices du manuel faire selon l'avancement du cours, voir la
 
 ## Diapositives du cours
 
+La colonne **Manuel** indique les sections du manuel à lire pour chaque module. Survolez une entrée pour voir les titres des sections, ou ouvrez la liste sous le tableau.
+
 ```{r}
 #| label: liste-diapos
 #| echo: false

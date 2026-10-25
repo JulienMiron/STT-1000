@@ -92,13 +92,133 @@ diapos_page <- function() {
     cat('<p class="diapos-archives">', paste(boutons, collapse = "\n"), '</p>\n\n', sep = "\n")
   }
   infos <- infos[order(infos$module), ]
-  cat("| Module | Présentation | Imprimable |\n|:--|:--:|:--:|\n")
+  infos$code <- diapos_codes(infos$numero)
+  lect <- diapos_lectures(infos$code)
+  cat("| Module | Présentation | Imprimable | Manuel |\n|:--|:--:|:--:|:--|\n")
   for (i in seq_len(nrow(infos))) {
     cat(sprintf(
-      "| Module %s – %s | %s | %s |\n",
+      "| Module %s – %s | %s | %s | %s |\n",
       infos$numero[i], infos$titre[i],
-      diapos_lien(infos$base[i]), diapos_lien(infos$base[i], "-imprimable")
+      diapos_lien(infos$base[i]), diapos_lien(infos$base[i], "-imprimable"),
+      lect$cellule[i]
     ))
   }
+  # Titres complets des sections (lisibles aussi sur téléphone, sans survol)
+  if (any(nzchar(lect$detail))) {
+    cat("\n<details class=\"diapos-lectures\"><summary>Titres des sections du manuel, module par module</summary>\n<ul>\n")
+    for (i in which(nzchar(lect$detail)))
+      cat(sprintf("<li><strong>Module %s – %s</strong>%s</li>\n", infos$numero[i],
+                  diapos_html(infos$titre[i]), lect$detail[i]))
+    cat("</ul></details>\n")
+  }
   invisible()
+}
+
+# ---------------------------------------------------------------------------
+# Lectures dans le manuel (colonne « Manuel »)
+#   manuel/sections.tsv : numéros et titres des chapitres et sections du livre
+#   manuel/lectures.tsv : sections à lire pour chaque module (« 6.1-6.3, 9.1.1 »)
+# ---------------------------------------------------------------------------
+
+# Échappement HTML
+diapos_html <- function(x) {
+  x <- gsub("&", "&amp;", x, fixed = TRUE)
+  x <- gsub("<", "&lt;", x, fixed = TRUE)
+  x <- gsub(">", "&gt;", x, fixed = TRUE)
+  x <- gsub("|", "&#124;", x, fixed = TRUE)   # pas de | dans une cellule de tableau
+  gsub("\"", "&quot;", x, fixed = TRUE)
+}
+
+# Code d'un module, comme dans exercices/avancement.tsv : le numéro du fichier
+# (« 3 », « 8.1 ») ; deux fichiers de même numéro deviennent N.1, N.2.
+# `numeros` doit être dans l'ordre d'enseignement.
+diapos_codes <- function(numeros) {
+  code <- numeros
+  for (n in unique(numeros[duplicated(numeros)])) {
+    k <- which(numeros == n)
+    code[k] <- paste0(n, ".", seq_along(k))
+  }
+  code
+}
+
+# Fichier TSV ; les lignes qui commencent par # sont des commentaires
+diapos_lire_tsv <- function(fichier) {
+  if (!file.exists(fichier)) return(NULL)
+  l <- readLines(fichier, warn = FALSE, encoding = "UTF-8")
+  l <- l[!grepl("^\\s*#", l) & nzchar(trimws(l))]
+  if (length(l) < 2) return(NULL)
+  utils::read.delim(text = l, colClasses = "character", quote = "", comment.char = "",
+                    na.strings = character(), strip.white = TRUE, fill = TRUE)
+}
+
+# Profondeur d'un numéro de section : « 6 » -> 0, « 6.2 » -> 1, « 6.2.1 » -> 2
+diapos_profondeur <- function(n) nchar(gsub("[^.]", "", n))
+
+# « 6.1-6.3, 9.1.1 » -> c("6.1", "6.2", "6.3", "9.1.1") selon l'ordre du livre
+diapos_developper <- function(spec, sections) {
+  items <- trimws(strsplit(spec, ",")[[1]])
+  items <- items[nzchar(items)]
+  out <- character()
+  for (it in items) {
+    if (grepl("-", it)) {
+      ab <- trimws(strsplit(it, "-")[[1]])
+      i <- match(ab[1], sections$numero)
+      j <- match(ab[2], sections$numero)
+      if (length(ab) != 2 || is.na(i) || is.na(j) || j < i) {
+        cat("[lectures] intervalle non reconnu dans manuel/lectures.tsv :", it, "\n", file = stderr())
+        out <- c(out, ab)
+        next
+      }
+      cand <- sections$numero[i:j]
+      out <- c(out, cand[diapos_profondeur(cand) == diapos_profondeur(ab[1])])
+    } else {
+      out <- c(out, it)
+    }
+  }
+  out
+}
+
+# Pour chaque module (codes dans l'ordre du tableau) : contenu de la cellule
+# « Manuel » (compact, titres au survol) et détail avec les titres complets
+diapos_lectures <- function(codes, fichier = "manuel/lectures.tsv", fichier_sections = "manuel/sections.tsv") {
+  vide <- data.frame(cellule = rep("", length(codes)), detail = rep("", length(codes)),
+                     stringsAsFactors = FALSE)
+  lect <- diapos_lire_tsv(fichier)
+  sections <- diapos_lire_tsv(fichier_sections)
+  if (is.null(lect) || is.null(sections)) return(vide)
+  titre_de <- function(n) {
+    t <- sections$titre[match(n, sections$numero)]
+    ifelse(is.na(t), "", t)
+  }
+  inconnus <- setdiff(lect$module, codes)
+  if (length(inconnus) > 0)
+    cat("[lectures] module(s) inconnu(s) dans manuel/lectures.tsv :", paste(inconnus, collapse = ", "), "\n", file = stderr())
+  res <- vide
+  for (i in seq_along(codes)) {
+    spec <- lect$sections[match(codes[i], lect$module)]
+    if (is.na(spec) || !nzchar(trimws(spec))) { res$cellule[i] <- "—"; next }
+    items <- trimws(strsplit(spec, ",")[[1]])
+    items <- items[nzchar(items)]
+    chap_item <- sub("\\..*$", "", items)
+    tout <- diapos_developper(spec, sections)
+    inconnues <- setdiff(tout, sections$numero)
+    if (length(inconnues) > 0)
+      cat("[lectures] section(s) absente(s) de manuel/sections.tsv :", paste(inconnues, collapse = ", "), "\n", file = stderr())
+    chap_tout <- sub("\\..*$", "", tout)
+    cell <- character(); det <- character()
+    for (ch in unique(chap_item)) {
+      lib <- paste(sprintf("<span class=\"diapos-item\">%s</span>", gsub("-", "–", items[chap_item == ch])),
+                   collapse = ", ")
+      secs <- tout[chap_tout == ch]
+      titres <- paste(secs, titre_de(secs))
+      bulle <- paste(c(sprintf("Chapitre %s : %s", ch, titre_de(ch)), titres), collapse = "&#10;")
+      cell <- c(cell, sprintf("<span class=\"diapos-manuel\" title=\"%s\">Chap. %s : %s</span>",
+                              gsub("&amp;#10;", "&#10;", diapos_html(bulle)), ch, lib))
+      det <- c(det, sprintf("<li>Chapitre %s – %s<ul>%s</ul></li>", ch, diapos_html(titre_de(ch)),
+                            paste(sprintf("<li>%s</li>", diapos_html(titres)), collapse = "")))
+    }
+    res$cellule[i] <- paste(cell, collapse = "<br>")
+    res$detail[i] <- sprintf("<ul>%s</ul>", paste(det, collapse = ""))
+  }
+  res
 }

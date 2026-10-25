@@ -14,7 +14,7 @@ versionnés : ils sont produits par la compilation.
 | Chemin | Contenu |
 |---|---|
 | `index.qmd` | Page d'accueil du site (bandeau + liens vers les autres pages) |
-| `diapos.qmd` | Page *Diapositives* : lien vers le recueil d'exercices, boutons « Tout télécharger » (ZIP) et liste automatique des PDF des diapos |
+| `diapos.qmd` | Page *Diapositives* : lien vers le recueil d'exercices, boutons « Tout télécharger » (ZIP), liste automatique des PDF des diapos et sections du manuel à lire |
 | `diapos/Module *.tex` | Sources des diapos (un fichier par module) |
 | `diapos/compiler.sh` | Compile les diapos (version présentation + version imprimable) |
 | `diapos/latexmkrc` | Configuration de `latexmk` pour les diapos |
@@ -25,6 +25,7 @@ versionnés : ils sont produits par la compilation.
 | `exercices.qmd` | Page *Exercices* : exercices du manuel selon l'avancement du cours (voir plus bas) |
 | `exercices/correspondance.tsv` | Diapo à partir de laquelle chaque exercice du manuel est faisable |
 | `exercices/avancement.tsv` | Avancement du cours en classe (à mettre à jour chaque semaine) |
+| `manuel/lectures.tsv`, `manuel/sections.tsv` | Sections du manuel à lire pour chaque module (colonne *Manuel* de la page Diapositives) |
 | `R/` | Fonctions R utilisées par les pages Diapositives (`diapos.R`) et Exercices (`exercices.R`), et scripts lancés avant chaque rendu (`logo.R`, `archives.R`) |
 | `.github/workflows/publish.yml` | Compilation et publication automatiques |
 
@@ -166,6 +167,22 @@ colonne `titre` sert d'ancrage : l'exercice suit la diapo qui porte ce titre, et
 le journal du rendu (onglet *Actions*) l'indique par une ligne `[exercices]`.
 **Pour corriger une ligne à la main**, changer `diapo` et `titre` ensemble (ou
 vider `titre` : le numéro est alors pris tel quel).
+
+## Colonne *Manuel* de la page Diapositives
+
+La page *Diapositives* indique, pour chaque module, les sections du manuel à lire
+(colonne *Manuel* ; les titres apparaissent au survol et dans la liste dépliable
+sous le tableau). Deux fichiers, colonnes séparées par des **tabulations** :
+
+- `manuel/lectures.tsv` : pour chaque code de module (`1`, `2`, …, le même code
+  que dans `exercices/avancement.tsv`), les sections à lire, par exemple
+  `6.1-6.3, 9.1.1` (`a-b` = de a à b, sections de même niveau). Laisser vide
+  s'il n'y a aucune lecture ;
+- `manuel/sections.tsv` : numéros et titres des chapitres et sections du manuel
+  (identique dans STT-1000 et STT-1900).
+
+Le code est dans `R/diapos.R` (`diapos_lectures()`). Une section ou un module
+inconnu est signalé par une ligne `[lectures]` dans le journal du rendu.
 
 ## Archives ZIP des diapos
 

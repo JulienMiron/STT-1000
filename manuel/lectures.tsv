@@ -1,0 +1,18 @@
+# Lectures dans le manuel pour chaque module (colonne « Manuel » de la page Diapositives).
+# Colonnes séparées par des TABULATIONS :
+#   module    code du module (numéro dans le nom du fichier de diapos ; voir exercices/avancement.tsv)
+#   sections  numéros de sections du manuel séparés par des virgules ; « a-b » = de a à b
+#             (sections de même niveau, dans l'ordre du livre : voir manuel/sections.tsv).
+#             Laisser vide si aucune lecture.
+module	sections
+1	1.1-1.7
+2	2.1-2.3, 2.4.1-2.4.2, 2.5.4
+3	4.1-4.4, 4.6-4.7
+4	5.1-5.4, 6.1-6.3
+5	
+6	7.1, 7.2.1-7.2.3, 7.3.1-7.3.2
+7	8.1-8.4, 9.1.1
+8	9.2
+9.1	10.1-10.2
+9.2	9.3.1-9.3.4, 9.3.6, 10.3.1-10.3.4, 10.3.6
+10	7.2.5, 7.3.4, 12.1-12.5, 12.7

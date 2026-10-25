@@ -1,0 +1,124 @@
+# Structure du manuel (chapitres et sections des lectures), dans l'ordre du livre.
+# Sert à afficher les titres des sections indiquées dans manuel/lectures.tsv.
+# Colonnes séparées par des TABULATIONS : numero (« 6 » = chapitre, « 6.2 » = section,
+# « 6.2.1 » = sous-section), titre.
+# Le titre de 8.5 n'a pas pu être vérifié (page 236 absente du PDF des lectures).
+numero	titre
+1	Une introduction aux probabilités
+1.1	Un retour sur les ensembles
+1.1.1	Les sous-ensembles
+1.1.2	Les opérations sur les ensembles
+1.2	Les expériences aléatoires
+1.3	Les événements
+1.4	Les probabilités et leur détermination
+1.4.1	L'estimation d'une probabilité fondée sur la pratique
+1.5	Les espaces échantillonnaux finis et leur dénombrement
+1.5.1	Les diagrammes en arbre
+1.5.2	Le principe de multiplication
+1.5.3	Les permutations
+1.5.4	Les combinaisons
+1.5.5	Les permutations d'objets semblables
+1.6	Les probabilités conditionnelles
+1.7	Les partitions, les probabilités totales et le théorème de Bayes
+2	Les variables aléatoires à une dimension
+2.1	Les fonctions de répartition
+2.2	Les variables aléatoires discrètes
+2.3	Les variables aléatoires continues
+2.4	Quelques caractéristiques des distributions
+2.4.1	L'espérance mathématique
+2.4.2	La variance et l'écart-type
+2.4.3	Les moments d'une distribution
+2.5	Les fonctions d'une variable aléatoire
+2.5.1	Les événements équivalents
+2.5.2	Les fonctions discrètes d'une variable aléatoire
+2.5.3	Les fonctions continues d'une variable aléatoire continue
+2.5.4	L'espérance mathématique d'une fonction de X
+4	Quelques lois de probabilité discrètes
+4.1	Les épreuves et la loi de Bernoulli
+4.2	La loi binomiale
+4.3	La loi géométrique
+4.4	La loi de Pascal
+4.5	La loi hypergéométrique
+4.6	La loi de Poisson
+4.7	Quelques approximations
+5	Quelques lois de probabilité continues
+5.1	La loi uniforme continue
+5.2	La loi exponentielle
+5.3	La loi gamma
+5.4	La loi de Weibull
+6	La loi normale
+6.1	La loi normale
+6.1.1	Les propriétés de la loi normale
+6.2	La propriété d'additivité de la loi normale
+6.3	Le théorème central limite
+7	La statistique en bref et la description des données
+7.1	Les concepts de base en statistique
+7.2	La présentation graphique des données
+7.2.1	Le graphique de points et le nuage de points
+7.2.2	Le tableau de fréquences et l'histogramme
+7.2.3	Le diagramme en boîte
+7.2.4	Le diagramme en bâtons
+7.2.5	Le diagramme quantile-quantile
+7.2.6	Le diagramme chronologique
+7.3	La description numérique des données
+7.3.1	Les mesures de position
+7.3.2	Les mesures de dispersion
+7.3.3	Les coefficients d'asymétrie et d'aplatissement
+7.3.4	Une mesure d'association : le coefficient de corrélation
+7.3.5	Les données groupées
+8	Les échantillons aléatoires et les distributions échantillonnales
+8.1	Les échantillons aléatoires
+8.2	Les statistiques et les distributions échantillonnales
+8.3	La loi du khi-carré
+8.4	La loi t de Student
+8.5	La loi F de Fisher
+9	L'estimation de paramètres
+9.1	L'estimation ponctuelle
+9.1.1	Les propriétés des estimateurs
+9.1.2	La méthode du maximum de vraisemblance
+9.1.3	La méthode des moments
+9.2	L'estimation par intervalle de confiance à partir d'un seul échantillon
+9.2.1	La moyenne d'une loi normale de variance connue
+9.2.2	La moyenne d'une loi normale de variance inconnue
+9.2.3	La variance d'une loi normale
+9.2.4	La proportion dans une population
+9.3	L'estimation par intervalle de confiance à partir de deux échantillons
+9.3.1	La différence entre les moyennes de deux lois normales de variances connues
+9.3.2	La différence entre les moyennes de deux lois normales de variances inconnues mais égales
+9.3.3	La différence entre les moyennes de deux lois de variances inconnues mais inégales
+9.3.4	La différence entre moyennes de deux lois normales dans le cas d'observations appariées
+9.3.5	Le rapport des variances de deux lois normales
+9.3.6	La différence entre deux proportions
+9.4	Les intervalles de prévision et les intervalles de tolérance
+9.4.1	Les intervalles de prévision
+9.4.2	Les intervalles de tolérance
+10	Les tests d'hypothèses
+10.1	Les concepts de base
+10.2	Les tests d'hypothèses à partir d'un seul échantillon
+10.2.1	Les tests sur la moyenne d'une distribution normale de variance connue
+10.2.2	Les tests sur la moyenne d'une distribution normale de variance inconnue
+10.2.3	Les tests sur la variance d'une distribution normale
+10.2.4	Les tests sur une proportion
+10.3	Les tests d'hypothèses à partir de deux échantillons
+10.3.1	Les tests sur les moyennes de deux distributions normales de variances connues
+10.3.2	Les tests sur les moyennes de deux distributions normales de variances inconnues mais égales
+10.3.3	Les tests sur les moyennes de deux distributions normales de variances inconnues mais inégales
+10.3.4	Les tests t appariés
+10.3.5	Les tests sur l'égalité de deux variances
+10.3.6	Les tests sur deux proportions
+10.4	Le test d'ajustement du khi-carré
+10.5	Les tests de tableaux de contingence
+10.5.1	Le test d'indépendance de deux variables aléatoires catégoriques
+10.5.2	Le test d'homogénéité de r populations
+12	La régression linéaire simple et la corrélation
+12.1	La régression linéaire simple
+12.2	Les tests d'hypothèses dans une régression linéaire simple
+12.2.1	Les tests sur la pente de la droite
+12.2.2	Le test sur l'ordonnée à l'origine de la droite
+12.3	L'estimation par intervalle pour une régression linéaire simple
+12.4	La prévision de nouvelles observations
+12.5	La validation et la qualité de l'ajustement du modèle de régression
+12.5.1	L'analyse des résidus
+12.5.2	Le coefficient de détermination
+12.6	Les transformations pour une droite
+12.7	La corrélation
