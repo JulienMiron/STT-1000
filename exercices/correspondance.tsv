@@ -75,52 +75,52 @@ exercice	parties	sujet	module	diapo	titre	note
 1.44		essais indépendants (binomiale)	1	57	Combinaisons : formule générale	binomiale à la main : indépendance et combinaisons, diapo 57
 2.1	a	fonction de masse, combinaisons	2	4	Variable aléatoire	v.a. et P(X=x), diapo 4 ; combinaisons au module 1
 2.1	b	fonction de masse, combinaisons	2	18	Fonction de probabilité/masse	diagramme de la fonction de masse, définie diapo 18
-2.2		variance d'une v.a. discrète	2	39	Mesure de dispersion d'une distribution	variance d'une v.a. discrète, définie diapo 39
+2.2		variance d'une v.a. discrète	2	42	Mesure de dispersion d'une distribution	variance d'une v.a. discrète, définie diapo 42
 2.3	a	densité, espérance, variance	2	26	Propriétés d'une fonction de densité	intégrale de la densité égale à 1, diapo 26
-2.3	b	densité, espérance, variance	2	33	Mesure de la tendance centrale	espérance d'une v.a. continue, diapo 33
-2.3	c	densité, espérance, variance	2	39	Mesure de dispersion d'une distribution	variance, définie diapo 39
+2.3	b	densité, espérance, variance	2	35	Mesure de la tendance centrale	espérance d'une v.a. continue, diapo 35
+2.3	c	densité, espérance, variance	2	42	Mesure de dispersion d'une distribution	variance, définie diapo 42
 2.4	a	répartition, densité, centile	2	23	Fonction de densité	densité = dérivée de la répartition, diapo 23
 2.4	b, c	répartition, densité, centile	2	26	Propriétés d'une fonction de densité	P(T≥t) et P(T<t) via F : P(T=t)=0, diapo 26 ; centile défini dans l'énoncé
 2.5		propriétés d'une fonction de répartition	2	15	Propriétés d'une fonction de répartition	propriétés d'une fonction de répartition, diapo 15
 2.6		densité à partir de la répartition	2	23	Fonction de densité	densité = dérivée de la répartition, diapo 23
-2.7		propriétés d'une fonction de masse	2	21	Propri\'et\'es de la fonction de probabilit\'e	propriétés d'une fonction de masse, diapo 21
-2.8	a	masse, répartition, espérance, écart-type	2	33	Mesure de la tendance centrale	espérance d'une v.a. discrète, diapo 33
-2.8	b	masse, répartition, espérance, écart-type	2	43	Résultats utiles	V=E(X²)−μ² avec E(X²) fourni, diapo 43
+2.7		propriétés d'une fonction de masse	2	21	Propriétés de la fonction de probabilité	propriétés d'une fonction de masse, diapo 21
+2.8	a	masse, répartition, espérance, écart-type	2	35	Mesure de la tendance centrale	espérance d'une v.a. discrète, diapo 35
+2.8	b	masse, répartition, espérance, écart-type	2	46	Résultats utiles	V=E(X²)−μ² avec E(X²) fourni, diapo 46
 2.8	c	masse, répartition, espérance, écart-type	2	18	Fonction de probabilité/masse	fonction de masse, définie diapo 18
-2.8	d	masse, répartition, espérance, écart-type	2	11	Retour à l'exemple 2 (suite)	répartition en escalier construite, exemple diapos 10-11
+2.8	d	masse, répartition, espérance, écart-type	2	11	Exemple 2 : fonction de répartition (suite)	répartition en escalier construite, exemple diapos 10-11
 2.9		probabilité à partir d'une masse	2	18	Fonction de probabilité/masse	somme de la fonction de masse donnée, diapo 18
 2.10	a, e	répartition discrète, masse, probabilités	2	9	Fonction de répartition	définition de la répartition, diapo 9
 2.10	b	répartition discrète, masse, probabilités	2	18	Fonction de probabilité/masse	fonction de masse, diapo 18
 2.10	c	répartition discrète, masse, probabilités	2	15	Propriétés d'une fonction de répartition	P(a<X≤b)=F(b)−F(a), diapo 15
 2.10	d	répartition discrète, masse, probabilités	2	16		sauts de F aux entiers (v.a. discrète), diapo 16
 2.11	a, b, c, e	densité, probabilité conditionnelle, moments	2	26	Propriétés d'une fonction de densité	constante k par intégrale égale à 1, diapo 26
-2.11	d	densité, probabilité conditionnelle, moments	2	39	Mesure de dispersion d'une distribution	variance, diapo 39
+2.11	d	densité, probabilité conditionnelle, moments	2	42	Mesure de dispersion d'une distribution	variance, diapo 42
 2.12	a, c	densité, espérance, répartition	2	26	Propriétés d'une fonction de densité	constante k par intégrale égale à 1, diapo 26
-2.12	b	densité, espérance, répartition	2	33	Mesure de la tendance centrale	espérance d'une v.a. continue, diapo 33
+2.12	b	densité, espérance, répartition	2	35	Mesure de la tendance centrale	espérance d'une v.a. continue, diapo 35
 2.13	a	fonction de masse, espérance	2	18	Fonction de probabilité/masse	fonction de masse diapo 18 ; combinaisons au module 1
-2.13	b	fonction de masse, espérance	2	33	Mesure de la tendance centrale	espérance d'une v.a. discrète, diapo 33
+2.13	b	fonction de masse, espérance	2	35	Mesure de la tendance centrale	espérance d'une v.a. discrète, diapo 35
 2.14	a, c	fonction de masse, espérance d'un gain	2	18	Fonction de probabilité/masse	fonction de masse diapo 18 ; probabilités totales module 1
-2.14	b, d, e	fonction de masse, espérance d'un gain	2	33	Mesure de la tendance centrale	espérance d'un gain discret, diapo 33
+2.14	b, d, e	fonction de masse, espérance d'un gain	2	35	Mesure de la tendance centrale	espérance d'un gain discret, diapo 35
 2.15	a	reconnaître densités et répartitions	2	26	Propriétés d'une fonction de densité	propriétés d'une densité, diapo 26
 2.15	b	reconnaître densités et répartitions	2	15	Propriétés d'une fonction de répartition	propriétés d'une répartition, diapo 15
 2.16	a, b, e	densité, espérance, variance, répartition	2	26	Propriétés d'une fonction de densité	constante k par intégrale égale à 1, diapo 26
-2.16	c	densité, espérance, variance, répartition	2	33	Mesure de la tendance centrale	espérance d'une v.a. continue, diapo 33
-2.16	d	densité, espérance, variance, répartition	2	43	Résultats utiles	V=E(T²)−μ² avec E(T²) fourni, diapo 43
-2.17	a, b	fonction de masse, espérance, écart-type	2	21	Propri\'et\'es de la fonction de probabilit\'e	somme des masses égale à 1, diapo 21
-2.17	c	fonction de masse, espérance, écart-type	2	33	Mesure de la tendance centrale	espérance d'une v.a. discrète, diapo 33
-2.17	d	fonction de masse, espérance, écart-type	2	39	Mesure de dispersion d'une distribution	écart-type, diapo 39
+2.16	c	densité, espérance, variance, répartition	2	35	Mesure de la tendance centrale	espérance d'une v.a. continue, diapo 35
+2.16	d	densité, espérance, variance, répartition	2	46	Résultats utiles	V=E(T²)−μ² avec E(T²) fourni, diapo 46
+2.17	a, b	fonction de masse, espérance, écart-type	2	21	Propriétés de la fonction de probabilité	somme des masses égale à 1, diapo 21
+2.17	c	fonction de masse, espérance, écart-type	2	35	Mesure de la tendance centrale	espérance d'une v.a. discrète, diapo 35
+2.17	d	fonction de masse, espérance, écart-type	2	42	Mesure de dispersion d'une distribution	écart-type, diapo 42
 2.18	a	densité, répartition et moments	2	26	Propriétés d'une fonction de densité	propriétés de la densité (aucune borne à 1), diapo 26
 2.18	b, g, h	densité, répartition et moments	2	15	Propriétés d'une fonction de répartition	F non décroissante, P(a<X≤b)=F(b)−F(a), diapo 15
 2.18	c	densité, répartition et moments	2	23	Fonction de densité	densité = dérivée de la répartition, diapo 23
-2.18	d	densité, répartition et moments	2	33	Mesure de la tendance centrale	espérance, diapo 33
+2.18	d	densité, répartition et moments	2	35	Mesure de la tendance centrale	espérance, diapo 35
 2.18	e	densité, répartition et moments	2	24		répartition = intégrale de la densité, diapo 24
-2.18	f	densité, répartition et moments	2	39	Mesure de dispersion d'une distribution	variance, diapo 39
-2.19	a, b	espérance discrète, indépendance	2	33	Mesure de la tendance centrale	espérance discrète diapo 33 ; b : indépendance (module 1), E(A) inchangée
+2.18	f	densité, répartition et moments	2	42	Mesure de dispersion d'une distribution	variance, diapo 42
+2.19	a, b	espérance discrète, indépendance	2	35	Mesure de la tendance centrale	espérance discrète diapo 35 ; b : indépendance (module 1), E(A) inchangée
 2.19	c	espérance discrète, indépendance	2	4	Variable aléatoire	v.a. diapo 4 ; indépendance au module 1
-2.20		espérance et écart-type graphiques	2	39	Mesure de dispersion d'une distribution	espérance (diapo 33) et écart-type (diapo 39)
+2.20		espérance et écart-type graphiques	2	42	Mesure de dispersion d'une distribution	espérance (diapo 33) et écart-type (diapo 42)
 2.21	a	répartition, moment d'ordre 3, médiane	2	24		répartition = intégrale de f, diapo 24
-2.21	b	répartition, moment d'ordre 3, médiane	2	33	Mesure de la tendance centrale	espérance, diapo 33
-2.21	c	répartition, moment d'ordre 3, médiane	2	42	Espérance d'une fonction d'une variable aléatoire	espérance d'une fonction H(X), diapo 42
+2.21	b	répartition, moment d'ordre 3, médiane	2	35	Mesure de la tendance centrale	espérance, diapo 35
+2.21	c	répartition, moment d'ordre 3, médiane	2	45	Espérance d'une fonction d'une variable aléatoire	espérance d'une fonction H(X), diapo 45
 2.21	d	répartition, moment d'ordre 3, médiane	2	26	Propriétés d'une fonction de densité	P(X≥m)=1−F(m) car P(X=m)=0, diapo 26 ; médiane définie dans l'énoncé
 2.22	a(i), a(iii), a(iv), c	lecture d'une fonction de répartition	2	26	Propriétés d'une fonction de densité	P(X=a)=0 pour une v.a. continue, diapo 26
 2.22	a(ii), a(v), d	lecture d'une fonction de répartition	2	9	Fonction de répartition	lecture de F(x)=P(X≤x), diapo 9
@@ -132,35 +132,35 @@ exercice	parties	sujet	module	diapo	titre	note
 2.25	c	répartition discrète, fonction de masse	2	15	Propriétés d'une fonction de répartition	P(a<X≤b)=F(b)−F(a), diapo 15
 2.26	a	répartition continue, espérance, variance	2	9	Fonction de répartition	valeur où F atteint 1, diapo 9
 2.26	b	répartition continue, espérance, variance	2	26	Propriétés d'une fonction de densité	P(X<3) : P(X=a)=0 pour une v.a. continue, diapo 26
-2.26	c	répartition continue, espérance, variance	2	39	Mesure de dispersion d'une distribution	densité (diapo 23), espérance et variance (diapo 39)
+2.26	c	répartition continue, espérance, variance	2	42	Mesure de dispersion d'une distribution	densité (diapo 23), espérance et variance (diapo 42)
 2.27	a	masse, espérance, variance de g(X)	2	18	Fonction de probabilité/masse	fonction de masse de Y=g(X), diapo 18
-2.27	b	masse, espérance, variance de g(X)	2	33	Mesure de la tendance centrale	espérance d'une v.a. discrète, diapo 33
-2.27	c	masse, espérance, variance de g(X)	2	39	Mesure de dispersion d'une distribution	variance, diapo 39
-2.28	a	espérance et variance de aX+b	2	42	Espérance d'une fonction d'une variable aléatoire	espérance de H(X) sans densité de P, diapo 42
-2.28	b	espérance et variance de aX+b	2	43	Résultats utiles	V(aX+b)=a²V(X), diapo 43
+2.27	b	masse, espérance, variance de g(X)	2	35	Mesure de la tendance centrale	espérance d'une v.a. discrète, diapo 35
+2.27	c	masse, espérance, variance de g(X)	2	42	Mesure de dispersion d'une distribution	variance, diapo 42
+2.28	a	espérance et variance de aX+b	2	45	Espérance d'une fonction d'une variable aléatoire	espérance de H(X) sans densité de P, diapo 45
+2.28	b	espérance et variance de aX+b	2	46	Résultats utiles	V(aX+b)=a²V(X), diapo 46
 2.29	a	probabilité, espérance d'un bénéfice	2	24		probabilité par intégrale de la densité, diapo 24
-2.29	b	probabilité, espérance d'un bénéfice	2	33	Mesure de la tendance centrale	espérance d'un bénéfice à deux valeurs, diapo 33
+2.29	b	probabilité, espérance d'un bénéfice	2	35	Mesure de la tendance centrale	espérance d'un bénéfice à deux valeurs, diapo 35
 2.30	a	espérance et variance de aX+b	2	18	Fonction de probabilité/masse	fonction de masse, diapo 18
-2.30	b	espérance et variance de aX+b	2	33	Mesure de la tendance centrale	espérance d'une v.a. discrète, diapo 33
-2.30	c	espérance et variance de aX+b	2	43	Résultats utiles	V=E(X²)−μ² et V(aX+b)=a²V(X), diapo 43
+2.30	b	espérance et variance de aX+b	2	35	Mesure de la tendance centrale	espérance d'une v.a. discrète, diapo 35
+2.30	c	espérance et variance de aX+b	2	46	Résultats utiles	V=E(X²)−μ² et V(aX+b)=a²V(X), diapo 46
 2.31	a, c	fonction de masse, espérance de aX+b	2	18	Fonction de probabilité/masse	fonction de masse diapo 18 ; c : probabilité × 360 jours
-2.31	b, d	fonction de masse, espérance de aX+b	2	43	Résultats utiles	E(aX+b) et V(aX+b), diapo 43
+2.31	b, d	fonction de masse, espérance de aX+b	2	46	Résultats utiles	E(aX+b) et V(aX+b), diapo 46
 2.32		densité d'une transformation	hors			densité de Y=g(X) (méthode de la répartition) non vue
-2.33		loi uniforme discrète, espérance	2	33	Mesure de la tendance centrale	espérance d'une v.a. discrète, diapo 33
-2.34		espérance d'une fonction de X	2	33	Mesure de la tendance centrale	espérance d'un revenu à deux valeurs, diapo 33
+2.33		loi uniforme discrète, espérance	2	35	Mesure de la tendance centrale	espérance d'une v.a. discrète, diapo 35
+2.34		espérance d'une fonction de X	2	35	Mesure de la tendance centrale	espérance d'un revenu à deux valeurs, diapo 35
 2.35		densité de transformations	hors			densité de Y=g(X) (méthode de la répartition) non vue
 2.36		fonction de perte, stock optimal	hors			fonction de perte (exemple 2.27 du manuel) et minimisation non vues
-2.37		espérance d'une fonction quadratique	2	43	Résultats utiles	linéarité de E et E(G²)=V(G)+μ², diapo 43
+2.37		espérance d'une fonction quadratique	2	46	Résultats utiles	linéarité de E et E(G²)=V(G)+μ², diapo 46
 2.38		densité de transformations	hors			densité de Y=g(X) (méthode de la répartition) non vue
-2.39		espérance d'une fonction linéaire	2	42	Espérance d'une fonction d'une variable aléatoire	espérance de H(R) sans densité de P, diapo 42
-2.40		espérance de X², variance	2	43	Résultats utiles	E(X²)=V(X)+μ², diapo 43
-2.41	a	moments, répartition d'une fonction	2	39	Mesure de dispersion d'une distribution	espérance et variance discrètes, diapo 39
+2.39		espérance d'une fonction linéaire	2	45	Espérance d'une fonction d'une variable aléatoire	espérance de H(R) sans densité de P, diapo 45
+2.40		espérance de X², variance	2	46	Résultats utiles	E(X²)=V(X)+μ², diapo 46
+2.41	a	moments, répartition d'une fonction	2	42	Mesure de dispersion d'une distribution	espérance et variance discrètes, diapo 42
 2.41	b	moments, répartition d'une fonction	2	18	Fonction de probabilité/masse	masse de Y=g(X) puis répartition, diapo 18
-2.42	a	répartition, espérance d'un profit	2	43	Résultats utiles	densité (diapo 23), puis E(X+b) et V(X+b), diapo 43
+2.42	a	répartition, espérance d'un profit	2	46	Résultats utiles	densité (diapo 23), puis E(X+b) et V(X+b), diapo 46
 2.42	b	répartition, espérance d'un profit	2	26	Propriétés d'une fonction de densité	P(X<−0,8) via F : P(X=a)=0, diapo 26
-2.42	c	répartition, espérance d'un profit	2	39	Mesure de dispersion d'une distribution	espérance et écart-type d'un profit discret, diapo 39
-2.43	a, b, e, f, g	propriétés de l'espérance et variance	2	43	Résultats utiles	E(aX+b), V(aX+b), V=E(X²)−μ², diapo 43
-2.43	c, d	propriétés de l'espérance et variance	2	42	Espérance d'une fonction d'une variable aléatoire	espérance de H(X) (contre-exemple), diapo 42
+2.42	c	répartition, espérance d'un profit	2	42	Mesure de dispersion d'une distribution	espérance et écart-type d'un profit discret, diapo 42
+2.43	a, b, e, f, g	propriétés de l'espérance et variance	2	46	Résultats utiles	E(aX+b), V(aX+b), V=E(X²)−μ², diapo 46
+2.43	c, d	propriétés de l'espérance et variance	2	45	Espérance d'une fonction d'une variable aléatoire	espérance de H(X) (contre-exemple), diapo 45
 4.1	a, f	identification de lois discrètes	3	10	Loi binomiale	loi binomiale, définie diapo 10
 4.1	b, e	identification de lois discrètes	3	18	Loi géométrique	loi géométrique, définie diapo 18
 4.1	c	identification de lois discrètes	3	30	Loi de Poisson	processus de Poisson (moyenne λt), diapo 30
@@ -218,7 +218,7 @@ exercice	parties	sujet	module	diapo	titre	note
 5.9	a, b, c, d, e	densité exponentielle, absence de mémoire	2	25	Probabilité = aire sous la densité	probabilité = aire sous la densité diapo 25; conditionnelle module 1
 5.9	f, g	densité exponentielle, absence de mémoire	4	14	Loi exponentielle	absence de mémoire (sans calcul), diapo 14
 5.10	a	fonction de répartition, loi binomiale	2	9	Fonction de répartition	fonction de répartition donnée, définition diapo 9
-5.10	b	fonction de répartition, loi binomiale	2	39	Mesure de dispersion d'une distribution	espérance (diapo 33) et variance (diapo 39) par intégrale
+5.10	b	fonction de répartition, loi binomiale	2	42	Mesure de dispersion d'une distribution	espérance (diapo 33) et variance (diapo 42) par intégrale
 5.10	c	fonction de répartition, loi binomiale	3	11	Loi binomiale	fonction de masse binomiale, diapo 11
 5.11	a	loi exponentielle, écart-type	4	11	Loi exponentielle	répartition exponentielle, diapo 11
 5.11	b	loi exponentielle, écart-type	4	10	Loi exponentielle	variance exponentielle 1/λ², diapo 10
