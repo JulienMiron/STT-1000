@@ -85,16 +85,16 @@ En voici deux.
   \item<2-> $X$ est le résultat observé :\\
     $X(e)=e,~\forall e\in \mathcal{U}$\\
     $\mathbb{R}_X=\{1,2,3,4,5,6\}$
-  \item<3-> Je gagne 1~\$ si j'obtiens 4, 5 ou 6.\\
-    Je perds 1~\$ si j'obtiens 1, 2 ou 3.\\
-    $Y$ est mon gain :\\
+  \item<3-> Dans un jeu vidéo, ce dé détermine les dégâts d'une attaque : un 1 est un échec (0 point), un 6 est un coup critique (20 points) et tout autre résultat inflige 10 points.
+    $Y$ est le nombre de points de dégâts :\\
       $Y(e)=\left\{
   \begin{array}{rl}
-  -1 &\text{si}\;e\in\{1,2,3\}\\
-  1&\text{si}\;e\in\{4,5,6\}
+  0 &\text{si}\;e=1\\
+  10 &\text{si}\;e\in\{2,3,4,5\}\\
+  20 &\text{si}\;e=6
   \end{array}
   \right.$\\
-  $\mathbb{R}_Y=\{-1,1\}$.
+  $\mathbb{R}_Y=\{0,10,20\}$.
  \end{itemize}
 \end{frame}
 
@@ -115,7 +115,7 @@ En voici deux.
 }
 \end{column}
 \begin{column}{0.6\textwidth}
-\begin{tikzpicture}[scale=0.95, pt/.style={circle, fill, inner sep=1.4pt}]
+\begin{tikzpicture}[scale=0.9, pt/.style={circle, fill, inner sep=1.4pt}]
   % Espace échantillonnal
   \draw (0,0.2) ellipse (0.95 and 2.1);
   \node at (0,2.6) {$\mathcal{U}$};
@@ -131,10 +131,11 @@ En voici deux.
     \node[right] at (3.55,2.5-0.5*\i) {\small \i};
   }
   % Image de Y
-  \draw (3.6,-1.95) circle (0.7);
-  \node at (4.75,-1.95) {$\mathbb{R}_Y$};
-  \node[pt] at (3.45,-1.7) {}; \node[right] at (3.55,-1.7) {\small $-1$};
-  \node[pt] at (3.45,-2.2) {}; \node[right] at (3.55,-2.2) {\small $1$};
+  \draw (3.6,-2.05) circle (0.82);
+  \node at (4.8,-2.05) {$\mathbb{R}_Y$};
+  \node[pt] at (3.3,-1.62) {}; \node[right] at (3.38,-1.62) {\small $0$};
+  \node[pt] at (3.3,-2.05) {}; \node[right] at (3.38,-2.05) {\small $10$};
+  \node[pt] at (3.3,-2.48) {}; \node[right] at (3.38,-2.48) {\small $20$};
 \end{tikzpicture}
 \end{column}
 \end{columns}
@@ -144,7 +145,7 @@ En voici deux.
 
 \begin{frame}[t,label=ex2prob]{Exemple 2 : probabilités}
 
-Quelle est la probabilité que je perde 1~\$ en jouant?\\
+Quelle est la probabilité qu'une attaque inflige 10 points de dégâts?\\
 
 {\large
  \begin{tabular}{c|c|c|c}\hline
@@ -177,18 +178,39 @@ $$F_X(x)=P(X\leq x)$$
 \end{frame}
 \begin{frame}[t,label=ex2rep]{Exemple 2 : fonction de répartition}
 
-Quelle est la fonction de répartition du gain $Y$ lorsqu'on lance un dé équilibré?
+Quelle est la fonction de répartition des dégâts $Y$?
 
 On sait que\\
-$\begin{array}{ll}P(Y=-1)&=1/2\\
-P(Y=1)&=1/2\end{array}$
+$\begin{array}{ll}P(Y=0)&=1/6\\
+P(Y=10)&=4/6\\
+P(Y=20)&=1/6\end{array}$
 
 \lienreponse{rep-ex1}
 \end{frame}
 
 \begin{frame}[t]{Exemple 2 : fonction de répartition (suite)}
 
- \centerline{\includegraphics[height=6.8cm]{cdf-modif.pdf}}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[width=10.5cm, height=6.6cm, axis lines=left, xmin=-6, xmax=28, ymin=0, ymax=1.12,
+    xtick={0,10,20}, ytick={0,0.16667,0.83333,1}, yticklabels={$0$,$1/6$,$5/6$,$1$},
+    xlabel={$y$}, ylabel={$F_Y(y)$}, ylabel style={rotate=-90},
+    tick label style={font=\small}, clip=false]
+  % paliers
+  \addplot[very thick, red] coordinates {(-6,0) (0,0)};
+  \addplot[very thick, red] coordinates {(0,0.16667) (10,0.16667)};
+  \addplot[very thick, red] coordinates {(10,0.83333) (20,0.83333)};
+  \addplot[very thick, red] coordinates {(20,1) (28,1)};
+  % sauts : guides pointillés
+  \addplot[densely dashed, gray] coordinates {(0,0) (0,0.16667)};
+  \addplot[densely dashed, gray] coordinates {(10,0.16667) (10,0.83333)};
+  \addplot[densely dashed, gray] coordinates {(20,0.83333) (20,1)};
+  % points pleins (valeur prise) et vides (valeur non prise)
+  \addplot[only marks, mark=*, mark size=2.5pt, red] coordinates {(0,0.16667) (10,0.83333) (20,1)};
+  \addplot[only marks, mark=*, mark size=2.5pt, red, fill=white] coordinates {(0,0) (10,0.16667) (20,0.83333)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
 
 \end{frame}
 
@@ -227,10 +249,10 @@ Supposons que $\lambda=1/10$. Calculez ces probabilités.
 \end{frame}
 
 
-\begin{frame}[t,label=quizgain]{Exemple 2 : gain et fonction de répartition}
+\begin{frame}[t,label=quizgain]{Exemple 2 : dégâts et fonction de répartition}
 
 \centerline{\LARGE\bfseries\alert{QUIZ !}}
-Quelle est la probabilité d'obtenir un gain supérieur à 0,75~\$?
+Quelle est la probabilité qu'une attaque inflige plus de 15 points de dégâts?
 
 \medskip
 Répondez à l'aide de la fonction de répartition.
@@ -681,13 +703,13 @@ Rappel : $E(X)=1/\lambda\qquad V(X)=1/\lambda^2$
 \footnotesize
 \begin{itemize}
 \item \retour{ex2tab}{Exemple 2 (suite)} (tableau de $X(e)$ et $Y(e)$) : $X(e)=e$ pour $e=1,\ldots,6$~;
-$Y(e)=-1$ si $e\in\{1,2,3\}$, $Y(e)=1$ si $e\in\{4,5,6\}$.
-\item \retour{ex2prob}{Exemple 2 : probabilités} (perdre 1~\$) : $P(Y=-1)=P(e\in\{1,2,3\})=3/6=1/2$.
-\item \retour{ex2rep}{Exemple 2 : fonction de répartition} de $Y$ : $F_Y(y)=0$ si $y<-1$~;
-$F_Y(y)=1/2$ si $-1\le y<1$~; $F_Y(y)=1$ si $y\ge1$.
+$Y(1)=0$, $Y(e)=10$ si $e\in\{2,3,4,5\}$, $Y(6)=20$.
+\item \retour{ex2prob}{Exemple 2 : probabilités} (10 points de dégâts) : $P(Y=10)=P(e\in\{2,3,4,5\})=4/6=2/3$.
+\item \retour{ex2rep}{Exemple 2 : fonction de répartition} de $Y$ : $F_Y(y)=0$ si $y<0$~;
+$F_Y(y)=1/6$ si $0\le y<10$~; $F_Y(y)=5/6$ si $10\le y<20$~; $F_Y(y)=1$ si $y\ge20$.
 \item \retour{ex3}{Exemple 3 (suite)} ($\lambda=1/10$) : $P(X\le15)=1-e^{-1{,}5}\approx0{,}777$~;
 $P(X>10)=e^{-1}\approx0{,}368$~; $P(5<X\le10)=e^{-0{,}5}-e^{-1}\approx0{,}239$.
-\item \retour{ex2pmf}{Exemple 2 : fonctions de probabilité} : $p_X(1)=\cdots=p_X(6)=1/6$~; $p_Y(-1)=p_Y(1)=1/2$.
+\item \retour{ex2pmf}{Exemple 2 : fonctions de probabilité} : $p_X(1)=\cdots=p_X(6)=1/6$~; $p_Y(0)=1/6$, $p_Y(10)=2/3$, $p_Y(20)=1/6$.
 \item \retour{proppmf}{Propriétés de la fonction de probabilité} : (1) $p_X(x)\ge 0$ pour tout $x$~; (2) $\sum_x p_X(x)=1$.
 \end{itemize}
 
@@ -712,7 +734,7 @@ $P(X>5)=e^{-5\lambda}$.
 \begin{frame}[t,label=rep-quiz]{Réponses des quiz}
 \footnotesize
 \begin{itemize}
-\item \retour{quizgain}{Quiz} (dé, gain $>0{,}75$~\$) : $P(Y>0{,}75)=1-F_Y(0{,}75)=1-1/2=1/2$.
+\item \retour{quizgain}{Quiz} (plus de 15 points de dégâts) : $P(Y>15)=1-F_Y(15)=1-5/6=1/6$.
 \item \retour{ex4}{Quiz} (Exemple 4, densité sur $[0,20]$) : $f(x)=1/30$ si $x\in[0,10)$, $f(x)=1/15$ si
 $x\in[10,20]$, 0 sinon~; $F(x)=x/30$ si $0\le x<10$, $F(x)=1/3+(x-10)/15$ si $10\le x\le20$~;
 $P(5<X<12)=3/10=0{,}3$.
