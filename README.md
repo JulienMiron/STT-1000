@@ -80,24 +80,41 @@ Prérequis : une distribution TeX complète (TeX Live ou MiKTeX) avec
 
 Ce dépôt est une copie de travail des diapos ; `Global/STT-1000/Diapos`
 (archive maîtresse, aussi synchronisée avec Overleaf) reste la référence à
-long terme. Un hook Git reporte automatiquement toute correction de
-`diapos/*.tex` vers `Global` à chaque commit (copie + commit + push). Les
-fichiers portent le même nom dans les deux dépôts.
+long terme. L'action GitHub `.github/workflows/sync-global.yml`
+(« Synchroniser vers Global ») reporte automatiquement vers `Global` les
+fichiers de `diapos/` modifiés par chaque push sur `main` (copie + commit +
+push sur `master`), peu importe d'où vient le push (Mac, interface GitHub,
+Claude). La logique est dans `scripts/sync-global-action.sh` :
 
-Seuls les fichiers `.tex` sont reportés : si la classe `BeamerTemplate.cls`
-ou une image change, il faut la copier à la main dans `Global` (la classe y
-est à la racine et sert aussi aux autres cours).
+| Dans ce dépôt | Dans Global |
+|---|---|
+| `diapos/Module *.tex`, images, figures | `STT-1000/Diapos/` (même nom) |
+| `diapos/BeamerTemplate.cls`, `ligne2.png`, `logo_ul.pdf` | racine de Global (partagés par tous les cours) |
+| `diapos/compiler.sh`, `diapos/latexmkrc` | non reportés |
 
-**Après un clone frais, l'activer une seule fois** (la config des hooks
-n'est pas clonée par Git) :
+Les suppressions ne sont pas reportées. Une modification faite directement
+dans Global ou Overleaf est écrasée au prochain push qui touche le même
+fichier ici : corriger les diapos dans ce dépôt.
 
-```bash
-git config core.hooksPath .githooks
-```
+**Jeton (une seule fois, à renouveler à son expiration).** L'action pousse
+sur Global avec le secret `GLOBAL_TOKEN` :
 
-Détails et mode d'emploi manuel : voir l'en-tête de
-`scripts/sync-to-global.sh` (`--dry-run` pour simuler, `--all` pour tout
-resynchroniser).
+1. GitHub → photo de profil → *Settings → Developer settings → Personal
+   access tokens → Fine-grained tokens → Generate new token*.
+2. *Repository access : Only select repositories* → `Global` ;
+   *Permissions → Repository permissions → Contents : Read and write*.
+3. Dans ce dépôt : *Settings → Secrets and variables → Actions → New
+   repository secret*, nom `GLOBAL_TOKEN`, coller le jeton.
+
+Si le secret est absent ou expiré, l'action échoue avec un message qui le dit.
+
+**Rattraper un retard :** onglet *Actions → Synchroniser vers Global → Run
+workflow* reporte tous les fichiers de `diapos/` (seuls ceux qui diffèrent
+créent un commit dans Global).
+
+Le hook local `.githooks/post-commit` (et `scripts/sync-to-global.sh`, qui
+reste utilisable à la main avec `--dry-run` ou `--all`) n'est plus
+nécessaire : inutile d'activer `core.hooksPath`.
 
 ## Synchronisation automatique depuis Global (recueil)
 

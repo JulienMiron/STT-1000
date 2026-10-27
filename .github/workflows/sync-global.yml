@@ -1,0 +1,68 @@
+# Reporte automatiquement les diapos (dossier diapos/) vers le dépôt Global à
+# chaque push sur main qui les modifie. Global est l'archive maîtresse et est
+# synchronisé avec Overleaf. Remplace le hook local .githooks/post-commit.
+#
+# Nécessite le secret GLOBAL_TOKEN : un jeton GitHub (fine-grained) limité au
+# dépôt JulienMiron/Global, avec la permission « Contents : Read and write ».
+# Voir la section « Synchronisation vers Global » du README.
+#
+# Lancement manuel (onglet Actions > Synchroniser vers Global > Run workflow) :
+# reporte tous les fichiers de diapos/, utile pour rattraper un retard.
+name: Synchroniser vers Global
+
+on:
+  push:
+    branches: main
+    paths:
+      - 'diapos/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Une synchronisation à la fois, dans l'ordre des pushes.
+concurrency:
+  group: sync-global
+  cancel-in-progress: false
+
+jobs:
+  synchroniser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Vérifier le jeton
+        env:
+          GLOBAL_TOKEN: ${{ secrets.GLOBAL_TOKEN }}
+        run: |
+          if [ -z "$GLOBAL_TOKEN" ]; then
+            echo "::error::Le secret GLOBAL_TOKEN est absent (ou expiré). Voir la section « Synchronisation vers Global » du README."
+            exit 1
+          fi
+
+      - name: Récupérer STT-1000
+        uses: actions/checkout@v5
+        with:
+          path: stt
+          fetch-depth: 0
+
+      - name: Récupérer Global
+        uses: actions/checkout@v5
+        with:
+          repository: JulienMiron/Global
+          ref: master
+          token: ${{ secrets.GLOBAL_TOKEN }}
+          path: global
+          fetch-depth: 1
+          sparse-checkout: |
+            /STT-1000/Diapos/
+            /BeamerTemplate.cls
+            /ligne2.png
+            /logo_ul.pdf
+          sparse-checkout-cone-mode: false
+
+      - name: Reporter les diapos vers Global
+        env:
+          AVANT: ${{ github.event.before }}
+          APRES: ${{ github.sha }}
+          MODE: ${{ github.event_name == 'workflow_dispatch' && 'tout' || '' }}
+        run: bash stt/scripts/sync-global-action.sh "$PWD/stt" "$PWD/global" "$AVANT" "$APRES" $MODE
