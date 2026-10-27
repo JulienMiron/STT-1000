@@ -161,51 +161,51 @@ exercice	parties	sujet	module	diapo	titre	note
 2.42	c	répartition, espérance d'un profit	2	42	Mesure de dispersion d'une distribution	espérance et écart-type d'un profit discret, diapo 42
 2.43	a, b, e, f, g	propriétés de l'espérance et variance	2	46	Résultats utiles	E(aX+b), V(aX+b), V=E(X²)−μ², diapo 46
 2.43	c, d	propriétés de l'espérance et variance	2	45	Espérance d'une fonction d'une variable aléatoire	espérance de H(X) (contre-exemple), diapo 45
-4.1	a, f	identification de lois discrètes	3	10	Loi binomiale	loi binomiale, définie diapo 10
-4.1	b, e	identification de lois discrètes	3	18	Loi géométrique	loi géométrique, définie diapo 18
-4.1	c	identification de lois discrètes	3	30	Loi de Poisson	processus de Poisson (moyenne λt), diapo 30
-4.1	d	identification de lois discrètes	3	25	Loi binomiale négative (Pascal)	loi de Pascal, définie diapo 25
+4.1	a, f	identification de lois discrètes	3	10	Loi binomiale : définition	loi binomiale, définie diapo 10
+4.1	b, e	identification de lois discrètes	3	17	Loi géométrique : définition	loi géométrique, définie diapo 17
+4.1	c	identification de lois discrètes	3	28	Loi de Poisson : d'où vient-elle?	processus de Poisson (moyenne λt), diapo 28
+4.1	d	identification de lois discrètes	3	23	Loi binomiale négative : définition	loi de Pascal, définie diapo 23
 4.1	g	identification de lois discrètes	hors			loi hypergéométrique jamais présentée (identification de loi nommée)
-4.2	a, b	loi binomiale, loi géométrique	3	11	Loi binomiale	fonction de masse binomiale, diapo 11
-4.2	c	loi binomiale, loi géométrique	3	19	Loi géométrique	fonction de masse géométrique, diapo 19
-4.3	a	loi binomiale, loi de Pascal	3	11	Loi binomiale	fonction de masse binomiale, diapo 11
-4.3	b	loi binomiale, loi de Pascal	3	28	Espérance et variance	espérance et variance de la loi de Pascal, diapo 28
-4.4		loi binomiale	3	11	Loi binomiale	fonction de masse binomiale, diapo 11
-4.5		loi binomiale, indépendance	3	11	Loi binomiale	fonction de masse binomiale, diapo 11
-4.6		loi binomiale, probabilité conditionnelle	3	11	Loi binomiale	fonction de masse binomiale, diapo 11
-4.7		loi binomiale, indépendance	3	11	Loi binomiale	fonction de masse binomiale, diapo 11
-4.8		formes des lois discrètes	3	32	Loi de Poisson	allure de la loi de Poisson, diapo 32
-4.9	a, b, c	loi géométrique, loi de Pascal	3	18	Loi géométrique	loi géométrique, définie diapo 18
-4.9	d	loi géométrique, loi de Pascal	3	26	Loi binomiale négative	fonction de masse de Pascal, diapo 26
-4.10		loi géométrique, estimation du paramètre	3	19	Loi géométrique	fonction de masse géométrique, diapo 19
-4.11		loi géométrique, maximisation	3	19	Loi géométrique	fonction de masse géométrique, diapo 19
-4.12	a, d	loi géométrique, espérance, variance	3	19	Loi géométrique	fonction de masse géométrique, diapo 19
-4.12	b, c, e	loi géométrique, espérance, variance	3	22	Loi géométrique	espérance et variance géométriques, diapo 22
-4.13		loi géométrique, absence de mémoire	3	19	Loi géométrique	masse géométrique + conditionnelle, diapo 19 (absence de mémoire diapo 23)
-4.14	a	lois géométrique et de Pascal	3	22	Loi géométrique	espérance géométrique, diapo 22
-4.14	b, c	lois géométrique et de Pascal	3	19	Loi géométrique	masse géométrique + conditionnelle, diapo 19 (absence de mémoire diapo 23)
-4.14	d, e	lois géométrique et de Pascal	3	26	Loi binomiale négative	fonction de masse de Pascal, diapo 26
-4.15	a	loi de Pascal	3	26	Loi binomiale négative	fonction de masse de Pascal, diapo 26
-4.15	b	loi de Pascal	3	28	Espérance et variance	espérance de la loi de Pascal, diapo 28
-4.16		loi de Pascal	3	26	Loi binomiale négative	fonction de masse de Pascal, diapo 26
-4.17		loi de Pascal, espérance, variance	3	28	Espérance et variance	espérance et variance de la loi de Pascal, diapo 28
-4.18		loi de Pascal	3	11	Loi binomiale	≥ 4 succès en 6 essais : binomiale, diapo 11 (Pascal diapo 26)
+4.2	a, b	loi binomiale, loi géométrique	3	11	Loi binomiale : fonction de probabilité	fonction de masse binomiale, diapo 11
+4.2	c	loi binomiale, loi géométrique	3	18	Loi géométrique : fonction de probabilité	fonction de masse géométrique, diapo 18
+4.3	a	loi binomiale, loi de Pascal	3	11	Loi binomiale : fonction de probabilité	fonction de masse binomiale, diapo 11
+4.3	b	loi binomiale, loi de Pascal	3	26	Loi binomiale négative : espérance et variance	espérance et variance de la loi de Pascal, diapo 26
+4.4		loi binomiale	3	11	Loi binomiale : fonction de probabilité	fonction de masse binomiale, diapo 11
+4.5		loi binomiale, indépendance	3	11	Loi binomiale : fonction de probabilité	fonction de masse binomiale, diapo 11
+4.6		loi binomiale, probabilité conditionnelle	3	11	Loi binomiale : fonction de probabilité	fonction de masse binomiale, diapo 11
+4.7		loi binomiale, indépendance	3	11	Loi binomiale : fonction de probabilité	fonction de masse binomiale, diapo 11
+4.8		formes des lois discrètes	3	30	Loi de Poisson : allure	allure de la loi de Poisson, diapo 30
+4.9	a, b, c	loi géométrique, loi de Pascal	3	17	Loi géométrique : définition	loi géométrique, définie diapo 17
+4.9	d	loi géométrique, loi de Pascal	3	24	Loi binomiale négative : fonction de probabilité	fonction de masse de Pascal, diapo 24
+4.10		loi géométrique, estimation du paramètre	3	18	Loi géométrique : fonction de probabilité	fonction de masse géométrique, diapo 18
+4.11		loi géométrique, maximisation	3	18	Loi géométrique : fonction de probabilité	fonction de masse géométrique, diapo 18
+4.12	a, d	loi géométrique, espérance, variance	3	18	Loi géométrique : fonction de probabilité	fonction de masse géométrique, diapo 18
+4.12	b, c, e	loi géométrique, espérance, variance	3	20	Loi géométrique : espérance et variance	espérance et variance géométriques, diapo 20
+4.13		loi géométrique, absence de mémoire	3	18	Loi géométrique : fonction de probabilité	masse géométrique + conditionnelle, diapo 18 (absence de mémoire diapo 23)
+4.14	a	lois géométrique et de Pascal	3	20	Loi géométrique : espérance et variance	espérance géométrique, diapo 20
+4.14	b, c	lois géométrique et de Pascal	3	18	Loi géométrique : fonction de probabilité	masse géométrique + conditionnelle, diapo 18 (absence de mémoire diapo 23)
+4.14	d, e	lois géométrique et de Pascal	3	24	Loi binomiale négative : fonction de probabilité	fonction de masse de Pascal, diapo 24
+4.15	a	loi de Pascal	3	24	Loi binomiale négative : fonction de probabilité	fonction de masse de Pascal, diapo 24
+4.15	b	loi de Pascal	3	26	Loi binomiale négative : espérance et variance	espérance de la loi de Pascal, diapo 26
+4.16		loi de Pascal	3	24	Loi binomiale négative : fonction de probabilité	fonction de masse de Pascal, diapo 24
+4.17		loi de Pascal, espérance, variance	3	26	Loi binomiale négative : espérance et variance	espérance et variance de la loi de Pascal, diapo 26
+4.18		loi de Pascal	3	11	Loi binomiale : fonction de probabilité	≥ 4 succès en 6 essais : binomiale, diapo 11 (Pascal diapo 26)
 4.19	a	loi hypergéométrique vs binomiale	1	60	Exemples (suite)	hypergéométrique non vue; probabilité par combinaisons, diapo 60
-4.19	b, c	loi hypergéométrique vs binomiale	3	11	Loi binomiale	fonction de masse binomiale, diapo 11
+4.19	b, c	loi hypergéométrique vs binomiale	3	11	Loi binomiale : fonction de probabilité	fonction de masse binomiale, diapo 11
 4.20		loi hypergéométrique, taille d'échantillon	1	26	Règle de multiplication	hypergéométrique non vue; tirages successifs, règle de multiplication
-4.21	a, c	loi de Poisson, processus de Poisson	3	30	Loi de Poisson	processus de Poisson, diapo 30; c) amincissement non énoncé
-4.21	b	loi de Poisson, processus de Poisson	3	31	Loi de Poisson	espérance et variance de la Poisson, diapo 31
-4.22		processus de Poisson	3	30	Loi de Poisson	processus de Poisson (moyenne λt), diapo 30
-4.23	a, b, c	loi de Poisson, loi binomiale	3	30	Loi de Poisson	loi et processus de Poisson, diapo 30
-4.23	d	loi de Poisson, loi binomiale	3	31	Loi de Poisson	espérance et variance de la Poisson, diapo 31
-4.24	a, c, e	loi de Poisson, espérance d'une fonction	3	30	Loi de Poisson	masse de Poisson, diapo 30; E[H(X)] module 2; table calculable
-4.24	b, d	loi de Poisson, espérance d'une fonction	3	31	Loi de Poisson	espérance de la Poisson, diapo 31
-4.25	a	approximation binomiale par Poisson	3	10	Loi binomiale	loi binomiale, définie diapo 10
-4.25	b	approximation binomiale par Poisson	3	11	Loi binomiale	fonction de masse binomiale, diapo 11
-4.25	c, d	approximation binomiale par Poisson	3	33	Loi de Poisson	approximation de la binomiale par la Poisson, diapo 33
-4.26		loi de Poisson, espérance d'une fonction	3	30	Loi de Poisson	masse de Poisson, diapo 30; E[H(X)] du module 2
-4.27	a, b	approximation binomiale par Poisson	3	11	Loi binomiale	fonction de masse binomiale, diapo 11
-4.27	c	approximation binomiale par Poisson	3	33	Loi de Poisson	approximation de la binomiale par la Poisson, diapo 33
+4.21	a, c	loi de Poisson, processus de Poisson	3	28	Loi de Poisson : d'où vient-elle?	processus de Poisson, diapo 28; c) amincissement non énoncé
+4.21	b	loi de Poisson, processus de Poisson	3	29	Loi de Poisson : fonction de probabilité	espérance et variance de la Poisson, diapo 29
+4.22		processus de Poisson	3	28	Loi de Poisson : d'où vient-elle?	processus de Poisson (moyenne λt), diapo 28
+4.23	a, b, c	loi de Poisson, loi binomiale	3	28	Loi de Poisson : d'où vient-elle?	loi et processus de Poisson, diapo 28
+4.23	d	loi de Poisson, loi binomiale	3	29	Loi de Poisson : fonction de probabilité	espérance et variance de la Poisson, diapo 29
+4.24	a, c, e	loi de Poisson, espérance d'une fonction	3	28	Loi de Poisson : d'où vient-elle?	masse de Poisson, diapo 28; E[H(X)] module 2; table calculable
+4.24	b, d	loi de Poisson, espérance d'une fonction	3	29	Loi de Poisson : fonction de probabilité	espérance de la Poisson, diapo 29
+4.25	a	approximation binomiale par Poisson	3	10	Loi binomiale : définition	loi binomiale, définie diapo 10
+4.25	b	approximation binomiale par Poisson	3	11	Loi binomiale : fonction de probabilité	fonction de masse binomiale, diapo 11
+4.25	c, d	approximation binomiale par Poisson	3	31	Loi de Poisson : deux propriétés importantes	approximation de la binomiale par la Poisson, diapo 31
+4.26		loi de Poisson, espérance d'une fonction	3	28	Loi de Poisson : d'où vient-elle?	masse de Poisson, diapo 28; E[H(X)] du module 2
+4.27	a, b	approximation binomiale par Poisson	3	11	Loi binomiale : fonction de probabilité	fonction de masse binomiale, diapo 11
+4.27	c	approximation binomiale par Poisson	3	31	Loi de Poisson : deux propriétés importantes	approximation de la binomiale par la Poisson, diapo 31
 5.1		loi uniforme, espérance, écart-type	4	3	Loi uniforme	densité, espérance et variance uniformes, diapo 3
 5.2	a	loi uniforme, fonction de répartition	4	5	Loi uniforme	fonction de répartition de la loi uniforme, diapo 5
 5.2	b, c	loi uniforme, fonction de répartition	4	3	Loi uniforme	densité, espérance et variance uniformes, diapo 3
@@ -219,7 +219,7 @@ exercice	parties	sujet	module	diapo	titre	note
 5.9	f, g	densité exponentielle, absence de mémoire	4	14	Loi exponentielle	absence de mémoire (sans calcul), diapo 14
 5.10	a	fonction de répartition, loi binomiale	2	9	Fonction de répartition	fonction de répartition donnée, définition diapo 9
 5.10	b	fonction de répartition, loi binomiale	2	42	Mesure de dispersion d'une distribution	espérance (diapo 33) et variance (diapo 42) par intégrale
-5.10	c	fonction de répartition, loi binomiale	3	11	Loi binomiale	fonction de masse binomiale, diapo 11
+5.10	c	fonction de répartition, loi binomiale	3	11	Loi binomiale : fonction de probabilité	fonction de masse binomiale, diapo 11
 5.11	a	loi exponentielle, écart-type	4	11	Loi exponentielle	répartition exponentielle, diapo 11
 5.11	b	loi exponentielle, écart-type	4	10	Loi exponentielle	variance exponentielle 1/λ², diapo 10
 5.12	a	loi exponentielle, fonction d'une v.a.	2	4	Variable aléatoire	bénéfice défini comme fonction de la durée (v.a.), diapo 4
@@ -231,12 +231,12 @@ exercice	parties	sujet	module	diapo	titre	note
 5.16		loi exponentielle, probabilité conditionnelle	4	11	Loi exponentielle	répartition exponentielle diapo 11 (ou absence de mémoire diapo 14)
 5.17	a	processus de Poisson, loi Gamma	4	17	Loi Gamma	Gamma comme somme d'exponentielles (diapo 17), interarrivées diapo 8
 5.17	b	processus de Poisson, loi Gamma	4	19	Loi Gamma	espérance et variance de la Gamma, diapo 19
-5.17	c	processus de Poisson, loi Gamma	3	30	Loi de Poisson	au moins une arrivée en 15 min, processus de Poisson, diapo 30
+5.17	c	processus de Poisson, loi Gamma	3	28	Loi de Poisson : d'où vient-elle?	au moins une arrivée en 15 min, processus de Poisson, diapo 28
 5.18	a	loi Gamma, processus de Poisson	4	19	Loi Gamma	espérance d'une somme / de la Gamma, diapo 19
 5.18	b	loi Gamma, processus de Poisson	4	20	Lien avec les processus de Poisson	lien Gamma et processus de Poisson, diapo 20
 5.19		reconnaissance de densités continues	4	17	Loi Gamma	choix incluant des lois Gamma (règle 6); densité Gamma diapo 17
 5.20	a	processus de Poisson, exponentielle, Gamma	1	33	Généralisation à $k$ événements	indépendance de k événements, diapo 33
-5.20	b, c, d	processus de Poisson, exponentielle, Gamma	3	30	Loi de Poisson	processus de Poisson (moyenne λt), diapo 30; conditionnelle module 1
+5.20	b, c, d	processus de Poisson, exponentielle, Gamma	3	28	Loi de Poisson : d'où vient-elle?	processus de Poisson (moyenne λt), diapo 28; conditionnelle module 1
 5.20	e	processus de Poisson, exponentielle, Gamma	4	17	Loi Gamma	Gamma comme somme d'exponentielles, diapo 17
 5.21	a, c	somme d'exponentielles, loi Gamma	4	19	Loi Gamma	espérance d'une somme / de la Gamma, diapo 19
 5.21	b	somme d'exponentielles, loi Gamma	4	10	Loi exponentielle	variance exponentielle diapo 10; V(somme) indépendante module 3 diapo 5
@@ -288,7 +288,7 @@ exercice	parties	sujet	module	diapo	titre	note
 6.26		différence et moyenne de normales	4	50	Loi normale	différence et moyenne de normales indépendantes, diapo 50
 6.27	a	loi Gamma, théorème central limite	4	17	Loi Gamma	somme d'exponentielles i.i.d. = loi Gamma, diapo 17
 6.27	b, c	loi Gamma, théorème central limite	4	53	Un résultat très (très) utile	TCL diapo 53; E et V de l'exponentielle diapos 9-10
-6.28	a	loi de Poisson, théorème central limite	3	33	Loi de Poisson	additivité de la loi de Poisson, diapo 33
+6.28	a	loi de Poisson, théorème central limite	3	31	Loi de Poisson : deux propriétés importantes	additivité de la loi de Poisson, diapo 31
 6.28	b	loi de Poisson, théorème central limite	4	61	Correction pour la continuité	TCL et correction de continuité (requise pour P(Y=100)), diapo 61
 6.28	c	loi de Poisson, théorème central limite	4	53	Un résultat très (très) utile	TCL pour la moyenne diapo 53; E et V de Poisson (module 3)
 6.29		combinaison linéaire de normales, quantile	4	50	Loi normale	combinaison linéaire et moyenne de normales, diapo 50
@@ -490,7 +490,7 @@ exercice	parties	sujet	module	diapo	titre	note
 10.29		choix du test t approprié	9.2	21	Un échantillon de $n$ différences	choix parmi trois tests t; test apparié et ses d.l., diapo 21
 10.30	a	test d'ajustement du khi-carré	7	14	Estimation d'une variance $\sigma^2$ par $S^2$	normale ajustée avec x̄ et s (13-14); correction de continuité (module 4)
 10.30	b, c, d	test d'ajustement du khi-carré	hors			test d'ajustement du khi-carré non vu
-10.31	a	test d'ajustement du khi-carré, loi uniforme	3	14	Loi binomiale	fréquence espérée = np (espérance binomiale), diapo 14
+10.31	a	test d'ajustement du khi-carré, loi uniforme	3	14	Loi binomiale : espérance	fréquence espérée = np (espérance binomiale), diapo 14
 10.31	b	test d'ajustement du khi-carré, loi uniforme	hors			test d'ajustement du khi-carré non vu
 10.32	a	ajustement d'une loi de Poisson	7	13	Estimation de l'espérance $\mu$ par $\overline{X}$	probabilités de Poisson (module 3) avec μ estimé par x̄, diapo 13
 10.32	b, c	ajustement d'une loi de Poisson	hors			test d'ajustement du khi-carré non vu (regroupement, conclusion)
