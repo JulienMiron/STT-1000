@@ -207,102 +207,102 @@ exercice	parties	sujet	module	diapo	titre	note
 4.27	a, b	approximation binomiale par Poisson	3	11	Loi binomiale : fonction de probabilité	fonction de masse binomiale, diapo 11
 4.27	c	approximation binomiale par Poisson	3	31	Loi de Poisson : deux propriétés importantes	approximation de la binomiale par la Poisson, diapo 31
 5.1		loi uniforme, espérance, écart-type	4	3	Loi uniforme	densité, espérance et variance uniformes, diapo 3
-5.2	a	loi uniforme, fonction de répartition	4	5	Loi uniforme	fonction de répartition de la loi uniforme, diapo 5
+5.2	a	loi uniforme, fonction de répartition	4	5	Loi uniforme : fonction de répartition	fonction de répartition de la loi uniforme, diapo 5
 5.2	b, c	loi uniforme, fonction de répartition	4	3	Loi uniforme	densité, espérance et variance uniformes, diapo 3
 5.3		loi uniforme, vrai ou faux	4	3	Loi uniforme	loi uniforme diapo 3; conditionnelle module 1
 5.4		loi uniforme, transformation linéaire	4	3	Loi uniforme	E et V uniformes diapo 3; E(aX+b), V(aX+b) module 2
 5.5		loi uniforme, paramètres, variance	4	3	Loi uniforme	variance de la loi uniforme, diapo 3
 5.6		lois uniforme, géométrique et binomiale	4	3	Loi uniforme	loi uniforme diapo 3; lois géométrique et binomiale module 3
 5.7		loi uniforme, probabilité d'événements	4	3	Loi uniforme	densité uniforme, diapo 3
-5.8		loi exponentielle, gain espéré	4	11	Loi exponentielle	λ via moyenne (diapo 9), répartition exponentielle diapo 11
+5.8		loi exponentielle, gain espéré	4	11	Loi exponentielle : fonction de répartition	λ via moyenne (diapo 9), répartition exponentielle diapo 11
 5.9	a, b, c, d, e	densité exponentielle, absence de mémoire	2	25	Probabilité = aire sous la densité	probabilité = aire sous la densité diapo 25; conditionnelle module 1
-5.9	f, g	densité exponentielle, absence de mémoire	4	14	Loi exponentielle	absence de mémoire (sans calcul), diapo 14
+5.9	f, g	densité exponentielle, absence de mémoire	4	14	Loi exponentielle : absence de mémoire	absence de mémoire (sans calcul), diapo 14
 5.10	a	fonction de répartition, loi binomiale	2	9	Fonction de répartition	fonction de répartition donnée, définition diapo 9
 5.10	b	fonction de répartition, loi binomiale	2	42	Mesure de dispersion d'une distribution	espérance (diapo 33) et variance (diapo 42) par intégrale
 5.10	c	fonction de répartition, loi binomiale	3	11	Loi binomiale : fonction de probabilité	fonction de masse binomiale, diapo 11
-5.11	a	loi exponentielle, écart-type	4	11	Loi exponentielle	répartition exponentielle, diapo 11
-5.11	b	loi exponentielle, écart-type	4	10	Loi exponentielle	variance exponentielle 1/λ², diapo 10
+5.11	a	loi exponentielle, écart-type	4	11	Loi exponentielle : fonction de répartition	répartition exponentielle, diapo 11
+5.11	b	loi exponentielle, écart-type	4	10	Loi exponentielle : variance	variance exponentielle 1/λ², diapo 10
 5.12	a	loi exponentielle, fonction d'une v.a.	2	4	Variable aléatoire	bénéfice défini comme fonction de la durée (v.a.), diapo 4
-5.12	b, c	loi exponentielle, fonction d'une v.a.	4	11	Loi exponentielle	répartition exponentielle diapo 11; masse et espérance module 2
-5.13		loi exponentielle, paramètre λ	4	11	Loi exponentielle	répartition exponentielle, diapo 11
-5.14		loi exponentielle, médiane, conditionnelle	4	11	Loi exponentielle	répartition exponentielle diapo 11; conditionnelle module 1
+5.12	b, c	loi exponentielle, fonction d'une v.a.	4	11	Loi exponentielle : fonction de répartition	répartition exponentielle diapo 11; masse et espérance module 2
+5.13		loi exponentielle, paramètre λ	4	11	Loi exponentielle : fonction de répartition	répartition exponentielle, diapo 11
+5.14		loi exponentielle, médiane, conditionnelle	4	11	Loi exponentielle : fonction de répartition	répartition exponentielle diapo 11; conditionnelle module 1
 5.15	a	loi exponentielle, coût espéré	2	4	Variable aléatoire	coût défini comme fonction de la durée (v.a.), diapo 4
-5.15	b, c	loi exponentielle, coût espéré	4	11	Loi exponentielle	répartition exponentielle diapo 11; espérance module 2
-5.16		loi exponentielle, probabilité conditionnelle	4	11	Loi exponentielle	répartition exponentielle diapo 11 (ou absence de mémoire diapo 14)
+5.15	b, c	loi exponentielle, coût espéré	4	11	Loi exponentielle : fonction de répartition	répartition exponentielle diapo 11; espérance module 2
+5.16		loi exponentielle, probabilité conditionnelle	4	11	Loi exponentielle : fonction de répartition	répartition exponentielle diapo 11 (ou absence de mémoire diapo 14)
 5.17	a	processus de Poisson, loi Gamma	4	17	Loi Gamma	Gamma comme somme d'exponentielles (diapo 17), interarrivées diapo 8
-5.17	b	processus de Poisson, loi Gamma	4	19	Loi Gamma	espérance et variance de la Gamma, diapo 19
+5.17	b	processus de Poisson, loi Gamma	4	19	Loi Gamma : espérance et variance	espérance et variance de la Gamma, diapo 19
 5.17	c	processus de Poisson, loi Gamma	3	28	Loi de Poisson : d'où vient-elle?	au moins une arrivée en 15 min, processus de Poisson, diapo 28
-5.18	a	loi Gamma, processus de Poisson	4	19	Loi Gamma	espérance d'une somme / de la Gamma, diapo 19
+5.18	a	loi Gamma, processus de Poisson	4	19	Loi Gamma : espérance et variance	espérance d'une somme / de la Gamma, diapo 19
 5.18	b	loi Gamma, processus de Poisson	4	20	Lien avec les processus de Poisson	lien Gamma et processus de Poisson, diapo 20
 5.19		reconnaissance de densités continues	4	17	Loi Gamma	choix incluant des lois Gamma (règle 6); densité Gamma diapo 17
 5.20	a	processus de Poisson, exponentielle, Gamma	1	33	Généralisation à $k$ événements	indépendance de k événements, diapo 33
 5.20	b, c, d	processus de Poisson, exponentielle, Gamma	3	28	Loi de Poisson : d'où vient-elle?	processus de Poisson (moyenne λt), diapo 28; conditionnelle module 1
 5.20	e	processus de Poisson, exponentielle, Gamma	4	17	Loi Gamma	Gamma comme somme d'exponentielles, diapo 17
-5.21	a, c	somme d'exponentielles, loi Gamma	4	19	Loi Gamma	espérance d'une somme / de la Gamma, diapo 19
-5.21	b	somme d'exponentielles, loi Gamma	4	10	Loi exponentielle	variance exponentielle diapo 10; V(somme) indépendante module 3 diapo 5
+5.21	a, c	somme d'exponentielles, loi Gamma	4	19	Loi Gamma : espérance et variance	espérance d'une somme / de la Gamma, diapo 19
+5.21	b	somme d'exponentielles, loi Gamma	4	10	Loi exponentielle : variance	variance exponentielle diapo 10; V(somme) indépendante module 3 diapo 5
 5.22		loi Gamma, paramètres, probabilité	4	20	Lien avec les processus de Poisson	paramètres via E, V (diapo 19); probabilité via lien Poisson diapo 20
 5.23	a, b, d	lois exponentielle et Gamma, vrai/faux	4	17	Loi Gamma	loi Gamma (somme d'exponentielles), diapo 17
-5.23	c	lois exponentielle et Gamma, vrai/faux	4	9	Loi exponentielle	moyennes uniforme (diapo 3) et exponentielle (diapo 9)
-5.23	e	lois exponentielle et Gamma, vrai/faux	4	11	Loi exponentielle	répartition exponentielle, diapo 11
-5.23	f	lois exponentielle et Gamma, vrai/faux	4	14	Loi exponentielle	absence de mémoire, diapo 14
+5.23	c	lois exponentielle et Gamma, vrai/faux	4	9	Loi exponentielle : espérance	moyennes uniforme (diapo 3) et exponentielle (diapo 9)
+5.23	e	lois exponentielle et Gamma, vrai/faux	4	11	Loi exponentielle : fonction de répartition	répartition exponentielle, diapo 11
+5.23	f	lois exponentielle et Gamma, vrai/faux	4	14	Loi exponentielle : absence de mémoire	absence de mémoire, diapo 14
 5.23	g	lois exponentielle et Gamma, vrai/faux	4	8	Loi exponentielle	exponentielle de taux λ dans un processus de Poisson, diapo 8
 5.24		loi bêta, fonction Gamma	4	17	Loi Gamma	densité bêta fournie; Γ(n)=(n-1)!, diapo 17
-5.25		loi de Weibull, fonction de répartition	4	27	Fonction de répartition	fonction de répartition de Weibull, diapo 27
-5.26	a	loi de Weibull, effet des paramètres	4	27	Fonction de répartition	fonction de répartition de Weibull, diapo 27
+5.25		loi de Weibull, fonction de répartition	4	59	Loi de Weibull : fonction de répartition	fonction de répartition de Weibull, diapo 59
+5.26	a	loi de Weibull, effet des paramètres	4	59	Loi de Weibull : fonction de répartition	fonction de répartition de Weibull, diapo 59
 5.26	b(i)	loi de Weibull, effet des paramètres	hors			espérance de Weibull déclarée « pas à l'étude » (diapo 27)
-5.26	b(ii), b(iii)	loi de Weibull, effet des paramètres	4	26	Loi de Weibull	δ paramètre d'échelle, γ décalage, diapo 26; E(aX+b) module 2
-5.27		loi de Weibull vs exponentielle	4	27	Fonction de répartition	répartition de Weibull diapo 27; exponentielle diapos 9-14
-5.28	a	loi de Weibull, espérance	4	27	Fonction de répartition	fonction de répartition de Weibull, diapo 27
+5.26	b(ii), b(iii)	loi de Weibull, effet des paramètres	4	58	Loi de Weibull	δ paramètre d'échelle, γ décalage, diapo 58; E(aX+b) module 2
+5.27		loi de Weibull vs exponentielle	4	59	Loi de Weibull : fonction de répartition	répartition de Weibull diapo 59; exponentielle diapos 9-14
+5.28	a	loi de Weibull, espérance	4	59	Loi de Weibull : fonction de répartition	fonction de répartition de Weibull, diapo 59
 5.28	b	loi de Weibull, espérance	hors			espérance de Weibull déclarée « pas à l'étude » (diapo 27)
-6.1		loi normale centrée réduite, table	4	39	Loi normale standard	table de Φ diapo 39; symétrie de la densité diapo 36
-6.2		loi normale, standardisation	4	44	Standardisation	standardisation F(x)=Φ((x−μ)/σ) diapo 44; points d'inflexion diapo 36
-6.3		quantiles de la loi normale standard	4	43	Loi normale standard	lecture inverse de la table de Φ, diapo 43
-6.4	a, d	propriétés de la loi normale	4	34	Loi normale	densité normale positive sur tout ℝ, diapo 34
-6.4	b, c, e, h	propriétés de la loi normale	4	50	Loi normale	combinaison linéaire de normales indépendantes, diapo 50
-6.4	f	propriétés de la loi normale	4	36	Loi normale	symétrie de la densité autour de μ, diapo 36
-6.4	g	propriétés de la loi normale	4	44	Standardisation	P(|X−μ|<σ)=Φ(1)−Φ(−1) par standardisation, diapo 44
-6.4	i, j	propriétés de la loi normale	4	53	Un résultat très (très) utile	théorème central limite (somme et moyenne), diapo 53
-6.5		loi normale, standardisation	4	44	Standardisation	standardisation, diapo 44
-6.6		loi normale et loi binomiale	4	44	Standardisation	standardisation diapo 44; b) loi binomiale (module 3)
-6.7		loi normale, probabilité et quantile	4	44	Standardisation	standardisation diapo 44; quantile par lecture inverse diapo 43
-6.8		loi normale, standardisation	4	44	Standardisation	standardisation, diapo 44
-6.9		quantile d'une loi normale	4	44	Standardisation	quantile : lecture inverse (diapo 43) et standardisation (diapo 44)
-6.10		loi normale, probabilités et quantile	4	44	Standardisation	standardisation diapo 44; quantile par lecture inverse diapo 43
-6.11		loi normale, effet de la moyenne	4	44	Standardisation	standardisation diapo 44; symétrie (diapo 36) pour b) et c)
-6.12		différence de deux normales indépendantes	4	50	Loi normale	différence de normales indépendantes, diapo 50
-6.13		loi normale, fonction de masse, espérance	4	44	Standardisation	standardisation diapo 44; fonction de masse et espérance (module 2)
-6.14		forme de la densité normale	4	36	Loi normale	symétrie et points d'inflexion μ±σ de la densité, diapo 36
-6.15	a(i), a(ii), a(iii)	paramètres graphiques, combinaison de normales	4	36	Loi normale	sommet en μ et points d'inflexion en μ±σ, diapo 36
-6.15	b, c	paramètres graphiques, combinaison de normales	4	50	Loi normale	somme et moyenne de normales indépendantes, diapo 50
-6.16		loi normale, quantile, espérance binomiale	4	44	Standardisation	standardisation diapo 44; c) espérance binomiale np (module 3)
+6.1		loi normale centrée réduite, table	4	31	Table de la loi normale standard (1/2)	table de Φ diapo 31; symétrie de la densité diapo 28
+6.2		loi normale, standardisation	4	37	Standardisation	standardisation F(x)=Φ((x−μ)/σ) diapo 37; points d'inflexion diapo 28
+6.3		quantiles de la loi normale standard	4	36	Loi normale standard : lire la table à l'envers	lecture inverse de la table de Φ, diapo 36
+6.4	a, d	propriétés de la loi normale	4	26	Loi normale	densité normale positive sur tout ℝ, diapo 26
+6.4	b, c, e, h	propriétés de la loi normale	4	43	Combinaisons linéaires de normales	combinaison linéaire de normales indépendantes, diapo 43
+6.4	f	propriétés de la loi normale	4	28	Loi normale : propriétés de la densité	symétrie de la densité autour de μ, diapo 28
+6.4	g	propriétés de la loi normale	4	37	Standardisation	P(|X−μ|<σ)=Φ(1)−Φ(−1) par standardisation, diapo 37
+6.4	i, j	propriétés de la loi normale	4	46	Un résultat très (très) utile	théorème central limite (somme et moyenne), diapo 46
+6.5		loi normale, standardisation	4	37	Standardisation	standardisation, diapo 37
+6.6		loi normale et loi binomiale	4	37	Standardisation	standardisation diapo 37; b) loi binomiale (module 3)
+6.7		loi normale, probabilité et quantile	4	37	Standardisation	standardisation diapo 37; quantile par lecture inverse diapo 36
+6.8		loi normale, standardisation	4	37	Standardisation	standardisation, diapo 37
+6.9		quantile d'une loi normale	4	37	Standardisation	quantile : lecture inverse (diapo 36) et standardisation (diapo 37)
+6.10		loi normale, probabilités et quantile	4	37	Standardisation	standardisation diapo 37; quantile par lecture inverse diapo 36
+6.11		loi normale, effet de la moyenne	4	37	Standardisation	standardisation diapo 37; symétrie (diapo 28) pour b) et c)
+6.12		différence de deux normales indépendantes	4	43	Combinaisons linéaires de normales	différence de normales indépendantes, diapo 43
+6.13		loi normale, fonction de masse, espérance	4	37	Standardisation	standardisation diapo 37; fonction de masse et espérance (module 2)
+6.14		forme de la densité normale	4	28	Loi normale : propriétés de la densité	symétrie et points d'inflexion μ±σ de la densité, diapo 28
+6.15	a(i), a(ii), a(iii)	paramètres graphiques, combinaison de normales	4	28	Loi normale : propriétés de la densité	sommet en μ et points d'inflexion en μ±σ, diapo 28
+6.15	b, c	paramètres graphiques, combinaison de normales	4	43	Combinaisons linéaires de normales	somme et moyenne de normales indépendantes, diapo 43
+6.16		loi normale, quantile, espérance binomiale	4	37	Standardisation	standardisation diapo 37; c) espérance binomiale np (module 3)
 6.17		espérance et variance de la moyenne	5	36	Généralisation pour plusieurs variables	E et V d'une combinaison linéaire, cas indépendant, diapo 36
-6.18		différence de deux normales indépendantes	4	50	Loi normale	différence de normales indépendantes, diapo 50
-6.19		somme de normales indépendantes	4	50	Loi normale	somme de normales indépendantes, diapo 50
-6.20	a, b	combinaison linéaire de normales, corrélation	4	50	Loi normale	combinaison linéaire de normales indépendantes, diapo 50
+6.18		différence de deux normales indépendantes	4	43	Combinaisons linéaires de normales	différence de normales indépendantes, diapo 43
+6.19		somme de normales indépendantes	4	43	Combinaisons linéaires de normales	somme de normales indépendantes, diapo 43
+6.20	a, b	combinaison linéaire de normales, corrélation	4	43	Combinaisons linéaires de normales	combinaison linéaire de normales indépendantes, diapo 43
 6.20	c	combinaison linéaire de normales, corrélation	5	29	Coefficient de corrélation	covariance tirée de ρ (diapo 29); variance avec covariance diapo 27
-6.21		théorème central limite, loi uniforme	4	53	Un résultat très (très) utile	TCL diapo 53; moyenne et variance de la loi uniforme diapo 3
-6.22		théorème central limite, somme	4	53	Un résultat très (très) utile	TCL pour une somme, diapo 53
-6.23		somme de normales i.i.d.	4	50	Loi normale	somme de normales i.i.d., diapo 50
-6.24		somme de normales indépendantes	4	50	Loi normale	somme de normales indépendantes, diapo 50
-6.25		approximation normale de la binomiale	4	61	Correction pour la continuité	approximation normale de la binomiale avec correction de continuité, diapo 61
-6.26		différence et moyenne de normales	4	50	Loi normale	différence et moyenne de normales indépendantes, diapo 50
+6.21		théorème central limite, loi uniforme	4	46	Un résultat très (très) utile	TCL diapo 46; moyenne et variance de la loi uniforme diapo 3
+6.22		théorème central limite, somme	4	46	Un résultat très (très) utile	TCL pour une somme, diapo 46
+6.23		somme de normales i.i.d.	4	43	Combinaisons linéaires de normales	somme de normales i.i.d., diapo 43
+6.24		somme de normales indépendantes	4	43	Combinaisons linéaires de normales	somme de normales indépendantes, diapo 43
+6.25		approximation normale de la binomiale	4	54	Correction pour la continuité	approximation normale de la binomiale avec correction de continuité, diapo 54
+6.26		différence et moyenne de normales	4	43	Combinaisons linéaires de normales	différence et moyenne de normales indépendantes, diapo 43
 6.27	a	loi Gamma, théorème central limite	4	17	Loi Gamma	somme d'exponentielles i.i.d. = loi Gamma, diapo 17
-6.27	b, c	loi Gamma, théorème central limite	4	53	Un résultat très (très) utile	TCL diapo 53; E et V de l'exponentielle diapos 9-10
+6.27	b, c	loi Gamma, théorème central limite	4	46	Un résultat très (très) utile	TCL diapo 46; E et V de l'exponentielle diapos 9-10
 6.28	a	loi de Poisson, théorème central limite	3	31	Loi de Poisson : deux propriétés importantes	additivité de la loi de Poisson, diapo 31
-6.28	b	loi de Poisson, théorème central limite	4	61	Correction pour la continuité	TCL et correction de continuité (requise pour P(Y=100)), diapo 61
-6.28	c	loi de Poisson, théorème central limite	4	53	Un résultat très (très) utile	TCL pour la moyenne diapo 53; E et V de Poisson (module 3)
-6.29		combinaison linéaire de normales, quantile	4	50	Loi normale	combinaison linéaire et moyenne de normales, diapo 50
-6.30	a(i), a(ii)	loi normale, binomiale, somme de normales	4	44	Standardisation	standardisation diapo 44; a(ii) approximation de Poisson de la binomiale (module 3)
-6.30	b	loi normale, binomiale, somme de normales	4	50	Loi normale	somme de normales i.i.d. puis quantile, diapo 50
-6.31	a, b, c(i)	loi normale, binomiale, moyenne de normales	4	44	Standardisation	standardisation et quantile diapo 44; c(i) loi binomiale (module 3)
-6.31	c(ii)	loi normale, binomiale, moyenne de normales	4	50	Loi normale	moyenne de normales indépendantes, diapo 50
+6.28	b	loi de Poisson, théorème central limite	4	54	Correction pour la continuité	TCL et correction de continuité (requise pour P(Y=100)), diapo 54
+6.28	c	loi de Poisson, théorème central limite	4	46	Un résultat très (très) utile	TCL pour la moyenne diapo 46; E et V de Poisson (module 3)
+6.29		combinaison linéaire de normales, quantile	4	43	Combinaisons linéaires de normales	combinaison linéaire et moyenne de normales, diapo 43
+6.30	a(i), a(ii)	loi normale, binomiale, somme de normales	4	37	Standardisation	standardisation diapo 37; a(ii) approximation de Poisson de la binomiale (module 3)
+6.30	b	loi normale, binomiale, somme de normales	4	43	Combinaisons linéaires de normales	somme de normales i.i.d. puis quantile, diapo 43
+6.31	a, b, c(i)	loi normale, binomiale, moyenne de normales	4	37	Standardisation	standardisation et quantile diapo 37; c(i) loi binomiale (module 3)
+6.31	c(ii)	loi normale, binomiale, moyenne de normales	4	43	Combinaisons linéaires de normales	moyenne de normales indépendantes, diapo 43
 6.32	a, b	lois uniforme et géométrique, TCL	4	3	Loi uniforme	loi uniforme diapo 3; b) loi géométrique (module 3)
-6.32	c	lois uniforme et géométrique, TCL	4	53	Un résultat très (très) utile	TCL diapo 53; E et V de la loi uniforme diapo 3
-6.33	a, b	exponentielle, normale, fiabilité de systèmes	4	11	Loi exponentielle	répartition exponentielle diapo 11; b) indépendance d'événements (module 1)
-6.33	c	exponentielle, normale, fiabilité de systèmes	4	44	Standardisation	fiabilité des composants normaux par standardisation, diapo 44
+6.32	c	lois uniforme et géométrique, TCL	4	46	Un résultat très (très) utile	TCL diapo 46; E et V de la loi uniforme diapo 3
+6.33	a, b	exponentielle, normale, fiabilité de systèmes	4	11	Loi exponentielle : fonction de répartition	répartition exponentielle diapo 11; b) indépendance d'événements (module 1)
+6.33	c	exponentielle, normale, fiabilité de systèmes	4	37	Standardisation	fiabilité des composants normaux par standardisation, diapo 37
 6.34		loi lognormale, moments, mode, médiane	hors			loi lognormale non vue (moments, mode via densité de X)
 6.35	a	loi lognormale, combinaison de normales	hors			loi lognormale (E et V de l'exponentielle d'une normale) non vue
-6.35	b	loi lognormale, combinaison de normales	4	50	Loi normale	ln W combinaison linéaire de normales (diapo 50), puis quantiles
+6.35	b	loi lognormale, combinaison de normales	4	43	Combinaisons linéaires de normales	ln W combinaison linéaire de normales (diapo 43), puis quantiles
 6.36		loi normale bivariée, loi conditionnelle	hors			loi normale bivariée et loi conditionnelle normale non vues
 6.37		loi normale bivariée, loi conditionnelle	hors			loi normale bivariée et loi conditionnelle normale non vues
 6.38		loi normale bivariée, lois conditionnelles	hors			loi normale bivariée (marginales, lois conditionnelles) non vue
@@ -350,23 +350,23 @@ exercice	parties	sujet	module	diapo	titre	note
 7.18	b	données groupées, histogramme à classes inégales	6	26	Procédure pour tracer un histogramme	histogramme de densité à classes inégales, diapo 26
 7.19		histogramme de densité	6	26	Procédure pour tracer un histogramme	histogramme de densité (hauteur = fréq. rel./largeur), diapo 26
 7.20		coefficient de corrélation de Pearson	10	37	Estimation de $\rho$	coefficient de corrélation échantillonnal r, diapo 37
-8.1	a	loi de X̄, erreur-type	4	50	Loi normale	X̄ = combinaison linéaire de normales indépendantes, diapo 50
+8.1	a	loi de X̄, erreur-type	4	43	Combinaisons linéaires de normales	X̄ = combinaison linéaire de normales indépendantes, diapo 43
 8.1	b, c	loi de X̄, erreur-type	8	22	La marge d'erreur et l'erreur-type	erreur-type (σ/√n, estimée par S/√n), diapo 22
-8.2	a	différence de deux moyennes, loi F	4	50	Loi normale	différence de moyennes de normales indépendantes, diapo 50
+8.2	a	différence de deux moyennes, loi F	4	43	Combinaisons linéaires de normales	différence de moyennes de normales indépendantes, diapo 43
 8.2	b	différence de deux moyennes, loi F	8	22	La marge d'erreur et l'erreur-type	erreur-type d'un estimateur, diapo 22
-8.2	c	différence de deux moyennes, loi F	4	53	Un résultat très (très) utile	TCL pour chaque moyenne, diapo 53
+8.2	c	différence de deux moyennes, loi F	4	46	Un résultat très (très) utile	TCL pour chaque moyenne, diapo 46
 8.2	d, e	différence de deux moyennes, loi F	hors			loi de Fisher non vue (test F exclu, M9 partie 2 diapo 10)
-8.3		loi de X̄1 − X̄2 standardisée	4	50	Loi normale	combinaison linéaire de normales (50) puis standardisation (45)
-8.4	a	proportion échantillonnale, TCL	4	53	Un résultat très (très) utile	TCL appliqué à des Bernoulli (M3 diapo 8), diapo 53
+8.3		loi de X̄1 − X̄2 standardisée	4	43	Combinaisons linéaires de normales	combinaison linéaire de normales (43) puis standardisation (38)
+8.4	a	proportion échantillonnale, TCL	4	46	Un résultat très (très) utile	TCL appliqué à des Bernoulli (M3 diapo 8), diapo 46
 8.4	b	proportion échantillonnale, TCL	8	26	Cas 4 pour $p$	erreur-type de p̂, p remplacé par p̂, diapo 26
-8.5	a	lois échantillonnales, vrai ou faux	4	50	Loi normale	loi de X̄ pour normales indépendantes, diapo 50
+8.5	a	lois échantillonnales, vrai ou faux	4	43	Combinaisons linéaires de normales	loi de X̄ pour normales indépendantes, diapo 43
 8.5	b	lois échantillonnales, vrai ou faux	7	14	Estimation d'une variance $\sigma^2$ par $S^2$	E(S²) = σ² et V(S²) = 2σ⁴/(n−1), diapo 14
-8.5	c	lois échantillonnales, vrai ou faux	4	53	Un résultat très (très) utile	V(X̄) = σ²/n, diapo 53
+8.5	c	lois échantillonnales, vrai ou faux	4	46	Un résultat très (très) utile	V(X̄) = σ²/n, diapo 46
 8.5	d	lois échantillonnales, vrai ou faux	7	28	Loi de Student (loi $t_\nu$)	symétrie de la loi de Student, diapo 28
 8.5	e	lois échantillonnales, vrai ou faux	7	25	Table de la loi du khi-deux	asymétrie du khi-carré, médiane lue dans la table, diapo 25
 8.5	f	lois échantillonnales, vrai ou faux	8	22	La marge d'erreur et l'erreur-type	erreur-type, diapo 22
 8.5	g	lois échantillonnales, vrai ou faux	7	5	Modèle, loi, paramètres	paramètres (population) vs estimations (échantillon), diapo 5
-8.6	a, b	lois de X̄, S² et T	4	50	Loi normale	loi de X̄ (50) et quantiles normaux (43)
+8.6	a, b	lois de X̄, S² et T	4	43	Combinaisons linéaires de normales	loi de X̄ (43) et quantiles normaux (36)
 8.6	c	lois de X̄, S² et T	7	25	Table de la loi du khi-deux	(n−1)S²/σ² khi-carré (24) et table, diapo 25
 8.6	d	lois de X̄, S² et T	7	31	Table de la loi de Student	statistique T de Student (30) et table, diapo 31
 8.7		échantillon aléatoire simple	hors			définition d'un échantillon aléatoire (simple) jamais donnée
@@ -377,13 +377,13 @@ exercice	parties	sujet	module	diapo	titre	note
 8.12	a, b	simulation de lois échantillonnales	6	22	Variance échantillonnale	écart-type échantillonnal, diapo 22 ; loi de X̄ vue au M4
 8.12	c	simulation de lois échantillonnales	7	30	Propriétés de la loi $t$	statistique T de Student, E et V, diapo 30
 8.12	d	simulation de lois échantillonnales	7	14	Estimation d'une variance $\sigma^2$ par $S^2$	E(S²) et V(S²) dans le cas normal, diapo 14
-8.13	a, b, c, e	lois de X̄, S², T et F	4	50	Loi normale	combinaison linéaire de normales indépendantes, diapo 50
-8.13	d	lois de X̄, S², T et F	4	45	Standardisation	standardisation d'une normale, diapo 45
+8.13	a, b, c, e	lois de X̄, S², T et F	4	43	Combinaisons linéaires de normales	combinaison linéaire de normales indépendantes, diapo 43
+8.13	d	lois de X̄, S², T et F	4	38	Standardisation	standardisation d'une normale, diapo 38
 8.13	f	lois de X̄, S², T et F	7	30	Propriétés de la loi $t$	statistique T de Student, E et V, diapo 30
 8.13	g	lois de X̄, S², T et F	7	14	Estimation d'une variance $\sigma^2$ par $S^2$	E(S²) et V(S²) dans le cas normal, diapo 14
 8.13	h	lois de X̄, S², T et F	hors			loi de Fisher non vue
-8.14	a	probabilités sur X̄ et S²	4	44	Standardisation	standardisation F(x) = Φ((x−μ)/σ) et table, diapo 44
-8.14	b	probabilités sur X̄ et S²	4	50	Loi normale	loi de X̄ pour normales indépendantes, diapo 50
+8.14	a	probabilités sur X̄ et S²	4	37	Standardisation	standardisation F(x) = Φ((x−μ)/σ) et table, diapo 37
+8.14	b	probabilités sur X̄ et S²	4	43	Combinaisons linéaires de normales	loi de X̄ pour normales indépendantes, diapo 43
 8.14	c	probabilités sur X̄ et S²	7	31	Table de la loi de Student	statistique T de Student (30) et table, diapo 31
 8.14	d	probabilités sur X̄ et S²	7	25	Table de la loi du khi-deux	(n−1)S²/σ² khi-carré (24) et table, diapo 25
 9.1		comparaison d'estimateurs sans biais	7	13	Estimation de l'espérance $\mu$ par $\overline{X}$	sans biais et variance faible (diapo 12), V(X̄)=σ²/n diapo 13
@@ -410,7 +410,7 @@ exercice	parties	sujet	module	diapo	titre	note
 9.17	d, e	interprétation d'un IC de Student	8	7	Plusieurs intervalles de confiance	interprétation du niveau de confiance, diapo 7
 9.18		IC pour moyenne et variance	8	29	Cas 5 pour $\sigma^2$: loi normale, $\mu$ et $\sigma^2$ inconnues	IC pour σ² (khi-carré), diapo 29
 9.19		IC pour une moyenne, variance connue	8	12	Cas 1 pour $\mu$: loi normale, variance connue	IC pour μ, variance connue, diapo 12
-9.20	a	standardisation, IC approximatif (Poisson)	4	45	Standardisation	standardisation d'une normale, diapo 45
+9.20	a	standardisation, IC approximatif (Poisson)	4	38	Standardisation	standardisation d'une normale, diapo 38
 9.20	b	standardisation, IC approximatif (Poisson)	8	26	Cas 4 pour $p$	paramètre dans la marge remplacé par son estimé (proportion), diapo 26
 9.21	a	IC pour une moyenne, variance connue	8	12	Cas 1 pour $\mu$: loi normale, variance connue	IC pour μ, variance connue, diapo 12
 9.21	b	IC pour une moyenne, variance connue	8	17	Cas 2 pour $\mu$: loi normale, variance inconnue	IC pour μ, variance inconnue, diapo 17
