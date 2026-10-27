@@ -3,25 +3,20 @@
 \subtitle{STT-1000 Probabilités et statistique}
 \date{\today}
 
-% Théorème qui porte un nom : \begin{thmnom}{Théorème de Bayes} ... \end{thmnom}
-% (même apparence que l'environnement thm de la classe, mais avec le nom en titre)
-\newtcolorbox{thmnom}[1]{
-  boxrule=0pt,
-  boxsep=0pt,
-  colback=ThmColorBG,
-  enhanced jigsaw,
-  detach title,
-  fonttitle=\bfseries,
-  coltitle=TitreThm,
-  coltext=TexteThm,
-  title={#1.},
-  before upper={\tcbtitle\ },
-  borderline west={2pt}{0pt}{ThmColorBar},
-  sharp corners,
-  before skip=10pt,
-  after skip=10pt,
-  breakable,
-}
+% Lien discret vers la page de réponses, ajouté au pied de page à côté du numéro
+% (ne prend aucune place sur la diapo). Usage, n'importe où dans la diapo : \lienreponse{rep-ex1}
+\newcommand{\cibleReponse}{}
+\newcommand{\lienreponse}[1]{\gdef\cibleReponse{#1}}
+\addtobeamertemplate{footline}{}{%
+  \ifx\cibleReponse\empty\else
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=south east, inner sep=0pt] at ([xshift=-1.5cm,yshift=0.2cm]current page.south east)
+        {\hyperlink{\cibleReponse}{\scriptsize\color{gray}Réponse~$\rightarrow$}};
+    \end{tikzpicture}%
+    \global\let\cibleReponse\empty
+  \fi}
+% Lien de retour vers l'exemple, dans les pages de réponses
+\newcommand{\retour}[2]{\hyperlink{#1}{\textbf{#2}~{\color{gray}$\hookleftarrow$}}}
 
 \begin{document}
 \begin{frame}[t]
@@ -48,7 +43,7 @@
   \begin{Boite}{Probabilités}
     Outil mathématique formel qui sert à décrire et à modéliser les comportements aléatoires.
   \end{Boite}
-  On connaît les \enquote{paramètres} du phénomène et on cherche à décrire ce qu'on peut en attendre.\\
+  On connaît les \enquote{paramètres} du phénomène; on décrit ce qu'on peut en attendre.\\
   Exemple : on lance un dé équilibré à 6 faces. Quelle est la probabilité d'obtenir un 3?
 
   \pause
@@ -214,7 +209,7 @@ Retour aux expériences précédentes :
 
 \end{frame}
 
-\begin{frame}[t]{Exemple 1}
+\begin{frame}[t,label=ex1]{Exemple 1}
 
 \centerline{\LARGE\bfseries\alert{QUIZ !}}
  Les événements suivants sont-ils mutuellement exclusifs?
@@ -231,6 +226,7 @@ Retour aux expériences précédentes :
    \vspace{1.3cm}
  \end{itemize}
  }
+\lienreponse{rep-quiz}
 \end{frame}
 
 
@@ -279,20 +275,8 @@ Les résultats suivants découlent directement des 4 axiomes.
  \end{itemize}
 \end{frame}
 
-\begin{frame}[t]{Résultats découlant des axiomes (suite)}
- \begin{itemize}\itemsep6mm
-  \item<1->{\bf Théorème 1.5} : généralisation du théorème 1.4 à $k$ événements :
-     \\
-$P\left(\bigcup\limits_{i=1}^kA_i\right)=\sum\limits_{i=1}^kP(A_i)
-  -\sum\limits_{i=1}^k\sum\limits_{j=i+1}^kP(A_i\cap A_j)+\cdots+(-1)^{k-1}P\left(\bigcap\limits_{i=1}^kA_i\right)$
 
-  \item<2->{\bf Théorème 1.6} : si $A\subset B$, alors $P(A)\le P(B)$.
-
-  {\small \color{gray}{[$B=(\overline{A}\cap B)\cup A$, où $\overline{A}\cap B$ et $A$ sont mutuellement exclusifs...]}}
- \end{itemize}
-\end{frame}
-
-\begin{frame}[t]{Exemple 2}
+\begin{frame}[t,label=ex2]{Exemple 2}
 
 \centerline{\LARGE\bfseries\alert{QUIZ !}}
 \begin{minipage}{8cm}{
@@ -312,11 +296,12 @@ Chez ce fournisseur, $P(A)=0{,}05$, $P(B)=0{,}20$ et $P(A \cup B)=0{,}23$.
   \item Quelle est la probabilité que la batterie de votre téléphone ait une autonomie suffisante?
   \item Quelle est la probabilité que votre téléphone présente les deux problèmes?
 \end{enumerate}
+\lienreponse{rep-quiz}
 \end{frame}
 
 
 
-\begin{frame}[t]{Exemple 2 (suite)}
+\begin{frame}[t,label=ex2s]{Exemple 2 (suite)}
 Dans l'exemple précédent, quelle est la probabilité que votre téléphone ne présente aucun des deux problèmes?
 
  \bigskip
@@ -327,9 +312,10 @@ Dans l'exemple précédent, quelle est la probabilité que votre téléphone ne 
 Rappel : $P(A)=0{,}05$, $P(B)=0{,}20$ et $P(A \cup B)=0{,}23$.
 \vspace{3cm}
 
+\lienreponse{rep-ex1}
 \end{frame}
 
-\begin{frame}[t]{Exemple 3}
+\begin{frame}[t,label=ex3]{Exemple 3}
 
 \begin{minipage}{9cm}{
 \small
@@ -351,6 +337,7 @@ Rappel : $P(A)=0{,}05$, $P(B)=0{,}20$ et $P(A \cup B)=0{,}23$.
   \item d'un étudiant qui utilise Linux et qui est satisfait de son programme? % manque d'information
  \end{enumerate}
 }
+\lienreponse{rep-ex1}
 \end{frame}
 
 \begin{frame}[t]{Exemple 3 (suite)}
@@ -370,6 +357,7 @@ Rappel : $P(A)=0{,}05$, $P(B)=0{,}20$ et $P(A \cup B)=0{,}23$.
       \item[(vi)] soit satisfait de son programme ou utilise Linux? % 0,85
      \end{enumerate}
 }
+\lienreponse{rep-ex1}
 \end{frame}
 
 \begin{frame}[t]{Exemple 3 : piste de solution}
@@ -409,6 +397,7 @@ Rappel : $P(A)=0{,}05$, $P(B)=0{,}20$ et $P(A \cup B)=0{,}23$.
 
 Pour faire ces calculs, il faut tenir compte d'une information partielle, qui réduit l'espace échantillonnal. Ce sont des \textit{probabilités conditionnelles}...
 
+\lienreponse{rep-ex1}
 \end{frame}
 
 \section{Probabilités conditionnelles}
@@ -439,8 +428,13 @@ Pour faire ces calculs, il faut tenir compte d'une information partielle, qui r�
 La définition de la probabilité conditionnelle permet de trouver $P(A\cap B)$ :
 $$P(A|B)=\frac{P(A\cap B)}{P(B)}\quad\Leftrightarrow\quad P(A\cap B)=P(A|B)P(B).$$
 On appelle parfois cette formule la \enquote{règle de multiplication}.
+
+\medskip
+Elle se généralise à plus de deux événements :
+$$P(A\cap B\cap C)=P(A)\,P(B|A)\,P(C|A\cap B),$$
+et ainsi de suite pour $k$ événements.
 \end{frame}
-\begin{frame}[t]{Exemple 4}
+\begin{frame}[t,label=ex4]{Exemple 4}
 
 {\small
  \begin{enumerate}[$\bullet$]\itemsep3mm
@@ -450,6 +444,7 @@ On appelle parfois cette formule la \enquote{règle de multiplication}.
  \item[a)] Une requête a été traitée par le serveur A. Quelle est la probabilité qu'elle ait échoué?
      \end{enumerate}
      }
+\lienreponse{rep-ex1}
 \end{frame}
 
 \begin{frame}[t]{Exemple 4 (suite)}
@@ -459,9 +454,10 @@ On appelle parfois cette formule la \enquote{règle de multiplication}.
 \item[b)] Une requête a échoué. Quelle est la probabilité qu'elle ait été traitée par le serveur B?
      \end{enumerate}
      }
+\lienreponse{rep-ex1}
 \end{frame}
 
-\begin{frame}[t]
+\begin{frame}[t,label=quizpab]
 
 \centerline{\LARGE\bfseries\alert{QUIZ !}}
 Supposons $P(B)>0$.
@@ -475,6 +471,7 @@ Supposons $P(B)>0$.
 \item Que vaut $P(A|B)$ si $A$ et $B$ sont mutuellement exclusifs?
 \vspace{1cm}
 \end{itemize}
+\lienreponse{rep-quiz}
 \end{frame}
 
 \subsection{Indépendance}
@@ -531,21 +528,55 @@ On dit alors que $A$ et $B$ sont \alerter{indépendants}. Voyons une définition
  $P(A\cap B\cap C)=P(A)P(B)P(C)$.
 \end{frame}
 
-\begin{frame}[t]{Exemple 5}
+\begin{frame}[t,label=ex5]{Exemple 5}
 
 $A$ et $B$ sont-ils indépendants?
 
- \centerline{\includegraphics[height=5cm]{venn1-p22.jpg}}
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+  \draw (-4,-2.4) rectangle (4,2.4);
+  \draw (-0.9,0) circle (1.5);
+  \draw (1.0,-0.05) circle (1.55);
+  \node at (-2.3,1.45) {$A$};
+  \node at (2.55,1.4) {$B$};
+  \node at (4.25,2.4) {$\mathcal{U}$};
+  \node at (-1.55,0) {0,09};
+  \node at (0.03,0) {0,21};
+  \node at (1.55,0) {0,49};
+  \node at (0,-2.0) {0,21};
+\end{tikzpicture}
+\end{center}
 
+\lienreponse{rep-ex1}
 \end{frame}
 
-\begin{frame}[t]{Exemple 6}
+\begin{frame}[t,label=ex6]{Exemple 6}
 
 Il est possible que $A\perp B$, $A\perp C$ et $B\perp C$, sans que
 $A,B,C$ soient (mutuellement) indépendants. Par exemple :
 
- \centerline{\includegraphics[height=5cm]{venn2-p22.jpg}}
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+  \draw (-4,-2.6) rectangle (4,2.4);
+  \draw (-0.8,0.6) circle (1.35);
+  \draw (0.8,0.6) circle (1.35);
+  \draw (0,-0.7) circle (1.35);
+  \node at (-2.3,1.8) {$A$};
+  \node at (2.3,1.8) {$B$};
+  \node at (1.3,-2.15) {$C$};
+  \node at (4.25,2.4) {$\mathcal{U}$};
+  \node at (-1.45,0.95) {0,25};
+  \node at (1.45,0.95) {0,25};
+  \node at (0,-1.5) {0,25};
+  \node at (0,0.17) {0,25};
+  \node at (0,1.3) {0};
+  \node at (-0.85,-0.4) {0};
+  \node at (0.85,-0.4) {0};
+  \node at (-3.2,-1.8) {0};
+\end{tikzpicture}
+\end{center}
 
+\lienreponse{rep-ex1}
 \end{frame}
 
 \subsection{Loi des probabilités totales}
@@ -657,7 +688,7 @@ $A,B,C$ soient (mutuellement) indépendants. Par exemple :
 \end{frame}
 
 \begin{frame}[t]{Conditionner sur une partition pour trouver $P(A)$}
- \begin{thmnom}{Loi des probabilités totales}
+ \begin{thm}[Loi des probabilités totales]{}
   Soient $A$ un événement de $\mathcal{U}$ et $B_1,\ldots,B_k$ une partition
   de $\mathcal{U}$. Alors
   $$\begin{array}{llccccc}
@@ -668,14 +699,14 @@ P(A)&=& P(A\cap B_1) &+&\cdots&+&P(A\cap B_k)\\
     &=&\multicolumn{5}{l}{\sum\limits_{i=1}^k P(B_i)P(A|B_i).}\\
 \end{array}
 $$
- \end{thmnom}
+ \end{thm}
 
 
  \bigskip
  \underline{Cas particulier} : comme $B$ et $\overline{B}$ forment une partition
  de $\mathcal{U}$, on a $P(A)=P(A|B)P(B)+P(A|\overline{B})P(\overline{B})$.
 \end{frame}
-\begin{frame}[t]{Exemple 7}
+\begin{frame}[t,label=ex7]{Exemple 7}
 
 {\small Je dors bien 75\,\% des nuits. Après une bonne nuit, mon code passe tous les
  tests du premier coup 90\,\% du temps. Après une mauvaise nuit, il les passe du
@@ -687,6 +718,7 @@ $$
 \end{enumerate}
 
 }
+\lienreponse{rep-ex2}
 \end{frame}
 \begin{frame}[t]{Exemple 7 (suite)}
 
@@ -699,6 +731,7 @@ $$
  \vspace{5 cm}
 
 }
+\lienreponse{rep-ex2}
 \end{frame}
 
 \begin{frame}[t]{Exemple 8}
@@ -728,12 +761,13 @@ Tracez un diagramme en arbre et un diagramme de Venn qui représentent cette sit
 \end{frame}
 
 
-\begin{frame}[t]{Exemple 8 (suite)}
+\begin{frame}[t,label=ex8]{Exemple 8 (suite)}
 Quelle est la probabilité qu'un disque choisi au hasard dans ce centre de données fonctionne plus de 5 ans sans panne?
 
  \vspace{5.6cm}
 
 
+\lienreponse{rep-ex2}
 \end{frame}
 
 \subsection{Théorème de Bayes}
@@ -751,26 +785,27 @@ Quelle est la probabilité qu'un disque choisi au hasard dans ce centre de donn�
 \end{frame}
 
 \begin{frame}
- \begin{thmnom}{Théorème de Bayes}
+ \begin{thm}[Théorème de Bayes]{}
   Soient $A$ un événement de $\mathcal{U}$ et $B_1,\ldots,B_k$ une partition
   de $\mathcal{U}$. Alors
   $$P(B_j|A)=\frac{P(A|B_j)P(B_j)}{\sum_{i=1}^kP(A|B_i)P(B_i)},\ \ \forall j=1,\ldots,k.$$
- \end{thmnom}
+ \end{thm}
 C'est l'un des résultats les plus importants de la théorie des probabilités.
 
 \end{frame}
 
-\begin{frame}[t]{Exemple 7 (suite)}
+\begin{frame}[t,label=ex7b]{Exemple 7 (suite)}
 
 Aujourd'hui, mon code a passé tous les tests du premier coup (!).
 \bigskip
 
 Sachant cela, quelle est la probabilité que j'aie bien dormi?
 
+\lienreponse{rep-ex2}
 \end{frame}
 
 
-\begin{frame}[t]
+\begin{frame}[t,label=quizbayes]
 
 \centerline{\LARGE\bfseries\alert{QUIZ !}}
   Retournons à l'exemple 8. Un disque du centre de données est tombé en panne le mois passé,
@@ -778,6 +813,7 @@ Sachant cela, quelle est la probabilité que j'aie bien dormi?
  \vspace{5cm}
 
 
+\lienreponse{rep-quiz}
 \end{frame}
 
 \section{Permutations et combinaisons}
@@ -829,9 +865,17 @@ Sachant cela, quelle est la probabilité que j'aie bien dormi?
  \medskip
 
  \uncover<3->{ [Rappel : $n!=n(n-1)(n-2)\cdots1$ et $0!=1!=1$, donc $P_n^n=n!$]}
+
+ \medskip
+
+ \uncover<4->{
+  {\small Remarque : c'est un tirage \alerter{sans remise}, car un objet placé ne peut plus
+  être choisi. Dans un tirage \alerter{avec remise}, on aurait $n$ choix à chaque position,
+  donc $n^r$ arrangements.}
+ }
 \end{frame}
 
-\begin{frame}[t]{Exemples}
+\begin{frame}[t,label=exdev]{Exemples}
 \begin{itemize}
 \item Dix développeurs sont disponibles pour prendre en charge quatre microservices
  distincts (un développeur par microservice). Combien y a-t-il de façons d'assigner
@@ -848,6 +892,7 @@ Sachant cela, quelle est la probabilité que j'aie bien dormi?
 
 \vspace{0.15in}
  \end{itemize}
+\lienreponse{rep-ex2}
 \end{frame}
 
 \subsection{Combinaisons}
@@ -897,7 +942,7 @@ D'où vient cette formule?\\
 
 \begin{frame}[t]{Exemples}
  \begin{itemize}
-  \item<1->{\bf Lotto 6/49} : on tire au hasard 6 des 49 nombres de 1 à 49, et l'ordre dans
+  \item<1->{\bf Lotto 6/49} : on tire au hasard, sans remise, 6 des 49 nombres de 1 à 49, et l'ordre dans
   lequel les 6 nombres sont tirés ne compte pas. Il y a donc
   \uncover<1->{
   $${49\choose6}=\frac{49!}{6!\,43!}=\frac{49\times48\times47\times46\times45\times44}{6!}=
@@ -923,7 +968,7 @@ D'où vient cette formule?\\
  \end{itemize}
 \end{frame}
 
-\begin{frame}[t]{Exemples (suite)}
+\begin{frame}[t,label=expoker]{Exemples (suite)}
 
 
  \begin{itemize}
@@ -934,9 +979,10 @@ D'où vient cette formule?\\
 \vspace{0.1in}
 
 
+\lienreponse{rep-ex2}
 \end{frame}
 
-\begin{frame}[t]{Exemples (suite)}
+\begin{frame}[t,label=excomites]{Exemples (suite)}
  \begin{itemize}
   \item<1->{\bf Comités} : une association étudiante en informatique de 30 membres doit choisir 4 représentants.
   \begin{itemize} \itemsep1.3cm
@@ -946,16 +992,30 @@ D'où vient cette formule?\\
   \item Et si le comité est formé d'un président et de 3 autres membres?
   \end{itemize}
  \end{itemize}
+\lienreponse{rep-ex2}
 \end{frame}
 
-\subsection{Quelques résultats}
+\section{Compléments}
 
-\begin{frame}{Propriété importante}
+\begin{frame}[t]{Autres résultats découlant des axiomes}
+ \begin{itemize}\itemsep6mm
+  \item<1->{\bf Théorème 1.5} : généralisation du théorème 1.4 à $k$ événements :
+     \\
+$P\left(\bigcup\limits_{i=1}^kA_i\right)=\sum\limits_{i=1}^kP(A_i)
+  -\sum\limits_{i=1}^k\sum\limits_{j=i+1}^kP(A_i\cap A_j)+\cdots+(-1)^{k-1}P\left(\bigcap\limits_{i=1}^kA_i\right)$
 
- \begin{thmnom}{Théorème du binôme}
+  \item<2->{\bf Théorème 1.6} : si $A\subset B$, alors $P(A)\le P(B)$.
+
+  {\small \color{gray}{[$B=(\overline{A}\cap B)\cup A$, où $\overline{A}\cap B$ et $A$ sont mutuellement exclusifs...]}}
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Théorème du binôme}
+
+ \begin{thm}[Théorème du binôme]{}
   Soient deux nombres réels $x$ et $y$ et un entier $n\ge0$. Alors
   $$(x+y)^n=\sum_{r=0}^n{n\choose r}x^ry^{n-r}.$$
- \end{thmnom}
+ \end{thm}
 
 \end{frame}
 
@@ -973,47 +1033,47 @@ D'où vient cette formule?\\
 
 \section{Réponses des exemples}
 
-\begin{frame}[t]{Réponses des exemples (1/2)}
+\begin{frame}[t,label=rep-ex1]{Réponses des exemples (1/2)}
 \footnotesize
 \begin{itemize}
-\item \textbf{Exemple 2 (suite)} (aucun des deux problèmes) : $1-0{,}23=0{,}77$.
-\item \textbf{Exemple 3} : (i) $0{,}45$~; (ii) manque d'information~; (iii) $0{,}45$~;
+\item \retour{ex2s}{Exemple 2 (suite)} (aucun des deux problèmes) : $1-0{,}23=0{,}77$.
+\item \retour{ex3}{Exemple 3} : (i) $0{,}45$~; (ii) manque d'information~; (iii) $0{,}45$~;
 (iv) $0{,}30$~; (v) manque d'information~; (vi) $0{,}85$~; (vii) $P(L|S)=0{,}45/0{,}75=0{,}6$~;
 (viii) $P(I|L)=0{,}35/0{,}55\approx0{,}636$.
-\item \textbf{Exemple 4} : a) $0{,}10/0{,}70=1/7\approx0{,}143$~; b) $0{,}15/0{,}25=0{,}6$.
-\item \textbf{Exemple 5} : $P(A)=0{,}30$, $P(B)=0{,}70$, $P(A)P(B)=0{,}21=P(A\cap B)$
+\item \retour{ex4}{Exemple 4} : a) $0{,}10/0{,}70=1/7\approx0{,}143$~; b) $0{,}15/0{,}25=0{,}6$.
+\item \retour{ex5}{Exemple 5} : $P(A)=0{,}30$, $P(B)=0{,}70$, $P(A)P(B)=0{,}21=P(A\cap B)$
 $\Rightarrow$ $A$ et $B$ sont indépendants.
-\item \textbf{Exemple 6} : $A,B,C$ sont indépendants deux à deux, mais
+\item \retour{ex6}{Exemple 6} : $A,B,C$ sont indépendants deux à deux, mais
 $P(A\cap B\cap C)=0{,}25\neq P(A)P(B)P(C)=0{,}125$ $\Rightarrow$ pas mutuellement
 indépendants.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[t]{Réponses des exemples (2/2)}
+\begin{frame}[t,label=rep-ex2]{Réponses des exemples (2/2)}
 \footnotesize
 \begin{itemize}
-\item \textbf{Exemple 7} : a) $0{,}25\times0{,}80=0{,}20$~; b) $0{,}75\times0{,}90+0{,}25\times0{,}20=0{,}725$~;
-(suite, Bayes) $P(\text{bien dormi}|\text{tests réussis})=\dfrac{0{,}90\times0{,}75}{0{,}725}=\dfrac{27}{29}\approx0{,}931$.
-\item \textbf{Exemple 8} : $P(\text{fonctionne}>5\text{ ans})=0{,}5\times0{,}9+0{,}3\times0{,}8+0{,}2\times0{,}7=0{,}83$.
-\item \textbf{Exemples} (développeurs) : $P^{10}_4=5~040$~; avec les testeurs : $5~040\times11~880=59~875~200$.
-\item \textbf{Exemples} (poker, paires) : $1~098~240/2~598~960\approx0{,}423$ (42,3\,\%).
-\item \textbf{Exemples} (comités) : $27~405$ comités~; $P^{30}_4=657~720$ (président, vice-président, trésorier,
+\item \retour{ex7}{Exemple 7} : a) $0{,}25\times0{,}80=0{,}20$~; b) $0{,}75\times0{,}90+0{,}25\times0{,}20=0{,}725$~;
+(\hyperlink{ex7b}{suite, Bayes}) $P(\text{bien dormi}|\text{tests réussis})=\dfrac{0{,}90\times0{,}75}{0{,}725}=\dfrac{27}{29}\approx0{,}931$.
+\item \retour{ex8}{Exemple 8} : $P(\text{fonctionne}>5\text{ ans})=0{,}5\times0{,}9+0{,}3\times0{,}8+0{,}2\times0{,}7=0{,}83$.
+\item \retour{exdev}{Exemples} (développeurs) : $P^{10}_4=5~040$~; avec les testeurs : $5~040\times11~880=59~875~200$.
+\item \retour{expoker}{Exemples} (poker, paires) : $1~098~240/2~598~960\approx0{,}423$ (42,3\,\%).
+\item \retour{excomites}{Exemples} (comités) : $27~405$ comités~; $P^{30}_4=657~720$ (président, vice-président, trésorier,
 secrétaire)~; $30\times{29\choose3}=109~620$ (président et 3 autres membres).
 \end{itemize}
 \end{frame}
 
 \section{Réponses des quiz}
 
-\begin{frame}[t]{Réponses des quiz}
+\begin{frame}[t,label=rep-quiz]{Réponses des quiz}
 \footnotesize
 \begin{itemize}
-\item \textbf{Exemple 1} (mutuellement exclusifs) : $\mathcal{E}_1$ (dé) : oui, mutuellement exclusifs~;
+\item \retour{ex1}{Exemple 1} (mutuellement exclusifs) : $\mathcal{E}_1$ (dé) : oui, mutuellement exclusifs~;
 $\mathcal{E}_4$ (temps de réponse) : non ($A\cap B=(150,175)\neq\emptyset$).
-\item \textbf{Exemple 2} (téléphone) : a) $P(\overline{B})=1-0{,}20=0{,}80$~; b) $P(A\cap B)=
+\item \retour{ex2}{Exemple 2} (téléphone) : a) $P(\overline{B})=1-0{,}20=0{,}80$~; b) $P(A\cap B)=
 0{,}05+0{,}20-0{,}23=0{,}02$.
-\item \textbf{Quiz} ($P(B)>0$) : $P(A|B)=1$ si $B\subset A$~; $P(A|B)=P(A)/P(B)$ si
+\item \retour{quizpab}{Quiz} ($P(B)>0$) : $P(A|B)=1$ si $B\subset A$~; $P(A|B)=P(A)/P(B)$ si
 $A\subset B$~; $P(A|B)=0$ si $A$ et $B$ sont mutuellement exclusifs.
-\item \textbf{Quiz} (disque en panne avant 5 ans) : $P(\text{fabricant }B|\text{panne avant 5 ans})=\dfrac{0{,}30\times0{,}20}{1-0{,}83}=\dfrac{6}{17}\approx0{,}353$.
+\item \retour{quizbayes}{Quiz} (disque en panne avant 5 ans) : $P(\text{fabricant }B|\text{panne avant 5 ans})=\dfrac{0{,}30\times0{,}20}{1-0{,}83}=\dfrac{6}{17}\approx0{,}353$.
 \end{itemize}
 \end{frame}
 

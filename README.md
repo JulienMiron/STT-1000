@@ -82,8 +82,11 @@ Ce dépôt est une copie de travail des diapos ; `Global/STT-1000/Diapos`
 (archive maîtresse, aussi synchronisée avec Overleaf) reste la référence à
 long terme. Un hook Git reporte automatiquement toute correction de
 `diapos/*.tex` vers `Global` à chaque commit (copie + commit + push). Les
-noms de fichiers diffèrent entre les deux dépôts ; la correspondance est
-dans `scripts/global-mapping.tsv`.
+fichiers portent le même nom dans les deux dépôts.
+
+Seuls les fichiers `.tex` sont reportés : si la classe `BeamerTemplate.cls`
+ou une image change, il faut la copier à la main dans `Global` (la classe y
+est à la racine et sert aussi aux autres cours).
 
 **Après un clone frais, l'activer une seule fois** (la config des hooks
 n'est pas clonée par Git) :

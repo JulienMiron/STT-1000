@@ -13,7 +13,7 @@ exercice	parties	sujet	module	diapo	titre	note
 1.2		opérations sur les ensembles	1	9	Opérations sur les événements	complément, intersection, union, inclusion, diapo 9
 1.3	a(i), a(ii), a(iii), a(iv), a(v)	opérations ensemblistes, probabilité d'événements	1	9	Opérations sur les événements	opérations sur les ensembles, diapo 9
 1.3	b	opérations ensemblistes, probabilité d'événements	1	15		somme des probabilités des éléments (axiome 3), diapo 15
-1.4	a, c	diagramme de Venn, union de trois événements	1	22	Exemple 3 : piste de solution	remplir les zones d'un Venn à 3 ensembles, diapo 22
+1.4	a, c	diagramme de Venn, union de trois événements	1	21	Exemple 3 : piste de solution	remplir les zones d'un Venn à 3 ensembles, diapo 21
 1.4	b	diagramme de Venn, union de trois événements	1	16	Résultats découlant des axiomes	P(A∪B∪C), théorème 1.4, diapo 16
 1.5		événements dans un espace continu	1	8	Événements	événement comme sous-ensemble de l'espace, diapo 8
 1.6	a	espace échantillonnal continu, événements	1	6	Expérience aléatoire et espace échantillonnal	espace échantillonnal continu, diapo 6
@@ -21,58 +21,58 @@ exercice	parties	sujet	module	diapo	titre	note
 1.7		opérations sur des événements	1	9	Opérations sur les événements	complément, intersection, union, diapo 9
 1.8		nombre de sous-ensembles	1	10	Ensemble vide, inclusion et égalité	∅ et l'ensemble lui-même sont des sous-ensembles, diapo 10
 1.9		espace échantillonnal	1	6	Expérience aléatoire et espace échantillonnal	définition de l'espace échantillonnal, diapo 6
-1.10	a	tirage sans remise, combinaisons	1	27	Règle de multiplication	complément et règle de multiplication itérée, diapo 27
-1.10	b	tirage sans remise, combinaisons	1	59	Exemples	probabilité par dénombrement avec combinaisons (Lotto), diapo 59
-1.11		principe de multiplication	1	55	Permutations : formule générale	principe de multiplication, diapo 55
-1.12	a	principe de multiplication, permutations	1	55	Permutations : formule générale	principe de multiplication, diapo 55
-1.12	b, c	principe de multiplication, permutations	1	34	Généralisation à $k$ événements	caractères indépendants (k événements), diapo 34 ; sinon dénombrement diapo 57
-1.13		dénombrement, combinaisons	1	58	Combinaisons : formule générale	formule des combinaisons, diapo 58
-1.14	a	tirage sans remise, combinaisons	1	59	Exemples	probabilité par dénombrement avec combinaisons, diapo 59
-1.14	b	tirage sans remise, combinaisons	1	32		règle de multiplication itérée et indépendance des deux lots, diapo 32
-1.15		tirage sans remise, règle de multiplication	1	27	Règle de multiplication	deux tirages successifs, règle de multiplication, diapo 27
-1.16	a	combinaisons, indépendance	1	27	Règle de multiplication	règle de multiplication itérée (ou combinaisons diapo 57), diapo 27
-1.16	b	combinaisons, indépendance	1	59	Exemples	probabilité par dénombrement avec combinaisons, diapo 59
-1.16	c, d	combinaisons, indépendance	1	32		indépendance de deux tirages, diapo 32
-1.17		tirage sans remise, combinaisons	1	59	Exemples	probabilité par dénombrement avec combinaisons, diapo 59
-1.18		dénombrement, indépendance	1	34	Généralisation à $k$ événements	positions des 12 soupapes indépendantes, diapo 34
-1.19		dénombrement, combinaisons	1	58	Combinaisons : formule générale	formule des combinaisons, diapo 58
-1.20	a	combinaisons, permutations	1	58	Combinaisons : formule générale	combinaisons (ordre sans importance), diapo 58
-1.20	b	combinaisons, permutations	1	55	Permutations : formule générale	permutations (ordre important), diapo 55
-1.21	a, e, f, k	indépendance, événements mutuellement exclusifs	1	42	Conditionner sur une partition pour trouver $P(A)$	P(B) par la loi des probabilités totales, diapo 42
-1.21	b	indépendance, événements mutuellement exclusifs	1	32		définition de l'indépendance, diapo 32
+1.10	a	tirage sans remise, combinaisons	1	26	Règle de multiplication	complément et règle de multiplication itérée, diapo 26
+1.10	b	tirage sans remise, combinaisons	1	58	Exemples	probabilité par dénombrement avec combinaisons (Lotto), diapo 58
+1.11		principe de multiplication	1	52	Principe de multiplication	principe de multiplication, diapo 52
+1.12	a	principe de multiplication, permutations	1	54	Permutations : formule générale	principe de multiplication, diapo 54
+1.12	b, c	principe de multiplication, permutations	1	33	Généralisation à $k$ événements	caractères indépendants (k événements), diapo 33 ; sinon dénombrement diapo 57
+1.13		dénombrement, combinaisons	1	57	Combinaisons : formule générale	formule des combinaisons, diapo 57
+1.14	a	tirage sans remise, combinaisons	1	58	Exemples	probabilité par dénombrement avec combinaisons, diapo 58
+1.14	b	tirage sans remise, combinaisons	1	31		règle de multiplication itérée et indépendance des deux lots, diapo 31
+1.15		tirage sans remise, règle de multiplication	1	26	Règle de multiplication	deux tirages successifs, règle de multiplication, diapo 26
+1.16	a	combinaisons, indépendance	1	26	Règle de multiplication	règle de multiplication itérée (ou combinaisons diapo 57), diapo 26
+1.16	b	combinaisons, indépendance	1	58	Exemples	probabilité par dénombrement avec combinaisons, diapo 58
+1.16	c, d	combinaisons, indépendance	1	31		indépendance de deux tirages, diapo 31
+1.17		tirage sans remise, combinaisons	1	58	Exemples	probabilité par dénombrement avec combinaisons, diapo 58
+1.18		dénombrement, indépendance	1	33	Généralisation à $k$ événements	positions des 12 soupapes indépendantes, diapo 33
+1.19		dénombrement, combinaisons	1	57	Combinaisons : formule générale	formule des combinaisons, diapo 57
+1.20	a	combinaisons, permutations	1	57	Combinaisons : formule générale	combinaisons (ordre sans importance), diapo 57
+1.20	b	combinaisons, permutations	1	54	Permutations : formule générale	permutations (ordre important), diapo 54
+1.21	a, e, f, k	indépendance, événements mutuellement exclusifs	1	41	Conditionner sur une partition pour trouver $P(A)$	P(B) par la loi des probabilités totales, diapo 41
+1.21	b	indépendance, événements mutuellement exclusifs	1	31		définition de l'indépendance, diapo 31
 1.21	c, d	indépendance, événements mutuellement exclusifs	1	12	Événements mutuellement exclusifs	événements mutuellement exclusifs, diapo 12
-1.21	g	indépendance, événements mutuellement exclusifs	1	17	Résultats découlant des axiomes (suite)	monotonie (théorème 1.6), diapo 17
+1.21	g	indépendance, événements mutuellement exclusifs	1	63	Autres résultats découlant des axiomes	monotonie (théorème 1.6), diapo 63
 1.21	h	indépendance, événements mutuellement exclusifs	1	15		complément et probabilité d'un événement, diapo 15
 1.21	i, j	indépendance, événements mutuellement exclusifs	1	16	Résultats découlant des axiomes	P(∅)=0 et théorème 1.4, diapo 16
-1.22		tirage avec remise, indépendance	1	42	Conditionner sur une partition pour trouver $P(A)$	reprend 1.21 (probabilités totales), diapo 42
-1.23		dénombrement, combinaisons	1	58	Combinaisons : formule générale	formule des combinaisons, diapo 58
-1.24	a	principe de multiplication, combinaisons	1	55	Permutations : formule générale	principe de multiplication, diapo 55
-1.24	b	principe de multiplication, combinaisons	1	58	Combinaisons : formule générale	formule des combinaisons, diapo 58
-1.25		indépendance, complément	1	34	Généralisation à $k$ événements	indépendance des 12 tirages mensuels, diapo 34
-1.26		fiabilité, indépendance	1	34	Généralisation à $k$ événements	indépendance mutuelle des composants, diapo 34
+1.22		tirage avec remise, indépendance	1	41	Conditionner sur une partition pour trouver $P(A)$	reprend 1.21 (probabilités totales), diapo 41
+1.23		dénombrement, combinaisons	1	57	Combinaisons : formule générale	formule des combinaisons, diapo 57
+1.24	a	principe de multiplication, combinaisons	1	52	Principe de multiplication	principe de multiplication, diapo 52
+1.24	b	principe de multiplication, combinaisons	1	57	Combinaisons : formule générale	formule des combinaisons, diapo 57
+1.25		indépendance, complément	1	33	Généralisation à $k$ événements	indépendance des 12 tirages mensuels, diapo 33
+1.26		fiabilité, indépendance	1	33	Généralisation à $k$ événements	indépendance mutuelle des composants, diapo 33
 1.27	a, b	probabilité conditionnelle, indépendance	1	16	Résultats découlant des axiomes	probabilités estimées par des proportions observées, diapo 16
-1.27	c	probabilité conditionnelle, indépendance	1	25		probabilité conditionnelle, diapo 25
-1.27	d	probabilité conditionnelle, indépendance	1	34	Généralisation à $k$ événements	indépendance de trois drones, diapo 34
-1.28		fiabilité, indépendance	1	34	Généralisation à $k$ événements	indépendance mutuelle des composants, diapo 34
-1.29		théorème de Bayes	1	49		théorème de Bayes, diapo 49
-1.30		théorème de Bayes	1	49		théorème de Bayes, diapo 49
-1.31		fiabilité en série, indépendance	1	34	Généralisation à $k$ événements	indépendance de trois sous-systèmes, diapo 34
-1.32		probabilités totales	1	42	Conditionner sur une partition pour trouver $P(A)$	loi des probabilités totales, diapo 42
-1.33		probabilité conditionnelle, règle de multiplication	1	27	Règle de multiplication	règle de multiplication et probabilité conditionnelle, diapo 27
-1.34		théorème de Bayes	1	49		théorème de Bayes, diapo 49
-1.35	a	probabilités totales, Bayes	1	42	Conditionner sur une partition pour trouver $P(A)$	loi des probabilités totales, diapo 42
-1.35	b	probabilités totales, Bayes	1	49		théorème de Bayes, diapo 49
+1.27	c	probabilité conditionnelle, indépendance	1	24		probabilité conditionnelle, diapo 24
+1.27	d	probabilité conditionnelle, indépendance	1	33	Généralisation à $k$ événements	indépendance de trois drones, diapo 33
+1.28		fiabilité, indépendance	1	33	Généralisation à $k$ événements	indépendance mutuelle des composants, diapo 33
+1.29		théorème de Bayes	1	48		théorème de Bayes, diapo 48
+1.30		théorème de Bayes	1	48		théorème de Bayes, diapo 48
+1.31		fiabilité en série, indépendance	1	33	Généralisation à $k$ événements	indépendance de trois sous-systèmes, diapo 33
+1.32		probabilités totales	1	41	Conditionner sur une partition pour trouver $P(A)$	loi des probabilités totales, diapo 41
+1.33		probabilité conditionnelle, règle de multiplication	1	26	Règle de multiplication	règle de multiplication et probabilité conditionnelle, diapo 26
+1.34		théorème de Bayes	1	48		théorème de Bayes, diapo 48
+1.35	a	probabilités totales, Bayes	1	41	Conditionner sur une partition pour trouver $P(A)$	loi des probabilités totales, diapo 41
+1.35	b	probabilités totales, Bayes	1	48		théorème de Bayes, diapo 48
 1.36		probabilité géométrique (uniforme)	2	27	Exemple 4	intervalles équiprobables (exemple 4), à transposer aux aires, diapo 27
-1.37	a, b	union, indépendance, probabilité conditionnelle	1	32		hypothèse d'indépendance, diapo 32
-1.37	c(i), c(ii)	union, indépendance, probabilité conditionnelle	1	27	Règle de multiplication	règle de multiplication et probabilité conditionnelle, diapo 27
-1.38		permutations, règle du complément	1	34	Généralisation à $k$ événements	anniversaires indépendants, multiplication itérée, diapo 34 ; sinon permutations diapo 53
+1.37	a, b	union, indépendance, probabilité conditionnelle	1	31		hypothèse d'indépendance, diapo 31
+1.37	c(i), c(ii)	union, indépendance, probabilité conditionnelle	1	26	Règle de multiplication	règle de multiplication et probabilité conditionnelle, diapo 26
+1.38		permutations, règle du complément	1	33	Généralisation à $k$ événements	anniversaires indépendants, multiplication itérée, diapo 33 ; sinon permutations diapo 53
 1.39	a	union, probabilité conditionnelle	1	16	Résultats découlant des axiomes	P(A∪B), théorème 1.3, diapo 16
-1.39	b	union, probabilité conditionnelle	1	25		probabilité conditionnelle, diapo 25
-1.40		probabilités totales, diagramme en arbre	1	42	Conditionner sur une partition pour trouver $P(A)$	loi des probabilités totales (arbre), diapo 42
-1.41		théorème de Bayes	1	49		théorème de Bayes, diapo 49
-1.42		théorème de Bayes	1	49		théorème de Bayes, diapo 49
-1.43		indépendance, union	1	32		indépendance de deux événements, diapo 32
-1.44		essais indépendants (binomiale)	1	58	Combinaisons : formule générale	binomiale à la main : indépendance et combinaisons, diapo 58
+1.39	b	union, probabilité conditionnelle	1	24		probabilité conditionnelle, diapo 24
+1.40		probabilités totales, diagramme en arbre	1	41	Conditionner sur une partition pour trouver $P(A)$	loi des probabilités totales (arbre), diapo 41
+1.41		théorème de Bayes	1	48		théorème de Bayes, diapo 48
+1.42		théorème de Bayes	1	48		théorème de Bayes, diapo 48
+1.43		indépendance, union	1	31		indépendance de deux événements, diapo 31
+1.44		essais indépendants (binomiale)	1	57	Combinaisons : formule générale	binomiale à la main : indépendance et combinaisons, diapo 57
 2.1	a	fonction de masse, combinaisons	2	4	Variable aléatoire	v.a. et P(X=x), diapo 4 ; combinaisons au module 1
 2.1	b	fonction de masse, combinaisons	2	18	Fonction de probabilité/masse	diagramme de la fonction de masse, définie diapo 18
 2.2		variance d'une v.a. discrète	2	39	Mesure de dispersion d'une distribution	variance d'une v.a. discrète, définie diapo 39
@@ -190,9 +190,9 @@ exercice	parties	sujet	module	diapo	titre	note
 4.16		loi de Pascal	3	26	Loi binomiale négative	fonction de masse de Pascal, diapo 26
 4.17		loi de Pascal, espérance, variance	3	28	Espérance et variance	espérance et variance de la loi de Pascal, diapo 28
 4.18		loi de Pascal	3	11	Loi binomiale	≥ 4 succès en 6 essais : binomiale, diapo 11 (Pascal diapo 26)
-4.19	a	loi hypergéométrique vs binomiale	1	61	Exemples (suite)	hypergéométrique non vue; probabilité par combinaisons, diapo 61
+4.19	a	loi hypergéométrique vs binomiale	1	60	Exemples (suite)	hypergéométrique non vue; probabilité par combinaisons, diapo 60
 4.19	b, c	loi hypergéométrique vs binomiale	3	11	Loi binomiale	fonction de masse binomiale, diapo 11
-4.20		loi hypergéométrique, taille d'échantillon	1	27	Règle de multiplication	hypergéométrique non vue; tirages successifs, règle de multiplication
+4.20		loi hypergéométrique, taille d'échantillon	1	26	Règle de multiplication	hypergéométrique non vue; tirages successifs, règle de multiplication
 4.21	a, c	loi de Poisson, processus de Poisson	3	30	Loi de Poisson	processus de Poisson, diapo 30; c) amincissement non énoncé
 4.21	b	loi de Poisson, processus de Poisson	3	31	Loi de Poisson	espérance et variance de la Poisson, diapo 31
 4.22		processus de Poisson	3	30	Loi de Poisson	processus de Poisson (moyenne λt), diapo 30
@@ -235,7 +235,7 @@ exercice	parties	sujet	module	diapo	titre	note
 5.18	a	loi Gamma, processus de Poisson	4	19	Loi Gamma	espérance d'une somme / de la Gamma, diapo 19
 5.18	b	loi Gamma, processus de Poisson	4	20	Lien avec les processus de Poisson	lien Gamma et processus de Poisson, diapo 20
 5.19		reconnaissance de densités continues	4	17	Loi Gamma	choix incluant des lois Gamma (règle 6); densité Gamma diapo 17
-5.20	a	processus de Poisson, exponentielle, Gamma	1	34	Généralisation à $k$ événements	indépendance de k événements, diapo 34
+5.20	a	processus de Poisson, exponentielle, Gamma	1	33	Généralisation à $k$ événements	indépendance de k événements, diapo 33
 5.20	b, c, d	processus de Poisson, exponentielle, Gamma	3	30	Loi de Poisson	processus de Poisson (moyenne λt), diapo 30; conditionnelle module 1
 5.20	e	processus de Poisson, exponentielle, Gamma	4	17	Loi Gamma	Gamma comme somme d'exponentielles, diapo 17
 5.21	a, c	somme d'exponentielles, loi Gamma	4	19	Loi Gamma	espérance d'une somme / de la Gamma, diapo 19

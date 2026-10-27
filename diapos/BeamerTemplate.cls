@@ -307,9 +307,19 @@
 % BOÎTES PERSONNALISÉES (tcolorbox)
 % ============================================================================
 
+% Saute un groupe vide {} placé au début du corps (ancienne convention
+% \begin{defn}{}), pour avoir exactement une espace après le titre dans tous les cas.
+% (tcolorbox place un \ignorespaces juste après « before upper » : on le passe d'abord.)
+\newcommand{\cls@sautgroupevide}{\futurelet\cls@jeton\cls@saut@a}
+\def\cls@saut@a{\ifx\cls@jeton\ignorespaces\expandafter\cls@saut@b\else\expandafter\cls@saut@c\fi}
+\def\cls@saut@b\ignorespaces{\cls@saut@c}
+\def\cls@saut@c{\@ifnextchar\bgroup{\cls@groupe}{}}
+\newcommand{\cls@groupe}[1]{\if\relax\detokenize{#1}\relax\expandafter\ignorespaces\else{#1}\fi}
+
 % --- Définition ---
 % Boîte avec barre bleue à gauche, fond bleu pâle.
-% Usage : \begin{defn} Texte de la définition. \end{defn}
+% Usage : \begin{defn} Texte. \end{defn}  ou  \begin{defn}[Nom] Texte. \end{defn}
+%         (avec un nom, il remplace « Définition » dans le titre)
 \newtcolorbox[auto counter]{defn}[1][]{
   boxrule=0pt,
   boxsep=0pt,
@@ -318,8 +328,8 @@
   detach title,
   fonttitle=\bfseries,
   coltitle=black,
-  title=Définition.~,
-  before upper={\tcbtitle},
+  title={\if\relax\detokenize{#1}\relax Définition\else #1\fi.},
+  before upper={\tcbtitle\ \cls@sautgroupevide},
   borderline west={2pt}{0pt}{DefnColorBar},
   sharp corners,
   before skip=10pt,
@@ -329,7 +339,8 @@
 
 % --- Théorème ---
 % Boîte avec barre orange à gauche, fond orange pâle.
-% Usage : \begin{thm} Énoncé du théorème. \end{thm}
+% Usage : \begin{thm} Énoncé. \end{thm}  ou  \begin{thm}[Théorème de Bayes] Énoncé. \end{thm}
+%         (avec un nom, il remplace « Théorème » dans le titre)
 \newtcolorbox[auto counter]{thm}[1][]{
   boxrule=0pt,
   boxsep=0pt,
@@ -339,8 +350,8 @@
   fonttitle=\bfseries,
   coltitle=TitreThm,
   coltext=TexteThm,
-  title=Théorème.~,
-  before upper={\tcbtitle},
+  title={\if\relax\detokenize{#1}\relax Théorème\else #1\fi.},
+  before upper={\tcbtitle\ \cls@sautgroupevide},
   borderline west={2pt}{0pt}{ThmColorBar},
   sharp corners,
   before skip=10pt,
@@ -350,7 +361,7 @@
 
 % --- Proposition ---
 % Même style que les théorèmes.
-% Usage : \begin{prp} Énoncé de la proposition. \end{prp}
+% Usage : \begin{prp} Énoncé. \end{prp}  ou  \begin{prp}[Nom] Énoncé. \end{prp}
 \newtcolorbox[auto counter]{prp}[1][]{
   boxrule=0pt,
   boxsep=0pt,
@@ -359,8 +370,8 @@
   detach title,
   fonttitle=\bfseries,
   coltitle=black,
-  title=Proposition.~,
-  before upper={\tcbtitle},
+  title={\if\relax\detokenize{#1}\relax Proposition\else #1\fi.},
+  before upper={\tcbtitle\ \cls@sautgroupevide},
   borderline west={2pt}{0pt}{PropColorBar},
   sharp corners,
   before skip=10pt,

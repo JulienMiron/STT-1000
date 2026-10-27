@@ -2,8 +2,10 @@
 # Reporte les corrections des diapos (diapos/*.tex) vers le dépôt Global,
 # qui sert d'archive maîtresse et est aussi synchronisé avec Overleaf.
 #
-# Les noms de fichiers diffèrent entre ce dépôt et Global (voir
-# scripts/global-mapping.tsv : "Module N - Titre.tex" -> "STT-1000-Module N.tex").
+# Les fichiers portent le même nom dans ce dépôt et dans Global. Si un nom devait
+# un jour différer, ajouter une ligne « nom ici<TAB>nom dans Global » à
+# scripts/global-mapping.tsv : le script en tient compte si le fichier existe.
+# Seuls les .tex sont reportés (pas BeamerTemplate.cls ni les images).
 #
 # Appelé automatiquement par le hook .githooks/post-commit à chaque commit
 # touchant diapos/*.tex. Peut aussi être lancé à la main :
