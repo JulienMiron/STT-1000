@@ -17,7 +17,7 @@ website:
 
   page-footer:
     left: "Site de cours STT-1000"
-    center: "[Julien Miron](https://julienmiron.github.io/SitePerso/)"
+    center: "[Julien Miron](https://julienmiron.ca/)"
     right: "Généré avec Quarto"
 
   navbar:
