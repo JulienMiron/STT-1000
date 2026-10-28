@@ -275,11 +275,11 @@ exercice	parties	sujet	module	diapo	titre	note
 6.15	a(i), a(ii), a(iii)	paramètres graphiques, combinaison de normales	4	28	Loi normale : propriétés de la densité	sommet en μ et points d'inflexion en μ±σ, diapo 28
 6.15	b, c	paramètres graphiques, combinaison de normales	4	43	Combinaisons linéaires de normales	somme et moyenne de normales indépendantes, diapo 43
 6.16		loi normale, quantile, espérance binomiale	4	37	Standardisation	standardisation diapo 37; c) espérance binomiale np (module 3)
-6.17		espérance et variance de la moyenne	5	36	Généralisation pour plusieurs variables	E et V d'une combinaison linéaire, cas indépendant, diapo 36
+6.17		espérance et variance de la moyenne	5	38	Généralisation à plusieurs variables	E et V d'une combinaison linéaire, cas indépendant, diapo 38
 6.18		différence de deux normales indépendantes	4	43	Combinaisons linéaires de normales	différence de normales indépendantes, diapo 43
 6.19		somme de normales indépendantes	4	43	Combinaisons linéaires de normales	somme de normales indépendantes, diapo 43
 6.20	a, b	combinaison linéaire de normales, corrélation	4	43	Combinaisons linéaires de normales	combinaison linéaire de normales indépendantes, diapo 43
-6.20	c	combinaison linéaire de normales, corrélation	5	29	Coefficient de corrélation	covariance tirée de ρ (diapo 29); variance avec covariance diapo 27
+6.20	c	combinaison linéaire de normales, corrélation	5	28	Coefficient de corrélation	covariance tirée de ρ (diapo 28); variance avec covariance diapo 26
 6.21		théorème central limite, loi uniforme	4	46	Un résultat très (très) utile	TCL diapo 46; moyenne et variance de la loi uniforme diapo 3
 6.22		théorème central limite, somme	4	46	Un résultat très (très) utile	TCL pour une somme, diapo 46
 6.23		somme de normales i.i.d.	4	43	Combinaisons linéaires de normales	somme de normales i.i.d., diapo 43
@@ -307,7 +307,7 @@ exercice	parties	sujet	module	diapo	titre	note
 6.37		loi normale bivariée, loi conditionnelle	hors			loi normale bivariée et loi conditionnelle normale non vues
 6.38		loi normale bivariée, lois conditionnelles	hors			loi normale bivariée (marginales, lois conditionnelles) non vue
 6.39	a, b, c, d, f, g	loi normale bivariée, vrai ou faux	hors			loi normale bivariée et moments conditionnels non vus
-6.39	e	loi normale bivariée, vrai ou faux	5	29	Coefficient de corrélation	corrélation, mesure standardisée du lien linéaire dans [−1, 1], diapo 29
+6.39	e	loi normale bivariée, vrai ou faux	5	28	Coefficient de corrélation	corrélation, mesure standardisée du lien linéaire dans [−1, 1], diapo 28
 6.40		loi normale bivariée, courbes de niveau	hors			loi normale bivariée et courbes de niveau non vues
 7.1	a	moyenne, variance, centiles, diagramme en boîte	6	22	Variance échantillonnale	variance échantillonnale et formule de calcul, diapo 22
 7.1	b	moyenne, variance, centiles, diagramme en boîte	6	16	Quantiles	quantiles échantillonnaux avec interpolation, diapo 16
