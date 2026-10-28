@@ -311,44 +311,44 @@ exercice	parties	sujet	module	diapo	titre	note
 6.40		loi normale bivariée, courbes de niveau	hors			loi normale bivariée et courbes de niveau non vues
 7.1	a	moyenne, variance, centiles, diagramme en boîte	6	22	Variance échantillonnale	variance échantillonnale et formule de calcul, diapo 22
 7.1	b	moyenne, variance, centiles, diagramme en boîte	6	16	Quantiles	quantiles échantillonnaux avec interpolation, diapo 16
-7.1	c	moyenne, variance, centiles, diagramme en boîte	6	34	Procédure (suite)	construction du diagramme en boîte (points extrêmes), diapo 34
-7.2	a	histogramme, position, dispersion, diagramme en boîte	6	26	Procédure pour tracer un histogramme	procédure pour tracer un histogramme, diapo 26
+7.1	c	moyenne, variance, centiles, diagramme en boîte	6	34	Construire un diagramme en boîte (suite)	construction du diagramme en boîte (points extrêmes), diapo 34
+7.2	a	histogramme, position, dispersion, diagramme en boîte	6	26	Tracer un histogramme	procédure pour tracer un histogramme, diapo 26
 7.2	b	histogramme, position, dispersion, diagramme en boîte	6	15	Mode	mode défini diapo 15
 7.2	c	histogramme, position, dispersion, diagramme en boîte	6	23	Écart interquartile	écart interquartile, diapo 23
 7.2	d	histogramme, position, dispersion, diagramme en boîte	6	35	Utilité du diagramme en boîte	utilité du diagramme en boîte (centre, symétrie), diapo 35
 7.3	a	quartiles, EIQ, diagramme en boîte, asymétrie	6	18	Quartiles échantillonnaux	quartiles échantillonnaux, diapo 18
 7.3	b	quartiles, EIQ, diagramme en boîte, asymétrie	6	23	Écart interquartile	écart interquartile, diapo 23
-7.3	c	quartiles, EIQ, diagramme en boîte, asymétrie	6	34	Procédure (suite)	construction du diagramme en boîte, diapo 34
+7.3	c	quartiles, EIQ, diagramme en boîte, asymétrie	6	34	Construire un diagramme en boîte (suite)	construction du diagramme en boîte, diapo 34
 7.3	d	quartiles, EIQ, diagramme en boîte, asymétrie	6	35	Utilité du diagramme en boîte	symétrie lue sur le diagramme en boîte, diapo 35
 7.4	a	moyenne tronquée	6	8	Caractéristiques de la moyenne échantillonnale	moyenne sensible aux valeurs extrêmes, diapo 8
-7.4	b	moyenne tronquée	6	13	Médiane {\it échantillonnale}	médiane échantillonnale peu sensible aux extrêmes, diapo 13
-7.5	a, c	lecture d'un diagramme en boîte	6	33	Procédure de construction d'un diag. en boîte	boîte délimitée par Q1 et Q3, diapo 33
+7.4	b	moyenne tronquée	6	13	Médiane \textit{échantillonnale}	médiane échantillonnale peu sensible aux extrêmes, diapo 13
+7.5	a, c	lecture d'un diagramme en boîte	6	33	Construire un diagramme en boîte	boîte délimitée par Q1 et Q3, diapo 33
 7.5	b	lecture d'un diagramme en boîte	6	35	Utilité du diagramme en boîte	asymétrie lue sur la boîte (35), moyenne sensible (8)
-7.5	d	lecture d'un diagramme en boîte	6	34	Procédure (suite)	point isolé = vraie observation (34), étendue (21)
+7.5	d	lecture d'un diagramme en boîte	6	34	Construire un diagramme en boîte (suite)	point isolé = vraie observation (34), étendue (21)
 7.6	a, b	transformations et statistiques descriptives	6	22	Variance échantillonnale	variance échantillonnale, diapo 22
-7.6	c, d	transformations et statistiques descriptives	6	7	Tendance centrale: moyenne et médiane	définition de la moyenne échantillonnale, diapo 7
-7.7	a, b, c, d	lecture d'histogramme et diagramme en boîte	6	26	Procédure pour tracer un histogramme	fréquences lues sur un histogramme (26), médiane (13)
-7.7	e	lecture d'histogramme et diagramme en boîte	6	34	Procédure (suite)	points extrêmes du diagramme en boîte, diapo 34
+7.6	c, d	transformations et statistiques descriptives	6	7	Tendance centrale : moyenne et médiane	définition de la moyenne échantillonnale, diapo 7
+7.7	a, b, c, d	lecture d'histogramme et diagramme en boîte	6	26	Tracer un histogramme	fréquences lues sur un histogramme (26), médiane (13)
+7.7	e	lecture d'histogramme et diagramme en boîte	6	34	Construire un diagramme en boîte (suite)	points extrêmes du diagramme en boîte, diapo 34
 7.8		diagramme pour variable qualitative	hors			diagramme pour variable qualitative (barres, secteurs) non vu
-7.9		propriétés des écarts à la moyenne	6	7	Tendance centrale: moyenne et médiane	seule la définition de la moyenne est requise, diapo 7
+7.9		propriétés des écarts à la moyenne	6	7	Tendance centrale : moyenne et médiane	seule la définition de la moyenne est requise, diapo 7
 7.10	a	propriétés des mesures descriptives	6	23	Écart interquartile	EIQ comme mesure de dispersion, diapo 23
 7.10	b, d, e, f	propriétés des mesures descriptives	6	22	Variance échantillonnale	variance et écart-type échantillonnaux, diapo 22
-7.10	c, g	propriétés des mesures descriptives	6	13	Médiane {\it échantillonnale}	médiane échantillonnale et sensibilité aux extrêmes, diapo 13
+7.10	c, g	propriétés des mesures descriptives	6	13	Médiane \textit{échantillonnale}	médiane échantillonnale et sensibilité aux extrêmes, diapo 13
 7.11		types de variables	6	5	Types de variables	types de variables (quantitative, ordinale, catégorielle), diapo 5
 7.12		unités et transformations linéaires	6	22	Variance échantillonnale	variance, dernière des six statistiques, diapo 22
 7.13		comparaison par cotes standardisées	6	22	Variance échantillonnale	écart-type échantillonnal (22), standardisation vue au module 4
 7.14		graphique quantile-quantile normal	10	49	Exemple 4 sur l'absorption d'oxygène	graphique Q-Q seulement nommé (48) et illustré sur résidus (49)
-7.15	a	données groupées, centile, coefficient de variation	6	26	Procédure pour tracer un histogramme	histogramme, diapo 26
+7.15	a	données groupées, centile, coefficient de variation	6	26	Tracer un histogramme	histogramme, diapo 26
 7.15	b	données groupées, centile, coefficient de variation	6	15	Mode	mode défini diapo 15
 7.15	c	données groupées, centile, coefficient de variation	6	16	Quantiles	quantiles échantillonnaux, diapo 16
 7.15	d	données groupées, centile, coefficient de variation	hors			coefficient de variation non vu
-7.16	a	données groupées discrètes, variance	6	13	Médiane {\it échantillonnale}	moyenne et médiane échantillonnales, diapo 13
+7.16	a	données groupées discrètes, variance	6	13	Médiane \textit{échantillonnale}	moyenne et médiane échantillonnales, diapo 13
 7.16	b	données groupées discrètes, variance	6	22	Variance échantillonnale	variance et formule de calcul, diapo 22
 7.17	a	données groupées, diagramme en boîte	hors			moyenne, variance, médiane pour données groupées en classes non vues
-7.17	b	données groupées, diagramme en boîte	6	33	Procédure de construction d'un diag. en boîte	quartiles aux extrémités de la boîte, diapo 33
+7.17	b	données groupées, diagramme en boîte	6	33	Construire un diagramme en boîte	quartiles aux extrémités de la boîte, diapo 33
 7.18	a	données groupées, histogramme à classes inégales	hors			moyenne, variance, médiane pour données groupées en classes non vues
-7.18	b	données groupées, histogramme à classes inégales	6	26	Procédure pour tracer un histogramme	histogramme de densité à classes inégales, diapo 26
-7.19		histogramme de densité	6	26	Procédure pour tracer un histogramme	histogramme de densité (hauteur = fréq. rel./largeur), diapo 26
+7.18	b	données groupées, histogramme à classes inégales	6	26	Tracer un histogramme	histogramme de densité à classes inégales, diapo 26
+7.19		histogramme de densité	6	26	Tracer un histogramme	histogramme de densité (hauteur = fréq. rel./largeur), diapo 26
 7.20		coefficient de corrélation de Pearson	10	37	Estimation de $\rho$	coefficient de corrélation échantillonnal r, diapo 37
 8.1	a	loi de X̄, erreur-type	4	43	Combinaisons linéaires de normales	X̄ = combinaison linéaire de normales indépendantes, diapo 43
 8.1	b, c	loi de X̄, erreur-type	8	22	La marge d'erreur et l'erreur-type	erreur-type (σ/√n, estimée par S/√n), diapo 22
